@@ -1,0 +1,26 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/Users/Hanli/" . "Org/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/Users/Hanli/Org/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "refile.org"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/Users/Hanli/Org/" (23772 23425 514109 498000) ".git/" "refile.org" "../" "./")
+
+ ("/Users/Hanli/" (23772 23103 833099 599000) "antares-hexo/" "test.lock.db" ".h2.server.properties" ".viminfo" ".bash_history" ".gitconfig" "install.log" "TMP/" "Downloads/" ".oh-my-zsh/" ".gem/" ".git/" ".#test.hs" "Documents/" "Codes/" ".Trash/" "Dropbox/" ".emacs~" ".zsh-update" "db/" "Applications/" ".emacs" "Movies/" "Applications (Parallels)/" ".ssh/" ".zcompdump-Micawber-5.0.7" "Works/" ".dropbox/" "Public/" ".android/" ".emacs.d/" "blog/" ".ShadowsocksX-NG/" ".oracle_jre_usage/" "Library/" "Desktop/" ".zsh_history" ".rnd" ".bundle/" ".zprofile" ".zcompdump-涵立’s MacBook-5.0.7" "Pictures/" "Creative Cloud Files/" "Org/" ".zshrc" ".subversion/" "test.h2.db" ".CFUserTextEncoding" "VirtualBox VMs/" ".DS_Store" "go/" "InstallAnywhere/" ".gemrc" "Music/" ".config/" "antares/" ".zshrc-e" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t
