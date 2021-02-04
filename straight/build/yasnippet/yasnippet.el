@@ -1,0 +1,1 @@
+/Users/Hanli/.emacs.d/straight/repos/yasnippet/yasnippet.el
