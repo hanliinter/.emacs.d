@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/clojure-mode/def
+# -*- mode: snippet -*-
+# name: def
+# key: def
+# --
+(def $0)

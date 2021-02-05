@@ -1,1 +1,21 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/go-mode/testmain
+# -*- mode: snippet -*-
+# name: testmain
+# key: testmain
+# contributor : @atotto
+# --
+func TestMain(m *testing.M) {
+	setup()
+	ret := m.Run()
+	if ret == 0 {
+		teardown()
+	}
+	os.Exit(ret)
+}
+
+func setup() {
+	$1
+}
+
+func teardown() {
+	$2
+}

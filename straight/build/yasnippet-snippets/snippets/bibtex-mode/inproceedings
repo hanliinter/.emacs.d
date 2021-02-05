@@ -1,1 +1,21 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/bibtex-mode/inproceedings
+# -*- mode: snippet -*-
+# name: inproceedings
+# key: inproceedings
+# --
+@inproceedings{ ${title},
+  author       = {${author}},
+  title        = {${title}},
+  booktitle    = {${booktitle}},
+  year         = {${year}},
+  editor       = {${editor}}${,
+  volume       = {${volume}}}${,
+  series       = {${series}}}${,
+  pages        = {${pages}}}${,
+  address      = {${address}}}${,
+  month        = {${month}}}${,
+  organization = {${organization}}}${,
+  publisher    = {${publisher}}}${,
+  note         = {${note}}}
+}
+
+$0

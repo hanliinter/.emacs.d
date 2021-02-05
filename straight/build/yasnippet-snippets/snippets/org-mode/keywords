@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/org-mode/keywords
+# -*- mode: snippet -*-
+# name: keywords
+# key: <ke
+# --
+#+keywords: $0

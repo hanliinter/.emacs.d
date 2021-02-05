@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/ruby-mode/app
+# -*- mode: snippet -*-
+# name: if __FILE__ == $PROGRAM_NAME ... end
+# group : general
+# --
+if __FILE__ == $PROGRAM_NAME
+  $0
+end

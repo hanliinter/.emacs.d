@@ -1,1 +1,11 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/terraform-mode/google/gcp_resources/google_billing_account_iam_member
+# -*- mode: snippet -*-
+# name: google_billing_account_iam_member
+# key: goog_billing_account_iam_member
+# --
+
+resource "google_billing_account_iam_member" "${1:name}" {
+  billing_account_id = "${2:billing_account_id}"
+  role               = "${3:role}"
+  member             = "user:${4:member}"
+}
+

@@ -1,1 +1,10 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/terraform-mode/google/data_sources/google_storage_object_signed_url
+# -*- mode: snippet -*-
+# name: google_storage_object_signed_url
+# key: goog_storage_object_signed_url
+# --
+
+data "google_storage_object_signed_url" "${1:name}" {
+  bucket = "${2:bucket}"
+  path   = "${3:path}"
+}
+

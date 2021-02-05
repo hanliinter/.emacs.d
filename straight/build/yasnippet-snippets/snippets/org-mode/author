@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/org-mode/author
+# -*- mode: snippet -*-
+# name: author
+# key: <au
+# --
+#+author: $0

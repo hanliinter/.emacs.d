@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c++-mode/fln
+# -*- mode: snippet -*-
+# name: fill_n
+# key: fln
+# --
+std::fill_n(std::begin(${1:container}), $2, $3);
+$0

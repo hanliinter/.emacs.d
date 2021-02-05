@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/ruby-mode/GLOB
+# -*- mode: snippet -*-
+# name: GLOB
+# key: $
+# --
+$${1:GLOBAL} = $0

@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/tuareg-mode/printf
+# -*- mode: snippet -*-
+# name: printf
+# key: pr
+# --
+Printf.printf "${1:string}" ${2:vals};;

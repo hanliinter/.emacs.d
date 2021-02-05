@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/rust-mode/ifl
+# -*- mode: snippet -*-
+# name: if let pattern = expression { ... };
+# key: ifl
+# --
+if let ${1:pattern} = ${2:expression} {
+    $0
+};

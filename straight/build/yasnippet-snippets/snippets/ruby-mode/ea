@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/ruby-mode/ea
+# -*- mode: snippet -*-
+# name: each { |...| ... }
+# group : collections
+# --
+each { |${e}| $0 }

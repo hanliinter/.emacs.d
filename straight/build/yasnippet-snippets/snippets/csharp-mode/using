@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/csharp-mode/using
+# -*- mode: snippet -*-
+# contributor : Alejandro Espinoza Esparza <aespinoza@structum.com.mx>
+# name: using ...;
+# key: using
+# --
+using $1;

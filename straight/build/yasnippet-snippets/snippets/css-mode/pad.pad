@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/css-mode/pad.pad
+# -*- mode: snippet -*-
+# contributor : rejeep <johan.rejeep@gmail.com>
+# name: padding: ...
+# --
+padding: $1;

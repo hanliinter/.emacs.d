@@ -1,1 +1,9 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/terraform-mode/google/data_sources/google_project_services_data
+# -*- mode: snippet -*-
+# name: google_project_services_data
+# key: goog_project_services_data
+# --
+
+data "google_project_services" "${1:name}" {
+  project = "${2:project_id}"
+}
+

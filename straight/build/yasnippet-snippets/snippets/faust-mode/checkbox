@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/faust-mode/checkbox
+# -*- mode: snippet -*-
+# name: checkbox
+# key: ch
+# --
+checkbox("$1")$0

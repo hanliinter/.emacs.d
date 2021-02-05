@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/nsis-mode/outfile
+# -*- mode: snippet -*-
+# name: outfile
+# key: out
+# --
+outFile "${1:setup}.exe"

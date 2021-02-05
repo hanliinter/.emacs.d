@@ -1,1 +1,11 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/terraform-mode/google/cloud_functions_resources/google_cloudfunctions_function
+# -*- mode: snippet -*-
+# name: google_cloudfunctions_function
+# key: goog_cloudfunctions_function
+# --
+
+resource "google_cloudfunctions_function" "${1:name}" {
+  name                  = "${2:name}"
+  source_archive_bucket = "${3:bucket_name}"
+  source_archive_object = "${4:obejct_name}"
+}
+

@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/python-mode/for
+# -*- mode: snippet -*-
+# name: for ... in ... : ...
+# key: for
+# group : control structure
+# --
+for ${var} in ${collection}:
+    $0

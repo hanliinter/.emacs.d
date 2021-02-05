@@ -1,1 +1,12 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/d-mode/tf
+# -*- mode: snippet -*-
+# name: try … finally …
+# key: tryf
+# --
+try
+{
+  $0
+}
+finally
+{
+  $1
+}

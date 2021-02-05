@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/cc-mode/else
+# -*- mode: snippet -*-
+# name: else { ... }
+# key: else
+# --
+else${1: {
+    $0
+}}

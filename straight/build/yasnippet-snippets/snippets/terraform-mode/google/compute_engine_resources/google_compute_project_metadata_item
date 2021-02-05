@@ -1,1 +1,10 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/terraform-mode/google/compute_engine_resources/google_compute_project_metadata_item
+# -*- mode: snippet -*-
+# name: google_compute_project_metadata_item
+# key: goog_compute_project_metadata_item
+# --
+
+resource "google_compute_project_metadata_item" "${1:name}" {
+  key   = "${2:key}"
+  value = "${3:value}"
+}
+

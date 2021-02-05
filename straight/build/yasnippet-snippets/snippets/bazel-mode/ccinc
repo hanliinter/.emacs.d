@@ -1,1 +1,10 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/bazel-mode/ccinc
+# -*- mode: snippet -*-
+# name: cc_inc_library
+# key: ccinc
+# --
+cc_inc_library(
+    name = "$0",
+    hdrs = ["$1"],
+    prefix = "$2",
+    deps = ["$3"]
+)

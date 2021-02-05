@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/latex-mode/emph
+# -*- mode: snippet -*-
+# name: emph
+# key: e
+# --
+\emph{$1}$0

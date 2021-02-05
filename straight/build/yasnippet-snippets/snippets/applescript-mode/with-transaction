@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/applescript-mode/with-transaction
+# -*- mode: snippet -*-
+# name: with-transaction
+# --
+with transaction
+$0
+end transaction

@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c++-mode/cstd
+# -*- mode: snippet -*-
+# name: cstd
+# key: cstd
+# --
+#include <cstdlib>

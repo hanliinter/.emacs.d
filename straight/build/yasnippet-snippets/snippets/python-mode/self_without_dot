@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/python-mode/self_without_dot
+# -*- mode: snippet -*-
+# name: self_without_dot
+# key: s
+# group: object oriented
+# --
+self

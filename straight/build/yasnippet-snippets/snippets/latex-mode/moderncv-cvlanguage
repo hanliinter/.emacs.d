@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/latex-mode/moderncv-cvlanguage
+# -*- mode: snippet -*-
+# name: moderncv-cvlanguage
+# key: cvlang
+# --
+\cvlanguage{${1:language}}{${2:skill-level}}{${3:comment}}
+$0

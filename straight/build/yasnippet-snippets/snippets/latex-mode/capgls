@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/latex-mode/capgls
+# -*- mode: snippet -*-
+# name: Gls
+# key: G
+# --
+\Gls{${1:label}}

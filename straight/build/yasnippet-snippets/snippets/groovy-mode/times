@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/groovy-mode/times
+# -*- mode: snippet -*-
+# name: times
+# key: times
+# --
+${1:10}.times {
+              $0
+}                .

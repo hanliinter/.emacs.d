@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/python-mode/from
+# -*- mode: snippet -*-
+# name: from
+# key: from
+# group : general
+# --
+from ${1:lib} import ${2:funs}

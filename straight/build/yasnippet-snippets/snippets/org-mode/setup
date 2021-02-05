@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/org-mode/setup
+# -*- mode: snippet -*-
+# name: setup
+# key: set
+# --
+#+setupfile: $0

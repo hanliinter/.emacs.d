@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/ruby-mode/=b
+# -*- mode: snippet -*-
+# name: =begin rdoc ... =end
+# group : general
+# --
+=begin rdoc
+  $0
+=end

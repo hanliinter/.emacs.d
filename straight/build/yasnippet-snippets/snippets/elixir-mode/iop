@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/elixir-mode/iop
+# -*- mode: snippet -*-
+# name: iop
+# key: iop
+# --
+IO.puts("$1 #{inspect $1}")$0

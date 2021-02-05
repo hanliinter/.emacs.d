@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/ruby-mode/forin
+# -*- mode: snippet -*-
+# name: for ... in ...; ... end
+# group : control structure
+# --
+for ${1:element} in ${2:collection}
+  $0
+end

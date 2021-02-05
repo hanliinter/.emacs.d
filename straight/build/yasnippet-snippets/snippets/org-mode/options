@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/org-mode/options
+# -*- mode: snippet -*-
+# name: options
+# key: <op
+# --
+#+options: h:${1:1} num:${2:t||nil} toc:${3:t||nil}$0

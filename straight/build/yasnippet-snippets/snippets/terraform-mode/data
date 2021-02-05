@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/terraform-mode/data
+# -*- mode: snippet -*-
+# name: data
+# key: data
+# --
+data "${1:type}" "${2:name}" {
+  $0
+}

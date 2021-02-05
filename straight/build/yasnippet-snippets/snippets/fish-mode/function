@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/fish-mode/function
+# -*- mode: snippet -*-
+# name: function
+# key: function
+# --
+function ${1:name}
+    $0
+end

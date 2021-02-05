@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/dart-mode/func
+# -*- mode: snippet -*-
+# name: fun
+# key: fun
+# --
+${1:Type} ${2:Name}($3) {
+  $0
+}

@@ -1,1 +1,8 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/erlang-mode/try
+# -*- mode: snippet -*-
+# name: try ... of ... catch after end
+# --
+try $1 of
+    $0
+catch
+after
+end

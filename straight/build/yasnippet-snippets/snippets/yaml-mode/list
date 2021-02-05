@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/yaml-mode/list
+# -*- mode: snippet -*-
+# name: list
+# key: list
+# --
+[$1]
+$0

@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/vhdl-mode/type
+# -*- mode: snippet -*-
+# name: type
+# key: type
+# --
+type ${1:Name} is (${2:Value list});

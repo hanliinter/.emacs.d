@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/kotlin-mode/void
+# -*- mode: snippet -*-
+# name: Function returning nothing
+# key: void
+# --
+fun $1($2) {
+    $0
+}

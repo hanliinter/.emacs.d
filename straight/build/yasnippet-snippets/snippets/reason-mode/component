@@ -1,1 +1,10 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/reason-mode/component
+# -*- mode: snippet -*-
+# name: component
+# key: component
+# --
+module ${1:Component} = {
+  [@react.component]
+  let make = (${2:parameters}) => {
+    $0
+  };
+};

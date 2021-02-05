@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/html-mode/script.javascript-src
+# -*- mode: snippet -*-
+# contributor : Jimmy Wu <frozenthrone88@gmail.com>
+# name:<script type="text/javascript" src="..."></script>
+# --
+<script type="text/javascript" src="$1"></script>

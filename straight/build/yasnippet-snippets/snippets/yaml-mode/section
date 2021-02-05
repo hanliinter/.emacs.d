@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/yaml-mode/section
+# -*- mode: snippet -*-
+# name: section
+# key: --
+# --
+--- # ${1:section}
+$0

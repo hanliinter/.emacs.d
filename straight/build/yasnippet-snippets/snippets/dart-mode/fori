@@ -1,1 +1,8 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/dart-mode/fori
+# -*- mode: snippet -*-
+# name: fori
+# key: fori
+# expand-env: ((yas-indent-line 'fixed) (yas-wrap-around-region nil))
+# --
+for(var ${1:obj} in ${2:collection}) {
+  $0
+}

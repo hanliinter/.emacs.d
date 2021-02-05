@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/ned-mode/chan
+# -*- mode: snippet -*-
+# name: chan
+# key: chan
+# --
+channel Channel extends ${1:ned.DelayChannel} {
+        $0
+}

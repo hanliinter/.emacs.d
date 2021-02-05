@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/rst-mode/term
+# -*- mode: snippet -*-
+# name: term
+# key: term
+# --
+:term:\`$0\`

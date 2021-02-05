@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/emacs-lisp-mode/delete-char
+# -*- mode: snippet -*-
+# contributor: Xah Lee (XahLee.org)
+# name: delete-char
+# key: delete-char
+# key: dc
+# --
+(delete-char $0)

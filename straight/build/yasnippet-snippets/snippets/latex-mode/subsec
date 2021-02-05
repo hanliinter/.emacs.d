@@ -1,1 +1,8 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/latex-mode/subsec
+# -*- mode: snippet -*-
+# name: subsec
+# key: sub
+# --
+\subsection{${1:name}}
+\label{subsec:${2:label}}
+
+$0

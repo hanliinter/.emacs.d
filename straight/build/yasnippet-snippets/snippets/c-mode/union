@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c-mode/union
+# -*- mode: snippet -*-
+# name: union
+# key: union
+# --
+typedef union {
+        $0
+} ${1:name};

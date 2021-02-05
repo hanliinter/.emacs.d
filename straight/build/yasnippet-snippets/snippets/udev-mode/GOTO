@@ -1,1 +1,8 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/udev-mode/GOTO
+# -*- mode: snippet -*-
+# name: GOTO
+# key: goto
+# --
+GOTO="$1"
+$0
+
+LABEL="$1"

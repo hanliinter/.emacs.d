@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/java-mode/fori
+# -*- mode: snippet -*-
+# name: fori
+# key: fori
+# --
+for (${1:Object el} : ${2:iterator}) {
+    $0
+}

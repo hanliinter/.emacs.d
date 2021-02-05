@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/go-mode/lambda
+# -*- mode: snippet -*-
+# name: lambda func
+# key: lambda
+# --
+func(${1:args}) $2 {
+  $0
+}()

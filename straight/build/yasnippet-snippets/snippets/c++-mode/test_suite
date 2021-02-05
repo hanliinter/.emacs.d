@@ -1,1 +1,10 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c++-mode/test_suite
+# -*- mode: snippet -*-
+# name: test_suite
+# key: ts
+# group: testing
+# --
+BOOST_AUTO_TEST_SUITE( ${1:test_suite1} )
+
+$0
+
+BOOST_AUTO_TEST_SUITE_END()

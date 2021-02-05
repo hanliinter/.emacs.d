@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/emacs-lisp-mode/match-beginning
+# -*- mode: snippet -*-
+# contributor: Xah Lee (XahLee.org)
+# name: match-beginning
+# key: match-beginning
+# key: mb
+# --
+(match-beginning $0)

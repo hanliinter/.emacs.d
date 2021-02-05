@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/crystal-mode/zip
+# -*- mode: snippet -*-
+# name: zip(...) { |...| ... }
+# key: zip
+# group : collections
+# --
+zip(${enums}) { |${row}| $0 }

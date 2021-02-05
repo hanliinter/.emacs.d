@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/terraform-mode/google/data_sources/google_container_registry_repository
+# -*- mode: snippet -*-
+# name: google_container_registry_repository
+# key: goog_container_registry_repository
+# --
+
+data "google_container_registry_repository" "${1:name}" {}
+

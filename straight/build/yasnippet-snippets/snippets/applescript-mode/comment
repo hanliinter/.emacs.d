@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/applescript-mode/comment
+# -*- mode: snippet -*-
+# name: comment
+# --
+(*
+$0
+*)

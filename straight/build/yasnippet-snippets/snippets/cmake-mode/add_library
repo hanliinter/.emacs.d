@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/cmake-mode/add_library
+# -*- mode: snippet -*-
+# name: add_library
+# key: lib
+# --
+add_library($1 ${2:class.cpp})
+target_link_libraries($1 $3)

@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/java-mode/assert
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: assert
+# key: as
+# --
+assert ${1:expression};

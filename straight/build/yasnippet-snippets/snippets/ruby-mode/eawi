@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/ruby-mode/eawi
+# -*- mode: snippet -*-
+# name: each_with_index { |e, i| ... }
+# group : collections
+# --
+each_with_index { |${e}, ${i}| $0 }

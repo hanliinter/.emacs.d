@@ -1,1 +1,10 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/terraform-mode/google/data_sources/google_container_cluster_data
+# -*- mode: snippet -*-
+# name: google_container_cluster_data
+# key: goog_container_cluster_data
+# --
+
+data "google_container_cluster" "${1:name}" {
+  name   = "${2:name}"
+  zone   = "${3:zone}"
+}
+

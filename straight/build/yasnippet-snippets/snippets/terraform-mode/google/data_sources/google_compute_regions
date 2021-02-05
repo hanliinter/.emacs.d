@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/terraform-mode/google/data_sources/google_compute_regions
+# -*- mode: snippet -*-
+# name: google_compute_regions
+# key: goog_compute_regions
+# --
+
+data "google_compute_regions" "${1:name}" {}
+

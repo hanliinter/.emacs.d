@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/ned-mode/submodules
+# -*- mode: snippet -*-
+# name: submodules
+# key: sub
+# --
+submodules:
+   $0

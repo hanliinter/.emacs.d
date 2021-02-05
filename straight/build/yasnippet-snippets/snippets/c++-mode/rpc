@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c++-mode/rpc
+# -*- mode: snippet -*-
+# name: replace_copy
+# key: rpc
+# --
+std::replace_copy(std::begin(${1:container}), std::end($1), std::begin($1), $2, $3);
+$0

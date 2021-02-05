@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/sh-mode/until
+# -*- mode: snippet -*-
+# name: until loop
+# key: until
+# --
+until ${1:cond}; do
+    $0
+done

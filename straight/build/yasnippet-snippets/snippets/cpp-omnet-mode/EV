@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/cpp-omnet-mode/EV
+# -*- mode: snippet -*-
+# name: EV
+# key: ev
+# --
+EV << "${1:string}"$0;

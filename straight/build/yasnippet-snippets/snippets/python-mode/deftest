@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/python-mode/deftest
+# -*- mode: snippet -*-
+# name: deftest
+# key: dt
+# group: testing
+# --
+def test_${1:long_name}(self):
+    $0

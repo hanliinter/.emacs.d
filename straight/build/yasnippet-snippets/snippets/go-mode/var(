@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/go-mode/var(
+# -*- mode: snippet -*-
+# name: var (...)
+# key: var
+# --
+var (
+  ${1:name} ${2:type}
+)

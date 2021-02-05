@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/elixir-mode/hinfo
+# -*- mode: snippet -*-
+# name: hinfo
+# key: hinfo
+# --
+def handle_info($1, ${2:state}) do
+  $0
+end

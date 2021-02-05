@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/nesc-mode/sim
+# -*- mode: snippet -*-
+# name: sim
+# key: sim
+# --
+#ifdef TOSSIM
+       $0
+#endif

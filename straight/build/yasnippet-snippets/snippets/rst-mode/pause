@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/rst-mode/pause
+# -*- mode: snippet -*-
+# name: pause
+# key: pause
+# group: hieroglyph
+# --
+.. rst-class:: build

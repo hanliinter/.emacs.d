@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c++-mode/sth
+# -*- mode: snippet -*-
+# name: sort_heap
+# key: sth
+# --
+std::sort_heap(std::begin(${1:container}), std::end($1));
+$0

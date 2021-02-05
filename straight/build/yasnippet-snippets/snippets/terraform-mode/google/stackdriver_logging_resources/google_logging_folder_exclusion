@@ -1,1 +1,11 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/terraform-mode/google/stackdriver_logging_resources/google_logging_folder_exclusion
+# -*- mode: snippet -*-
+# name: google_logging_folder_exclusion
+# key: goog_logging_folder_exclusion
+# --
+
+resource "google_logging_folder_exclusion" "${1:name}" {
+  name   = "${2:name}"
+  folder = "${3:folder}"
+  filter = "${4:filter}"
+}
+

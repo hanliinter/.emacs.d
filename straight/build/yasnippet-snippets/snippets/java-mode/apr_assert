@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/java-mode/apr_assert
+# -*- mode: snippet -*-
+# name: apr_assert
+# key: apr_assert
+# --
+if (Globals.useAssertions) {
+   ${1:assert ..};
+}

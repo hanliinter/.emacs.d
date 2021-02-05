@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/haskell-mode/efix
+# -*- mode: snippet -*-
+# name: fixme dummy
+# key: efix
+# expand-env: ((yas-indent-line 'fixed))
+# --
+(error "FIXME: $0")

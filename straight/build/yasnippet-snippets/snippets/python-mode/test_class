@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/python-mode/test_class
+# -*- mode: snippet -*-
+# name: test_class
+# key: tcs
+# group : testing
+# --
+class Test${1:toTest}(${2:unittest.TestCase}):
+    $0

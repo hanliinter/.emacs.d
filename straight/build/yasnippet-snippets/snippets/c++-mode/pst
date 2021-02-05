@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c++-mode/pst
+# -*- mode: snippet -*-
+# name: partial_sort
+# key: pst
+# --
+std::partial_sort(std::begin(${1:container}), std::end($1), std::end($1));
+$0

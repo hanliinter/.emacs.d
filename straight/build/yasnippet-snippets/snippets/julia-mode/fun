@@ -1,1 +1,9 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/julia-mode/fun
+# -*- mode: snippet -*-
+# name: function(...) ... end
+# key: fun
+# contributor: hankail05
+# --
+function ${1:fun}(${2:args})
+    ${3:body}
+end
+$0

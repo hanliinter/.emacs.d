@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/sh-mode/function
+# -*- mode: snippet -*-
+# name: function
+# key: f
+# --
+function ${1:name} {
+         $0
+}

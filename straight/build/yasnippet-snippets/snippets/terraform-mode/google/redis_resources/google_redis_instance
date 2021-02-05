@@ -1,1 +1,10 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/terraform-mode/google/redis_resources/google_redis_instance
+# -*- mode: snippet -*-
+# name: google_redis_instance
+# key: goog_redis_instance
+# --
+
+resource "google_redis_instance" "${1:name}" {
+  name           = "${2:name}"
+  memory_size_gb = ${3:size}
+}
+

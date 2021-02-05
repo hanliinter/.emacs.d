@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/rst-mode/parsed_literal
+# -*- mode: snippet -*-
+# name: parsed_literal
+# key: src
+# --
+.. parsed-literal::
+   $0

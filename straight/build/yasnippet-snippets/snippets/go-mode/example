@@ -1,1 +1,8 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/go-mode/example
+# -*- mode: snippet -*-
+# name: example
+# key: example
+# contributor : @atotto
+# --
+func Example$1() {
+	$0
+}

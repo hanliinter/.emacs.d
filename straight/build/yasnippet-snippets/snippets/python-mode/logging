@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/python-mode/logging
+# -*- mode: snippet -*-
+# name: logging
+# key: log
+# --
+logger = logging.getLogger("${1:name}")
+logger.setLevel(logging.${2:level})

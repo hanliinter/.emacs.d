@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/org-mode/center
+# -*- mode: snippet -*-
+# name: center
+# key: <c
+# --
+#+begin_center
+$0
+#+end_center

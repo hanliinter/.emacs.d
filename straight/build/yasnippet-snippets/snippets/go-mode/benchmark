@@ -1,1 +1,10 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/go-mode/benchmark
+# -*- mode: snippet -*-
+# name: benchmark
+# key: bench
+# contributor : @atotto
+# --
+func Benchmark$1(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		$0
+	}
+}

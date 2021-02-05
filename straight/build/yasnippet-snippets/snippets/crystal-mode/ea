@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/crystal-mode/ea
+# -*- mode: snippet -*-
+# name: each { |...| ... }
+# key: ea
+# group : collections
+# --
+each { |${e}| $0 }

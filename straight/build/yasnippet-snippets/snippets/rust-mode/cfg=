@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/rust-mode/cfg=
+# -*- mode: snippet -*-
+# name: #[cfg(option = "value")]
+# key: cfg=
+# --
+#[cfg(${1:option} = "${2:value}")]

@@ -1,1 +1,8 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/bibtex-mode/set
+# -*- mode: snippet -*-
+# name: set
+# key: set
+# author: Spenser Truex
+# --
+@set{${title},
+  entryset = {${entryset}}
+}

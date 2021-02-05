@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/clojure-mode/print
+# -*- mode: snippet -*-
+# -*- coding: utf-8 -*-
+# name: print
+# key: print
+# --
+(println $1)
+$0

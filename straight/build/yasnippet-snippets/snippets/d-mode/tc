@@ -1,1 +1,12 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/d-mode/tc
+# -*- mode: snippet -*-
+# name: try … catch …
+# key: tc
+# --
+try
+{
+  $0
+}
+catch (${1:Exception} e)
+{
+  $2
+}

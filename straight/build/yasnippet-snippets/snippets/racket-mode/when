@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/racket-mode/when
+# -*- mode: snippet -*-
+# name: (when ...)
+# key: when
+# --
+(when ${1:(${2:predicate})} $0)

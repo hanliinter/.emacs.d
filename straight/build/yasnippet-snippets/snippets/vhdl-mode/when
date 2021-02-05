@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/vhdl-mode/when
+# -*- mode: snippet -*-
+# name: when
+# key: when
+# --
+when ${1:Value} =>
+    $0

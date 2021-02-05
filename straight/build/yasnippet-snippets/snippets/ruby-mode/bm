@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/ruby-mode/bm
+# -*- mode: snippet -*-
+# name: Benchmark.bmbm(...) do ... end
+# group : general
+# --
+Benchmark.bmbm(${1:10}) do |x|
+  $0
+end

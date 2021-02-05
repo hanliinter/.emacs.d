@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/emacs-lisp-mode/substring
+# -*- mode: snippet -*-
+# contributor: Xah Lee (XahLee.org)
+# name: substring
+# key: substring
+# --
+(substring ${1:string} ${2:from}${3: to})

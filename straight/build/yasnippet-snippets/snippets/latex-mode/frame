@@ -1,1 +1,8 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/latex-mode/frame
+# -*- mode: snippet -*-
+# name: frame
+# key: fr
+# --
+\begin{frame}${1:[$2]}
+        ${3:\frametitle{$4}}
+        $0
+\end{frame}

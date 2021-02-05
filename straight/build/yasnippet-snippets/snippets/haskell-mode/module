@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/haskell-mode/module
+# -*- mode: snippet -*-
+# name: module
+# key: mod
+# --
+module ${1:Module} where
+$0

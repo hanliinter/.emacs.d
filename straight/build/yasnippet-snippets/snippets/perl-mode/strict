@@ -1,1 +1,8 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/perl-mode/strict
+# -*- mode: snippet -*-
+# name: strict
+# key: strict
+# contributor: Spenser Truex
+# --
+use warnings;
+use strict;
+$0

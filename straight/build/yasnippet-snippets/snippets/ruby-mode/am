@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/ruby-mode/am
+# -*- mode: snippet -*-
+# name: alias_method new, old
+# group : definitions
+# --
+alias_method :${new_name}, :${old_name}

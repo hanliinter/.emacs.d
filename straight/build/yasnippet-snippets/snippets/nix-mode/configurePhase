@@ -1,1 +1,8 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/nix-mode/configurePhase
+# -*- mode: snippet -*-
+# name: configurePhase
+# key: cp
+# --
+configurePhase= ''
+$1
+'';
+$0

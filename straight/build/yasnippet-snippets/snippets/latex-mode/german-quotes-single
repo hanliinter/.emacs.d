@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/latex-mode/german-quotes-single
+# -*- mode: snippet -*-
+# name: German single quotes
+# key: gq
+# --
+\glq{}$0\grq{}

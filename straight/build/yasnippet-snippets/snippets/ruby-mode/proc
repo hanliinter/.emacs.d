@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/ruby-mode/proc
+# -*- mode: snippet -*-
+# name: Proc.new { |...| ... }
+# key: proc
+# contributor: Valery Zajkov
+# --
+Proc.new { |${1:argument}| $0 }

@@ -1,1 +1,8 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/latex-mode/align
+# -*- mode: snippet -*-
+# name: align
+# key: ali
+# --
+\begin{align}
+\label{$0}
+$1
+\end{align}

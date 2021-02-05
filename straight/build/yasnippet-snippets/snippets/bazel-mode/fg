@@ -1,1 +1,8 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/bazel-mode/fg
+# -*- mode: snippet -*-
+# name: filegroup
+# key: fg
+# --
+filegroup(
+    name = "$0",
+    srcs = "$1"
+)

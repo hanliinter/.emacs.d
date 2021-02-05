@@ -1,1 +1,8 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/nix-mode/checkPhase
+# -*- mode: snippet -*-
+# name: checkPhase
+# key: ch
+# --
+checkPhase= ''
+$1
+'';
+$0

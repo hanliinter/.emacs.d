@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/python-mode/str
+# -*- mode: snippet -*-
+# name: __str__
+# key: str
+# group: dunder methods
+# --
+def __str__(self):
+    $0

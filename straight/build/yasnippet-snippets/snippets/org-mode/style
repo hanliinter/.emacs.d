@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/org-mode/style
+# -*- mode: snippet -*-
+# name: style
+# key: <st
+# --
+#+style: <link rel="stylesheet" type="text/css" href="$1" />

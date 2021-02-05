@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/emacs-lisp-mode/buffer-substring
+# -*- mode: snippet -*-
+# contributor: Xah Lee (XahLee.org)
+# name: buffer-substring
+# key: buffer-substring
+# key: bs
+# --
+(buffer-substring ${1:start} ${2:end})

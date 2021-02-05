@@ -1,1 +1,8 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/hy-mode/class
+# -*- mode: snippet -*-
+# name:class
+# key:class
+# binding: direct-keybinding
+# --
+(defclass ${1:ClassName} [${2:BaseClass}]
+${3:  (defn --init-- [${4:arg}]
+    (setv $0))})

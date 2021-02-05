@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/emacs-lisp-mode/file-name-sans-extension
+# -*- mode: snippet -*-
+# contributor: Xah Lee (XahLee.org)
+# name: file-name-sans-extension
+# key: file-name-sans-extension
+# key: fnse
+# --
+(file-name-sans-extension $0)

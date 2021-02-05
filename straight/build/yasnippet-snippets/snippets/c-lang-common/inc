@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c-lang-common/inc
+# -*- mode: snippet -*-
+# name: #include <...>
+# key  : incs
+# --
+#include <$1>

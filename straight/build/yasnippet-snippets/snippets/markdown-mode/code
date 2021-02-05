@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/markdown-mode/code
+# -*- mode: snippet -*-
+# name: Code block
+# key: code
+# --
+\`\`\`$1
+$0
+\`\`\`

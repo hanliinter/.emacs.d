@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/hy-mode/let
+# -*- mode: snippet -*-
+# name: let
+# key: let
+# binding: direct-keybinding
+# --
+(let [${1:arg}]
+  $0)

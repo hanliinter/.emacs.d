@@ -1,1 +1,11 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/dart-mode/statelesswidget
+# -*- mode: snippet -*-
+# name: StatelessWidget
+# key: slw
+# group: flutter
+# --
+class ${1:Name} extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container($0);
+  }
+}

@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/lisp-mode/format
+# -*- mode: snippet -*-
+# name: format
+# key: print
+# --
+(format t "~& $0 ~%")

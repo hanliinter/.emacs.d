@@ -1,1 +1,8 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/terraform-mode/google/data_sources/google_organization
+# -*- mode: snippet -*-
+# name: google_organization
+# key: goog_organization
+# --
+
+data "google_organization" "${1:name}" {
+}
+

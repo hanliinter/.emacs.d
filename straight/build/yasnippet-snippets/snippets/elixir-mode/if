@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/elixir-mode/if
+# -*- mode: snippet -*-
+# name: if
+# key: if
+# --
+if ${1:condition} do
+  $0
+end

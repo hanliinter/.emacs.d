@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/rust-mode/new
+# -*- mode: snippet -*-
+# name: fn main() { ... }
+# key: new
+# --
+pub fn new($1) -> ${2:Name} {
+   $2 { ${3} }
+}

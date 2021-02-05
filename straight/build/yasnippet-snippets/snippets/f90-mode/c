@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/f90-mode/c
+# -*- mode: snippet -*-
+# contributor: Li Zhu <http://www.zhuli.name>
+# name: continue
+# --
+continue $0

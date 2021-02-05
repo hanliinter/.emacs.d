@@ -1,1 +1,10 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/rst-mode/image
+# -*- mode: snippet -*-
+# name: image
+# key: img
+# --
+.. image:: ${1:path}
+   :height: ${2:100}
+   :width: ${3:200}
+   :alt: ${4:description}
+
+$0

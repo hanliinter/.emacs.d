@@ -1,1 +1,10 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/ruby-mode/bench
+# -*- mode: snippet -*-
+# name: bench
+# key: bench
+# --
+require "benchmark"
+
+TESTS = ${1:1_000}
+Benchmark.bmbm do |x|
+  x.report("${2:var}") {}
+end

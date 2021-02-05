@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/rust-mode/closure
+# -*- mode: snippet -*-
+# name: closure
+# key: ||
+# --
+|${1:arguments}| {
+       $0
+}

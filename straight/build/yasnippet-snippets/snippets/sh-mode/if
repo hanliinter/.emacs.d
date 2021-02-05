@@ -1,1 +1,8 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/sh-mode/if
+# -*- mode: snippet -*-
+# name: if
+# key: if
+# --
+if ${1:[ -f file]}
+   then ${2:do}
+fi
+$0

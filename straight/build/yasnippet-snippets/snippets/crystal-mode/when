@@ -1,1 +1,8 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/crystal-mode/when
+# -*- mode: snippet -*-
+# name: when ... end
+# key: when
+# group : control structure
+# --
+when ${condition}
+  $0
+end

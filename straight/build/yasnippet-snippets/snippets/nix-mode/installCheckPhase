@@ -1,1 +1,8 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/nix-mode/installCheckPhase
+# -*- mode: snippet -*-
+# name: installCheckPhase
+# key: ic
+# --
+installCheckPhase= ''
+$1
+'';
+$0

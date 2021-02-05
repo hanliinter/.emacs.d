@@ -1,1 +1,9 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/clojure-mode/if
+# -*- mode: snippet -*-
+# -*- coding: utf-8 -*-
+# name: if
+# key: if
+# --
+(if $1
+  $2$>
+  $3)$>
+$0

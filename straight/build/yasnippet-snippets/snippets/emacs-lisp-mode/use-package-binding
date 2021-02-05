@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/emacs-lisp-mode/use-package-binding
+# -*- mode: snippet -*-
+# contributor: Daniel Hitzel
+# name: use-package binding
+# key: upb
+# --
+:bind ("${1:binding}" . ${2:function-name})

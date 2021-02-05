@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/rust-mode/implt
+# -*- mode: snippet -*-
+# name: impl Trait for Type { ... }
+# key: implt
+# --
+impl ${1:Trait} for ${2:Type} {
+     $0
+}

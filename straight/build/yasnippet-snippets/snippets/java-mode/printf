@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/java-mode/printf
+# -*- mode: snippet -*-
+# name: printf
+# key: printf
+# --
+System.out.printf("$0%n");

@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/emacs-lisp-mode/save-excursion
+# -*- mode: snippet -*-
+# contributor: Xah Lee (XahLee.org)
+# name: save-excursion
+# key: save-excursion
+# key: se
+# --
+(save-excursion $0)

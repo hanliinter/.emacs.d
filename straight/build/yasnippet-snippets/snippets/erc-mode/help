@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/erc-mode/help
+# -*- mode: snippet -*-
+# name: help
+# key: h
+# --
+help $0

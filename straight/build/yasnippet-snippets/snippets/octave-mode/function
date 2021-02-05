@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/octave-mode/function
+# -*- mode: snippet -*-
+# name: function
+# key: fun
+# --
+function ${1:return_val} = ${2:fname}(${3:args})
+          $0
+endfunction

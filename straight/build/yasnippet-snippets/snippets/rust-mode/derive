@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/rust-mode/derive
+# -*- mode: snippet -*-
+# name: #[derive(Trait)]
+# key: derive
+# --
+#[derive(${1:Trait})]

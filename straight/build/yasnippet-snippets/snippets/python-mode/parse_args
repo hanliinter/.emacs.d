@@ -1,1 +1,9 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/python-mode/parse_args
+# -*- mode: snippet -*-
+# name: parse_args
+# key: pargs
+# group: argparser
+# --
+def parse_arguments():
+    parser = argparse.ArgumentParser(description='$1')
+    $0
+    return parser.parse_args()

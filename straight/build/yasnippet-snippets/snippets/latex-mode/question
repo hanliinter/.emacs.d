@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/latex-mode/question
+# -*- mode: snippet -*-
+# name: question
+# key: q
+# --
+\question{$0}

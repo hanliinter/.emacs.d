@@ -1,1 +1,9 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/vhdl-mode/ifelif
+# -*- mode: snippet -*-
+# name: ifelif
+# key: ifelif
+# --
+if ${1:cond1} then
+   $0
+elsif ${2:cond2} then
+      
+end if;

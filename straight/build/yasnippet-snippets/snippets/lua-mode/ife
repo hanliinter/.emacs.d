@@ -1,1 +1,9 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/lua-mode/ife
+# -*- mode: snippet -*-
+# name: if else
+# key: ife
+# --
+if $1 then
+	$2
+else
+	$0
+end

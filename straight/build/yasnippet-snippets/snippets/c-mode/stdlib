@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c-mode/stdlib
+# -*- mode: snippet -*-
+# name: stdlib
+# key: std
+# --
+#include <stdlib.h>

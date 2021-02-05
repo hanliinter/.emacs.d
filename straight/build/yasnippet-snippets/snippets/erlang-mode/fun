@@ -1,1 +1,4 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/erlang-mode/fun
+# -*- mode: snippet -*-
+# name: fun (...) -> ... end
+# --
+fun ($1) -> $0 end

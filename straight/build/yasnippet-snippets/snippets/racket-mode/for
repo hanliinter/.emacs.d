@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/racket-mode/for
+# -*- mode: snippet -*-
+# name: (for... (...) ...)
+# key: for
+# --
+(for$1 (${2:for-clause}) $0)

@@ -1,1 +1,9 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/go-mode/method
+# -*- mode: snippet -*-
+# name: method
+# key: mthd
+# contributor: @Kunde21
+# --
+// $2 ${5:...}
+func (${1:recv}) ${2:name}(${3:args}) $4 {
+  $0
+}

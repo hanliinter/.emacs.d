@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/tuareg-mode/main
+# -*- mode: snippet -*-
+# name: main
+# key: m
+# --
+let main =
+    $0

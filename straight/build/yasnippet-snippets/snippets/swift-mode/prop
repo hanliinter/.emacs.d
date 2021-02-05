@@ -1,1 +1,8 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/swift-mode/prop
+# -*- mode: snippet -*-
+# name: prop-getset
+# key: prop-getset
+# --
+var $1: $2 {
+    get {$3}
+    set {$3 = value }
+}

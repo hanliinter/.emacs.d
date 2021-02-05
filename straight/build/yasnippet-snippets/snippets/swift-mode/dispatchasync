@@ -1,1 +1,10 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/swift-mode/dispatchasync
+# -*- mode: snippet -*-
+# name: dispatchAsync
+# key: dispatchAsync
+# --
+DispatchQueue.global(qos: .default).async {
+    $1
+    DispatchQueue.main.async {
+        $0
+    }
+}

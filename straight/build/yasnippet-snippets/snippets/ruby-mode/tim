@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/ruby-mode/tim
+# -*- mode: snippet -*-
+# name: times { |n| ... }
+# group : control structure
+# --
+times { |${n}| $0 }

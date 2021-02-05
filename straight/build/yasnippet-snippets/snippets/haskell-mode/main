@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/haskell-mode/main
+# -*- mode: snippet -*-
+# name: main function
+# key: main
+# expand-env: ((yas-indent-line 'fixed))
+# --
+main :: IO ()
+main = do $0

@@ -1,1 +1,10 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/terraform-mode/google/app_engine_resources/google_app_engine_application
+# -*- mode: snippet -*-
+# name: google_app_engine_application
+# key: goog_app_engine_application
+# --
+
+resource "google_app_engine_application" "${1:name}" {
+  project     = "${2:project_id}"
+  location_id = "${3:location_id}"
+}
+

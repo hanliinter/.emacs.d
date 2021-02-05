@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/clojure-mode/require
+# -*- mode: snippet -*-
+# name: require
+# key: require
+# expand-env: ((yas-triggers-in-field nil))
+# --
+(:require [$1 :as $2])$>

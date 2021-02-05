@@ -1,1 +1,9 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c++-mode/cpi
+# -*- mode: snippet -*-
+# name: copy_if
+# key: cpi
+# --
+std::copy_if(std::begin(${1:container}), std::end($1), std::begin($2),
+[]($3) {
+  $4
+});
+$0

@@ -1,1 +1,11 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/python-mode/script
+# -*- mode: snippet -*-
+# name: script
+# key: script
+# --
+#!/usr/bin/env python
+
+def main():
+    pass
+
+if __name__ == '__main__':
+    main()

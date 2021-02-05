@@ -1,1 +1,9 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/julia-mode/begin
+# -*- mode: snippet -*-
+# name: begin ... end
+# key: begin
+# contributor: hankail05
+# --
+begin
+    ${1:body}
+end
+$0

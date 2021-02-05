@@ -1,1 +1,8 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/csharp-mode/region
+# -*- mode: snippet -*-
+# contributor : Alejandro Espinoza Esparza <aespinoza@structum.com.mx>
+# name: #region ... #endregion
+# key: region
+# --
+#region $1
+$0
+#endregion

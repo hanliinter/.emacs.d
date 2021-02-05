@@ -1,1 +1,8 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/cc-mode/do
+# -*- mode: snippet -*-
+# name: do { ... } while (...)
+# key: do
+# --
+do
+{
+    $0
+} while (${1:condition});

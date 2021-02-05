@@ -1,1 +1,8 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/fish-mode/if
+# -*- mode: snippet -*-
+# name: if ... end
+# key: if
+# --
+if ${1:[ -f file ]}
+    ${2:do}
+end
+$0

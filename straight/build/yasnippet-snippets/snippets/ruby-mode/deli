@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/ruby-mode/deli
+# -*- mode: snippet -*-
+# name: delete_if { |...| ... }
+# group : collections
+# --
+delete_if { |${e}| $0 }

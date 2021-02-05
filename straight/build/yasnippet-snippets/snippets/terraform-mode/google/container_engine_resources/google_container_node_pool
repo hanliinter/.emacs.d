@@ -1,1 +1,9 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/terraform-mode/google/container_engine_resources/google_container_node_pool
+# -*- mode: snippet -*-
+# name: google_container_node_pool
+# key: goog_container_node_pool
+# --
+
+resource "google_container_node_pool" "${1:name}" {
+  cluster = "${2:value}"
+}
+

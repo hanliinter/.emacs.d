@@ -1,1 +1,10 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/terraform-mode/google/compute_engine_resources/google_compute_shared_vpc_service_project
+# -*- mode: snippet -*-
+# name: google_compute_shared_vpc_service_project
+# key: goog_compute_shared_vpc_service_project
+# --
+
+resource "google_compute_shared_vpc_service_project" "${1:name}" {
+  host_project    = "${2:host_project}"
+  service_project = "${3:service_project}"
+}
+

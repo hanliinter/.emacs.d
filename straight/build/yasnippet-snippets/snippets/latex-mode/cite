@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/latex-mode/cite
+# -*- mode: snippet -*-
+# name: cite
+# key: c
+# --
+\cite{$1} $0

@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/erlang-mode/after
+# -*- mode: snippet -*-
+# name: after ... ->
+# --
+after
+    $1 -> $0

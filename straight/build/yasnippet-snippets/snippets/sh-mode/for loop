@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/sh-mode/for loop
+# -*- mode: snippet -*-
+# name: for loop
+# key: for
+# --
+for ${1:var} in ${2:stuff}; do
+    $0
+done

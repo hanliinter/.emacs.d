@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/terraform-mode/google/data_sources/google_project_data
+# -*- mode: snippet -*-
+# name: google_project_data
+# key: goog_project_data
+# --
+
+data "google_project" "project" {}
+

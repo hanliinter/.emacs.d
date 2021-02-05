@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/dart-mode/impl
+# -*- mode: snippet -*-
+# name: impl
+# key: impl
+# --
+implements ${1:Name}$0

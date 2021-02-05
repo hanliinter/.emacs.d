@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/emacs-lisp-mode/forward-char
+# -*- mode: snippet -*-
+# contributor: Xah Lee (XahLee.org)
+# name: forward-char
+# key: forward-char
+# key: fc
+# --
+(forward-char $0)

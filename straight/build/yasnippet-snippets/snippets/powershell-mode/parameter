@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/powershell-mode/parameter
+# -*- mode: snippet -*-
+# name: parameter
+# key: par
+# --
+[Parameter(Mandatory=$true, ValueFromPipelineByPropertyName=$true)][string]\$${1:Foobar}

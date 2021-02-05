@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/python-mode/assert
+# -*- mode: snippet -*-
+# name: assert
+# key: ass
+# group: testing
+# --
+assert $0

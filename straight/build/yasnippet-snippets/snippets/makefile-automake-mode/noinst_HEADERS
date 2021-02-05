@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/makefile-automake-mode/noinst_HEADERS
+# -*- mode: snippet -*-
+# name: noinst_HEADERS
+# key: noinst
+# --
+noinst_HEADERS = $0

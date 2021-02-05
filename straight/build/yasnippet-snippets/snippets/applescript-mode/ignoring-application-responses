@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/applescript-mode/ignoring-application-responses
+# -*- mode: snippet -*-
+# name: ignoring-application-responses
+# --
+ignoring application responses
+$0
+end ignoring

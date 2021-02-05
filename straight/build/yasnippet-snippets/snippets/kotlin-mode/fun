@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/kotlin-mode/fun
+# -*- mode: snippet -*-
+# name: Function with no parameters
+# key: fun0
+# --
+fun $1($2): $3 {
+    $0
+}

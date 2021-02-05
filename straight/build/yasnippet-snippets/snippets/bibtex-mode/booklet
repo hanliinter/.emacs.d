@@ -1,1 +1,15 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/bibtex-mode/booklet
+# -*- mode: snippet -*-
+# name: booklet
+# key: booklet
+# --
+@booklet{ ${title},
+  author       = {${author}}${,
+  howpublished = {${howpublished}}}${,
+  address      = {${address}}}${,
+  year         = {${year}}}${,
+  month        = {${month}}}${,
+  volume       = {${volume}}}${,
+  note         = {${note}}}
+}
+
+$0

@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/rst-mode/module
+# -*- mode: snippet -*-
+# name: module
+# key: mod
+# --
+:mod: \`$0\`

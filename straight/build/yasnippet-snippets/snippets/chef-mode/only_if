@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/chef-mode/only_if
+# -*- mode: snippet -*-
+# name: only_if
+# key: only_if
+# --
+only_if "${1}"

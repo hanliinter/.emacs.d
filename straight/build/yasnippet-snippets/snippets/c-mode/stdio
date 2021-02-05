@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c-mode/stdio
+# -*- mode: snippet -*-
+# name: stdio
+# key: io
+# --
+#include <stdio.h>

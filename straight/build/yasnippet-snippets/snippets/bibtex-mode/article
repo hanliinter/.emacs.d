@@ -1,1 +1,17 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/bibtex-mode/article
+# -*- mode: snippet -*-
+# name: article
+# key: article
+# --
+@article{ ${title},
+  author  = {${author}},
+  title   = {${title}},
+  journal = {${journal}},
+  year    = {${year}}${,
+  volume  = {${volume}}}${,
+  number  = {${number}}}${,
+  pages   = {${pages}}}${,
+  month   = {${month}}}${,
+  note    = {${note}}}
+}
+
+$0

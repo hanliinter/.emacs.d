@@ -1,1 +1,11 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/f90-mode/program
+# -*- mode: snippet -*-
+# contributor: Jonas Kalderstam <jonas@kalderstam.se>
+# name: program .. end program
+# key: program
+# --
+program ${1:name}
+  ${2:implicit none}
+
+  $0
+
+end program $1

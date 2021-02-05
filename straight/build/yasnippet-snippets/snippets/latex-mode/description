@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/latex-mode/description
+# -*- mode: snippet -*-
+# name: description
+# key: desc
+# --
+\begin{description}
+\item[$1] $0
+\end{description}

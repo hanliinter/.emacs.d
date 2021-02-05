@@ -1,1 +1,8 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/rjsx-mode/React/ptndr
+# -*- mode: snippet -*-
+# uuid: 2d93109e-3916-42b5-afda-692d0ea2e784
+# contributor: Jimmy Yuen Ho Wong <wyuenho@gmail.com>
+# name: propTypeNodeRequired
+# key: ptndr
+# --
+
+PropTypes.node.isRequired,

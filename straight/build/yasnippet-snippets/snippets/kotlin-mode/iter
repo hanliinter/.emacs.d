@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/kotlin-mode/iter
+# -*- mode: snippet -*-
+# name: Iterate over elements of iterable (for-in) loop
+# key: iter
+# --
+for ($1 in $2) {
+    $0
+}

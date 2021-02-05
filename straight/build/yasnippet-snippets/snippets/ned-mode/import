@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/ned-mode/import
+# -*- mode: snippet -*-
+# name: import
+# key: imp
+# --
+import ned.${1:Package};

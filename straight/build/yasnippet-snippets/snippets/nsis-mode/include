@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/nsis-mode/include
+# -*- mode: snippet -*-
+# name: include
+# key: inc
+# --
+!include "${Library.nsh}"

@@ -1,1 +1,10 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c++-mode/operator+=
+# -*- mode: snippet -*-
+# name: operator+=
+# key: +=
+# group: operator overloading
+# --
+${1:Name}& $1::operator+=(${2:const $1 &rhs})
+{
+  $0
+  return *this;
+}

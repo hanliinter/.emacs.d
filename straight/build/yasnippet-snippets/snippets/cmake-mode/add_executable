@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/cmake-mode/add_executable
+# -*- mode: snippet -*-
+# name: add_executable
+# key: exe
+# --
+add_executable($1 ${2:main.cpp})
+target_link_libraries($1 $3)

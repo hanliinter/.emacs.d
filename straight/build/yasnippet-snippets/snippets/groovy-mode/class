@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/groovy-mode/class
+# -*- mode: snippet -*-
+# name: class
+# key: class
+# --
+class ${1:Class} {
+      $0
+}

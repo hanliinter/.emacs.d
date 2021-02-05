@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/makefile-bsdmake-mode/var
+# -*- mode: snippet -*-
+# name: var
+# key: $
+# --
+$(${1:VAR})$0

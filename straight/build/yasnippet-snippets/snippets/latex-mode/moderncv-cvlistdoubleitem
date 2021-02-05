@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/latex-mode/moderncv-cvlistdoubleitem
+# -*- mode: snippet -*-
+# name: moderncv-cvlistdoubleitem
+# key: cvditem
+# --
+\cvlistdoubleitem{${1:item}}{${2:item}}
+$0

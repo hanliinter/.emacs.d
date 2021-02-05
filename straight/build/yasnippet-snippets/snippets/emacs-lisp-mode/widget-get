@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/emacs-lisp-mode/widget-get
+# -*- mode: snippet -*-
+# contributor: Xah Lee (XahLee.org)
+# name: widget-get
+# key: widget-get
+# key: wg
+# --
+(widget-get $0)

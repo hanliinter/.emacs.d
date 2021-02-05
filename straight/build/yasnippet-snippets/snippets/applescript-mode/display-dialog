@@ -1,1 +1,4 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/applescript-mode/display-dialog
+# -*- mode: snippet -*-
+# name: display-dialog
+# --
+display dialog "$0"

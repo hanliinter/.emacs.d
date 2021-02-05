@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c++-mode/phh
+# -*- mode: snippet -*-
+# name: push_heap
+# key: phh
+# --
+std::push_heap(std::begin(${1:container}), std::end($1));
+$0

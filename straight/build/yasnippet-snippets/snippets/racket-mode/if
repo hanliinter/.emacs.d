@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/racket-mode/if
+# -*- mode: snippet -*-
+# name: (if ... ... ...)
+# key: if
+# --
+(if ${1:(${2:predicate})}
+    $0)

@@ -1,1 +1,11 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/makefile-bsdmake-mode/gen
+# -*- mode: snippet -*-
+# name: gen
+# key: gen
+# possibly add some smart control over the list
+# --
+all: ${1:targets}
+
+$0
+
+clean:
+        ${2:clean actions}

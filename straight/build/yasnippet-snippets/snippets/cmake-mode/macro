@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/cmake-mode/macro
+# -*- mode: snippet -*-
+# name: macro
+# key: macro
+# --
+macro(${1:name}${2: args})
+        $2
+endmacro($1)$0

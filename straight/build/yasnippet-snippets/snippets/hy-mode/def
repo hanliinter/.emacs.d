@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/hy-mode/def
+# -*- mode: snippet -*-
+# name: def
+# key: def
+# binding: direct-keybinding
+# --
+(defn ${1:function-name} [${2:arg}]
+  $0)

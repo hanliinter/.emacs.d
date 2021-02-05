@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/haskell-mode/function
+# -*- mode: snippet -*-
+# name: fun
+# key: fun
+# expand-env: ((yas-indent-line 'fixed))
+# --
+${1:function-name} :: ${2:type}
+$1 ${3:arguments} $0

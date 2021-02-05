@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/terraform-mode/output
+# -*- mode: snippet -*-
+# name: output
+# key: output
+# --
+output "${1:name}" {
+  value = ${2:value}
+}

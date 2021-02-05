@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/elixir-mode/receive
+## -*- mode: snippet -*-
+# name: receive
+# key: rcv
+# --
+receive do
+  $0
+end

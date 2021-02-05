@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/dix-mode/call-macro
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: <call-macro>
+# key: m
+# condition: (progn (backward-char 1) (dix-transfer-enclosing-allows "call-macro"))
+# binding: direct-keybinding
+# --
+<call-macro n="$1"><with-param pos="$2"/>$0</call-macro>

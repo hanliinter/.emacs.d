@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/crystal-mode/select
+# -*- mode: snippet -*-
+# name: select { |...| ... }
+# key: select
+# group : collections
+# --
+select { |${1:element}| $0 }

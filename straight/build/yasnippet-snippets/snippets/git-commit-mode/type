@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/git-commit-mode/type
+# -*- mode: snippet -*-
+# name: type
+# key: type
+# --
+${1:$$(yas-choose-value '("fix" "hotfix" "add" "update" "change" "clean" "disable" "remove" "upgrade" "revert"))} $0

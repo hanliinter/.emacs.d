@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/emacs-lisp-mode/with-current-buffer
+# -*- mode: snippet -*-
+# contributor: Xah Lee (XahLee.org)
+# name: with-current-buffer
+# key: with-current-buffer
+# key: wcb
+# --
+(with-current-buffer $0)

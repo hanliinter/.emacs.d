@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/ruby-mode/collect
+# -*- mode: snippet -*-
+# name: collect { |...| ... }
+# group : collections
+# --
+collect { |${e}| $0 }

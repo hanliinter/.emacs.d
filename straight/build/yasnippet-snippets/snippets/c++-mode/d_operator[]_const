@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c++-mode/d_operator[]_const
+# -*- mode: snippet -*-
+# name: d_operator[]_const
+# key: c[
+# --
+const ${1:Name}& operator[](${2:int index}) const;

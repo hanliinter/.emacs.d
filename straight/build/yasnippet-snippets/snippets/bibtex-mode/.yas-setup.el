@@ -1,1 +1,4 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/bibtex-mode/.yas-setup.el
+(require 'yasnippet)
+(require 'yasnippet-snippets)
+
+(add-hook 'bibtex-mode-hook #'yasnippet-snippets--no-indent)

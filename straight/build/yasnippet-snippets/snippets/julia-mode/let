@@ -1,1 +1,9 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/julia-mode/let
+# -*- mode: snippet -*-
+# name: let ... ... end
+# key: let
+# contributor: hankail05
+# --
+let ${1:x = 0}
+    ${2:body}
+end
+$0

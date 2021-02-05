@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/fundamental-mode/current-date
+# -*- mode: snippet -*-
+# name: current-date
+# key: dd
+# contributor : Kristof Molnar-Tatai <kristof.mlnr@gmail.com>
+# --
+`(format-time-string "%Y-%m-%d")`

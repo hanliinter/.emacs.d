@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/python-mode/assertTrue
+# -*- mode: snippet -*-
+# name: assertTrue
+# key: at
+# group: testing
+# --
+self.assertTrue($0)

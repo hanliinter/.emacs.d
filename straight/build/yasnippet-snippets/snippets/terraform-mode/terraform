@@ -1,1 +1,9 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/terraform-mode/terraform
+# -*- mode: snippet -*-
+# name: terraform
+# key: tf
+# --
+terraform {
+  backend "${1:backend}" {
+    $0
+  }
+}

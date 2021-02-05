@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/vhdl-mode/signal
+# -*- mode: snippet -*-
+# name: signal
+# key: signal
+# --
+signal ${1:Names}: ${2:Type};

@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/faust-mode/tgroup
+# -*- mode: snippet -*-
+# name: tgroup
+# key: tg
+# --
+tgroup("${1:name}", ${2:expression})$0

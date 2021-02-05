@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/rust-mode/whilel
+# -*- mode: snippet -*-
+# name: while let pattern = expression { ... }
+# key: whilel
+# --
+while let ${1:pattern} = ${2:expression} {
+      $0
+}

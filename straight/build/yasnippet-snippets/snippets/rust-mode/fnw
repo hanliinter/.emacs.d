@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/rust-mode/fnw
+# -*- mode: snippet -*-
+# name: fn name<T>(x: T) where T: Clone { ... }
+# key: fnw
+# --
+fn ${1:name}<${2:T}>(${3:x: T}) where ${4:T: Clone} {
+     $0
+}

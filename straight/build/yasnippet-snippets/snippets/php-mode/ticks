@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/php-mode/ticks
+# -*- mode: snippet -*-
+# contributor: USAMI Kenta <tadsan@zonu.me>
+# name: declare(ticks=)
+# key: ticks
+# group: definitions
+# --
+declare(ticks=${1:1});

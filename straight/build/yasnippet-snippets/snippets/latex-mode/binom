@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/latex-mode/binom
+# -*- mode: snippet -*-
+# name: binom
+# key: binom
+# --
+\binom{${1:n}}{${2:k}}$0

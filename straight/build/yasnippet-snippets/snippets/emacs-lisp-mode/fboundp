@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/emacs-lisp-mode/fboundp
+# -*- mode: snippet -*-
+# contributor: Xah Lee (XahLee.org)
+# name: fboundp
+# key: fboundp
+# --
+(fboundp '$0)

@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/nesc-mode/uint8_t
+# -*- mode: snippet -*-
+# name: uint8_t
+# key: u8
+# --
+uint8_t ${1:var};
+$0

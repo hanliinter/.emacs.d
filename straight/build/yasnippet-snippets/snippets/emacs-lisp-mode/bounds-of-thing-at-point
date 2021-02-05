@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/emacs-lisp-mode/bounds-of-thing-at-point
+# -*- mode: snippet -*-
+# contributor: Xah Lee (XahLee.org)
+# name: bounds-of-thing-at-point
+# key: bounds-of-thing-at-point
+# key: botap
+# --
+(bounds-of-thing-at-point $0)

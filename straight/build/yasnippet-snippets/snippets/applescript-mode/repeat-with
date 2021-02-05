@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/applescript-mode/repeat-with
+# -*- mode: snippet -*-
+# name: repeat-with
+# --
+repeat with $1
+$0
+end repeat

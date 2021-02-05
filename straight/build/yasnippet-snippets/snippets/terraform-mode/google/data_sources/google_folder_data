@@ -1,1 +1,9 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/terraform-mode/google/data_sources/google_folder_data
+# -*- mode: snippet -*-
+# name: google_folder_data
+# key: goog_folder_data
+# --
+
+data "google_folder" "${1:name}" {
+  folder = "${2:folder}"
+}
+

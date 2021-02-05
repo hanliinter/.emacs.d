@@ -1,1 +1,11 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/d-mode/struct
+# -*- mode: snippet -*-
+# name: struct … { … }
+# key: struct
+# --
+/++
+ + $1
+ +/
+struct ${1:StructName}
+{
+	$0
+}

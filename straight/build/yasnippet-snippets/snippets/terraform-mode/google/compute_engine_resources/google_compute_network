@@ -1,1 +1,9 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/terraform-mode/google/compute_engine_resources/google_compute_network
+# -*- mode: snippet -*-
+# name: google_compute_network
+# key: goog_compute_network
+# --
+
+resource "google_compute_network" "${1:name}" {
+  name = "${2:name}"
+}
+

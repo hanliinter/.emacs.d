@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/makefile-gmake-mode/make
+# -*- mode: snippet -*-
+# name: make
+# contributor: gbalats
+# key: make
+# --
+\$(MAKE) --directory=${1:\$@}
+$0

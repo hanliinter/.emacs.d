@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/latex-mode/glspl
+# -*- mode: snippet -*-
+# name: glspl
+# key: gp
+# --
+\glspl{${1:label}}

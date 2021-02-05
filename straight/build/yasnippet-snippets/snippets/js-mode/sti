@@ -1,1 +1,10 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/js-mode/sti
+# -*- mode: snippet -*-
+# uuid: 596c0e05-ee02-4d02-85e0-64252296629d
+# contributor: Jimmy Yuen Ho Wong <wyuenho@gmail.com>
+# name: setInterval
+# key: sti
+# --
+
+setInterval(() => {
+  ${2}
+}, ${0:intervalInms})

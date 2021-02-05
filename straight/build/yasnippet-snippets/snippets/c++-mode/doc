@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c++-mode/doc
+# -*- mode: snippet -*-
+# name: doc
+# key: doc
+# --
+/**
+ * $0
+ */

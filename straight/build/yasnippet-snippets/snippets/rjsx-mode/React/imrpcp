@@ -1,1 +1,9 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/rjsx-mode/React/imrpcp
+# -*- mode: snippet -*-
+# uuid: b3d7bbf4-ad54-43c2-84d6-12448dc9f00b
+# contributor: Jimmy Yuen Ho Wong <wyuenho@gmail.com>
+# name: import React, { PureComponent } & PropTypes
+# key: imrpcp
+# --
+
+import React, { PureComponent } from 'react'
+import PropTypes from 'prop-types'

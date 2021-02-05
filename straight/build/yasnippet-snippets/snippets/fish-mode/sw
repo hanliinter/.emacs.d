@@ -1,1 +1,8 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/fish-mode/sw
+# -*- mode: snippet -*-
+# name: switch
+# key: sw
+# --
+switch ${1:condition}
+    case ${2:*}
+         ${0}
+end

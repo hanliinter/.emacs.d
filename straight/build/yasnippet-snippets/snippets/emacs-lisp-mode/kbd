@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/emacs-lisp-mode/kbd
+# -*- mode: snippet -*-
+# contributor: Xah Lee (XahLee.org)
+# name: kbd
+# key: kbd
+# --
+(kbd "$0")

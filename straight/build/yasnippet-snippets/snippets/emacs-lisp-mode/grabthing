@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/emacs-lisp-mode/grabthing
+# -*- mode: snippet -*-
+# name: grab word under cursor
+# contributor : Xah Lee
+# --
+(setq $0 (thing-at-point 'symbol))

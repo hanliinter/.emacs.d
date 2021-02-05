@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/chef-mode/retries
+# -*- mode: snippet -*-
+# name: retries
+# key: retries
+# --
+retries ${1:1}
+retry_delay ${2:2}

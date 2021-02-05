@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/emacs-lisp-mode/match-string
+# -*- mode: snippet -*-
+# contributor: Xah Lee (XahLee.org)
+# name: match-string
+# key: match-string
+# key: ms
+# --
+(match-string $0)

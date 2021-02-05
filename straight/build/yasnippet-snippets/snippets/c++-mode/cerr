@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c++-mode/cerr
+# -*- mode: snippet -*-
+# name: cerr
+# key: err
+# --
+cerr << $0;

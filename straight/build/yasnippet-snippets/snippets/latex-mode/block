@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/latex-mode/block
+# -*- mode: snippet -*-
+# name: block
+# key: bl
+# --
+\begin{block}{$1}
+        $0
+\end{block}

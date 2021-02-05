@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/emacs-lisp-mode/aset
+# -*- mode: snippet -*-
+# contributor: Xah Lee (XahLee.org)
+# name: aset
+# key: aset
+# --
+(aset ${1:array} ${2:index} ${3:element})

@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/lisp-mode/if
+# -*- mode: snippet -*-
+# name: if
+# key: if
+# --
+(when (${1:condition})
+      (${2:then-do-this}))
+$0

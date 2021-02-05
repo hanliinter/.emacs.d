@@ -1,1 +1,9 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/bazel-mode/cct
+# -*- mode: snippet -*-
+# name: cc_test
+# key: cct
+# --
+cc_test(
+    name = "$0"
+    srcs = ["$1"],
+    deps = ["$2"]
+)

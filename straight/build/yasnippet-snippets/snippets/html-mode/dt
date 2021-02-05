@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/html-mode/dt
+# -*- mode: snippet -*-
+# contributor : Rodrigo Setti <rodrigosetti@gmail.com>
+# name: <dt> ... </dt>
+# group : list
+# --
+<dt>$1</dt>

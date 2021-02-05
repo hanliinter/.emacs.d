@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/cmake-mode/project
+# -*- mode: snippet -*-
+# name: project
+# key: proj
+# --
+project($0)

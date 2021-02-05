@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/js-mode/each
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: each
+# --
+${1:collection}.forEach(function (${2:elem}) {
+  $0
+});

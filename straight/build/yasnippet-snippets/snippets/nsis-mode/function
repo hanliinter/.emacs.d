@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/nsis-mode/function
+# -*- mode: snippet -*-
+# name: function
+# key: fun
+# --
+Function ${1:Name}
+         $0
+FunctionEnd

@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/reason-mode/switch
+# -*- mode: snippet -*-
+# name: switch
+# key: switch
+# --
+switch (${1:to_match}) {
+| ${2:matching} => $0
+}

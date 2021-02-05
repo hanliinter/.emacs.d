@@ -1,1 +1,4 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/js-mode/al
+# -*- mode: snippet -*-
+# name: alert
+# --
+alert($0);

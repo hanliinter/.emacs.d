@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/erlang-mode/def
+# -*- mode: snippet -*-
+# name: -define(...,...).
+# --
+-define($1,$2).
+$0

@@ -1,1 +1,10 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/fish-mode/ife
+# -*- mode: snippet -*-
+# name: if ... ... else ... end
+# key: ife
+# --
+if ${1:cond}
+    ${2:stuff}
+else
+    ${3:other}
+end
+$0

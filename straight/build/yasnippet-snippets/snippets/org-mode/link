@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/org-mode/link
+# -*- mode: snippet -*-
+# name: link
+# key: <li
+# --
+[[${1:link}][${2:description}]]

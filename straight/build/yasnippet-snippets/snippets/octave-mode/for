@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/octave-mode/for
+# -*- mode: snippet -*-
+# name: for
+# key: for
+# --
+for ${1:var} = ${2:expr}
+    $0
+endfor

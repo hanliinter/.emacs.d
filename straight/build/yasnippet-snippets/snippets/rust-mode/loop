@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/rust-mode/loop
+# -*- mode: snippet -*-
+# name: loop { ... }
+# key: loop
+# --
+loop {
+     $0
+}

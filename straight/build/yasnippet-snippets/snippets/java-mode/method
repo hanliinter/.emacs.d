@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/java-mode/method
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: method
+# key: m
+# --
+${1:$$(yas-choose-value '("public" "private" "protected" ""))} ${2:void} ${3:name}(${4:args}) {
+            $0
+}

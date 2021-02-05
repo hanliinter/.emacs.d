@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/snippet-mode/elisp
+# -*- mode: snippet -*-
+# name: elisp
+# key: `
+# --
+\`$0\`

@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/vhdl-mode/constant
+# -*- mode: snippet -*-
+# name: constant
+# key: const
+# --
+constant ${1:Name}: ${2:Type} := ${3:Value};

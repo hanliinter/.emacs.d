@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/scala-mode/case
+# -*- mode: snippet -*-
+#Author : Jonas Bonèr <jonas@jonasboner.com>
+# name: case pattern =>
+# key: case
+# --
+case ${1:_} => $0

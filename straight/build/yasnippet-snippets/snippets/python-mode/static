@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/python-mode/static
+# -*- mode: snippet -*-
+# name: static
+# key: sm
+# --
+@staticmethod
+def ${1:func}($0):

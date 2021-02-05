@@ -1,1 +1,10 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/bazel-mode/ccl
+# -*- mode: snippet -*-
+# name: cc_library
+# key: ccl
+# --
+cc_library(
+    name = "$0",
+    srcs = ["$1"],
+    hdrs = ["$2"],
+    deps = ["$3"]
+)

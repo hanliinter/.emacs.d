@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/java-mode/toString
+# -*- mode: snippet -*-
+# name: toString
+# key: toStr
+# --
+public String toString() {
+       $0
+}

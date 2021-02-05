@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/emacs-lisp-mode/skip-chars-forward
+# -*- mode: snippet -*-
+# contributor: Xah Lee (XahLee.org)
+# name: skip-chars-forward
+# key: skip-chars-forward
+# key: scf
+# --
+(skip-chars-forward "${1:string}"${2: lim})

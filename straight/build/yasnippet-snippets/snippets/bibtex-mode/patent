@@ -1,1 +1,15 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/bibtex-mode/patent
+# -*- mode: snippet -*-
+# name: patent
+# key: patent
+# author: Spenser Truex
+# --
+@patent{ ${title},
+  title  = {${title}},
+  author = {${author}},
+  number = {${number}},
+  year   = {${year}},
+  holder = {${holder}}${,
+  type   = {${type}}}${,
+  url    = {${url}}}${,
+  note   = {${note}}}
+}

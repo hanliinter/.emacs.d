@@ -1,1 +1,10 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c++-mode/alo
+# -*- mode: snippet -*-
+# name: all_of
+# key: alo
+# --
+if (std::all_of(std::begin(${1:container}), std::end($1), []($2) {
+  $3
+})) {
+  $4
+}
+$0

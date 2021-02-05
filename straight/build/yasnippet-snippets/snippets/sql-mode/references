@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/sql-mode/references
+# -*- mode: snippet -*-
+# contributor : Alejandro Espinoza Esparza <aespinoza@structum.com.mx>
+# name: REFERENCES ...
+# --
+REFERENCES ${1:TableName}([${2:ColumnName}])

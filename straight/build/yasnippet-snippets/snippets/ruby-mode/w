@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/ruby-mode/w
+# -*- mode: snippet -*-
+# name: attr_writer ...
+# group : definitions
+# --
+attr_writer :

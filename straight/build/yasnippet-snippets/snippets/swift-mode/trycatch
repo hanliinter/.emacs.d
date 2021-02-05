@@ -1,1 +1,11 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/swift-mode/trycatch
+# -*- mode: snippet -*-
+# name: trycatch
+# key: trycatch
+# --
+do {
+    try $1
+} catch $2 {
+    $3
+} catch $4 {
+    $5
+}

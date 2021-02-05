@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/go-mode/dd
+# -*- mode: snippet -*-
+# name: debug fmt.Printf
+# key: dd
+# --
+fmt.Printf("%+v\n", $1) // output for debug
+$0

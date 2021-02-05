@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/org-mode/verse
+# -*- mode: snippet -*-
+# name: verse
+# key: <v
+# --
+#+begin_verse
+$0
+#+end_verse

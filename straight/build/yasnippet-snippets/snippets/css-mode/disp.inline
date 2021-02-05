@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/css-mode/disp.inline
+# -*- mode: snippet -*-
+# contributor : rejeep <johan.rejeep@gmail.com>
+# name: display: inline
+# --
+display: inline;

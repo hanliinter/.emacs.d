@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/python-mode/embed
+# -*- mode: snippet -*-
+# name: embed
+# key: embed
+# --
+from IPython import embed; embed()

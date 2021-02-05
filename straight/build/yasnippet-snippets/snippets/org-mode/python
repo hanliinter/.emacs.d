@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/org-mode/python
+# -*- mode: snippet -*-
+# name: python
+# key: py_
+# --
+#+begin_src python
+$0
+#+end_src

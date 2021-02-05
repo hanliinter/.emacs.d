@@ -1,1 +1,8 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/hy-mode/ifn
+# -*- mode: snippet -*-
+# name:ifn
+# key:ifn
+# binding: direct-keybinding
+# --
+(if-not ${1:condition}
+  ${2:result-false}
+  ${3:result-true})

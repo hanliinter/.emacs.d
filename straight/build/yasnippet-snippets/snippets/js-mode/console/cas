@@ -1,1 +1,9 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/js-mode/console/cas
+# -*- mode: snippet -*-
+# uuid: b845ab40-1e04-4d11-bb0c-14266e733945
+# contributor: Jimmy Yuen Ho Wong <wyuenho@gmail.com>
+# name: console.assert
+# key: cas
+# group: console
+# --
+
+console.assert(${1:expression}, ${2:object})

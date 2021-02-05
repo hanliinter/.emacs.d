@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/faust-mode/component
+# -*- mode: snippet -*-
+# name: component
+# key: co
+# --
+component("$1.dsp")$0

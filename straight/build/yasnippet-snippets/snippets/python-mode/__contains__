@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/python-mode/__contains__
+# -*- mode: snippet -*-
+# name: __contains__
+# key: cont
+# group: dunder methods
+# --
+def __contains__(self, el):
+    $0

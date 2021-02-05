@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/tuareg-mode/list_comprehension
+# -*- mode: snippet -*-
+# name: list_comprehension
+# key: l
+# --
+[? $1 | $0 ?]

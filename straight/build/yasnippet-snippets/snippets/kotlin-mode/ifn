@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/kotlin-mode/ifn
+# -*- mode: snippet -*-
+# name: Inserts 'if null' expression
+# key: ifn
+# --
+if ($1 == null) {
+   $0
+}

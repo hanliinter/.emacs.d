@@ -1,1 +1,9 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/terraform-mode/google/iot_core/google_cloudiot_registry
+# -*- mode: snippet -*-
+# name: google_cloudiot_registry
+# key: goog_cloudiot_registry
+# --
+
+resource "google_cloudiot_registry" "${1:name}" {
+  name = "${2:name}"
+}
+

@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/latex-mode/usepackage
+# -*- mode: snippet -*-
+# name: usepackage
+# key: pkg
+# --
+\usepackage{$0}

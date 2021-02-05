@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/rust-mode/static
+# -*- mode: snippet -*-
+# name: CONSTANT: Type = value;
+# key: static
+# --
+static ${1:CONSTANT}: ${2:Type} = ${3:value};

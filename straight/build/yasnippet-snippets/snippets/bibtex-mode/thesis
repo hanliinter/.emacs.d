@@ -1,1 +1,17 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/bibtex-mode/thesis
+# -*- mode: snippet -*-
+# name: thesis
+# key: thesis
+# author: Spenser Truex
+# --
+@thesis{ ${title},
+author  = {${author}},
+title   = {${title}},
+school  = {${school}},
+year    = {${year}}${,
+type    = {${type}}}${,
+address = {${address}}}${,
+month   = {${month}}}${,
+note    = {${note}}}
+}
+
+$0

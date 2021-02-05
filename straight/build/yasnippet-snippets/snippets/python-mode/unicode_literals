@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/python-mode/unicode_literals
+# -*- mode: snippet -*-
+# name: unicode_literals
+# key: fu
+# group: future
+# --
+from __future__ import unicode_literals

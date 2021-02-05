@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/org-mode/video
+# -*- mode: snippet -*-
+# name: video
+# key: <vi
+# --
+
+[[${1:link of the video}][file:${2:link of the image}]

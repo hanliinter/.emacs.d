@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/makefile-bsdmake-mode/PHONY
+# -*- mode: snippet -*-
+# name: PHONY
+# key: phony
+# --
+.PHONY: $0

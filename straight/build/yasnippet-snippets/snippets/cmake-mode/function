@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/cmake-mode/function
+# -*- mode: snippet -*-
+# name: function
+# key: fun
+# --
+function(${1:name})
+         $2
+endfunction($1)$0

@@ -1,1 +1,8 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/go-mode/forrange
+# -*- mode: snippet -*-
+# name: for range
+# key: range
+# contributor : @atotto
+# --
+for ${3:key}, ${2:value} := range ${1:target} {
+	$0
+}

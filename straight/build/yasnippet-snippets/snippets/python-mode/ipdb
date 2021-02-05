@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/python-mode/ipdb
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: ipdb trace
+# key: ipdb
+# group: debug
+# --
+import ipdb; ipdb.set_trace()

@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/nxml-mode/tag
+# -*- mode: snippet -*-
+# contributor : Anders Bach Nielsen <abachn@abachn.net>
+# name: <tag>...</tag>
+# key: t
+# --
+<${1:tag}>$2</$1>$0

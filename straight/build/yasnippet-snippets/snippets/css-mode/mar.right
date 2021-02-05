@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/css-mode/mar.right
+# -*- mode: snippet -*-
+# contributor : rejeep <johan.rejeep@gmail.com>
+# name: margin-right: ...
+# --
+margin-right: $1;

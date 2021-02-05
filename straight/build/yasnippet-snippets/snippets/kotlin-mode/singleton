@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/kotlin-mode/singleton
+# -*- mode: snippet -*-
+# name: Singleton
+# key: singleton
+# --
+object $1 {
+    $0
+}

@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/snippet-mode/field
+# -*- mode: snippet -*-
+# name: ${ ...  } field
+# contributor : joaotavora
+# key: $f
+# key: field
+# --
+\${${1:${2:n}:}$3${4:\$(${5:lisp-fn})}\}$0

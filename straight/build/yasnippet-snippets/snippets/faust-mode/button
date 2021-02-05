@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/faust-mode/button
+# -*- mode: snippet -*-
+# name: button
+# key: bu
+# --
+button("$1")$0

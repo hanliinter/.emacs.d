@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/faust-mode/declarename
+# -*- mode: snippet -*-
+# name: declare name
+# key: dn
+# --
+declare name "$1";
+$0

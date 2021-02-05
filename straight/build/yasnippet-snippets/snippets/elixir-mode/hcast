@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/elixir-mode/hcast
+# -*- mode: snippet -*-
+# name: hcast
+# key: hcast
+# --
+def handle_cast($1, ${2:state}) do
+  $0
+end

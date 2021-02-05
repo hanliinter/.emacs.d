@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/emacs-lisp-mode/memq
+# -*- mode: snippet -*-
+# contributor: Xah Lee (XahLee.org)
+# name: memq
+# key: memq
+# --
+(memq ${1:element} ${2:list})

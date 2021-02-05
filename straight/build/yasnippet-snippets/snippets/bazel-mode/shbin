@@ -1,1 +1,9 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/bazel-mode/shbin
+# -*- mode: snippet -*-
+# name: sh_binary
+# key: shbin
+# --
+sh_binary(
+    name = "$0",
+    srcs = "$1",
+    data = "$2"
+)

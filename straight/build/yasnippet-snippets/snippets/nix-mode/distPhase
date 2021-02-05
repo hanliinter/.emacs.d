@@ -1,1 +1,8 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/nix-mode/distPhase
+# -*- mode: snippet -*-
+# name: distPhase
+# key: dp
+# --
+distPhase= ''
+$1
+'';
+$0

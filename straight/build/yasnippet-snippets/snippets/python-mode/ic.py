@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/python-mode/ic.py
+# -*- mode: snippet -*-
+# name: ic
+# key: ic
+# --
+from icecream import ic
+ic($1)

@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/elixir-mode/pry
+# -*- mode: snippet -*-
+# name: pry
+# key: pry
+# group: debug
+# --
+require IEx; IEx.pry

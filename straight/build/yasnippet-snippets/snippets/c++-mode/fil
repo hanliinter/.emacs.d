@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c++-mode/fil
+# -*- mode: snippet -*-
+# name: fill
+# key: fil
+# --
+std::fill(std::begin(${1:container}), std::end($1), $2);
+$0

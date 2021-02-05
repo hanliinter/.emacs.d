@@ -1,1 +1,10 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/terraform-mode/google/compute_engine_resources/google_compute_instance_from_template
+# -*- mode: snippet -*-
+# name: google_compute_instance_from_template
+# key: goog_compute_instance_from_template
+# --
+
+resource "google_compute_instance_from_template" "${1:name}" {
+  name                     = "${2:name}"
+  source_instance_template = "${3:template}"
+}
+

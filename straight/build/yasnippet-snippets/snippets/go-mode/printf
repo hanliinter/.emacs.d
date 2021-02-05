@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/go-mode/printf
+# -*- mode: snippet -*-
+# name: fmt.Printf(...)
+# key: pr
+# --
+fmt.Printf("${1:%s}\n", ${2:args})
+$0

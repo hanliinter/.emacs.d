@@ -1,1 +1,10 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/php-mode/__callStatic
+# -*- mode: snippet -*-
+# contributor: USAMI Kenta <tadsan@zonu.me>
+# name: __callStatic()
+# key: __callStatic
+# group: Magic Methods
+# --
+public function __callStatic($name, $args)
+{
+    $0
+}

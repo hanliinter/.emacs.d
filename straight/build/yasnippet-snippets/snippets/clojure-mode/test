@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/clojure-mode/test
+# -*- mode: snippet -*-
+# name: test
+# key: test
+# --
+(deftest $1
+  (is (= $2))$>
+  $0)$>

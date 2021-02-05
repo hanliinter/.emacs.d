@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c-mode/compile
+# -*- mode: snippet -*-
+# name: compile
+# key: compile
+# --
+// -*- compile-command: "${1:gcc -Wall -o ${2:dest} ${3:file}}" -*-

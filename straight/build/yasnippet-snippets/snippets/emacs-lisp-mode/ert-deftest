@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/emacs-lisp-mode/ert-deftest
+# -*- mode: snippet -*-
+# contributor: Raghav Kumar Gautam
+# name: ert-deftest
+# key: edt
+# --
+(ert-deftest ${1:test-name} ()
+  $0)

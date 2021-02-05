@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/dix-mode/otherwise
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: <otherwise> elements
+# key: o
+# condition: (progn (backward-char 1) (dix-transfer-enclosing-allows "otherwise"))
+# binding: direct-keybinding
+# --
+<otherwise>$0</otherwise>

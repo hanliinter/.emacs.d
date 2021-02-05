@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/hy-mode/defm
+# -*- mode: snippet -*-
+# name:defm
+# key:defm
+# binding: direct-keybinding
+# --
+(defmacro ${1:macro-name} [${2:arg}]
+  ${3:`($0)})

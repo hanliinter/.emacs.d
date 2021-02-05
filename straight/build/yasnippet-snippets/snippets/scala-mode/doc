@@ -1,1 +1,9 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/scala-mode/doc
+# -*- mode: snippet -*-
+#Author : Anders Bach Nielsen <andersbach.nielsen@epfl.ch>
+# name: /** ... */
+# key: doc
+# --
+/**
+ * ${1:description}
+ * $0
+ */

@@ -1,1 +1,8 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/rjsx-mode/React/fref
+# -*- mode: snippet -*-
+# uuid: 77cf7d01-d7db-40c5-856f-4fbd79a3f1d7
+# contributor: Jimmy Yuen Ho Wong <wyuenho@gmail.com>
+# name: forwardRef
+# key: fref
+# --
+
+const ref = React.createRef()

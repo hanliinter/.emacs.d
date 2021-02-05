@@ -1,1 +1,14 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/bibtex-mode/manual
+# -*- mode: snippet -*-
+# name: manual
+# key: manual
+# --
+@manual{ ${title},
+  title        = {${title}}${,
+  author       = {${author}}}${,
+  organization = {${organization}}}${,
+  address      = {${address}}}${,
+  editor       = {${editor}}}${,
+  month        = {${month}}}${,
+  year         = {${year}}}${,
+  note         = {${note}}}
+}

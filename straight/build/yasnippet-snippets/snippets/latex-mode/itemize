@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/latex-mode/itemize
+# -*- mode: snippet -*-
+# name: itemize
+# key: it
+# --
+\begin{itemize}
+\item $0
+\end{itemize}

@@ -1,1 +1,12 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/python-mode/test_file
+# -*- mode: snippet -*-
+# name: test_file
+# key: tf
+# group : testing
+# --
+import unittest
+${1:from ${2:test_file} import *}
+
+$0
+
+if __name__ == '__main__':
+    unittest.main()

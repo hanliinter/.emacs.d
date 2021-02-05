@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/makefile-bsdmake-mode/if
+# -*- mode: snippet -*-
+# name: if
+# key: if
+# --
+@if [ ${1:cond} ]
+    then $0
+fi

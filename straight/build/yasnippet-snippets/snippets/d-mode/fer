@@ -1,1 +1,8 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/d-mode/fer
+# -*- mode: snippet -*-
+# name: foreach_reverse (e ; …) { … }
+# key: fer
+# --
+foreach_reverse (${1:e} ; $2)
+{
+	$0
+}

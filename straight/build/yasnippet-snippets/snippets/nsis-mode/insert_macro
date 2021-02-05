@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/nsis-mode/insert_macro
+# -*- mode: snippet -*-
+# name: insert_macro
+# key: im
+# --
+!insertmacro ${1:Name} ${2:"args"}

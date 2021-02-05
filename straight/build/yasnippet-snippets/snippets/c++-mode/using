@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c++-mode/using
+# -*- mode: snippet -*-
+# name: using namespace ...
+# key: using
+# --
+using namespace ${std};
+$0

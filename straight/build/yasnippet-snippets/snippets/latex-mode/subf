@@ -1,1 +1,8 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/latex-mode/subf
+# -*- mode: snippet -*-
+# name: subf
+# key: sf
+# --
+\subfigure[${1:caption}]{
+  \label{fig:${2:label}}
+  \includegraphics[width=.${3:3}\textwidth]{${4:path}}}
+$0

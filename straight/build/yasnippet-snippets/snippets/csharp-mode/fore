@@ -1,1 +1,9 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/csharp-mode/fore
+# -*- mode: snippet -*-
+# contributor : Jostein Kjønigsen <jostein@kjonigsen.net>
+# name: foreach { ... }
+# key: fore
+# --
+foreach (${1:var} ${2:item} in ${3:list})
+{
+    $0
+}

@@ -1,1 +1,10 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/rjsx-mode/React/ptet
+# -*- mode: snippet -*-
+# uuid: fffe178e-0de7-4cd0-b3a0-b9d6679738d7
+# contributor: Jimmy Yuen Ho Wong <wyuenho@gmail.com>
+# name: propTypeOneOfType
+# key: ptet
+# --
+
+PropTypes.oneOfType([
+  $0
+]),

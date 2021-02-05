@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/emacs-lisp-mode/custom-autoload
+# -*- mode: snippet -*-
+# contributor: Xah Lee (XahLee.org)
+# name: custom-autoload
+# key: custom-autoload
+# key: ca
+# --
+(custom-autoload ${1:symbol} ${2:load}${3: noset})

@@ -1,1 +1,11 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/terraform-mode/google/storage_resources/google_storage_default_object_access_control
+# -*- mode: snippet -*-
+# name: google_storage_default_object_access_control
+# key: goog_storage_default_object_access_control
+# --
+
+resource "google_storage_default_object_access_control" "${1:name}" {
+  bucket = "${2:bucket}"
+  role   = "${3:role}"
+  entity = "${4:entity}"
+}
+

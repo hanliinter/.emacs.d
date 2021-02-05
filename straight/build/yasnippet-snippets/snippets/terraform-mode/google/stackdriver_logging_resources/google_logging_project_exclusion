@@ -1,1 +1,10 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/terraform-mode/google/stackdriver_logging_resources/google_logging_project_exclusion
+# -*- mode: snippet -*-
+# name: google_logging_project_exclusion
+# key: goog_logging_project_exclusion
+# --
+
+resource "google_logging_project_exclusion" "${1:name}" {
+  name   = "${2:name}"
+  filter = "${3:filter}"
+}
+

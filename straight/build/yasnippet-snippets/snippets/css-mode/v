@@ -1,1 +1,10 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/css-mode/v
+# -*- mode: snippet -*-
+# name: -vendor-prefix
+# contributor: Prateek Saxena
+# key: -v
+# --
+$1: $2;
+-webkit-$1: $2;
+-moz-$1: $2;
+-ms-$1: $2;
+-o-$1: $2;

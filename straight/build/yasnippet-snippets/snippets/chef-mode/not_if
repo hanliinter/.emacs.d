@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/chef-mode/not_if
+# -*- mode: snippet -*-
+# name: not_if
+# key: not_if
+# --
+not_if "${1}"

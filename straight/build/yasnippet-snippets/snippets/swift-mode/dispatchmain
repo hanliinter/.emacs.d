@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/swift-mode/dispatchmain
+# -*- mode: snippet -*-
+# name: dispatchMain
+# key: dispatchMain
+# --
+DispatchQueue.main.async(execute: { () -> Void in
+    $0
+})

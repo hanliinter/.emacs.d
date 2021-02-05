@@ -1,1 +1,8 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/rjsx-mode/GraphQL/graphql
+# -*- mode: snippet -*-
+# uuid: 1a3750bd-8108-40f5-92b4-f0730272815c
+# contributor: Jimmy Yuen Ho Wong <wyuenho@gmail.com>
+# name: graphQLForComponent
+# key: graphql
+# --
+
+import { compose, graphql } from 'react-apollo'

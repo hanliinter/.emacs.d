@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/ruby-mode/attribute
+# -*- mode: snippet -*-
+# name: attribute
+# key: @
+# --
+@${1:attr} = $0

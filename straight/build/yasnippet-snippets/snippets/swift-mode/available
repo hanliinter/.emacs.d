@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/swift-mode/available
+# -*- mode: snippet -*-
+# name: available
+# key: available
+# --
+@available(iOS $1, *)

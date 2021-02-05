@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/dart-mode/getset
+# -*- mode: snippet -*-
+# name: getset
+# key: getset
+# --
+${1:Type} _${2:Name};
+$1 get $2 => _$2;
+set $2($1 $2) => _$2 = $2;$0

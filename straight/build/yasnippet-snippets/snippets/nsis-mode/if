@@ -1,1 +1,9 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/nsis-mode/if
+# -*- mode: snippet -*-
+# name: if
+# key: if
+# --
+${IF} ${1:cond}
+      $0
+${ElseIf} ${2:else_cond}
+
+${EndIf}

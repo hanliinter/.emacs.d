@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/faust-mode/declareversion
+# -*- mode: snippet -*-
+# name: declare version
+# key: dv
+# --
+declare version "${1:0.1}";
+$0

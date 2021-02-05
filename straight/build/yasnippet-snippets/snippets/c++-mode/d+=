@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c++-mode/d+=
+# -*- mode: snippet -*-
+# name: d+=
+# key: d+=
+# --
+${1:Name}& operator+=(${2:const $1 &});

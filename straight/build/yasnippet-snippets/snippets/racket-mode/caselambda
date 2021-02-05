@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/racket-mode/caselambda
+# -*- mode: snippet -*-
+# name: (case-lambda [... ...]...)
+# key: case-lambda
+# --
+(case-lambda [${1:arguments} $0])

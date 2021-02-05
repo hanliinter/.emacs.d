@@ -1,1 +1,8 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c++-mode/prp
+# -*- mode: snippet -*-
+# name: prev_permutation
+# key: prp
+# --
+if (std::prev_permutation(std::begin(${1:container}), std::end($1))) {
+  $2
+}
+$0

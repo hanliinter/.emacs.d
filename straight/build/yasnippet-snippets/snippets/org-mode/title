@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/org-mode/title
+# -*- mode: snippet -*-
+# name: title
+# key: <ti
+# --
+#+title: $0

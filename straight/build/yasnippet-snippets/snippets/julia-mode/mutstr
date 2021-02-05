@@ -1,1 +1,9 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/julia-mode/mutstr
+# -*- mode: snippet -*-
+# name: mutable struct ... end
+# key: mutstr
+# contributor: hankail05
+# --
+mutable struct ${1:name}
+    ${2:body}
+end
+$0

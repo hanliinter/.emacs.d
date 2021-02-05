@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c++-mode/delete
+# -*- mode: snippet -*-
+# name: delete
+# key: dl
+# --
+delete ${1:pointer};

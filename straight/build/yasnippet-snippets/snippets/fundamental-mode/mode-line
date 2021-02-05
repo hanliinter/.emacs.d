@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/fundamental-mode/mode-line
+# name: Mode line
+# key: -*-
+# contributor : Daniel Hornung <d.hornung@indiscale.com>
+# --
+# -*- mode:${1:conf}; -*-

@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/go-mode/const(
+# -*- mode:snippet -*-
+# name: const (...)
+# key: const
+# --
+const (
+  ${1:name type} = ${2:val}
+)

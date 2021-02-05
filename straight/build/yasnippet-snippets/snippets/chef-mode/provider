@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/chef-mode/provider
+# -*- mode: snippet -*-
+# name: provider
+# key: provider
+# --
+provider Chef::Provider::${0:Package::Rubygems}

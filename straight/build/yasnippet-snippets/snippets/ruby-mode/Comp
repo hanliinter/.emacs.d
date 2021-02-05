@@ -1,1 +1,9 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/ruby-mode/Comp
+# -*- mode: snippet -*-
+# name: include Comparable; def <=> ... end
+# group : definitions
+# --
+include Comparable
+
+def <=> other
+  $0
+end

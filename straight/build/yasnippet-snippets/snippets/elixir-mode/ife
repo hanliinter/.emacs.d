@@ -1,1 +1,9 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/elixir-mode/ife
+# -*- mode: snippet -*-
+# name: if-else
+# key: ife
+# --
+if ${1:condition} do
+  $2
+else
+  $3
+end

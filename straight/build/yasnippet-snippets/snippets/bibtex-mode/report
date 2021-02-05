@@ -1,1 +1,17 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/bibtex-mode/report
+# -*- mode: snippet -*-
+# name: report
+# key: report
+# author: Spenser Truex
+# --
+@report{ ${title},
+  author       = {${author}},
+  title        = {${title}},
+  institution  = {${institution}},
+  year         = {${year}},
+  type         = {${type}}${,
+  address      = {${address}}}${,
+  month        = {${month}}}${,
+  note         = {${note}}}
+}
+
+$0

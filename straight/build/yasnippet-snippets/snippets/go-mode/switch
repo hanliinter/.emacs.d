@@ -1,1 +1,8 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/go-mode/switch
+# -*- mode: snippet -*-
+# name: switch
+# key: sw
+# --
+switch $1 {
+case $2:
+  $0
+}

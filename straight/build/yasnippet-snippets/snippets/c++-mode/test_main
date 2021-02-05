@@ -1,1 +1,10 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c++-mode/test_main
+# -*- mode: snippet -*-
+# name: test_main
+# key: test_main
+# group: testing
+# --
+int main(int argc, char **argv)
+{
+      ::testing::InitGoogleTest(&argc, argv);
+       return RUN_ALL_TESTS();
+}

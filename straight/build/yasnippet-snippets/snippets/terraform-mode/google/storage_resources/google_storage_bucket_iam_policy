@@ -1,1 +1,10 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/terraform-mode/google/storage_resources/google_storage_bucket_iam_policy
+# -*- mode: snippet -*-
+# name: google_storage_bucket_iam_policy
+# key: goog_storage_bucket_iam_policy
+# --
+
+resource "google_storage_bucket_iam_policy" "${1:name}" {
+  bucket      = "${2:bucket}"
+  policy_data = "${3:policy_data}"
+}
+

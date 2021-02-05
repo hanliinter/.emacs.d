@@ -1,1 +1,9 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/terraform-mode/google/gcp_resources/google_organization_policy
+# -*- mode: snippet -*-
+# name: google_organization_policy
+# key: goog_organization_policy
+# --
+
+resource "google_organization_policy" "${1:name}" {
+  org_id     = "${2:org_id}"
+  constraint = "${3:constraint}"
+}

@@ -1,1 +1,11 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/chef-mode/file
+# -*- mode: snippet -*-
+# name: file
+# key: file
+# --
+file "${1:name}" do
+  owner "root"
+  group "root"
+  mode "0644"
+
+  action :create
+end

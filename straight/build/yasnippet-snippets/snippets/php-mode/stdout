@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/php-mode/stdout
+# -*- mode: snippet -*-
+# contributor: USAMI Kenta <tadsan@zonu.me>
+# name: fwrite(STDOUT)
+# key: stdout
+# group: generic
+# --
+fwrite(STDOUT, ${1:$var}${2: . PHP_EOL});

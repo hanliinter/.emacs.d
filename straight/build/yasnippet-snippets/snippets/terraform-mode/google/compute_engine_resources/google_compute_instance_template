@@ -1,1 +1,12 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/terraform-mode/google/compute_engine_resources/google_compute_instance_template
+# -*- mode: snippet -*-
+# name: google_compute_instance_template
+# key: goog_compute_instance_template
+# --
+
+resource "google_compute_instance_template" "${1:name}" {
+  machine_type = "${2:machine_type}"
+  disk {
+    source_image = "${3:source_image}"
+  }
+}
+

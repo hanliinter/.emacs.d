@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/faust-mode/vgroup
+# -*- mode: snippet -*-
+# name: vgroup
+# key: vg
+# --
+vgroup("${1:name}", ${2:expression})$0

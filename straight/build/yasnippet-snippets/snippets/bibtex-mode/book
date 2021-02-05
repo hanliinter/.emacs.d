@@ -1,1 +1,22 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/bibtex-mode/book
+# -*- mode: snippet -*-
+# name: book
+# key: book
+# --
+@book{ ${title},
+  author    = {${author}},
+  editor    = {${editor}}
+  title     = {${title}},
+  publisher = {${publisher}},
+  year      = {${year}}${,
+  volume    = {${volume}}}${,
+  number    = {${number}}}${,
+  series    = {${series}}}${,
+  type      = {${type}}}${,
+  address   = {${address}}}${,
+  edition   = {${edition}}}${,
+  month     = {${month}}}${,
+  isbn      = {${isbn}}}${,
+  note      = {${note}}}
+}
+
+$0

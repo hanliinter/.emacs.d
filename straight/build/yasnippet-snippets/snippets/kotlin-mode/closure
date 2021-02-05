@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/kotlin-mode/closure
+# -*- mode: snippet -*-
+# name: Closure (function without name)
+# key: closure
+# --
+{ $1 -> $0 }

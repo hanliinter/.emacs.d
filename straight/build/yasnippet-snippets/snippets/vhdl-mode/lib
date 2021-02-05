@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/vhdl-mode/lib
+# -*- mode: snippet -*-
+# name: library
+# key: lib
+# --
+library IEEE;
+use IEEE.std_logic_1164.all;

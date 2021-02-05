@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/malabar-mode/variable
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: variable
+# key: var
+# --
+${1:int} ${2:n} = $0;

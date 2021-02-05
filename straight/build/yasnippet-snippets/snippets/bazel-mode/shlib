@@ -1,1 +1,10 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/bazel-mode/shlib
+# -*- mode: snippet -*-
+# name: sh_library
+# key: shlib
+# --
+sh_library(
+    name = "$0",
+    data = [
+        "$1"
+    ]
+)

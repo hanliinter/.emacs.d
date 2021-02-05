@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/nxml-mode/name
+# -*- mode: snippet -*-
+# contributor : Anders Bach Nielsen <abachn@abachn.net>
+# name: <a name="..."></a>
+# --
+<a name="$1"></a>

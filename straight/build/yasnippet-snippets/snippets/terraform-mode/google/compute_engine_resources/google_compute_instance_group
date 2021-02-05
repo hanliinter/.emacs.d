@@ -1,1 +1,10 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/terraform-mode/google/compute_engine_resources/google_compute_instance_group
+# -*- mode: snippet -*-
+# name: google_compute_instance_group
+# key: goog_compute_instance_group
+# --
+
+resource "google_compute_instance_group" "${1:name}" {
+  name = "${2:name}"
+  zone = "${3:zone}"
+}
+

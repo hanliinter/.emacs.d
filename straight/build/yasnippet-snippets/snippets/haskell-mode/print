@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/haskell-mode/print
+# -*- mode: snippet -*-
+# name: print
+# key: pr
+# --
+print $0

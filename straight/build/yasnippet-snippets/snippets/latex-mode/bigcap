@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/latex-mode/bigcap
+# -*- mode: snippet -*-
+# name: bigcap
+# key: bigcap
+# --
+\bigcap${1:\limits}_{$2}^{$3}$0

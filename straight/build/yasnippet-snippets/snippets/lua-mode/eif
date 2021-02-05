@@ -1,1 +1,9 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/lua-mode/eif
+# -*- mode: snippet -*-
+# name: if elseif
+# key: eif
+# --
+if $1 then
+	$2
+elseif $3 then
+	$0
+end

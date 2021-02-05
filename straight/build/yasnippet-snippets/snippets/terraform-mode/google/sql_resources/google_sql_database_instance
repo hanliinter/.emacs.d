@@ -1,1 +1,12 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/terraform-mode/google/sql_resources/google_sql_database_instance
+# -*- mode: snippet -*-
+# name: google_sql_database_instance
+# key: goog_sql_database_instance
+# --
+
+resource "google_sql_database_instance" "${1:name}" {
+  region = "${2:region}"
+  settings {
+    tier = "${3:tier}"
+  }
+}
+

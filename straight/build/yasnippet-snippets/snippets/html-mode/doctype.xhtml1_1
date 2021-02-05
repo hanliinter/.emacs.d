@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/html-mode/doctype.xhtml1_1
+# -*- mode: snippet -*-
+# name: DocType XHTML 1.1
+# group : meta
+# --
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">

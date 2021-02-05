@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/emacs-lisp-mode/file-relative-name
+# -*- mode: snippet -*-
+# contributor: Xah Lee (XahLee.org)
+# name: file-relative-name
+# key: file-relative-name
+# key: frn
+# --
+(file-relative-name $0)

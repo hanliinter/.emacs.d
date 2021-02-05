@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/js-mode/multiline-comment
+# -*- mode: snippet -*-
+# name: multiline-comment
+# key: /**
+# --
+/**
+ * $0
+ */

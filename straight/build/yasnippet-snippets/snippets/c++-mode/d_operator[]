@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c++-mode/d_operator[]
+# -*- mode: snippet -*-
+# name: d_operator[]
+# key: [
+# --
+${1:Name}& operator[](${2:int index});

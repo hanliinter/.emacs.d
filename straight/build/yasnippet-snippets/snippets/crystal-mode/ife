@@ -1,1 +1,10 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/crystal-mode/ife
+# -*- mode: snippet -*-
+# name: if ... else ... end
+# key: ife
+# group : control structure
+# --
+if ${1:condition}
+  $2
+else
+  $3
+end

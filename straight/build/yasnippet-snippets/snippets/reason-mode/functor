@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/reason-mode/functor
+# -*- mode: snippet -*-
+# name: functor
+# key: functor
+# --
+module ${1:Functor} = (${2:Module}: ${3:ModuleType}) => {
+  $0
+};

@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/nesc-mode/provides
+# -*- mode: snippet -*-
+# name: provides
+# key: provides
+# --
+provides interface ${1:Interface};

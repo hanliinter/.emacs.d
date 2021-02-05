@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/emacs-lisp-mode/find-file
+# -*- mode: snippet -*-
+# contributor: Xah Lee (XahLee.org)
+# name: find-file
+# key: find-file
+# key: ff
+# --
+(find-file $0)

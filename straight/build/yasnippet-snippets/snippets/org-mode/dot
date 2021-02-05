@@ -1,1 +1,8 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/org-mode/dot
+# -*- mode: snippet -*-
+# name: dot
+# key: dot_
+# --
+#+begin_src dot :file ${1:file} :cmdline -t${2:pdf} :exports none :results silent
+$0
+#+end_src
+[[file:${3:path}]]

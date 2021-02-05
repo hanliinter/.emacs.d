@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/fish-mode/bp
+# -*- mode: snippet -*-
+# name: breakpoint
+# key: bp
+# --
+breakpoint
+$0

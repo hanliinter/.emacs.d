@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/yaml-mode/entry
+# -*- mode: snippet -*-
+# name: entry
+# key: entry
+# --
+${1:entry}: ${2:value}
+$0

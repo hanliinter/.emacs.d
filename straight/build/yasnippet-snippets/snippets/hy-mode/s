@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/hy-mode/s
+# -*- mode: snippet -*-
+# name: s
+# key: s
+# binding: direct-keybinding
+# --
+(setv $0)

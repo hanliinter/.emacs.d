@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/nsis-mode/section
+# -*- mode: snippet -*-
+# name: section
+# key: sec
+# --
+Section "${1:Program}"
+        $0
+SectionEnd

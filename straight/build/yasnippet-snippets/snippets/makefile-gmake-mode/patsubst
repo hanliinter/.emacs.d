@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/makefile-gmake-mode/patsubst
+# -*- mode: snippet -*-
+# name: patsubst
+# key: ps
+# --
+$(patsubst ${1:from},${2:to},${3:src})

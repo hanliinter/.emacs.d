@@ -1,1 +1,9 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/terraform-mode/google/compute_engine_resources/google_compute_address
+# -*- mode: snippet -*-
+# name: google_compute_address
+# key: goog_compute_address
+# --
+
+resource "google_compute_address" "${1:name}" {
+  name = "${2:name}"
+}
+

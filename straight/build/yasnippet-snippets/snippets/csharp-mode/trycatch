@@ -1,1 +1,13 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/csharp-mode/trycatch
+# -*- mode: snippet -*-
+# contributor : Frede Brændstrup <frederikbraendstrup@gmail.com>
+# name: try{...} catch (ex) {...}
+# key: tc
+# --
+try
+{
+	$0
+}
+catch (${1:Exception} ex)
+{
+	${2:Console.WriteLine(ex.ToString());}
+}

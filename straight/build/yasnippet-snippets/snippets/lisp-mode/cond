@@ -1,1 +1,9 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/lisp-mode/cond
+# -*- mode: snippet -*-
+# name: cond
+# key: cond
+# --
+
+(cond (${1:case1} (${2:do-this}))
+      (${3:case2} (${4:do-this}))
+      (t ${5:default}))
+$0

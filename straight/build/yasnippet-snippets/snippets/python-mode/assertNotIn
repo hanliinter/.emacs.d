@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/python-mode/assertNotIn
+# -*- mode: snippet -*-
+# name: assetNotIn
+# key: an
+# group: testing
+# --
+self.assertNotIn(${1:member}, ${2:container})

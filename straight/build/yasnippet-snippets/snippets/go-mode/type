@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/go-mode/type
+# -*- mode: snippet -*-
+# name: type
+# key: type
+# --
+type $1 $2 {
+  $0
+}

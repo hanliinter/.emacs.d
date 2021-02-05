@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/rust-mode/asserteq
+# -*- mode: snippet -*-
+# name: assert_eq!(expected, actual);
+# key: asseq
+# --
+assert_eq!(${1:expected}, ${2:actual});

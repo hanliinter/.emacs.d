@@ -1,1 +1,8 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/lisp-mode/ifnot
+# -*- mode: snippet -*-
+# name: ifnot (...) (...)  ...
+# key: ifnot
+# --
+
+(unless (${1:condition})
+        (${2:then-do-this}))
+$0

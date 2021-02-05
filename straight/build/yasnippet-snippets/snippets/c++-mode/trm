@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c++-mode/trm
+# -*- mode: snippet -*-
+# name: generate_n
+# key: trm
+# --
+${1:container}.erase($1.find_last_not_of(" \t\n\r") + 1);
+$0

@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c-mode/scanf
+# -*- mode: snippet -*-
+# name: scanf
+# key: scanf
+# --
+scanf("${1:format string}", ${2:&variable});

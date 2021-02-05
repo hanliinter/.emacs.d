@@ -1,1 +1,8 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/nix-mode/unpackPhase
+# -*- mode: snippet -*-
+# name: unpackPhase
+# key: up
+# --
+unpackPhase = ''
+  $1
+'';
+$0

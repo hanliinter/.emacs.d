@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/html-mode/meta
+# -*- mode: snippet -*-
+# contributor : Jimmy Wu <frozenthrone88@gmail.com>
+# group : meta
+# name: <meta name="..." content="..." />
+# --
+<meta name="${1:generator}" content="${2:content}" />

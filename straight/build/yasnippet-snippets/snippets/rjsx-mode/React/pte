@@ -1,1 +1,8 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/rjsx-mode/React/pte
+# -*- mode: snippet -*-
+# uuid: 56738701-7759-43b2-b3a5-f61077f00679
+# contributor: Jimmy Yuen Ho Wong <wyuenho@gmail.com>
+# name: propTypeEnum
+# key: pte
+# --
+
+PropTypes.oneOf(['$0']),

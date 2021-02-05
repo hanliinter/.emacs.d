@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c++-mode/boost_require
+# -*- mode: snippet -*-
+# name: boost_require
+# key: req
+# group: boost
+# --
+BOOST_REQUIRE( ${1:condition} );
+$0

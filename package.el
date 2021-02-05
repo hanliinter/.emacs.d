@@ -5,113 +5,6 @@
   :straight t)
 
 
-(use-package ivy
-  :straight t)
-(use-package swiper
-  :straight t)
-
-
-(use-package counsel
-  :diminish ivy-mode counsel-mode
-  :bind (("C-s"   . swiper-isearch)
-         ("C-r"   . swiper-isearch-backward)
-         ("s-f"   . swiper)
-         ("C-S-s" . swiper-all)
-
-         ("C-c C-r" . ivy-resume)
-         ("C-c v p" . ivy-push-view)
-         ("C-c v o" . ivy-pop-view)
-         ("C-c v ." . ivy-switch-view)
-
-         :map counsel-mode-map
-         ([remap swiper] . counsel-grep-or-swiper)
-         ([remap swiper-backward] . counsel-grep-or-swiper-backward)
-         ([remap dired] . counsel-dired)
-         ([remap set-variable] . counsel-set-variable)
-         ([remap insert-char] . counsel-unicode-char)
-         ([remap recentf-open-files] . counsel-recentf)
-
-         ("C-x j"   . counsel-mark-ring)
-         ("C-h F"   . counsel-faces)
-
-         ("C-c B" . counsel-bookmarked-directory)
-         ("C-c L" . counsel-load-library)
-         ("C-c O" . counsel-find-file-extern)
-         ("C-c P" . counsel-package)
-         ("C-c R" . counsel-list-processes)
-         ("C-c f" . counsel-find-library)
-         ("C-c g" . counsel-grep)
-         ("C-c h" . counsel-command-history)
-         ("C-c i" . counsel-git)
-         ("C-c j" . counsel-git-grep)
-         ("C-c o" . counsel-outline)
-         ("C-c r" . counsel-rg)
-         ("C-c z" . counsel-fzf)
-
-         ("C-c c B" . counsel-bookmarked-directory)
-         ("C-c c F" . counsel-faces)
-         ("C-c c L" . counsel-load-library)
-         ("C-c c O" . counsel-find-file-extern)
-         ("C-c c P" . counsel-package)
-         ("C-c c R" . counsel-list-processes)
-         ("C-c c a" . counsel-apropos)
-         ("C-c c e" . counsel-colors-emacs)
-         ("C-c c f" . counsel-find-library)
-         ("C-c c g" . counsel-grep)
-         ("C-c c h" . counsel-command-history)
-         ("C-c c i" . counsel-git)
-         ("C-c c j" . counsel-git-grep)
-         ("C-c c l" . counsel-locate)
-         ("C-c c m" . counsel-minibuffer-history)
-         ("C-c c o" . counsel-outline)
-         ("C-c c p" . counsel-pt)
-         ("C-c c r" . counsel-rg)
-         ("C-c c s" . counsel-ag)
-         ("C-c c t" . counsel-load-theme)
-         ("C-c c u" . counsel-unicode-char)
-         ("C-c c w" . counsel-colors-web)
-         ("C-c c v" . counsel-set-variable)
-         ("C-c c z" . counsel-fzf)
-
-         :map ivy-minibuffer-map
-         ("C-w" . ivy-yank-word)
-         ("C-`" . ivy-avy)
-
-         :map counsel-find-file-map
-         ("C-h" . counsel-up-directory)
-
-         :map swiper-map
-         ("M-s" . swiper-isearch-toggle)
-         ("M-%" . swiper-query-replace)
-
-         :map isearch-mode-map
-         ("M-s" . swiper-isearch-toggle))
-  :hook ((after-init . ivy-mode)
-         (ivy-mode . counsel-mode))
-  :init
-  (setq enable-recursive-minibuffers t) ; Allow commands in minibuffers
-
-  (setq ivy-use-selectable-prompt t
-        ivy-use-virtual-buffers t    ; Enable bookmarks and recentf
-        ivy-height 10
-        ivy-fixed-height-minibuffer t
-        ivy-count-format "(%d/%d) "
-        ivy-on-del-error-function nil
-        ivy-initial-inputs-alist nil)
-
- 
-
-  (setq swiper-action-recenter t)
-
-  (setq counsel-find-file-at-point t
-        counsel-yank-pop-separator "\n────────\n")
-
-  ;; Use the faster search tool: ripgrep (`rg')
-  (when (executable-find "rg")
-    (setq counsel-grep-base-command "rg -S --no-heading --line-number --color never %s %s")
-    )
-  
-    :straight t)
 (use-package yasnippet
   :straight t
   :diminish yas-minor-mode
@@ -280,3 +173,126 @@ FACE defaults to inheriting from default and highlight."
   :straight t
   :config (which-key-setup-minibuffer)
   )
+
+
+;; Example configuration for Consult
+(use-package consult
+  :straight t
+  ;; Replace bindings. Lazily loaded due by `use-package'.
+  :bind (;; C-c bindings (mode-specific-map)
+         ("C-c h" . consult-history)
+         ("C-c m" . consult-mode-command)
+         ("C-c b" . consult-bookmark)
+         ("C-c k" . consult-kmacro)
+         ;; C-x bindings (ctl-x-map)
+         ("C-x M-:" . consult-complex-command)     ;; orig. repeat-complet-command
+         ("C-x b" . consult-buffer)                ;; orig. switch-to-buffer
+         ("C-x 4 b" . consult-buffer-other-window) ;; orig. switch-to-buffer-other-window
+         ("C-x 5 b" . consult-buffer-other-frame)  ;; orig. switch-to-buffer-other-frame
+         ;; Custom M-# bindings for fast register access
+         ("M-#" . consult-register-load)
+         ("M-'" . consult-register-store)          ;; orig. abbrev-prefix-mark (unrelated)
+         ("C-M-#" . consult-register)
+         ;; Other custom bindings
+         ("M-y" . consult-yank-pop)                ;; orig. yank-pop
+         ("<help> a" . consult-apropos)            ;; orig. apropos-command
+         ;; M-g bindings (goto-map)
+         ("M-g g" . consult-goto-line)             ;; orig. goto-line
+         ("M-g M-g" . consult-goto-line)           ;; orig. goto-line
+         ("M-g o" . consult-outline)
+         ("M-g m" . consult-mark)
+         ("M-g k" . consult-global-mark)
+         ("M-g i" . consult-imenu)
+         ("M-g I" . consult-project-imenu)
+         ("M-g e" . consult-error)
+         ;; M-s bindings (search-map)
+         ("M-s f" . consult-find)                  ;; alt. consult-locate, find-fd
+         ("M-s g" . consult-git-grep)              ;; alt. consult-grep
+         ("M-s r" . consult-ripgrep)
+         ("M-s l" . consult-line)
+         ("M-s m" . consult-multi-occur)
+         ("M-s k" . consult-keep-lines)
+         ("M-s u" . consult-focus-lines)
+         ;; Isearch integration
+         ("M-s e" . consult-isearch)
+         :map isearch-mode-map
+         ("M-e" . consult-isearch)                 ;; orig. isearch-edit-string
+         ("M-s e" . consult-isearch)               ;; orig. isearch-edit-string
+         ("M-s l" . consult-line))                 ;; required by consult-line to detect isearch
+
+  ;; The :init configuration is always executed (Not lazy)
+  :init
+
+  ;; Custom command wrappers. It is generally encouraged to write your own
+  ;; commands based on the Consult commands. Some commands have arguments which
+  ;; allow tweaking. Furthermore global configuration variables can be set
+  ;; locally in a let-binding.
+  (defun find-fd (&optional dir initial)
+    (interactive "P")
+    (let ((consult-find-command "fd --color=never --full-path ARG OPTS"))
+      (consult-find dir initial)))
+
+  ;; Optionally configure the register formatting. This improves the register
+  ;; preview for `consult-register', `consult-register-load',
+  ;; `consult-register-store' and the Emacs built-ins.
+  (setq register-preview-delay 0
+        register-preview-function #'consult-register-format)
+
+  ;; Optionally tweak the register preview window.
+  ;; This adds zebra stripes, sorting and hides the mode line of the window.
+  (advice-add #'register-preview :override #'consult-register-window)
+
+  ;; Configure other variables and modes in the :config section,
+  ;; after lazily loading the package.
+  :config
+
+  ;; Optionally configure preview. Note that the preview-key can also be
+  ;; configured on a per-command basis via `consult-config'. The default value
+  ;; is 'any, such that any key triggers the preview.
+  ;; (setq consult-preview-key 'any)
+  ;; (setq consult-preview-key (kbd "M-p"))
+  ;; (setq consult-preview-key (list (kbd "<S-down>") (kbd "<S-up>")))
+
+  ;; Optionally configure the narrowing key.
+  ;; Both < and C-+ work reasonably well.
+  (setq consult-narrow-key "<") ;; (kbd "C-+")
+
+  ;; Optionally make narrowing help available in the minibuffer.
+  ;; Probably not needed if you are using which-key.
+  ;; (define-key consult-narrow-map (vconcat consult-narrow-key "?") #'consult-narrow-help)
+
+  ;; Optionally configure additional sources for `consult-buffer',
+  ;; for example add views to the list of virtual buffers
+  ;; from a library like https://github.com/minad/bookmark-view/.
+  ;; (add-to-list 'consult-buffer-sources
+  ;;               (list :name     "View"
+  ;;                     :narrow   ?v
+  ;;                     :category 'bookmark
+  ;;                     :face     'font-lock-keyword-face
+  ;;                     :history  'bookmark-view-history
+  ;;                     :action   #'consult--bookmark-action
+  ;;                     :items    #'bookmark-view-names)
+  ;;              'append)
+
+  ;; Optionally configure a function which returns the project root directory.
+  ;; There are multiple reasonable alternatives to chose from:
+  ;; * projectile-project-root
+  ;; * vc-root-dir
+  ;; * project-roots
+  ;; * locate-dominating-file
+  (autoload 'projectile-project-root "projectile")
+  (setq consult-project-root-function #'projectile-project-root)
+  ;; (setq consult-project-root-function
+  ;;       (lambda ()
+  ;;         (when-let (project (project-current))
+  ;;           (car (project-roots project)))))
+  ;; (setq consult-project-root-function #'vc-root-dir)
+  ;; (setq consult-project-root-function
+  ;;       (lambda () (locate-dominating-file "." ".git")))
+)
+
+;; Optionally add the `consult-flycheck' command.
+(use-package consult-flycheck
+  :straight t
+  :bind (:map flycheck-command-map
+              ("!" . consult-flycheck)))

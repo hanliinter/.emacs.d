@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/cmake-mode/foreach
+# -*- mode: snippet -*-
+# name: foreach
+# key: for
+# --
+foreach(${1:var} \${${2:array}})
+        $3
+endforeach($1)$0

@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/faust-mode/process
+# -*- mode: snippet -*-
+# name: process
+# key: pr
+# --
+process = $1;
+$0

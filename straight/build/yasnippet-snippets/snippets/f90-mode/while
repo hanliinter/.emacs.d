@@ -1,1 +1,8 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/f90-mode/while
+# -*- mode: snippet -*-
+# contributor: Jonas Kalderstam <jonas@kalderstam.se>
+# name: while ... end while ...
+# key: while
+# --
+do while (${1:condition})
+  $0
+end do

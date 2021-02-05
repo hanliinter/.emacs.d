@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/ruby-mode/pry
+# -*- mode: snippet -*-
+# name: binding.pry
+# key: pry
+# --
+require 'pry'; binding.pry

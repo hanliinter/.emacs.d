@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/js-mode/error
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: new error
+# key: err
+# --
+new Error(${1:message});

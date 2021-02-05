@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/ruby-mode/dow
+# -*- mode: snippet -*-
+# name: downto(...) { |n| ... }
+# group : control structure
+# --
+downto(${0}) { |${n}|
+  $0
+}

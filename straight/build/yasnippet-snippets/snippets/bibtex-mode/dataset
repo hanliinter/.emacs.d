@@ -1,1 +1,17 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/bibtex-mode/dataset
+# -*- mode: snippet -*-
+# name: dataset
+# key: dataset
+# author: Spenser Truex
+# --
+@dataset{ ${title}
+  title        = {${title}},
+  editor       = {${editor}},
+  year         = {${year}}${,
+  author       = {${author}}}${,
+  volume       = {${volume}}}${,
+  version      = {${version}}}${,
+  publisher    = {${publisher}}}${,
+  organization = {${organization}}}${,
+  note         = {${note}}}
+
+}

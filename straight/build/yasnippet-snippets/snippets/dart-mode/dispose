@@ -1,1 +1,10 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/dart-mode/dispose
+# -*- mode: snippet -*-
+# name: dispose
+# key: dis
+# group: flutter
+# --
+@override
+void dispose() {
+  super.dispose();
+  $0
+}

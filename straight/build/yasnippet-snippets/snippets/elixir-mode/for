@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/elixir-mode/for
+# -*- mode: snippet -*-
+# name: for
+# key: for
+# --
+for ${2:x} <- ${1:enum} do
+  $2$0
+end

@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/dart-mode/import
+# -*- mode: snippet -*-
+# name: import
+# key: imp
+# --
+import '${1:Library}';$0

@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/apples-mode/tell-application-to-activate
+# -*- mode: snippet -*-
+# name: tell-application-to-activate
+# --
+tell application "$1" to activate
+$0

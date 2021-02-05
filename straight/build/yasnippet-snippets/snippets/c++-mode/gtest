@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c++-mode/gtest
+# -*- mode: snippet -*-
+# name: gtest
+# key: gtest
+# group: testing
+# --
+#include <gtest/gtest.h>

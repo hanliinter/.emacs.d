@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/reason-mode/module
+# -*- mode: snippet -*-
+# name: module
+# key: module
+# --
+module ${1:M} = {
+  $0
+};

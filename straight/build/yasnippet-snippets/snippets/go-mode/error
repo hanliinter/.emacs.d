@@ -1,1 +1,8 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/go-mode/error
+# -*- mode: snippet -*-
+# name: error
+# key: err
+# contributor : @atotto
+# --
+if err != nil {
+	$0
+}

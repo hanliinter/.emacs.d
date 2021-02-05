@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/latex-mode/note
+# -*- mode: snippet -*-
+# name: note
+# key: no
+# --
+\note{$0}

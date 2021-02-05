@@ -1,1 +1,6 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c-mode/malloc
+# -*- mode: snippet -*-
+# name: malloc
+# key: malloc
+# --
+malloc(sizeof($1)${2: * ${3:3}});
+$0

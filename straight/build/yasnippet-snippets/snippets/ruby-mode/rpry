@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/ruby-mode/rpry
+# -*- mode: snippet -*-
+# name: binding.pry_remote
+# key: rpry
+# --
+require 'pry-remote'; binding.remote_pry

@@ -1,1 +1,9 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/bazel-mode/genq
+# -*- mode: snippet -*-
+# name: genquery
+# key: genq
+# --
+genquery(
+    name = "$0",
+    expression = "$1",
+    scope = "$2"
+)

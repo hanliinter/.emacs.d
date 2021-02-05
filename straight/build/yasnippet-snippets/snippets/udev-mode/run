@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/udev-mode/run
+# -*- mode: snippet -*-
+# name: run
+# key: run
+# --
+RUN+="$0"

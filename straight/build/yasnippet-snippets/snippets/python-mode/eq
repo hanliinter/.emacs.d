@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/python-mode/eq
+# -*- mode: snippet -*-
+# name: __eq__
+# key: eq
+# group: dunder methods
+# --
+def __eq__(self, other):
+    return self.$1 == other.$1

@@ -1,1 +1,24 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/bibtex-mode/inreference
+# -*- mode: snippet -*-
+# name: inreference
+# key: inreference
+# author: Spenser Truex
+# --
+@inreference{ ${title},
+author    = {${author}},
+title     = {${title}},
+booktitle = {${booktitle}},
+publisher = {${publisher}},
+year      = {${year}}${,
+editor    = {${editor}}}${,
+volume    = {${volume}}}${,
+series    = {${series}}}${,
+type      = {${type}}}${,
+chapter   = {${chapter}}}${,
+pages     = {${pages}}}${,
+address   = {${address}}}${,
+edition   = {${edition}}}${,
+month     = {${month}}}${,
+note      = {${note}}}
+}
+
+$0

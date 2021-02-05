@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/latex-mode/labelcref
+# -*- mode: snippet -*-
+# name: labelcref
+# key: lref
+# --
+\labelcref{$0}

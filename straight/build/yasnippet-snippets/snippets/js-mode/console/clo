@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/js-mode/console/clo
+# -*- mode: snippet -*-
+# name: console.log (formatted)
+# key: clo
+# group: console
+# --
+
+console.log('$1: ', ${1:object})

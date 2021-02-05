@@ -1,1 +1,12 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/go-mode/parallel_benchmark
+# -*- mode: snippet -*-
+# name: parallel_benchmark
+# key: parbench
+# contributor : @kostya-sh
+# --
+func Benchmark$1(b *testing.B) {
+	b.RunParallel(func(pb *testing.PB) {
+		for pb.Next() {
+			$0
+		}
+	})
+}

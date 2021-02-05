@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/elixir-mode/test
+# -*- mode: snippet -*-
+# name: test
+# key: test
+# --
+test "$1" do
+  $0
+end

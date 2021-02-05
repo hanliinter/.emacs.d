@@ -1,1 +1,9 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c++-mode/namespace
+# -*- mode: snippet -*-
+# name: namespace
+# key: ns
+# --
+namespace ${1:Namespace} {
+
+          `yas/selected-text`
+
+}  // $1

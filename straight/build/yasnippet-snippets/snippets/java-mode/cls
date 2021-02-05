@@ -1,1 +1,7 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/java-mode/cls
+# -*- mode: snippet -*-
+# name: cls
+# key: cls
+# --
+class ${1:Class} {
+      $0
+}

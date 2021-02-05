@@ -1,1 +1,12 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/nix-mode/installPhase
+# -*- mode: snippet -*-
+# name: installPhase
+# key: ip
+# --
+installPhase= ''
+${1:    mkdir -p \$out/bin
+    for f in \$(find . -executable -type f);
+    do
+      cp \$f \$out/bin/
+    done}
+'';
+$0

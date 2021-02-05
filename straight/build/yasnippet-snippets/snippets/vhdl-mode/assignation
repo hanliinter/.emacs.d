@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/vhdl-mode/assignation
+# -*- mode: snippet -*-
+# name: assignation
+# key: asg
+# --
+${1:variable} <= ${2:value};

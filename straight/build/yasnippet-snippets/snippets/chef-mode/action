@@ -1,1 +1,5 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/chef-mode/action
+# -*- mode: snippet -*-
+# name: action
+# key: action
+# --
+action: ${0:nothing}

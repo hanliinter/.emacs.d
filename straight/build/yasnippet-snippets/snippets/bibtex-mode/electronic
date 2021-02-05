@@ -1,1 +1,14 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/bibtex-mode/electronic
+# -*- mode: snippet -*-
+# name: electronic
+# key: electronic
+# author: Spenser Truex
+# --
+@electronic{ ${title},
+author  = {${author}},
+title   = {${title}},
+year    = {${year}},
+url     = {${url}}${,
+editor  = {${editor}}}${,
+urldate = {${urldate}}}${,
+note    = {${note}}}
+}
