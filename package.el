@@ -296,3 +296,62 @@ FACE defaults to inheriting from default and highlight."
   :straight t
   :bind (:map flycheck-command-map
               ("!" . consult-flycheck)))
+
+
+;; Enable richer annotations using the Marginalia package
+(use-package marginalia
+  ;; Either bind `marginalia-cycle` globally or only in the minibuffer
+  :straight t
+:bind (("M-A" . marginalia-cycle)
+         :map minibuffer-local-map
+         ("M-A" . marginalia-cycle))
+
+  ;; The :init configuration is always executed (Not lazy!)
+  :init
+
+  ;; Must be in the :init section of use-package such that the mode gets
+  ;; enabled right away. Note that this forces loading the package.
+  (marginalia-mode)
+
+  ;; When using Selectrum, ensure that Selectrum is refreshed when cycling annotations.
+  (advice-add #'marginalia-cycle :after
+              (lambda () (when (bound-and-true-p selectrum-mode) (selectrum-exhibit))))
+
+  ;; Prefer richer, more heavy, annotations over the lighter default variant.
+  ;; E.g. M-x will show the documentation string additional to the keybinding.
+  ;; By default only the keybinding is shown as annotation.
+  ;; Note that there is the command `marginalia-cycle' to
+  ;; switch between the annotators.
+  ;; (setq marginalia-annotators '(marginalia-annotators-heavy marginalia-annotators-light nil))
+)
+
+(use-package embark
+  :straight t
+  :ensure t
+  :bind
+  ("C-S-a" . embark-act))              ; pick some comfortable binding
+
+;; Consult users will also want the embark-consult package.
+(use-package embark-consult
+  :straight t
+  :ensure t
+  :after (embark consult)
+  :demand t ; only necessary if you have the hook below
+  ;; if you want to have consult previews as you move around an
+  ;; auto-updating embark collect buffer
+  :hook
+  (embark-collect-mode . embark-consult-preview-minor-mode))
+
+(use-package orderless
+  :straight t
+  :ensure t
+  :custom (completion-styles '(orderless)))
+
+
+(straight-use-package 'prescient)
+(straight-use-package 'company-prescient)
+(straight-use-package 'selectrum-prescient)
+
+(use-package rg
+  :straight t
+  )
