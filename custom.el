@@ -37,3 +37,9 @@
 
 
 (windmove-default-keybindings)
+
+(use-package doom-modeline
+      :straight t
+      :ensure t
+      :defer t
+      :hook (after-init . doom-modeline-init))

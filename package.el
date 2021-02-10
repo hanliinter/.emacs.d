@@ -355,3 +355,7 @@ FACE defaults to inheriting from default and highlight."
 (use-package rg
   :straight t
   )
+
+(company-prescient-mode)
+(selectrum-prescient-mode)
+(prescient-persist-mode)

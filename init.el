@@ -31,3 +31,6 @@
 (load-file custom-file)
 (setq custom-org "~/.emacs.d/custom-org.el")
 (load-file custom-org)
+
+(setq language-file "~/.emacs.d/lang/general.el")
+(load-file language-file)
