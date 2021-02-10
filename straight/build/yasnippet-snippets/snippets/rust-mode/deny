@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# name: #[deny(lint)]
-# key: deny
-# --
-#[deny(${1:lint})]
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/rust-mode/deny

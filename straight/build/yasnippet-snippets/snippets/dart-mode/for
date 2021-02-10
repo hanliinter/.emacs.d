@@ -1,8 +1,1 @@
-# -*- mode: snippet -*-
-# name: for
-# key: for
-# expand-env: ((yas-indent-line 'fixed) (yas-wrap-around-region nil))
-# --
-for(var i = ${1:0}; i ${2:< 10}; i${3:++}) {
-  $0
-}
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/dart-mode/for

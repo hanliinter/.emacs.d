@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# name: dbg
-# key: dbg
-# --
-dbg("${1:Module}", "${2:message}"${3:, ${4:var list}});
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/nesc-mode/dbg

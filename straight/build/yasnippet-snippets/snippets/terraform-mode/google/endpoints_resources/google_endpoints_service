@@ -1,9 +1,1 @@
-# -*- mode: snippet -*-
-# name: google_endpoints_service
-# key: goog_endpoints_service
-# --
-
-resource "google_endpoints_service" "${1:name}" {
-  service_name = "${2:service_name}"
-}
-
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/terraform-mode/google/endpoints_resources/google_endpoints_service

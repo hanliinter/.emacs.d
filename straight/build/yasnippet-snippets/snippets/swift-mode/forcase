@@ -1,7 +1,1 @@
-# -*- mode: snippet -*-
-# name: forcase
-# key: forcase
-# --
-for case let $1 in $2 as $3 {
-    $0
-}
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/swift-mode/forcase

@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# name: emit_signal
-# key: emit
-# --
-emit(${1:signal_id}, ${2:long});
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/cpp-omnet-mode/emit_signal

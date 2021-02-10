@@ -1,6 +1,1 @@
-# -*- mode: snippet -*-
-# name: rule
-# key: ru
-# --
-  (${1:pattern}) => ${2:expression};
-$0
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/faust-mode/rule

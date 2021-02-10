@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# name: param
-# key: param
-# --
-@param ${1:parameter} $0
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/java-mode/param

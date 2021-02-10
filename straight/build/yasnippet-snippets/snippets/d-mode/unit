@@ -1,8 +1,1 @@
-# -*- mode: snippet -*-
-# name: unittest { … }
-# key: unittest
-# --
-@("${1:test name}") unittest
-{
-	$0
-}
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/d-mode/unit

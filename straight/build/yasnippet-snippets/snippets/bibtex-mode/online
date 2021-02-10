@@ -1,14 +1,1 @@
-# -*- mode: snippet -*-
-# name: online
-# key: online
-# author: Spenser Truex
-# --
-@online{ ${title},
-  author  = {${author}},
-  title   = {${title}},
-  year    = {${year}},
-  url     = {${url}}${,
-  editor  = {${editor}}}${,
-  urldate = {${urldate}}}${,
-  note    = {${note}}}
-}
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/bibtex-mode/online

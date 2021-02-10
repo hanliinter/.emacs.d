@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# name: fgets
-# key: fgets
-# --
-fgets(${1:variable}, ${2:size}, ${3:stdin});
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c-mode/fgets

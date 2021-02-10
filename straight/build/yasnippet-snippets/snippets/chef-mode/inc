@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# name: inc
-# key: inc
-# --
-include_recipe "${1:example::recipe}"
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/chef-mode/inc

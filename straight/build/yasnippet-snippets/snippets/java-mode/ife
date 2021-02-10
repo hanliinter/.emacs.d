@@ -1,10 +1,1 @@
-# -*- mode: snippet -*-
-# name: ife
-# key: ife
-# --
-if (${1:cond}) {
-    $2
-}
-else {
-     $3
-}
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/java-mode/ife

@@ -1,6 +1,1 @@
-# -*- mode: snippet -*-
-# contributor : Rodrigo Setti <rodrigosetti@gmail.com>
-# name: <dd> ... </dd>
-# group : list
-# --
-<dd>$1</dd>
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/html-mode/dd

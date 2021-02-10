@@ -1,13 +1,1 @@
-# -*- mode: snippet -*-
-# name: google_kms_crypto_key_iam_binding
-# key: goog_kms_crypto_key_iam_binding
-# --
-
-resource "google_kms_crypto_key_iam_binding" "${1:name}" {
-  crypto_key_id = "${2:crypto_key_id}"
-  role          = "${3:role}"
-  members       = [
-    "user:${4:member}",
-  ]
-}
-
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/terraform-mode/google/key_management_service_resources/google_kms_crypto_key_iam_binding

@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# name: Result<Type, failure::Error>
-# key: result
-# --
-Result<${1:Type}, ${2:failure::Error}>
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/rust-mode/result

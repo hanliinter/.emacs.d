@@ -1,8 +1,1 @@
-# -*- mode: snippet -*-
-# name: simple
-# key: simple
-# --
-simple ${1:Component}${2: extends ${3:Component}}
-{
-    $0
-}
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/ned-mode/simple

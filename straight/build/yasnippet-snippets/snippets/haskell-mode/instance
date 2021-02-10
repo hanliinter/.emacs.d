@@ -1,6 +1,1 @@
-# -*- mode: snippet -*-
-# name: instance
-# key: ins
-# --
-instance ${1:${2:(Show a)} => }${3:Ord} ${4:DataType} where
-$0
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/haskell-mode/instance

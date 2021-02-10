@@ -1,6 +1,1 @@
-# -*- mode: snippet; require-final-newline: nil -*-
-# name: special targets
-# contributor: gbalats
-# key: .
-# --
-.${1:PHONY$(upcase yas-text)}: $0
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/makefile-gmake-mode/special

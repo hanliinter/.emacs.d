@@ -1,8 +1,1 @@
-# -*- mode: snippet -*-
-# name: equation
-# key: eq
-# --
-\begin{equation}
-\label{$0}
-$1
-\end{equation}
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/latex-mode/equation

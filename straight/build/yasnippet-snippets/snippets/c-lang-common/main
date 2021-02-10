@@ -1,9 +1,1 @@
-# -*- mode: snippet -*-
-# name: main
-# key: main
-# --
-int main(${1:int argc, char *argv[]})
-{
-    $0
-    return 0;
-}
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c-lang-common/main

@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# name: packed
-# key: packed
-# --
-__attribute__((__packed__))$0
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c-mode/packed

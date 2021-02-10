@@ -1,9 +1,1 @@
-# -*- mode: snippet -*-
-# name: google_sourcerepo_repository
-# key: goog_sourcerepo_repository
-# --
-
-resource "google_sourcerepo_repository" "${1:name}" {
-  name = "${2:name}"
-}
-
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/terraform-mode/google/source_repositories_resources/google_sourcerepo_repository

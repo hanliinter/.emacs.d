@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# name: ... foreach ...
-# key: xfore
-# --
-${1:expression} foreach @${2:array};
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/perl-mode/xfore

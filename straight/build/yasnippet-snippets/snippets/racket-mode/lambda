@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# name: (lambda (...) ...)
-# key: lambda
-# --
-(lambda ${1:(${2:arguments})} $0)
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/racket-mode/lambda

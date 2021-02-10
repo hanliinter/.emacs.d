@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# name: -compile(...).
-# --
--compile([${1:export_all}]).
-$0
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/erlang-mode/compile

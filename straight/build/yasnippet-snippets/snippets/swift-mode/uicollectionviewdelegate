@@ -1,15 +1,1 @@
-# -*- mode: snippet -*-
-# name: uiCollectionViewDelegate
-# key: uiCollectionViewDelegate
-# --
-// MARK: UICollectionViewDelegate
-
-func collectionView(_ collectionView: UICollectionView,
-           didSelectItemAt indexPath: IndexPath) {
-
-}
-
-func collectionView(_ collectionView: UICollectionView,
-         didDeselectItemAt indexPath: IndexPath) {
-
-}
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/swift-mode/uicollectionviewdelegate

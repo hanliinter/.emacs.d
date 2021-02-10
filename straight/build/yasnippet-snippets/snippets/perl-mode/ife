@@ -1,9 +1,1 @@
-# -*- mode: snippet -*-
-# name: if (...) { ... } else { ... }
-# key: ife
-# --
-if ($1) {
-    $2
-} else {
-    $3
-}
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/perl-mode/ife

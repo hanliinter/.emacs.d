@@ -1,7 +1,1 @@
-# -*- mode: snippet -*-
-# name: do
-# key: for
-# --
-(dotimes (${1:var} ${2:count-form})
-         ${3:body})
-$0
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/lisp-mode/for

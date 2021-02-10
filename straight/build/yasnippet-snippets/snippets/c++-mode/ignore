@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# name: ignore
-# key: ignore
-# --
-${1:std::}cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c++-mode/ignore

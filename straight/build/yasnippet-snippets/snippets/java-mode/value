@@ -1,5 +1,1 @@
-# -*- mode: snippet; require-final-newline: nil -*-
-# name: value
-# key: val
-# --
-final ${1:int} ${2:n} = $0;
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/java-mode/value

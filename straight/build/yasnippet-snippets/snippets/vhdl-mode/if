@@ -1,7 +1,1 @@
-# -*- mode: snippet -*-
-# name: if
-# key: if
-# --
-if ${1:cond} then
-   $0
-end if;
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/vhdl-mode/if

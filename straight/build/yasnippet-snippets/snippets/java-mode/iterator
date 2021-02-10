@@ -1,7 +1,1 @@
-# -*- mode: snippet -*-
-# name: iterator
-# key: iterator
-# --
-public Iterator<${1:type}> iterator() {
-       $0
-}
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/java-mode/iterator

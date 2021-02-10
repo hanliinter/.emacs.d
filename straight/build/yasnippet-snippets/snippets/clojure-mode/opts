@@ -1,7 +1,1 @@
-# -*- mode: snippet -*-
-# key: opts
-# name: opts
-# --
-{:keys [$1]$>
- :or {$2}$>
- :as $3}$>
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/clojure-mode/opts

@@ -1,8 +1,1 @@
-# -*- mode: snippet -*-
-# name: upto(...) { |n| ... }
-# key: upt
-# group : control structure
-# --
-upto(${n}) { |${i}|
-  $0
-}
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/crystal-mode/upt

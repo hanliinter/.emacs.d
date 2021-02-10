@@ -1,8 +1,1 @@
-# -*- mode: snippet -*-
-# name: section
-# key: sec
-# --
-\section{${1:name}}
-\label{sec:${2:label}}
-
-$0
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/latex-mode/section

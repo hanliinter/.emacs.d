@@ -1,7 +1,1 @@
-# -*- mode: snippet -*-
-# name: __exit__
-# key: ex
-# group: dunder methods
-# --
-def __exit__(self, type, value, traceback):
-    $0
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/python-mode/__exit__

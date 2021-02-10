@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# name: ostream
-# key: os
-# --
-#include <ostream>
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c++-mode/ostream

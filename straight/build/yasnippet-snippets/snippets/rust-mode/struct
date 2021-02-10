@@ -1,7 +1,1 @@
-# -*- mode: snippet -*-
-# name: struct TypeName { .. }
-# key: struct
-# --
-struct ${1:TypeName} {
-       $0
-}
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/rust-mode/struct

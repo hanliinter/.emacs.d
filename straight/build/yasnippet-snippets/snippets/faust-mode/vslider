@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# name: vslider
-# key: vs
-# --
-vslider("${1:name}", ${2:default}, ${3:min}, ${4:max}, ${5:step})$0
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/faust-mode/vslider

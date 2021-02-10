@@ -1,8 +1,1 @@
-# -*- mode: snippet -*-
-# contributor: USAMI Kenta <tadsan@zonu.me>
-# name: PHPDoc @license Apache License
-# key: *license-apache
-# group: annotation
-# --
-* @license https://www.apache.org/licenses/LICENSE-2.0 Apache-2.0${0:
-*}
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/php-mode/license-doc-apache

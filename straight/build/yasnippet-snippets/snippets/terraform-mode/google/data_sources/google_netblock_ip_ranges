@@ -1,7 +1,1 @@
-# -*- mode: snippet -*-
-# name: google_netblock_ip_ranges
-# key: goog_netblock_ip_ranges
-# --
-
-data "google_netblock_ip_ranges" "${1:name}" {}
-
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/terraform-mode/google/data_sources/google_netblock_ip_ranges

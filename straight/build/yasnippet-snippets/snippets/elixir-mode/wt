@@ -1,8 +1,1 @@
-# -*- mode: snippet -*-
-# contributor: Miriam Retka (https://github.com/Auralcat)
-# name: wt
-# key: wt
-# --
-with ${1:{:ok, tuple} <- function(arg)}, do
-  $0
-end
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/elixir-mode/wt

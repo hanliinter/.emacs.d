@@ -1,11 +1,1 @@
-# -*- mode: snippet -*-
-# name: if, elsif, else ...
-# key: ifee
-# --
-if ($1) {
-	${2:# body...}
-} elsif ($3) {
-	${4:# elsif...}
-} else {
-	${5:# else...}
-}
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/perl-mode/ifee

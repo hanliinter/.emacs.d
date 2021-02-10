@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# name: frac
-# key: frac
-# --
-\frac{${1:numerator}}{${2:denominator}}$0
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/latex-mode/frac

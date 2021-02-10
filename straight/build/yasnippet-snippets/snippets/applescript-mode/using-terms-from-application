@@ -1,6 +1,1 @@
-# -*- mode: snippet -*-
-# name: using-terms-from-application
-# --
-using terms from application "$1"
-$0
-end using terms from
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/applescript-mode/using-terms-from-application

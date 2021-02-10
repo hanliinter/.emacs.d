@@ -1,7 +1,1 @@
-# -*- mode: snippet -*-
-# name: public
-# key: pb
-# expand-env: ((yas-also-auto-indent-first-line t))
-# --
-public:
-        $0
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c++-mode/public

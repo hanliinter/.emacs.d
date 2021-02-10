@@ -1,6 +1,1 @@
-# -*- mode: snippet -*-
-# name: random_shuffle
-# key: shf
-# --
-std::random_shuffle(std::begin(${1:container}), std::end($1));
-$0
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c++-mode/shf

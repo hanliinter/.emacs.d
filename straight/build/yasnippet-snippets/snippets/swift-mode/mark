@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# name: mark
-# key: mark
-# --
-// MARK: - $1
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/swift-mode/mark

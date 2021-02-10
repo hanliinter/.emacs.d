@@ -1,9 +1,1 @@
-# -*- mode: snippet -*-
-# name: remove_copy_if
-# key: rmf
-# --
-std::remove_copy_if(std::begin(${1:container}), std::end($1),
-  std::begin($1), []($2) {
-    $3
-});
-$0
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c++-mode/rmf

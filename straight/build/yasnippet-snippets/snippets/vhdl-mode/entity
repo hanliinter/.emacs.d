@@ -1,7 +1,1 @@
-# -*- mode: snippet -*-
-# name: entity
-# key: ent
-# --
-entity ${1:Name} is
-    $0
-end $1;
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/vhdl-mode/entity

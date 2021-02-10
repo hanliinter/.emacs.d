@@ -1,9 +1,1 @@
-# -*- mode: snippet -*-
-# name: google_compute_image
-# key: goog_compute_image
-# --
-
-resource "google_compute_image" "${1:name}" {
-  name = "${2:name}"
-}
-
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/terraform-mode/google/compute_engine_resources/google_compute_image

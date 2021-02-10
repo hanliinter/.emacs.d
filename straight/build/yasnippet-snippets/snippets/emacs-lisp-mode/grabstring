@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# name: grab buffer substring
-# contributor : Xah Lee
-# --
-(setq $0 (buffer-substring-no-properties myStartPos myEndPos))
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/emacs-lisp-mode/grabstring

@@ -1,8 +1,1 @@
-# -*- mode: snippet -*-
-# name: next_permutation
-# key: nxp
-# --
-if (std::next_permutation(std::begin(${1:container}), std::end($1))) {
-  $2
-}
-$0
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c++-mode/nxp

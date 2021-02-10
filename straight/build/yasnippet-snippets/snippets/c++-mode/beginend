@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# name: v.begin(), v.end()
-# key: beginend
-# --
-${1:v}.begin(), $1.end
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c++-mode/beginend

@@ -1,7 +1,1 @@
-# -*- mode: snippet -*-
-# name: encoding
-# key: enc
-# --
-binmode STDOUT, ':encoding(UTF-8)';
-binmode STDERR, ':encoding(UTF-8)';
-$0
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/perl-mode/enc

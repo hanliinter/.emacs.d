@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# name: reduce(...) { |...| ... }
-# group : collections
-# --
-reduce(${1:0}) { |${2:accumulator}, ${3:element}| $0 }
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/ruby-mode/red

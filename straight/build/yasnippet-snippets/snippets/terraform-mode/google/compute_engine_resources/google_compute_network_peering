@@ -1,11 +1,1 @@
-# -*- mode: snippet -*-
-# name: google_compute_network_peering
-# key: goog_compute_network_peering
-# --
-
-resource "google_compute_network_peering" "${1:name}" {
-  name         = "${2:name}"
-  network      = "${3:network}"
-  peer_network = "${4:peer_network}"
-}
-
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/terraform-mode/google/compute_engine_resources/google_compute_network_peering

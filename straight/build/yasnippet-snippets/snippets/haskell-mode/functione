@@ -1,6 +1,1 @@
-# -*- mode: snippet -*-
-# name: fune
-# key: fune
-# --
-${1:function-name} :: ${2:type}
-$1 = $0error "Not implemented: $1"
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/haskell-mode/functione

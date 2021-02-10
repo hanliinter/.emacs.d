@@ -1,6 +1,1 @@
-# -*- mode: snippet -*-
-# name: setter
-# key: set
-# --
-${1:Type} _${2:Name};
-set $2($1 $2) => _$2 = $2;
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/dart-mode/setter

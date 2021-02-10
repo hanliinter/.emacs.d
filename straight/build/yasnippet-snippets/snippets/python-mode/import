@@ -1,7 +1,1 @@
-# -*- mode: snippet -*-
-# name: import
-# key: imp
-# group : general
-# --
-import ${1:lib}${2: as ${3:alias}}
-$0
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/python-mode/import

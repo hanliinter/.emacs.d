@@ -1,8 +1,1 @@
-# -*- mode: snippet -*-
-# contributor: USAMI Kenta <tadsan@zonu.me>
-# name: PHPDoc @license MIT
-# key: *license-mit
-# group: annotation
-# --
-* @license https://opensource.org/licenses/MIT MIT${0:
-*}
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/php-mode/license-doc-mit

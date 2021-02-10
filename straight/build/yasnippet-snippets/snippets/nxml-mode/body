@@ -1,7 +1,1 @@
-# -*- mode: snippet -*-
-# contributor : Anders Bach Nielsen <abachn@abachn.net>
-# name: <body>...</body>
-# --
-<body$1>
-  $0
-</body>
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/nxml-mode/body

@@ -1,6 +1,1 @@
-# -*- mode: snippet -*-
-# name: remove
-# key: erm
-# --
-${1:container}.erase(std::remove(std::begin($1), std::end($1), $2), std::end($1));
-$0
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c++-mode/erm

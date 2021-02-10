@@ -1,7 +1,1 @@
-# -*- mode: snippet -*-
-# name: locals
-# key: locals
-# --
-locals {
-  {$1:name} = ${2:value}
-}
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/terraform-mode/locals

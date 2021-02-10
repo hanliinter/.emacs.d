@@ -100,7 +100,7 @@ Create a type-specific buffer to manage current candidates.
 The variable `embark-exporters-alist' controls how to make the
 buffer for each type of completion." t nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "embark" '("embark-")))
+(register-definition-prefixes "embark" '("embark-"))
 
 ;;;***
 

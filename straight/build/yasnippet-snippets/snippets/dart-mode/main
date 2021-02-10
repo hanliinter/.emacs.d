@@ -1,7 +1,1 @@
-# -*- mode: snippet -*-
-# name: main
-# key: main
-# --
-main(List<String> args) {
-  $0
-}
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/dart-mode/main

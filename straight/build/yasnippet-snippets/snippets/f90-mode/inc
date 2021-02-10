@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# contributor: Li Zhu <http://www.zhuli.name>
-# name: include
-# --
-include $0
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/f90-mode/inc

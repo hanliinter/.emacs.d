@@ -1,8 +1,1 @@
-# -*- mode: snippet -*-
-# name: Header 6
-# contributor: Peng Deng <dengpeng@gmail.com>
-# key: h6
-# --
-###### ${1:Header 6} ######
-
-$0
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/markdown-mode/h6

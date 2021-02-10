@@ -1,8 +1,1 @@
-# -*- mode: snippet -*-
-# name: patchPhase
-# key: pp
-# --
-patchPhase = ''
-  $1
-'';
-$0
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/nix-mode/patchPhase

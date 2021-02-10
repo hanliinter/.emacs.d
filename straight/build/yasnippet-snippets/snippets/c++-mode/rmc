@@ -1,7 +1,1 @@
-# -*- mode: snippet -*-
-# name: remove_copy
-# key: rmc
-# --
-std::remove_copy(std::begin(${1:container}), std::end($1),
-  std::begin($1), $2);
-$0
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c++-mode/rmc

@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# name: group
-# key: group
-# --
-# group : ${1:group}
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/snippet-mode/group

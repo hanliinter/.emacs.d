@@ -1,8 +1,1 @@
-# -*- mode: snippet -*-
-# name: doctest
-# key: doc
-# group: testing
-# --
->>> ${1:function calls}
-${2:desired output}
-$0
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/python-mode/doctest

@@ -1,6 +1,1 @@
-# -*- mode: snippet -*-
-# name: moderncv-cvcomputer
-# key: cvcomp
-# --
-\cvcomputer{${1:category}}{${2:programs}}{${3:category}}{${3:programs}}
-$0
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/latex-mode/moderncv-cvcomputer

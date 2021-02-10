@@ -1,7 +1,1 @@
-# -*- mode: snippet -*-
-# name: funca
-# key: afun
-# --
-Future<${1:Type}> ${2:Name}($3) async {
-  $0
-}
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/dart-mode/funca

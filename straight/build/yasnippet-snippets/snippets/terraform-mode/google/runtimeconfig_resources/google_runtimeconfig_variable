@@ -1,11 +1,1 @@
-# -*- mode: snippet -*-
-# name: google_runtimeconfig_variable
-# key: goog_runtimeconfig_variable
-# --
-
-resource "google_runtimeconfig_variable" "${1:name}" {
-  name   = "${2:name}"
-  parent = "${3:parent_config_name}"
-  text   = "${4:text}"
-}
-
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/terraform-mode/google/runtimeconfig_resources/google_runtimeconfig_variable

@@ -1,9 +1,1 @@
-# -*- mode: snippet -*-
-# name: google_cloudfunctions_function_data
-# key: goog_cloudfunctions_function_data
-# --
-
-data "google_cloudfunctions_function" "${1:name}" {
-  name = "${2:name}"
-}
-
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/terraform-mode/google/data_sources/google_cloudfunctions_function_data

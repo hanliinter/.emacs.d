@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# name: assert!(predicate);
-# key: ass
-# --
-assert!(${1:predicate});
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/rust-mode/assert

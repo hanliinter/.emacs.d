@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# name: zip(...) { |...| ... }
-# group : collections
-# --
-zip(${enums}) { |${row}| $0 }
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/ruby-mode/zip

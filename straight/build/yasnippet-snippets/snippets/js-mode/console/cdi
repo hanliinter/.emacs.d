@@ -1,9 +1,1 @@
-# -*- mode: snippet -*-
-# uuid: d2272fe8-85d4-44f5-b74c-39a88bb50487
-# contributor: Jimmy Yuen Ho Wong <wyuenho@gmail.com>
-# name: console.dir
-# key: cdi
-# group: console
-# --
-
-console.dir(${1:object})
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/js-mode/console/cdi

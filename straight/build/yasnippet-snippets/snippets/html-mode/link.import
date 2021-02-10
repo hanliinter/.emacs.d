@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# contributor : Vikrant Rathore <vikrant@vyomtech.com>
-# name: <link rel="import" />
-# --
-<link rel="import" href="${1:url}" />
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/html-mode/link.import

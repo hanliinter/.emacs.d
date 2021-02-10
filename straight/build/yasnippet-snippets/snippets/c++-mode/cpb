@@ -1,6 +1,1 @@
-# -*- mode: snippet -*-
-# name: copy_backward
-# key: cpb
-# --
-std::copy_backward(std::begin(${1:container}), std::end($1), std::end($1));
-$0
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c++-mode/cpb

@@ -1,10 +1,1 @@
-# -*- mode: snippet -*-
-# contributor: Robin de Rooij <rderooij685@gmail.com>
-# name: set
-# key: set
-# group: definitions
-# --
-public function set${1:$(upcase-initials yas-text)}(\$$1)
-{
-    \$this->$1 = \$$1;
-}
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/php-mode/set

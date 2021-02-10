@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# name: (define ... ...)
-# key: define
-# --
-(define ${1:(${2:name} ${3:arguments})} $0)
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/racket-mode/define

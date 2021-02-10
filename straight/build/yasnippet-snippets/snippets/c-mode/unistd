@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# name: unistd
-# key: uni
-# --
-#include <unistd.h>
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c-mode/unistd

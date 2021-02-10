@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# contributor : rejeep <johan.rejeep@gmail.com>
-# name: margin-bottom: ...
-# --
-margin-bottom: $1;
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/css-mode/mar.bottom

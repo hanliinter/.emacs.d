@@ -1,7 +1,1 @@
-# -*- mode: snippet -*-
-# name:args
-# key: args
-# --
-if [ $# -lt ${1:2} ]
-   then $0
-fi
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/sh-mode/args

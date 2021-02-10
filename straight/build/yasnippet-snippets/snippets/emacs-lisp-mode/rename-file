@@ -1,7 +1,1 @@
-# -*- mode: snippet -*-
-# contributor: Xah Lee (XahLee.org)
-# name: rename-file
-# key: rename-file
-# key: rf
-# --
-(rename-file ${1:file} ${2:newname}${3: ok-if-already-exists})
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/emacs-lisp-mode/rename-file

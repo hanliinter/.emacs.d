@@ -1,10 +1,1 @@
-# -*- mode: snippet -*-
-# name: template
-# contributor: gbalats
-# binding: C-c C-t
-# --
-define ${1:PROGRAM$(upcase yas-text)}_template
-$0
-endef
-
-\$(foreach ${2:${1:$(downcase yas-text)}},\$(${3:$1S}),\$(eval \$(call $1_template,\$($2))))
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/makefile-gmake-mode/template

@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# contributor : rejeep <johan.rejeep@gmail.com>
-# name: font-size: ...
-# --
-font-size: ${12px};
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/css-mode/fs

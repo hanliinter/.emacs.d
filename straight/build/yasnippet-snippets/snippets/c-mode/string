@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# name: string
-# key: str
-# --
-#include <string.h>
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c-mode/string

@@ -1,9 +1,1 @@
-# -*- mode: snippet -*-
-# name: macro(...) ... end
-# key: macro
-# contributor: hankail05
-# --
-macro ${1:macro}(${2:args})
-    ${3:body}
-end
-$0
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/julia-mode/macro

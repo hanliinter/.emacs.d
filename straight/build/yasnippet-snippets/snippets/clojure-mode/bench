@@ -1,8 +1,1 @@
-# -*- mode: snippet -*-
-# name: bench
-# key: bench
-# --
-(dotimes [_ 5 ]$>
-  (time (dotimes [i 1000000]$>
-  $0$>
-  )))$>
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/clojure-mode/bench

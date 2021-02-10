@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# contributor : rejeep <johan.rejeep@gmail.com>
-# name: font-family: ...
-# --
-font-family: $1;
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/css-mode/ff

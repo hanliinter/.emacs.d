@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# name: automodule
-# key: auto
-# --
-.. automodule:: ${1:module_name}
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/rst-mode/automodule

@@ -1,7 +1,1 @@
-# -*- mode: snippet -*-
-# name: do
-# key: do
-# --
-do
-	$0
-end
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/lua-mode/do

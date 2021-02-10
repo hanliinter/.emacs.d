@@ -1,15 +1,1 @@
-# -*- mode: snippet -*-
-# contributor: Dan Pitic <dpitic@gmail.com>
-# name: Function Doxygen Doc
-# key: doxy
-# group: doxygen
-# --
-/**
- * @brief      ${1:function description}
- *
- * @details    ${2:detailed description}
- *
- * @param      ${3:param}
- *
- * @return     ${4:return type}
- */
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c-lang-common/function_doxygen_doc

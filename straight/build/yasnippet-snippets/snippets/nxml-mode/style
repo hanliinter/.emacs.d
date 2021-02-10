@@ -1,7 +1,1 @@
-# -*- mode: snippet -*-
-# contributor : Anders Bach Nielsen <abachn@abachn.net>
-# name: <style type="text/css" media="...">...</style>
-# --
-<style type="text/css" media="${1:screen}">
-  $0
-</style>
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/nxml-mode/style

@@ -1,8 +1,1 @@
-# -*- mode: snippet -*-
-# name: section
-# key: sec
-# section for xorg.conf
-# --
-Section "${1:Device}"
-        $0
-EndSection
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/conf-unix-mode/section

@@ -1,10 +1,1 @@
-# -*- mode: snippet -*-
-# name: any_of
-# key: ano
-# --
-if (std::any_of(std::begin(${1:container}), std::end($1), []($2) {
-  $3
-})) {
-  $4
-}
-$0
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c++-mode/ano

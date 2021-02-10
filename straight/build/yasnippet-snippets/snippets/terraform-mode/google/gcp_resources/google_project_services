@@ -1,9 +1,1 @@
-# -*- mode: snippet -*-
-# name: google_project_services
-# key: goog_project_services
-# --
-
-resource "google_project_services" "${1:name}" {
-  services = ["${2:service}"]
-}
-
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/terraform-mode/google/gcp_resources/google_project_services

@@ -1,7 +1,1 @@
-# -*- mode: snippet -*-
-# name: class
-# key: cls
-# --
-class ${1:Name} {
-  $0
-}
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/dart-mode/class

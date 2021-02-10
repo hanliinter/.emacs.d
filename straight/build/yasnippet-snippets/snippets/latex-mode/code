@@ -1,7 +1,1 @@
-# -*- mode: snippet -*-
-# name: code
-# key: code
-# --
-\begin{lstlisting}
-$0
-\end{lstlisting}
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/latex-mode/code

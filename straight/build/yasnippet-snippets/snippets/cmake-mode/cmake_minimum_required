@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# name: cmake_minimum_required
-# key: min
-# --
-cmake_minimum_required(VERSION ${1:2.6})
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/cmake-mode/cmake_minimum_required

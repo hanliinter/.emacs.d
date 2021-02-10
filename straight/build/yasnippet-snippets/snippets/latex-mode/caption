@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# name: caption
-# key: ca
-# --
-\caption{$0}
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/latex-mode/caption

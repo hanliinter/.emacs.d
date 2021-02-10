@@ -1,8 +1,1 @@
-# -*- mode: snippet -*-
-# name: __new__
-# key: new
-# group: dunder methods
-# --
-def __new__(mcs, name, bases, dct):
-    $0
-    return type.__new__(mcs, name, bases, dct)
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/python-mode/__new__

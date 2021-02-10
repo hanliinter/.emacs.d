@@ -1,6 +1,1 @@
-# -*- mode: snippet -*-
-# contributor: Xah Lee (XahLee.org)
-# name: interactive
-# key: interactive
-# --
-(interactive${1: "${2:P}"})
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/emacs-lisp-mode/interactive

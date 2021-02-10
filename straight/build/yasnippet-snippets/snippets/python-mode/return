@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# name: return
-# key: r
-# --
-return $0
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/python-mode/return

@@ -1,10 +1,1 @@
-# -*- mode: snippet -*-
-# name: google_compute_ssl_certificate
-# key: goog_compute_ssl_certificate
-# --
-
-resource "google_compute_ssl_certificate" "${1:name}" {
-  private_key = "${file('${2:path}')}"
-  certificate = "${file('${3:path}')}"
-}
-
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/terraform-mode/google/compute_engine_resources/google_compute_ssl_certificate

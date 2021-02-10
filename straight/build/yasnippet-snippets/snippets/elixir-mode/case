@@ -1,7 +1,1 @@
-# -*- mode: snippet -*-
-# name: case
-# key: case
-# --
-case $1 do
-  $0
-end
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/elixir-mode/case

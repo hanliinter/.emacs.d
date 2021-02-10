@@ -32,7 +32,7 @@ Begin moving the current buffer to different windows.
 Use the arrow keys to move in the desired direction.  Pressing
 any other key exits this function." t nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "buffer-move" '("buf")))
+(register-definition-prefixes "buffer-move" '("buf"))
 
 ;;;***
 

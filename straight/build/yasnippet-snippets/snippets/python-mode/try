@@ -1,8 +1,1 @@
-# -*- mode: snippet -*-
-# name: try
-# key: try
-# --
-try:
-    $0
-except ${1:Exception}:
-    $2
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/python-mode/try

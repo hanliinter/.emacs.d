@@ -1,7 +1,1 @@
-# -*- mode: snippet -*-
-# name:when
-# key:when
-# binding: direct-keybinding
-# --
-(when ${1:condition}
-  $0)
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/hy-mode/when

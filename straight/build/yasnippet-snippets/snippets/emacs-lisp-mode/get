@@ -1,6 +1,1 @@
-# -*- mode: snippet -*-
-# contributor: Xah Lee (XahLee.org)
-# name: get
-# key: get
-# --
-(get ${1:symbol} {2:propname})
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/emacs-lisp-mode/get

@@ -1,8 +1,1 @@
-# -*- mode: snippet -*-
-#Author : Jonas Bonèr <jonas@jonasboner.com>
-# name: if (cond) { .. }
-# key: if
-# --
-if (${1:condition}) {
-  $0
-}
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/scala-mode/if

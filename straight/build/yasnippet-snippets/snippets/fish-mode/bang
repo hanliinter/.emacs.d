@@ -1,6 +1,1 @@
-# -*- mode: snippet -*-
-# name: bang
-# key: !
-# --
-#!/usr/bin/env fish
-$0
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/fish-mode/bang

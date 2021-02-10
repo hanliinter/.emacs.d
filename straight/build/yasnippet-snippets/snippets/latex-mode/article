@@ -1,11 +1,1 @@
-# -*- mode: snippet -*-
-# name: full template of article class
-# key: article
-# --
-\documentclass[${1:options}]{article}
-
-\author{$3}
-
-\begin{document}
-$0
-\end{document}
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/latex-mode/article

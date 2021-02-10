@@ -1,10 +1,1 @@
-# -*- mode: snippet -*-
-# uuid: d370d2c0-4093-4186-9102-070b1077ef1e
-# contributor: Jimmy Yuen Ho Wong <wyuenho@gmail.com>
-# name: propTypeShape
-# key: ptsh
-# --
-
-PropTypes.shape({
-  $0
-}),
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/rjsx-mode/React/ptsh

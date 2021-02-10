@@ -280,7 +280,7 @@ See `consult-grep' for more details regarding the asynchronous search.
 
 \(fn &optional INITIAL)" t nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "consult" '("consult-")))
+(register-definition-prefixes "consult" '("consult-"))
 
 ;;;***
 
@@ -291,7 +291,7 @@ See `consult-grep' for more details regarding the asynchronous search.
 (autoload 'consult-flymake "consult-flymake" "\
 Jump to Flymake diagnostic." t nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "consult-flymake" '("consult-flymake--candidates")))
+(register-definition-prefixes "consult-flymake" '("consult-flymake--candidates"))
 
 ;;;***
 
@@ -299,7 +299,7 @@ Jump to Flymake diagnostic." t nil)
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from consult-icomplete.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "consult-icomplete" '("consult-icomplete--")))
+(register-definition-prefixes "consult-icomplete" '("consult-icomplete--refresh"))
 
 ;;;***
 
@@ -307,7 +307,7 @@ Jump to Flymake diagnostic." t nil)
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from consult-selectrum.el
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "consult-selectrum" '("consult-selectrum--")))
+(register-definition-prefixes "consult-selectrum" '("consult-selectrum--"))
 
 ;;;***
 

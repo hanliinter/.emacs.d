@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# name: io
-# key: io
-# --
-#include <iostream>
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c++-mode/io

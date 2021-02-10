@@ -1,7 +1,1 @@
-# -*- mode: snippet -*-
-# name: main() function
-# key: main
-# --
-fun main(args: Array<String>) {
-    $0
-}
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/kotlin-mode/main

@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# name: size
-# key: size
-# --
-sys.getsizeof($0)
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/python-mode/size

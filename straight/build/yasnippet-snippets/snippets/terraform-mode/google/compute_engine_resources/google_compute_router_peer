@@ -1,13 +1,1 @@
-# -*- mode: snippet -*-
-# name: google_compute_router_peer
-# key: goog_compute_router_peer
-# --
-
-resource "google_compute_router_peer" "${1:name}" {
-  name            = "${2:name}"
-  router          = "${3:router}"
-  peer_ip_address = "${4:ip_address}"
-  peer_asn        = ${5:ASN}
-  interface       = "${6:interface}"
-}
-
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/terraform-mode/google/compute_engine_resources/google_compute_router_peer

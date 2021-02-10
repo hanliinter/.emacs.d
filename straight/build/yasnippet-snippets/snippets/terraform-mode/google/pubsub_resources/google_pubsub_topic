@@ -1,9 +1,1 @@
-# -*- mode: snippet -*-
-# name: google_pubsub_topic
-# key: goog_pubsub_topic
-# --
-
-resource "google_pubsub_topic" "${1:name}" {
-  name = "${2:name}"
-}
-
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/terraform-mode/google/pubsub_resources/google_pubsub_topic

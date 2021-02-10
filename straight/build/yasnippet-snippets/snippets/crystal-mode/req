@@ -1,6 +1,1 @@
-# -*- mode: snippet -*-
-# name: require "..."
-# key: require
-# group : general
-# --
-require '$0'
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/crystal-mode/req

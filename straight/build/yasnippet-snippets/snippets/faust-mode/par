@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# name: par
-# key: pa
-# --
-par(${1:i}, ${2:Nr}, ${3:expression})$0
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/faust-mode/par

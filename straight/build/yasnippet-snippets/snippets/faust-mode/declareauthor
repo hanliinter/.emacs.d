@@ -1,6 +1,1 @@
-# -*- mode: snippet -*-
-# name: declare author
-# key: da
-# --
-declare author "$1";
-$0
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/faust-mode/declareauthor

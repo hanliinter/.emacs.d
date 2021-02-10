@@ -1,7 +1,1 @@
-# -*- mode: snippet -*-
-# name: while
-# key: wh
-# --
-while ${1:cond} do
-      $0
-done
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/tuareg-mode/while

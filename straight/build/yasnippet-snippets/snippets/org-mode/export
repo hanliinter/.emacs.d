@@ -1,7 +1,1 @@
-# -*- mode: snippet -*-
-# name: export
-# key: <ex
-# --
-#+begin_export ${1:type}
-$0
-#+end_export
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/org-mode/export

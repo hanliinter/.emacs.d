@@ -1,11 +1,1 @@
-# -*- mode: snippet -*-
-#Author : Sam Halliday
-# name: try { .. } catch { case e => ..}
-# key: try
-# --
-try {
-  $0
-} catch {
-  case e: ${1:Throwable} =>
-    ${2:// TODO: handle exception}
-}
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/scala-mode/try

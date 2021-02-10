@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# name: word_regexp
-# key: <
-# --
-"\\_<${1:word}\\_>"
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/emacs-lisp-mode/word_regexp

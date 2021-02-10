@@ -1,6 +1,1 @@
-# -*- mode: snippet -*-
-# name: assertRaises
-# key: ar
-# group: testing
-# --
-self.assertRaises(${1:Exception}, ${2:fun})
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/python-mode/assertRaises

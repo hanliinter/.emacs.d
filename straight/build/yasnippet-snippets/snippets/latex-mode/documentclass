@@ -1,6 +1,1 @@
-# -*- mode: snippet -*-
-# name: documentclass
-# key: doc
-# --
-\documentclass[${1:options}]{$2}
-$0
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/latex-mode/documentclass

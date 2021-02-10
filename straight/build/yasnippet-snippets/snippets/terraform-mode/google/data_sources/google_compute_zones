@@ -1,7 +1,1 @@
-# -*- mode: snippet -*-
-# name: google_compute_zones
-# key: goog_compute_zones
-# --
-
-data "google_compute_zones" "${1:name}" {}
-
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/terraform-mode/google/data_sources/google_compute_zones

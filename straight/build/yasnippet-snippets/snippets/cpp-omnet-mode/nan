@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# name: nan
-# key: nan
-# --
-isnan(${1:x})
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/cpp-omnet-mode/nan

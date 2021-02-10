@@ -1,12 +1,1 @@
-# -*- mode: snippet -*-
-# contributor: Jonas Kalderstam <jonas@kalderstam.se>
-# name: module ... end module ...
-# key: module
-# --
-module ${1:name}
-
-contains
-
-  $0
-
-end module $1
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/f90-mode/module

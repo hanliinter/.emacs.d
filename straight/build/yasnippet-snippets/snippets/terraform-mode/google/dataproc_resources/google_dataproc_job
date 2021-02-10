@@ -1,14 +1,1 @@
-# -*- mode: snippet -*-
-# name: google_dataproc_job
-# key: goog_dataproc_job
-# --
-
-resource "google_dataproc_job" "${1:name}" {
-  placement {
-    cluster_name = "${2:cluster_name}"
-  }
-  ${3:config_type}_config {
-    ${4:arguments}
-  }
-}
-
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/terraform-mode/google/dataproc_resources/google_dataproc_job

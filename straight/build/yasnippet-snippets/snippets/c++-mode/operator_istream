@@ -1,10 +1,1 @@
-# -*- mode: snippet -*-
-# name: operator>>
-# key: >>
-# group: operator overloading
-# --
-std::istream& operator>>(std::istream& is, const ${1:Name}& ${2:c})
-{
-         $0
-	 return is;
-}
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c++-mode/operator_istream

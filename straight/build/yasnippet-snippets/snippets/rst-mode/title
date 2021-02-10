@@ -1,9 +1,1 @@
-# -*- mode: snippet -*-
-# name: Document title
-# key: tit
-# --
-${1:$(make-string (string-width yas-text) ?\=)}
-${1:Title}
-${1:$(make-string (string-width yas-text) ?\=)}
-
-$0
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/rst-mode/title

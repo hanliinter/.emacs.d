@@ -1,7 +1,1 @@
-# -*- mode: snippet -*-
-# name: example
-# key: <e
-# --
-#+begin_example
-$0
-#+end_example
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/org-mode/exampleblock

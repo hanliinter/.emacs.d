@@ -1,9 +1,1 @@
-# -*- mode: snippet -*-
-# name: reveal_image_background
-# key: <rib
-# --
-
-    :properties:
-    :reveal_background: ${1: path of the image}
-    :reveal_background_trans: ${2: default||cube||page||concave||zoom||linear||fade||none||slide}
-    :end:
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/org-mode/rv_image_background

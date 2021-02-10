@@ -1,7 +1,1 @@
-# -*- mode: snippet -*-
-# name: src
-# key: <src
-# --
-#+begin_src $1
-  $0
-#+end_src
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/org-mode/src

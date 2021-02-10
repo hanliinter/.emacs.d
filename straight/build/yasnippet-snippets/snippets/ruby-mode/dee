@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# name: deep_copy(...)
-# group : general
-# --
-Marshal.load(Marshal.dump($0))
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/ruby-mode/dee

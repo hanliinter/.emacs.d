@@ -1,8 +1,1 @@
-# -*- mode: snippet -*-
-# name: member_function
-# key: mf
-# --
-${1:type} ${2:Name}::${3:name}(${4:args})${5: const}
-{
-        $0
-}
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c++-mode/member_function

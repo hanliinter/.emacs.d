@@ -1,7 +1,1 @@
-# -*- mode: snippet -*-
-# name: function
-# key: fun
-# --
-Function ${1:Verb-Noun} {
-$0
-}
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/powershell-mode/function

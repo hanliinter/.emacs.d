@@ -1,6 +1,1 @@
-# -*- mode: snippet -*-
-# name: uniform
-# key: uni
-# uniform distribution
-# --
-uniform(${1:0}, ${2:1})
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/cpp-omnet-mode/uniform

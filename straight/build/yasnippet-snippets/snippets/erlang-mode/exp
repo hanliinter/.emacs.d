@@ -1,6 +1,1 @@
-# -*- mode: snippet -*-
-# name: -export([]).
-# contributor : hitesh <hitesh.jasani@gmail.com>
-# --
--export([${1:start/0}]).
-$0
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/erlang-mode/exp

@@ -1,10 +1,1 @@
-# -*- mode: snippet -*-
-# name: google_kms_key_ring
-# key: goog_kms_key_ring
-# --
-
-resource "google_kms_key_ring" "${1:name}" {
-  name     = "${2:name}"
-  location = "${3:location}"
-}
-
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/terraform-mode/google/key_management_service_resources/google_kms_key_ring

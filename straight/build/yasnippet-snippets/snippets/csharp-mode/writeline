@@ -1,6 +1,1 @@
-# -*- mode: snippet -*-
-# contributor : Frede Brændstrup <frederikbraendstrup@gmail.com>
-# name: Console.WriteLine(...);
-# key: cwl
-# --
-Console.WriteLine(${1:Write});
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/csharp-mode/writeline

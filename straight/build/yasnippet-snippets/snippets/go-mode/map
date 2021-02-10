@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# name: map
-# key: map
-# --
-map[${1:type}]${2:type}
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/go-mode/map

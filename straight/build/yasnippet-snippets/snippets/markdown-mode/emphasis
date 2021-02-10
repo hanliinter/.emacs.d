@@ -1,6 +1,1 @@
-# -*- mode: snippet -*-
-# name: Emphasis
-# contributor: Peng Deng <dengpeng@gmail.com>
-# key: _
-# --
-_${1:Text}_ $0
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/markdown-mode/emphasis

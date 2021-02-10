@@ -1,7 +1,1 @@
-# -*- mode: snippet -*-
-# contributor: Xah Lee (XahLee.org)
-# name: number-to-string
-# key: number-to-string
-# key: nts
-# --
-(number-to-string $0)
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/emacs-lisp-mode/number-to-string

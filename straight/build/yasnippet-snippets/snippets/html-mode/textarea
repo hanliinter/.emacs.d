@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# contributor : Jimmy Wu <frozenthrone88@gmail.com>
-# name: <textarea ...></textarea>
-# --
-<textarea name="$1" id="$2" rows="$3" cols="$4" tabindex="$5"></textarea>
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/html-mode/textarea

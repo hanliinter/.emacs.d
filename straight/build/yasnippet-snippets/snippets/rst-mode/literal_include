@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# name: literatal include
-# key: inc
-# --
-.. literalinclude:: ${1:path}
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/rst-mode/literal_include

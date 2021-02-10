@@ -1,5 +1,1 @@
-## -*- mode: snippet -*-
-# name: function-one-line
-# key: df
-# --
-def $1($2)${3:$$(when (and yas-moving-away-p yas-modified-p) (concat " when " yas-text))}, do: $0
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/elixir-mode/function-one-line

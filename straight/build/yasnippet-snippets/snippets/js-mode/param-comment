@@ -1,6 +1,1 @@
-# -*- mode: snippet -*-
-# name: param-comment
-# key: *@p
-#condition: (= (js2-node-type (js2-node-at-point)) js2-COMMENT)
-# --
-* @param {${type}} ${comment}.
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/js-mode/param-comment

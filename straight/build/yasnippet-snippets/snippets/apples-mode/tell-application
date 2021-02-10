@@ -1,6 +1,1 @@
-# -*- mode: snippet -*-
-# name: tell-application
-# --
-tell application "$1"
-$0
-end tell
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/apples-mode/tell-application

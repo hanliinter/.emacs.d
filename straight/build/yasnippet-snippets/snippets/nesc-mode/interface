@@ -1,7 +1,1 @@
-# -*- mode: snippet -*-
-# name: interface
-# key: int
-# --
-interface ${1:Interface} {
-          $0
-}
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/nesc-mode/interface

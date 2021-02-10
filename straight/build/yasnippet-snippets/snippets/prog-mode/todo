@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# name: todo
-# key: t
-# --
-`comment-start`TODO: $0`comment-end`
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/prog-mode/todo

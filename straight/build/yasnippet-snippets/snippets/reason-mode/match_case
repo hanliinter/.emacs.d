@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# name: match case
-# key: |
-# --
-| ${1:Case} => $0
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/reason-mode/match_case

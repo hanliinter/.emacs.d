@@ -1,8 +1,1 @@
-# -*- mode: snippet -*-
-# name: module
-# key: mod
-# --
-class ${1:Name} : public cSimpleModule
-{
-   $0
-}
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c++-mode/module

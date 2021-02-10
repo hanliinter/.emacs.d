@@ -1,8 +1,1 @@
-# -*- mode: snippet -*-
-# name: equal
-# key: eql
-# --
-if (std::equal(std::begin(${1:container}), std::end($1), std::begin($2))) {
-  $3
-}
-$0
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c++-mode/eql

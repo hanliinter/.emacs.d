@@ -1,6 +1,1 @@
-# -*- mode: snippet -*-
-# contributor: Xah Lee (XahLee.org)
-# name: nth
-# key: nth
-# --
-(nth ${1:index} ${2:list})
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/emacs-lisp-mode/nth

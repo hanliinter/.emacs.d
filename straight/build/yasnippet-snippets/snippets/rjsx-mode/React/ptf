@@ -1,8 +1,1 @@
-# -*- mode: snippet -*-
-# uuid: c1ba108b-8b55-4c1f-bc6b-04f3d0aa489f
-# contributor: Jimmy Yuen Ho Wong <wyuenho@gmail.com>
-# name: propTypeFunc
-# key: ptf
-# --
-
-PropTypes.func,
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/rjsx-mode/React/ptf

@@ -1,11 +1,1 @@
-# -*- mode: snippet -*-
-# name: partition
-# key: ptn
-# --
-auto pos = std::partition(std::begin(${1:container}), std::end($1), []($2) {
-  $3
-});
-if (pos != std::end($1)) {
-  $4
-}
-$0
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c++-mode/ptn

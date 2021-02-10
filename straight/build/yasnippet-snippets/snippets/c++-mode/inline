@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# name: inline
-# key: il
-# --
-inline $0
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c++-mode/inline

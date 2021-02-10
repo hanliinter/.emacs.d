@@ -42,7 +42,7 @@ a value in `ivy-re-builders-alist'.
 
 (with-eval-after-load 'ivy (add-to-list 'ivy-highlight-functions-alist '(orderless-ivy-re-builder . orderless-ivy-highlight)))
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "orderless" '("orderless-")))
+(register-definition-prefixes "orderless" '("orderless-"))
 
 ;;;***
 

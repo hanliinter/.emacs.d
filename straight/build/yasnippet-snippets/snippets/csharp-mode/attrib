@@ -1,9 +1,1 @@
-# -*- mode: snippet -*-
-# contributor : Alejandro Espinoza Esparza <aespinoza@structum.com.mx>
-# name: private attribute ....;
-# key: attrib
-# --
-/// <summary>
-/// $3
-/// </summary>
-private $1 $2;
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/csharp-mode/attrib

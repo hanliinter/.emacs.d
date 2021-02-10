@@ -1,7 +1,1 @@
-# -*- mode: snippet -*-
-# name: __len__
-# key: len
-# group: dunder methods
-# --
-def __len__(self):
-    $0
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/python-mode/__len__

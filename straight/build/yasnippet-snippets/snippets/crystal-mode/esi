@@ -1,7 +1,1 @@
-# -*- mode: snippet -*-
-# name: elsif ...
-# key: esi
-# group : control structure
-# --
-elsif`(indent-for-tab-command)` ${1:condition}
-  $2
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/crystal-mode/esi

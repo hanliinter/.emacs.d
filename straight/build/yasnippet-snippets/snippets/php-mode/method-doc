@@ -1,8 +1,1 @@
-# -*- mode: snippet -*-
-# contributor: USAMI Kenta <tadsan@zonu.me>
-# name: PHPDoc @property
-# key: *property
-# group: annotation
-# --
-* @property ${1:type} ${2:$variable} ${3:description}${0:
-*}
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/php-mode/method-doc

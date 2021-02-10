@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# name: typedef
-# key: typedef
-# --
-typedef ${1:type} ${2:alias};
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c-lang-common/typedef

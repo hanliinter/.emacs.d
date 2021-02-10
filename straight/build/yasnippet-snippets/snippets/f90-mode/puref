@@ -1,12 +1,1 @@
-# -*- mode: snippet -*-
-# contributor: Jonas Kalderstam <jonas@kalderstam.se>
-# name: pure function ... end function ...
-# key: pure func
-# --
-pure function ${1:name} (${2:arg})
-  ${3:real} :: $1
-  ${4:real, intent(in)} :: $2
-
-  $0
-
-end function $1
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/f90-mode/puref

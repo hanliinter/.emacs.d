@@ -1,11 +1,1 @@
-# -*- mode: snippet -*-
-# name: google_logging_folder_sink
-# key: goog_logging_folder_sink
-# --
-
-resource "google_logging_folder_sink" "${1:name}" {
-  name        = "${2:name}"
-  folder      = "${3:folder}"
-  destination = "${4:destination}"
-}
-
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/terraform-mode/google/stackdriver_logging_resources/google_logging_folder_sink

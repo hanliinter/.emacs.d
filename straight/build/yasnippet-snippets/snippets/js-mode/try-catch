@@ -1,11 +1,1 @@
-# -*- mode: snippet; require-final-newline: nil -*-
-# name: try...catch statement
-# key: try
-# --
-try {
-  $1
-} catch (err) {
-  $2
-}${3: finally {
-  $4
-}}
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/js-mode/try-catch

@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# name: printf
-# key: pr
-# --
-printf("${1:format string}"${2: ,a0,a1});
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c-mode/printf

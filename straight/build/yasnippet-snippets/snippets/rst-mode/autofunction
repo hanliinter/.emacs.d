@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# name: autofunction
-# key: auto
-# --
-.. autofunction:: $0
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/rst-mode/autofunction

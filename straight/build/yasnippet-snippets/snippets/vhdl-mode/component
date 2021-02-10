@@ -1,7 +1,1 @@
-# -*- mode: snippet -*-
-# name: component
-# key: comp
-# --
-component ${1:Name}
-  $0
-end component;
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/vhdl-mode/component

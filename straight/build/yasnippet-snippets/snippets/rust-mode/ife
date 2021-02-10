@@ -1,9 +1,1 @@
-# -*- mode: snippet -*-
-# name: if expression { ... } else { .. }
-# key: ife
-# --
-if ${1:expression} {
-   $0
-} else {
-   
-}
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/rust-mode/ife

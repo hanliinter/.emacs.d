@@ -1,6 +1,1 @@
-# -*- mode: snippet -*-
-#Author : Jonas Bonèr <jonas@jonasboner.com>
-# name: case object T
-# key: co
-# --
-case object ${1:name} $0
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/scala-mode/co

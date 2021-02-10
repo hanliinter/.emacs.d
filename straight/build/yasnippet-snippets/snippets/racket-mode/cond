@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# name: (cond [... ...]...)
-# key: cond
-# --
-(cond [${1:predicate} $0])
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/racket-mode/cond

@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# name: omnet
-# key: omnet
-# --
-#include <omnetpp.h>
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/cpp-omnet-mode/omnet

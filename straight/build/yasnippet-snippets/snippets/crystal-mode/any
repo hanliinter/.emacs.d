@@ -1,6 +1,1 @@
-# -*- mode: snippet -*-
-# name: any? { |...| ... }
-# key: any
-# group : collections
-# --
-any? { |${e}| $0 }
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/crystal-mode/any

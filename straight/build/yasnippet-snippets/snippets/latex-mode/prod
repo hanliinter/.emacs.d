@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# name: prod
-# key: prod
-# --
-\prod_{$1}^{$2}$0
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/latex-mode/prod

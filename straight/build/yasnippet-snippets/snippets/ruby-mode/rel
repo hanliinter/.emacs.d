@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# name: require_relative
-# group : general
-# --
-require_relative '$0'
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/ruby-mode/rel

@@ -1,8 +1,1 @@
-# -*- mode: snippet -*-
-# name: Header 3
-# contributor: Peng Deng <dengpeng@gmail.com>
-# key: h3
-# --
-### ${1:Header 3} ###
-
-$0
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/markdown-mode/h3

@@ -1,4 +1,1 @@
-# -*- mode: snippet -*-
-# name: background-color: ...
-# --
-background-color: #${1:DDD};
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/css-mode/bg

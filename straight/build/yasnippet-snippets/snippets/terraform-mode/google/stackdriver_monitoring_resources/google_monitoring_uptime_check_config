@@ -1,10 +1,1 @@
-# -*- mode: snippet -*-
-# name: google_monitoring_uptime_check_config
-# key: goog_monitoring_uptime_check_config
-# --
-
-resource "google_monitoring_uptime_check_config" "${1:name}" {
-  display_name = "${2:display_name}"
-  timeout      = "${3:timeout}"
-}
-
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/terraform-mode/google/stackdriver_monitoring_resources/google_monitoring_uptime_check_config

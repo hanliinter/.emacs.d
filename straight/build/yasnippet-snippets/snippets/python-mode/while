@@ -1,7 +1,1 @@
-# -*- mode: snippet -*-
-# name: while
-# key: wh
-# group: control structure
-# --
-while ${1:True}:
-    $0
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/python-mode/while

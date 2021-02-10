@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# name: cpp
-# key: cpp
-# --
-#include "`(file-name-nondirectory (file-name-sans-extension (buffer-file-name)))`.h"
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c++-mode/cpp

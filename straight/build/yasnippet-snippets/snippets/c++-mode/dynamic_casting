@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# name: dynamic_casting
-# key: cast
-# --
-check_and_cast<${1:Name} *>(${2:msg});
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c++-mode/dynamic_casting

@@ -1,9 +1,1 @@
-# -*- mode: snippet -*-
-# name: java_binary
-# key: jbin
-# --
-java_binary(
-    name = "$0",
-    srcs = "$1",
-    deps = "$2"
-)
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/bazel-mode/jbin

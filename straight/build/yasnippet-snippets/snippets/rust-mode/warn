@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# name: #[warn(lint)]
-# key: warn
-# --
-#[warn(${1:lint})]
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/rust-mode/warn

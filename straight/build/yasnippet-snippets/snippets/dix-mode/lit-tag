@@ -1,7 +1,1 @@
-# -*- mode: snippet; require-final-newline: nil -*-
-# name: <lit-tag> elements
-# key: lt
-# condition: (progn (backward-char 1) (dix-transfer-enclosing-allows "lit-tag"))
-# binding: direct-keybinding
-# --
-<lit-tag v="$1"/>$0
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/dix-mode/lit-tag

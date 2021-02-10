@@ -1,10 +1,1 @@
-# -*- mode: snippet -*-
-# name: java_import
-# key: jimp
-# --
-java_import(
-    name = "$0",
-    jars = [
-        "$1"
-    ]
-)
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/bazel-mode/jimp

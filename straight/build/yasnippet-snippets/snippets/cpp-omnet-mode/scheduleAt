@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# name: scheduleAt
-# key: sched
-# --
-scheduleAt(simTime()+${1:1.0}, ${2:event});
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/cpp-omnet-mode/scheduleAt

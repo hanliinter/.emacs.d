@@ -1,8 +1,1 @@
-# -*- mode: snippet -*-
-# name: constructor
-# key: ct
-# --
-${1:Name}::$1(${2:args}) ${3: : ${4:init}}
-{
-        $0
-}
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c++-mode/constructor

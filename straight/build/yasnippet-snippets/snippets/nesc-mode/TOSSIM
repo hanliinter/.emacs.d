@@ -1,7 +1,1 @@
-# -*- mode: snippet -*-
-# name: TOSSIM
-# key: tossim
-# --
-#ifndef TOSSIM
-        $0
-#endif
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/nesc-mode/TOSSIM

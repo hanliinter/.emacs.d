@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# name: -include("...").
-# --
--include("$1").
-$0
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/erlang-mode/inc

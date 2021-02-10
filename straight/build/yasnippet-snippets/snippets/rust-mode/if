@@ -1,7 +1,1 @@
-# -*- mode: snippet -*-
-# name: if expr { ... }
-# key: if
-# --
-if ${1:expression} {
-    $0
-}
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/rust-mode/if

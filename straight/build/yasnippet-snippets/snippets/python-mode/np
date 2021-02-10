@@ -1,7 +1,1 @@
-# -*- mode: snippet -*-
-# name: np
-# key: np
-# group : general
-# --
-import numpy as np
-$0
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/python-mode/np

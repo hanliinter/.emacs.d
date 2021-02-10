@@ -1,9 +1,1 @@
-# -*- mode: snippet -*-
-# name: is_heap_until
-# key: ihu
-# --
-auto pos = std::is_heap_until(std::begin(${1:container}), std::end($1));
-if (pos != std::end($1)) {
-  $2
-}
-$0
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c++-mode/ihu

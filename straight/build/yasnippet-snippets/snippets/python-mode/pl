@@ -1,7 +1,1 @@
-# -*- mode: snippet -*-
-# name: Import pyplot
-# key: plt
-# group : general
-# --
-import matplotlib.pyplot as plt
-$0
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/python-mode/pl

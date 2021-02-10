@@ -1,6 +1,1 @@
-# -*- mode: snippet -*-
-# name: moderncv-cvline
-# key: cvline
-# --
-\cvline{${1:hobby}}{${2:Description}}
-$0
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/latex-mode/moderncv-cvline

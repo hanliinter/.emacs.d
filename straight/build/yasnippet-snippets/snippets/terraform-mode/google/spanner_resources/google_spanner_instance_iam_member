@@ -1,11 +1,1 @@
-# -*- mode: snippet -*-
-# name: google_spanner_instance_iam_member
-# key: goog_spanner_instance_iam_member
-# --
-
-resource "google_spanner_instance_iam_member" "${1:name}" {
-  instance  = "${2:instance}"
-  role      = "${3:role}"
-  member    = "user:${4:user}"
-}
-
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/terraform-mode/google/spanner_resources/google_spanner_instance_iam_member

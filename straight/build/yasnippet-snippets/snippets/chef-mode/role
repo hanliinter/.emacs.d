@@ -1,12 +1,1 @@
-# -*- mode: snippet -*-
-# name: role
-# key: role
-# --
-name "${1:role name}"
-  description "${2:Description for the role}"
-  env_run_lists "${3:role name}" => [
-  ]
-  run_list ""
-  default_attributes(
-  ${4::attribute => "example"}
-  )
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/chef-mode/role

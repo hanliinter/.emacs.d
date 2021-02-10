@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# name: instdir
-# key: $
-# --
-$INSTDIR
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/nsis-mode/instdir

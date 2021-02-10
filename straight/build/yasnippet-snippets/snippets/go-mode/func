@@ -1,8 +1,1 @@
-# -*- mode: snippet -*-
-# name: func
-# key: func
-# --
-// $1 ${4:...}
-func ${1:name}(${2:args}) $3 {
-  $0
-}
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/go-mode/func

@@ -1,7 +1,1 @@
-# -*- mode: snippet -*-
-# name: if
-# key: if
-# --
-if (${1:cond}) {
-  $0
-}
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/reason-mode/if

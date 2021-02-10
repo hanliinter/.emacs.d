@@ -1,7 +1,1 @@
-# -*- mode: snippet -*-
-# name: quote
-# key: <q
-# --
-#+begin_quote
-$0
-#+end_quote
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/org-mode/quote

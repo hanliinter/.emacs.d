@@ -1,6 +1,1 @@
-# -*- mode: snippet -*-
-# name: def
-# key: def
-# --
-define(\`${1:macro}',\`${2:subst}').
-$0
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/m4-mode/def

@@ -1,6 +1,1 @@
-# -*- mode: snippet -*-
-# name: celery pdb
-# key: cdb
-# group: debug
-# --
-from celery.contrib import rdb; rdb.set_trace()
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/python-mode/celery_pdb

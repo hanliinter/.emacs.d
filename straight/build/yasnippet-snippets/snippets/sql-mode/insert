@@ -1,5 +1,1 @@
-# -*- mode: snippet; -*-
-# name: insert
-# key: ins
-# --
-INSERT INTO ${table-name} (${col1, col2}) VALUES (${'val1', 'val2'});$0
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/sql-mode/insert

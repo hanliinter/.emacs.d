@@ -1,8 +1,1 @@
-# -*- mode: snippet -*-
-# uuid: ebcbdf19-4ba9-404f-ab66-eb9b992d7126
-# contributor: Jimmy Yuen Ho Wong <wyuenho@gmail.com>
-# name: import redux statement
-# key: redux
-# --
-
-import { connect } from 'react-redux'
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/rjsx-mode/Redux/redux

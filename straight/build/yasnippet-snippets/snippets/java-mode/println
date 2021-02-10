@@ -1,6 +1,1 @@
-# -*- mode: snippet -*-
-# name: println
-# key: pr
-# --
-System.out.println("${1:text}");
-$0
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/java-mode/println

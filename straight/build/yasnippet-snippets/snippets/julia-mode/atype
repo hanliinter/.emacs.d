@@ -1,6 +1,1 @@
-# -*- mode: snippet -*-
-# name: abstract type ... end
-# key: atype
-# contributor: hankail05
-# --
-abstract type ${1:${2:type} <: ${3:supertype}} end$0
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/julia-mode/atype

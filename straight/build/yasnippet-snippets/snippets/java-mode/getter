@@ -1,7 +1,1 @@
-# -*- mode: snippet; require-final-newline: nil -*-
-# name: getter
-# key: g
-# --
-public ${1:int} get${2:Field}() {
-       return ${3:field};
-}
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/java-mode/getter

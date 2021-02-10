@@ -1,6 +1,1 @@
-# -*- mode: snippet -*-
-# name: remove whitespace at beginning
-# key: ltr
-# --
-${1:container}.erase(0, $1.find_first_not_of(" \t\n\r"));
-$0
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c++-mode/ltr

@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# name: supports
-# key: supports
-# --
-supports :status => :${1:true}, :restart => :${2:true}, :reload => :${3:true}
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/chef-mode/supports

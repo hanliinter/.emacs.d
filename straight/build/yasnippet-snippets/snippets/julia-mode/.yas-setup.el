@@ -1,5 +1,1 @@
-(require 'yasnippet)
-
-(defun yas-julia-iteration-keyword-choice ()
-  "Choose the iteration keyword for for-loop"
-  (yas-choose-value '("=" "in" "∈")))
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/julia-mode/.yas-setup.el

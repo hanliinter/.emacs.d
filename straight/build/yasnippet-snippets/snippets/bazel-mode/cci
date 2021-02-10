@@ -1,8 +1,1 @@
-# -*- mode: snippet -*-
-# name: cc_import
-# key: cci
-# --
-cc_import(
-    name = "$0",
-    hdrs = ["$1"]
-)
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/bazel-mode/cci

@@ -1,7 +1,1 @@
-# -*- mode: snippet -*-
-# contributor: Xah Lee (XahLee.org)
-# name: set-mark
-# key: set-mark
-# key: sm
-# --
-(set-mark $0)
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/emacs-lisp-mode/set-mark

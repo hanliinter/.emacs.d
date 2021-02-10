@@ -1,10 +1,1 @@
-# -*- mode: snippet -*-
-# name: google_compute_snapshot
-# key: goog_compute_snapshot
-# --
-
-resource "google_compute_snapshot" "${1:name}" {
-  name        = "${2:name}"
-  source_disk = "${3:source_disk}"
-}
-
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/terraform-mode/google/compute_engine_resources/google_compute_snapshot

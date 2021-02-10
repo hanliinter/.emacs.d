@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# name: code
-# key: code
-# --
-.. code:: ${1:python}
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/rst-mode/code

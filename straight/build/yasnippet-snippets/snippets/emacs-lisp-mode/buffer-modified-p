@@ -1,7 +1,1 @@
-# -*- mode: snippet -*-
-# contributor: Xah Lee (XahLee.org)
-# name: buffer-modified-p
-# key: buffer-modified-p
-# key: bmp
-# --
-(buffer-modified-p $0)
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/emacs-lisp-mode/buffer-modified-p

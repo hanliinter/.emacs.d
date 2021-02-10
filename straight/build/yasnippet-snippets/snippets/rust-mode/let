@@ -1,5 +1,1 @@
-# -*- mode: snippet -*-
-# name: let pattern = expression;
-# key: let
-# --
-let ${1:pattern} = ${2:expression};
+/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/rust-mode/let
