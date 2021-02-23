@@ -12,7 +12,6 @@
 ;; M-s s 
 
 ;; LSP
-
 (use-package eglot
   :straight t)
 

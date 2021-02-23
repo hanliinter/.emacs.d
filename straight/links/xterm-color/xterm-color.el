@@ -1,0 +1,1 @@
+c:/Users/h.wang/.emacs.d/straight/repos/xterm-color/xterm-color.el
