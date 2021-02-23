@@ -359,3 +359,10 @@ FACE defaults to inheriting from default and highlight."
 (company-prescient-mode)
 (selectrum-prescient-mode)
 (prescient-persist-mode)
+
+
+(use-package git-gutter
+  :straight t)
+
+ (use-package git-timemachine
+   :straight t)
