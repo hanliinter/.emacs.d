@@ -34,3 +34,6 @@
 
 (setq language-file "~/.emacs.d/lang/general.el")
 (load-file language-file)
+
+(setq global-basic-config-file "~/.emacs.d/global-basic.el")
+(load-file global-basic-config-file)
