@@ -378,3 +378,6 @@ FACE defaults to inheriting from default and highlight."
 (company-prescient-mode)
 (selectrum-prescient-mode)
 (prescient-persist-mode)
+
+(use-package imenu-list
+  :straight t)
