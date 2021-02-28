@@ -84,7 +84,9 @@
       (company-complete-common)))
   
 (use-package magit
-  :straight t)
+  :straight t
+  :bind ("C-c g" . magit-status)
+  )
 ;; Highlight the current line
 (use-package hl-line
   :straight t

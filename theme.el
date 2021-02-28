@@ -4,7 +4,8 @@
   (setq doom-themes-enable-bold t
 	doom-themes-enable-italic t)
 
-  (load-theme 'doom-nord-light t)
+  ;;(load-theme 'doom-nord-light t)
+  (load-theme 'doom-nord t)
 
   )
 
