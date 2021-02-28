@@ -1,1 +1,11 @@
 auto-save-list/**
+*~
+*.elc
+auto-save-list
+server
+straight
+*_flymake.*
+/server/
+.projectile
+.dir-locals.el
+

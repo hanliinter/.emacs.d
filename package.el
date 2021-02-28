@@ -14,6 +14,10 @@
   :straight t
   :after yasnippet)
 
+(add-to-list 'load-path
+	     "~/.emacs.d/snippets")
+
+
 (use-package company
   :straight t
   :diminish
@@ -26,8 +30,8 @@
          :map company-active-map
          ("C-p" . company-select-previous)
          ("C-n" . company-select-next)
-         ("<tab>" . company-complete-common-or-cycle)
-         ("<backtab>" . my-company-yasnippet)
+         ("<tab>" . smater-yas-company-complete )
+         ("<backtab>" . smater-yas-company-complete)
          :map company-search-map
          ("C-p" . company-select-previous)
          ("C-n" . company-select-next))
@@ -46,26 +50,43 @@
         company-backends '((company-capf :with company-yasnippet)
                            (company-dabbrev-code company-keywords company-files)
                            company-dabbrev))
-  
-  (defun my-company-yasnippet ()
-    "Hide the current completeions and show snippets."
-    (interactive)
-    (company-cancel)
-    (call-interactively 'company-yasnippet))
-  :config
-  ;; `yasnippet' integration
-  (with-no-warnings
-    (with-eval-after-load 'yasnippet
-      (defun company-backend-with-yas (backend)
-        "Add `yasnippet' to company backend."
-        (if (and (listp backend) (member 'company-yasnippet backend))
-            backend
-          (append (if (consp backend) backend (list backend))
-                  '(:with company-yasnippet))))
-      )))
+  )
+  ;; (defun my-company-yasnippet ()
+  ;;   "Hide the current completeions and show snippets."
+  ;;   (interactive)
+  ;;   (company-cancel)
+  ;;   (call-interactively 'company-yasnippet))
+  ;; :config
+  ;; ;; `yasnippet' integration
+  ;; (with-no-warnings
+  ;;   (with-eval-after-load 'yasnippet
+  ;;     (defun company-backend-with-yas (backend)
+  ;;       "Add `yasnippet' to company backend."
+  ;;       (if (and (listp backend) (member 'company-yasnippet backend))
+  ;;           backend
+  ;;         (append (if (consp backend) backend (list backend))
+  ;;                 '(:with company-yasnippet))))
+  ;;     )))
 
+(defun smater-yas-company-complete ()
+    "Try 'yas-expand' and 'yas-next-field' if possible. Otherwise choose company"
+    (interactive)
+    (if yas-minor-mode
+	(let ((current-point (point))
+	      (current-tick (buffer-chars-modified-tick)))
+	  (yas-expand)
+	  (when (and (eq current-point (point))
+		     (eq current-tick (buffer-chars-modified-tick)))
+	    (ignore-errors (yas-next-field))
+	  (when (and (eq current-point (point))
+		     (eq current-tick (buffer-chars-modified-tick)))
+	    (company-complete-common))))
+      (company-complete-common)))
+  
 (use-package magit
-  :straight t)
+  :straight t
+  :bind ("C-c g" . magit-status)
+  )
 ;; Highlight the current line
 (use-package hl-line
   :straight t
@@ -361,8 +382,13 @@ FACE defaults to inheriting from default and highlight."
 (prescient-persist-mode)
 
 
+
 (use-package git-gutter
   :straight t)
 
  (use-package git-timemachine
    :straight t)
+
+(use-package imenu-list
+  :straight t)
+
