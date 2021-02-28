@@ -5,6 +5,7 @@
 
 ;;Rust
 
+
 (use-package rustic
   :straight t)
 
@@ -17,6 +18,7 @@
   :straight t)
 
 ;; dumb-jump
+
 (use-package dumb-jump
   :straight t)
 (add-hook 'xref-backend-functions #'dumb-jump-xref-activate)

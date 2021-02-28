@@ -19,7 +19,7 @@
     (set-frame-font "Sarasa Mono SC-14" t t)))
  ((string-equal system-type "darwin") ; macOS
   (when (member "Menlo" (font-family-list))
-    (set-frame-font "Menlo" t t)))
+    (set-frame-font "Menlo-14" t t)))
  ((string-equal system-type "gnu/linux") ; linux
   (when (member "DejaVu Sans Mono" (font-family-list))
     (set-frame-font "DejaVu Sans Mono" t t))))
