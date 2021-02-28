@@ -3,7 +3,7 @@ auto-save-list/**
 *.elc
 auto-save-list
 server
-straight
+straight/
 *_flymake.*
 /server/
 .projectile
