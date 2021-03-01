@@ -1,7 +1,9 @@
 ;; Haskell
 
 (use-package haskell-mode
-  :straight t)
+  :straight t
+  
+  )
 
 ;;Rust
 
@@ -22,3 +24,9 @@
 (use-package dumb-jump
   :straight t)
 (add-hook 'xref-backend-functions #'dumb-jump-xref-activate)
+
+
+;; Protobuf
+(use-package protobuf-mode
+  :straight t)
+

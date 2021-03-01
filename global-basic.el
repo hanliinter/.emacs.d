@@ -60,3 +60,4 @@
   (scroll-bar-mode -1)
   (tooltip-mode -1))
 
+(setq read-process-output-max (* 1024 1024)) ;; set 1Mb message size for LSP
