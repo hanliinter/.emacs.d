@@ -2,8 +2,8 @@
 
 (use-package multiple-cursors
   :straight t
-  :bind (("C-c m m" . #'mc/edit-lines )
-         ("C-c m d" . #'mc/mark-all-dwim )))
+  :bind (("C-c e m" . #'mc/edit-lines )
+         ("C-c e d" . #'mc/mark-all-dwim )))
 
 (use-package expand-region
   :straight t
@@ -14,4 +14,4 @@
 
 (use-package ace-window
   :straight t
-  :bind (("C-x o" . ace-window))) 
+  :bind (("C-x o" . #'ace-window))) 
