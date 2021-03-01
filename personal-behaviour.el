@@ -33,8 +33,6 @@
   :bind (("C-x o" . ace-window))) 
 
 ;; Switch to some default buffer
- 
-;; iedit
 (use-package iedit
   :straight t)
 
