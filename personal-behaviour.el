@@ -59,3 +59,37 @@
 (use-package backup-walker
   :straight t
   :commands backup-walker-start)
+
+
+(defun ora-company-number ()
+  "filter the num key if it is part of candidates."
+  (interactive)
+  (let* ((k (substring (this-command-keys) 0 ))
+	  (re (concat "^" company-prefix k))
+	  )
+       (if (or(cl-find-if (lambda (s) (string-match re s))
+			  company-candidates)
+	      (> (string-to-number k) (length company-candidates))
+	      (looking-back "[0-9]" (line-beginning-position)
+	      ))
+	   (self-insert-command 1)
+	 (company-complete-number (if (equal k "0")
+				      10
+				    (string-to-number k)) )
+	   )
+
+       )
+  )
+
+
+
+(let ((keymap company-active-map))
+  (mapc
+   (lambda (x)
+     (define-key keymap (format "%d" x) 'ora-company-number))
+   (number-sequence 0 9))
+  (define-key keymap (kbd "SPC") (lambda () (interactive) (company-abort)))
+  ;(define-key map (kbd "<return>") nil)
+  
+  )
+

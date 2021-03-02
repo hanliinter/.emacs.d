@@ -51,6 +51,9 @@
                            (company-dabbrev-code company-keywords company-files)
                            company-dabbrev))
   )
+:config (setq company-show-numbers t)
+
+
   ;; (defun my-company-yasnippet ()
   ;;   "Hide the current completeions and show snippets."
   ;;   (interactive)
@@ -82,7 +85,8 @@
 		     (eq current-tick (buffer-chars-modified-tick)))
 	    (company-complete-common))))
       (company-complete-common)))
-  
+
+
 (use-package magit
   :straight t
   :bind ("C-c g" . magit-status)

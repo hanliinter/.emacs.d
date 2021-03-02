@@ -9,3 +9,5 @@ straight/
 .projectile
 .dir-locals.el
 
+*.desktop
+*.lock

@@ -3,9 +3,9 @@
 
 "28.0.50"
 
-#s(hash-table size 97 test equal rehash-size 1.5 rehash-threshold 0.8125 data ("org-elpa" ("2021-03-02 11:51:08" nil (:local-repo nil :package "org-elpa" :type git)) "melpa" ("2021-03-02 11:51:08" nil (:type git :host github :repo "melpa/melpa" :no-build t :package "melpa" :local-repo "melpa")) "gnu-elpa-mirror" ("2021-03-02 11:51:08" nil (:type git :host github :repo "emacs-straight/gnu-elpa-mirror" :no-build t :package "gnu-elpa-mirror" :local-repo "gnu-elpa-mirror")) "emacsmirror-mirror" ("2021-03-02 11:51:08" nil (:type git :host github :repo "emacs-straight/emacsmirror-mirror" :no-build t :package "emacsmirror-mirror" :local-repo "emacsmirror-mirror")) "straight" ("2021-03-02 11:51:08" ("emacs") (:type git :host github :repo "raxod502/straight.el" :files ("straight*.el") :branch "master" :package "straight" :local-repo "straight.el")) "use-package" ("2021-03-02 11:51:08" ("emacs" "bind-key") (:type git :flavor melpa :files (:defaults (:exclude "bind-key.el" "bind-chord.el" "use-package-chords.el" "use-package-ensure-system-package.el") "use-package-pkg.el") :host github :repo "jwiegley/use-package" :package "use-package" :local-repo "use-package")) "bind-key" ("2021-03-02 11:51:08" nil (:flavor melpa :files ("bind-key.el" "bind-key-pkg.el") :package "bind-key" :local-repo "use-package" :type git :repo "jwiegley/use-package" :host github)) "doom-themes" ("2021-03-02 11:51:08" ("emacs" "cl-lib") (:type git :flavor melpa :files (:defaults "themes/*.el" "doom-themes-pkg.el") :host github :repo "hlissner/emacs-doom-themes" :package "doom-themes" :local-repo "emacs-doom-themes")) "all-the-icons" ("2021-03-02 11:51:09" ("emacs") (:type git :flavor melpa :files (:defaults "data" "all-the-icons-pkg.el") :host github :repo "domtronn/all-the-icons.el" :package "all-the-icons" :local-repo "all-the-icons.el")) "selectrum" ("2021-03-02 11:51:09" ("emacs") (:type git :flavor melpa :host github :repo "raxod502/selectrum" :package "selectrum" :local-repo "selectrum")) "projectile" ("2021-03-02 11:51:09" ("emacs" "pkg-info") (:type git :flavor melpa :files ("projectile.el" "projectile-pkg.el") :host github :repo "bbatsov/projectile" :package "projectile" :local-repo "projectile")) "pkg-info" ("2021-03-02 11:51:09" ("epl") (:type git :flavor melpa :host github :repo "emacsorphanage/pkg-info" :package "pkg-info" :local-repo "pkg-info")) "epl" ("2021-03-02 11:51:09" ("cl-lib") (:type git :flavor melpa :host github :repo "cask/epl" :package "epl" :local-repo "epl")) "yasnippet" ("2021-03-02 11:51:09" ("cl-lib") (:type git :flavor melpa :files ("yasnippet.el" "snippets" "yasnippet-pkg.el") :host github :repo "joaotavora/yasnippet" :package "yasnippet" :local-repo "yasnippet")) "yasnippet-snippets" ("2021-03-02 11:51:09" ("yasnippet") (:type git :flavor melpa :files ("*.el" "snippets" ".nosearch" "yasnippet-snippets-pkg.el") :host github :repo "AndreaCrotti/yasnippet-snippets" :package "yasnippet-snippets" :local-repo "yasnippet-snippets")) "company" ("2021-03-02 11:51:09" ("emacs") (:type git :flavor melpa :host github :repo "company-mode/company-mode" :package "company" :local-repo "company-mode")) "magit" ("2021-03-02 11:51:09" ("emacs" "dash" "git-commit" "transient" "with-editor") (:type git :flavor melpa :files ("lisp/magit" "lisp/magit*.el" "lisp/git-rebase.el" "Documentation/magit.texi" "Documentation/AUTHORS.md" "LICENSE" (:exclude "lisp/magit-libgit.el") "magit-pkg.el") :host github :repo "magit/magit" :package "magit" :local-repo "magit")) "dash" ("2021-03-02 11:51:09" ("emacs") (:type git :flavor melpa :files ("dash.el" "dash.texi" "dash-pkg.el") :host github :repo "magnars/dash.el" :package "dash" :local-repo "dash.el")) "git-commit" ("2021-03-02 11:51:09" ("emacs" "dash" "transient" "with-editor") (:flavor melpa :files ("lisp/git-commit.el" "git-commit-pkg.el") :package "git-commit" :local-repo "magit" :type git :repo "magit/magit" :host github)) "transient" ("2021-03-02 11:51:09" ("emacs") (:type git :flavor melpa :files ("lisp/*.el" "docs/transient.texi" "transient-pkg.el") :host github :repo "magit/transient" :package "transient" :local-repo "transient")) "with-editor" ("2021-03-02 11:51:09" ("emacs") (:type git :flavor melpa :host github :repo "magit/with-editor" :package "with-editor" :local-repo "with-editor")) "symbol-overlay" ("2021-03-02 11:51:09" ("emacs" "seq") (:type git :flavor melpa :host github :repo "wolray/symbol-overlay" :package "symbol-overlay" :local-repo "symbol-overlay")) "which-key" ("2021-03-02 11:51:09" ("emacs") (:type git :flavor melpa :host github :repo "justbur/emacs-which-key" :package "which-key" :local-repo "emacs-which-key")) "consult" ("2021-03-02 11:51:09" ("emacs") (:type git :flavor melpa :files (:defaults (:exclude "consult-flycheck.el") "consult-pkg.el") :host github :repo "minad/consult" :package "consult" :local-repo "consult")) "consult-flycheck" ("2021-03-02 11:51:09" ("consult" "flycheck" "emacs") (:flavor melpa :files ("consult-flycheck.el" "consult-flycheck-pkg.el") :package "consult-flycheck" :local-repo "consult" :type git :repo "minad/consult" :host github)) "flycheck" ("2021-03-02 11:51:09" ("dash" "pkg-info" "let-alist" "seq" "emacs") (:type git :flavor melpa :host github :repo "flycheck/flycheck" :package "flycheck" :local-repo "flycheck")) "let-alist" ("2021-03-02 11:51:09" ("emacs") (:type git :host github :repo "emacs-straight/let-alist" :files ("*" (:exclude ".git")) :package "let-alist" :local-repo "let-alist")) "marginalia" ("2021-03-02 11:51:09" ("emacs") (:type git :flavor melpa :host github :repo "minad/marginalia" :package "marginalia" :local-repo "marginalia")) "embark" ("2021-03-02 11:51:09" ("emacs") (:type git :flavor melpa :files ("embark.el" "embark.texi" "embark-pkg.el") :host github :repo "oantolin/embark" :package "embark" :local-repo "embark")) "embark-consult" ("2021-03-02 11:51:09" ("emacs" "embark" "consult") (:flavor melpa :files ("embark-consult.el" "embark-consult-pkg.el") :package "embark-consult" :local-repo "embark" :type git :repo "oantolin/embark" :host github)) "orderless" ("2021-03-02 11:51:09" ("emacs") (:type git :flavor melpa :host github :repo "oantolin/orderless" :package "orderless" :local-repo "orderless")) "prescient" ("2021-03-02 11:51:09" ("emacs") (:type git :flavor melpa :files ("prescient.el" "prescient-pkg.el") :host github :repo "raxod502/prescient.el" :package "prescient" :local-repo "prescient.el")) "company-prescient" ("2021-03-02 11:51:09" ("emacs" "prescient" "company") (:flavor melpa :files ("company-prescient.el" "company-prescient-pkg.el") :package "company-prescient" :local-repo "prescient.el" :type git :repo "raxod502/prescient.el" :host github)) "selectrum-prescient" ("2021-03-02 11:51:09" ("emacs" "prescient" "selectrum") (:flavor melpa :files ("selectrum-prescient.el" "selectrum-prescient-pkg.el") :package "selectrum-prescient" :local-repo "prescient.el" :type git :repo "raxod502/prescient.el" :host github)) "rg" ("2021-03-02 11:51:09" ("emacs" "transient" "wgrep") (:type git :flavor melpa :host github :repo "dajva/rg.el" :package "rg" :local-repo "rg.el")) "wgrep" ("2021-03-02 11:51:09" nil (:type git :flavor melpa :files ("wgrep.el" "wgrep-pkg.el") :host github :repo "mhayashi1120/Emacs-wgrep" :package "wgrep" :local-repo "Emacs-wgrep")) "git-gutter" ("2021-03-02 11:51:09" ("emacs") (:type git :flavor melpa :host github :repo "emacsorphanage/git-gutter" :package "git-gutter" :local-repo "git-gutter")) "git-timemachine" ("2021-03-02 11:51:09" ("emacs" "transient") (:type git :flavor melpa :host gitlab :repo "pidu/git-timemachine" :package "git-timemachine" :local-repo "git-timemachine")) "imenu-list" ("2021-03-02 11:51:09" ("cl-lib") (:type git :flavor melpa :host github :repo "bmag/imenu-list" :package "imenu-list" :local-repo "imenu-list")) "buffer-move" ("2021-03-02 11:51:09" nil (:type git :flavor melpa :host github :repo "lukhas/buffer-move" :package "buffer-move" :local-repo "buffer-move")) "doom-modeline" ("2021-03-02 11:51:09" ("emacs" "all-the-icons" "shrink-path" "dash") (:type git :flavor melpa :host github :repo "seagle0128/doom-modeline" :package "doom-modeline" :local-repo "doom-modeline")) "shrink-path" ("2021-03-02 11:51:09" ("emacs" "s" "dash" "f") (:type git :flavor melpa :host gitlab :repo "bennya/shrink-path.el" :package "shrink-path" :local-repo "shrink-path.el")) "s" ("2021-03-02 11:51:09" nil (:type git :flavor melpa :files ("s.el" "s-pkg.el") :host github :repo "magnars/s.el" :package "s" :local-repo "s.el")) "f" ("2021-03-02 11:51:09" ("s" "dash") (:type git :flavor melpa :files ("f.el" "f-pkg.el") :host github :repo "rejeep/f.el" :package "f" :local-repo "f.el")) "org" ("2021-03-02 11:51:09" nil (:type git :repo "https://code.orgmode.org/bzg/org-mode.git" :local-repo "org" :package "org")) "babel" ("2021-03-02 11:51:09" nil (:type git :flavor melpa :host github :repo "juergenhoetzel/babel" :package "babel" :local-repo "babel")) "org-bullets" ("2021-03-02 11:51:09" nil (:type git :flavor melpa :host github :repo "integral-dw/org-bullets" :package "org-bullets" :local-repo "org-bullets")) "haskell-mode" ("2021-03-02 11:51:09" ("emacs") (:type git :flavor melpa :files (:defaults "NEWS" "logo.svg" "haskell-mode-pkg.el") :host github :repo "haskell/haskell-mode" :package "haskell-mode" :local-repo "haskell-mode")) "rustic" ("2021-03-02 11:51:09" ("emacs" "xterm-color" "dash" "s" "f" "markdown-mode" "spinner" "let-alist" "seq" "ht") (:type git :flavor melpa :host github :repo "brotzeit/rustic" :package "rustic" :local-repo "rustic")) "xterm-color" ("2021-03-02 11:51:09" ("emacs") (:type git :flavor melpa :host github :repo "atomontage/xterm-color" :package "xterm-color" :local-repo "xterm-color")) "markdown-mode" ("2021-03-02 11:51:09" ("emacs") (:type git :flavor melpa :host github :repo "jrblevin/markdown-mode" :package "markdown-mode" :local-repo "markdown-mode")) "spinner" ("2021-03-02 11:51:09" nil (:type git :host github :repo "emacs-straight/spinner" :files ("*" (:exclude ".git")) :package "spinner" :local-repo "spinner")) "ht" ("2021-03-02 11:51:09" ("dash") (:type git :flavor melpa :files ("ht.el" "ht-pkg.el") :host github :repo "Wilfred/ht.el" :package "ht" :local-repo "ht.el")) "eglot" ("2021-03-02 11:51:09" ("emacs" "jsonrpc" "flymake" "project" "xref" "eldoc") (:type git :flavor melpa :host github :repo "joaotavora/eglot" :package "eglot" :local-repo "eglot")) "jsonrpc" ("2021-03-02 11:51:09" ("emacs") (:type git :host github :repo "emacs-straight/jsonrpc" :files ("*" (:exclude ".git")) :package "jsonrpc" :local-repo "jsonrpc")) "flymake" ("2021-03-02 11:51:09" ("emacs" "eldoc") (:type git :host github :repo "emacs-straight/flymake" :files ("*" (:exclude ".git")) :package "flymake" :local-repo "flymake")) "eldoc" ("2021-03-02 11:51:09" ("emacs") (:type git :host github :repo "emacs-straight/eldoc" :files ("*" (:exclude ".git")) :package "eldoc" :local-repo "eldoc")) "project" ("2021-03-02 11:51:09" ("emacs" "xref") (:type git :host github :repo "emacs-straight/project" :files ("*" (:exclude ".git")) :package "project" :local-repo "project")) "xref" ("2021-03-02 11:51:09" ("emacs") (:type git :host github :repo "emacs-straight/xref" :files ("*" (:exclude ".git")) :package "xref" :local-repo "xref")) "dumb-jump" ("2021-03-02 11:51:09" ("emacs" "s" "dash" "popup") (:type git :flavor melpa :host github :repo "jacktasia/dumb-jump" :package "dumb-jump" :local-repo "dumb-jump")) "popup" ("2021-03-02 11:51:09" ("cl-lib") (:type git :flavor melpa :files ("popup.el" "popup-pkg.el") :host github :repo "auto-complete/popup-el" :package "popup" :local-repo "popup-el")) "protobuf-mode" ("2021-03-02 11:51:09" nil (:type git :flavor melpa :files ("editors/protobuf-mode.el" "protobuf-mode-pkg.el") :host github :repo "google/protobuf" :package "protobuf-mode" :local-repo "protobuf")) "iedit" ("2021-03-02 11:51:09" nil (:type git :flavor melpa :host github :repo "victorhge/iedit" :package "iedit" :local-repo "iedit")) "multiple-cursors" ("2021-03-02 11:51:09" ("cl-lib") (:type git :flavor melpa :host github :repo "magnars/multiple-cursors.el" :package "multiple-cursors" :local-repo "multiple-cursors.el")) "expand-region" ("2021-03-02 11:51:09" nil (:type git :flavor melpa :host github :repo "magnars/expand-region.el" :package "expand-region" :local-repo "expand-region.el")) "duplicate-thing" ("2021-03-02 11:51:09" nil (:type git :flavor melpa :host github :repo "ongaeshi/duplicate-thing" :package "duplicate-thing" :local-repo "duplicate-thing")) "ace-window" ("2021-03-02 11:51:09" ("avy") (:type git :flavor melpa :host github :repo "abo-abo/ace-window" :package "ace-window" :local-repo "ace-window")) "avy" ("2021-03-02 11:51:09" ("emacs" "cl-lib") (:type git :flavor melpa :host github :repo "abo-abo/avy" :package "avy" :local-repo "avy"))))
+#s(hash-table size 97 test equal rehash-size 1.5 rehash-threshold 0.8125 data ("org-elpa" ("2021-03-03 01:33:06" nil (:local-repo nil :package "org-elpa" :type git)) "melpa" ("2021-03-03 01:33:06" nil (:type git :host github :repo "melpa/melpa" :no-build t :package "melpa" :local-repo "melpa")) "gnu-elpa-mirror" ("2021-03-03 01:33:06" nil (:type git :host github :repo "emacs-straight/gnu-elpa-mirror" :no-build t :package "gnu-elpa-mirror" :local-repo "gnu-elpa-mirror")) "emacsmirror-mirror" ("2021-03-03 01:33:06" nil (:type git :host github :repo "emacs-straight/emacsmirror-mirror" :no-build t :package "emacsmirror-mirror" :local-repo "emacsmirror-mirror")) "straight" ("2021-03-03 01:33:06" ("emacs") (:type git :host github :repo "raxod502/straight.el" :files ("straight*.el") :branch "master" :package "straight" :local-repo "straight.el")) "use-package" ("2021-03-03 01:33:06" ("emacs" "bind-key") (:type git :flavor melpa :files (:defaults (:exclude "bind-key.el" "bind-chord.el" "use-package-chords.el" "use-package-ensure-system-package.el") "use-package-pkg.el") :host github :repo "jwiegley/use-package" :package "use-package" :local-repo "use-package")) "bind-key" ("2021-03-03 01:33:06" nil (:flavor melpa :files ("bind-key.el" "bind-key-pkg.el") :package "bind-key" :local-repo "use-package" :type git :repo "jwiegley/use-package" :host github)) "doom-themes" ("2021-03-03 01:33:06" ("emacs" "cl-lib") (:type git :flavor melpa :files (:defaults "themes/*.el" "doom-themes-pkg.el") :host github :repo "hlissner/emacs-doom-themes" :package "doom-themes" :local-repo "emacs-doom-themes")) "all-the-icons" ("2021-03-03 01:33:06" ("emacs") (:type git :flavor melpa :files (:defaults "data" "all-the-icons-pkg.el") :host github :repo "domtronn/all-the-icons.el" :package "all-the-icons" :local-repo "all-the-icons.el")) "selectrum" ("2021-03-03 01:33:06" ("emacs") (:type git :flavor melpa :host github :repo "raxod502/selectrum" :package "selectrum" :local-repo "selectrum")) "projectile" ("2021-03-03 01:33:06" ("emacs" "pkg-info") (:type git :flavor melpa :files ("projectile.el" "projectile-pkg.el") :host github :repo "bbatsov/projectile" :package "projectile" :local-repo "projectile")) "pkg-info" ("2021-03-03 01:33:06" ("epl") (:type git :flavor melpa :host github :repo "emacsorphanage/pkg-info" :package "pkg-info" :local-repo "pkg-info")) "epl" ("2021-03-03 01:33:06" ("cl-lib") (:type git :flavor melpa :host github :repo "cask/epl" :package "epl" :local-repo "epl")) "yasnippet" ("2021-03-03 01:33:06" ("cl-lib") (:type git :flavor melpa :files ("yasnippet.el" "snippets" "yasnippet-pkg.el") :host github :repo "joaotavora/yasnippet" :package "yasnippet" :local-repo "yasnippet")) "yasnippet-snippets" ("2021-03-03 01:33:06" ("yasnippet") (:type git :flavor melpa :files ("*.el" "snippets" ".nosearch" "yasnippet-snippets-pkg.el") :host github :repo "AndreaCrotti/yasnippet-snippets" :package "yasnippet-snippets" :local-repo "yasnippet-snippets")) "company" ("2021-03-03 01:33:06" ("emacs") (:type git :flavor melpa :host github :repo "company-mode/company-mode" :package "company" :local-repo "company-mode")) "magit" ("2021-03-03 01:33:06" ("emacs" "dash" "git-commit" "transient" "with-editor") (:type git :flavor melpa :files ("lisp/magit" "lisp/magit*.el" "lisp/git-rebase.el" "Documentation/magit.texi" "Documentation/AUTHORS.md" "LICENSE" (:exclude "lisp/magit-libgit.el") "magit-pkg.el") :host github :repo "magit/magit" :package "magit" :local-repo "magit")) "dash" ("2021-03-03 01:33:06" ("emacs") (:type git :flavor melpa :files ("dash.el" "dash.texi" "dash-pkg.el") :host github :repo "magnars/dash.el" :package "dash" :local-repo "dash.el")) "git-commit" ("2021-03-03 01:33:06" ("emacs" "dash" "transient" "with-editor") (:flavor melpa :files ("lisp/git-commit.el" "git-commit-pkg.el") :package "git-commit" :local-repo "magit" :type git :repo "magit/magit" :host github)) "transient" ("2021-03-03 01:33:06" ("emacs") (:type git :flavor melpa :files ("lisp/*.el" "docs/transient.texi" "transient-pkg.el") :host github :repo "magit/transient" :package "transient" :local-repo "transient")) "with-editor" ("2021-03-03 01:33:06" ("emacs") (:type git :flavor melpa :host github :repo "magit/with-editor" :package "with-editor" :local-repo "with-editor")) "symbol-overlay" ("2021-03-03 01:33:06" ("emacs" "seq") (:type git :flavor melpa :host github :repo "wolray/symbol-overlay" :package "symbol-overlay" :local-repo "symbol-overlay")) "which-key" ("2021-03-03 01:33:06" ("emacs") (:type git :flavor melpa :host github :repo "justbur/emacs-which-key" :package "which-key" :local-repo "emacs-which-key")) "consult" ("2021-03-03 01:33:06" ("emacs") (:type git :flavor melpa :files (:defaults (:exclude "consult-flycheck.el") "consult-pkg.el") :host github :repo "minad/consult" :package "consult" :local-repo "consult")) "consult-flycheck" ("2021-03-03 01:33:06" ("consult" "flycheck" "emacs") (:flavor melpa :files ("consult-flycheck.el" "consult-flycheck-pkg.el") :package "consult-flycheck" :local-repo "consult" :type git :repo "minad/consult" :host github)) "flycheck" ("2021-03-03 01:33:06" ("dash" "pkg-info" "let-alist" "seq" "emacs") (:type git :flavor melpa :host github :repo "flycheck/flycheck" :package "flycheck" :local-repo "flycheck")) "let-alist" ("2021-03-03 01:33:06" ("emacs") (:type git :host github :repo "emacs-straight/let-alist" :files ("*" (:exclude ".git")) :package "let-alist" :local-repo "let-alist")) "marginalia" ("2021-03-03 01:33:06" ("emacs") (:type git :flavor melpa :host github :repo "minad/marginalia" :package "marginalia" :local-repo "marginalia")) "embark" ("2021-03-03 01:33:06" ("emacs") (:type git :flavor melpa :files ("embark.el" "embark.texi" "embark-pkg.el") :host github :repo "oantolin/embark" :package "embark" :local-repo "embark")) "embark-consult" ("2021-03-03 01:33:06" ("emacs" "embark" "consult") (:flavor melpa :files ("embark-consult.el" "embark-consult-pkg.el") :package "embark-consult" :local-repo "embark" :type git :repo "oantolin/embark" :host github)) "orderless" ("2021-03-03 01:33:06" ("emacs") (:type git :flavor melpa :host github :repo "oantolin/orderless" :package "orderless" :local-repo "orderless")) "prescient" ("2021-03-03 01:33:06" ("emacs") (:type git :flavor melpa :files ("prescient.el" "prescient-pkg.el") :host github :repo "raxod502/prescient.el" :package "prescient" :local-repo "prescient.el")) "company-prescient" ("2021-03-03 01:33:06" ("emacs" "prescient" "company") (:flavor melpa :files ("company-prescient.el" "company-prescient-pkg.el") :package "company-prescient" :local-repo "prescient.el" :type git :repo "raxod502/prescient.el" :host github)) "selectrum-prescient" ("2021-03-03 01:33:06" ("emacs" "prescient" "selectrum") (:flavor melpa :files ("selectrum-prescient.el" "selectrum-prescient-pkg.el") :package "selectrum-prescient" :local-repo "prescient.el" :type git :repo "raxod502/prescient.el" :host github)) "rg" ("2021-03-03 01:33:06" ("emacs" "transient" "wgrep") (:type git :flavor melpa :host github :repo "dajva/rg.el" :package "rg" :local-repo "rg.el")) "wgrep" ("2021-03-03 01:33:06" nil (:type git :flavor melpa :files ("wgrep.el" "wgrep-pkg.el") :host github :repo "mhayashi1120/Emacs-wgrep" :package "wgrep" :local-repo "Emacs-wgrep")) "git-gutter" ("2021-03-03 01:33:06" ("emacs") (:type git :flavor melpa :host github :repo "emacsorphanage/git-gutter" :package "git-gutter" :local-repo "git-gutter")) "git-timemachine" ("2021-03-03 01:33:06" ("emacs" "transient") (:type git :flavor melpa :host gitlab :repo "pidu/git-timemachine" :package "git-timemachine" :local-repo "git-timemachine")) "imenu-list" ("2021-03-03 01:33:06" ("cl-lib") (:type git :flavor melpa :host github :repo "bmag/imenu-list" :package "imenu-list" :local-repo "imenu-list")) "buffer-move" ("2021-03-03 01:33:06" nil (:type git :flavor melpa :host github :repo "lukhas/buffer-move" :package "buffer-move" :local-repo "buffer-move")) "doom-modeline" ("2021-03-03 01:33:06" ("emacs" "all-the-icons" "shrink-path" "dash") (:type git :flavor melpa :host github :repo "seagle0128/doom-modeline" :package "doom-modeline" :local-repo "doom-modeline")) "shrink-path" ("2021-03-03 01:33:06" ("emacs" "s" "dash" "f") (:type git :flavor melpa :host gitlab :repo "bennya/shrink-path.el" :package "shrink-path" :local-repo "shrink-path.el")) "s" ("2021-03-03 01:33:06" nil (:type git :flavor melpa :files ("s.el" "s-pkg.el") :host github :repo "magnars/s.el" :package "s" :local-repo "s.el")) "f" ("2021-03-03 01:33:06" ("s" "dash") (:type git :flavor melpa :files ("f.el" "f-pkg.el") :host github :repo "rejeep/f.el" :package "f" :local-repo "f.el")) "org" ("2021-03-03 01:33:06" nil (:type git :repo "https://code.orgmode.org/bzg/org-mode.git" :local-repo "org" :package "org")) "babel" ("2021-03-03 01:33:06" nil (:type git :flavor melpa :host github :repo "juergenhoetzel/babel" :package "babel" :local-repo "babel")) "org-bullets" ("2021-03-03 01:33:07" nil (:type git :flavor melpa :host github :repo "integral-dw/org-bullets" :package "org-bullets" :local-repo "org-bullets")) "haskell-mode" ("2021-03-03 01:33:07" ("emacs") (:type git :flavor melpa :files (:defaults "NEWS" "logo.svg" "haskell-mode-pkg.el") :host github :repo "haskell/haskell-mode" :package "haskell-mode" :local-repo "haskell-mode")) "rustic" ("2021-03-03 01:33:07" ("emacs" "xterm-color" "dash" "s" "f" "markdown-mode" "spinner" "let-alist" "seq" "ht") (:type git :flavor melpa :host github :repo "brotzeit/rustic" :package "rustic" :local-repo "rustic")) "xterm-color" ("2021-03-03 01:33:07" ("emacs") (:type git :flavor melpa :host github :repo "atomontage/xterm-color" :package "xterm-color" :local-repo "xterm-color")) "markdown-mode" ("2021-03-03 01:33:07" ("emacs") (:type git :flavor melpa :host github :repo "jrblevin/markdown-mode" :package "markdown-mode" :local-repo "markdown-mode")) "spinner" ("2021-03-03 01:33:07" nil (:type git :host github :repo "emacs-straight/spinner" :files ("*" (:exclude ".git")) :package "spinner" :local-repo "spinner")) "ht" ("2021-03-03 01:33:07" ("dash") (:type git :flavor melpa :files ("ht.el" "ht-pkg.el") :host github :repo "Wilfred/ht.el" :package "ht" :local-repo "ht.el")) "eglot" ("2021-03-03 01:33:07" ("emacs" "jsonrpc" "flymake" "project" "xref" "eldoc") (:type git :flavor melpa :host github :repo "joaotavora/eglot" :package "eglot" :local-repo "eglot")) "jsonrpc" ("2021-03-03 01:33:07" ("emacs") (:type git :host github :repo "emacs-straight/jsonrpc" :files ("*" (:exclude ".git")) :package "jsonrpc" :local-repo "jsonrpc")) "flymake" ("2021-03-03 01:33:07" ("emacs" "eldoc") (:type git :host github :repo "emacs-straight/flymake" :files ("*" (:exclude ".git")) :package "flymake" :local-repo "flymake")) "eldoc" ("2021-03-03 01:33:07" ("emacs") (:type git :host github :repo "emacs-straight/eldoc" :files ("*" (:exclude ".git")) :package "eldoc" :local-repo "eldoc")) "project" ("2021-03-03 01:33:07" ("emacs" "xref") (:type git :host github :repo "emacs-straight/project" :files ("*" (:exclude ".git")) :package "project" :local-repo "project")) "xref" ("2021-03-03 01:33:07" ("emacs") (:type git :host github :repo "emacs-straight/xref" :files ("*" (:exclude ".git")) :package "xref" :local-repo "xref")) "dumb-jump" ("2021-03-03 01:33:07" ("emacs" "s" "dash" "popup") (:type git :flavor melpa :host github :repo "jacktasia/dumb-jump" :package "dumb-jump" :local-repo "dumb-jump")) "popup" ("2021-03-03 01:33:07" ("cl-lib") (:type git :flavor melpa :files ("popup.el" "popup-pkg.el") :host github :repo "auto-complete/popup-el" :package "popup" :local-repo "popup-el")) "protobuf-mode" ("2021-03-03 01:33:07" nil (:type git :flavor melpa :files ("editors/protobuf-mode.el" "protobuf-mode-pkg.el") :host github :repo "google/protobuf" :package "protobuf-mode" :local-repo "protobuf")) "iedit" ("2021-03-03 01:33:07" nil (:type git :flavor melpa :host github :repo "victorhge/iedit" :package "iedit" :local-repo "iedit")) "multiple-cursors" ("2021-03-03 01:33:07" ("cl-lib") (:type git :flavor melpa :host github :repo "magnars/multiple-cursors.el" :package "multiple-cursors" :local-repo "multiple-cursors.el")) "expand-region" ("2021-03-03 01:33:07" nil (:type git :flavor melpa :host github :repo "magnars/expand-region.el" :package "expand-region" :local-repo "expand-region.el")) "duplicate-thing" ("2021-03-03 01:33:07" nil (:type git :flavor melpa :host github :repo "ongaeshi/duplicate-thing" :package "duplicate-thing" :local-repo "duplicate-thing")) "ace-window" ("2021-03-03 01:33:07" ("avy") (:type git :flavor melpa :host github :repo "abo-abo/ace-window" :package "ace-window" :local-repo "ace-window")) "avy" ("2021-03-03 01:33:07" ("emacs" "cl-lib") (:type git :flavor melpa :host github :repo "abo-abo/avy" :package "avy" :local-repo "avy")) "restart-emacs" ("2021-03-03 01:33:07" nil (:type git :flavor melpa :host github :repo "iqbalansari/restart-emacs" :package "restart-emacs" :local-repo "restart-emacs")) "backup-walker" ("2021-03-03 01:33:07" nil (:type git :flavor melpa :host github :repo "lewang/backup-walker" :package "backup-walker" :local-repo "backup-walker")) "org-brain" ("2021-03-03 01:33:07" ("emacs" "org") (:type git :flavor melpa :host github :repo "Kungsgeten/org-brain" :package "org-brain" :local-repo "org-brain")) "org-download" ("2021-03-03 01:33:07" ("emacs" "async") (:type git :flavor melpa :host github :repo "abo-abo/org-download" :package "org-download" :local-repo "org-download")) "async" ("2021-03-03 01:33:07" ("emacs") (:type git :flavor melpa :host github :repo "jwiegley/emacs-async" :package "async" :local-repo "emacs-async")) "org-journal" ("2021-03-03 01:33:07" ("emacs" "org") (:type git :flavor melpa :host github :repo "bastibe/org-journal" :package "org-journal" :local-repo "org-journal"))))
 
-#s(hash-table size 65 test equal rehash-size 1.5 rehash-threshold 0.8125 data ("straight" ((straight-x straight-autoloads straight) (autoload 'straight-get-recipe "straight" "Interactively select a recipe from one of the recipe repositories.
+#s(hash-table size 97 test equal rehash-size 1.5 rehash-threshold 0.8125 data ("straight" ((straight-x straight-autoloads straight) (autoload 'straight-get-recipe "straight" "Interactively select a recipe from one of the recipe repositories.
 All recipe repositories in `straight-recipe-repositories' will
 first be cloned. After the recipe is selected, it will be copied
 to the kill ring. With a prefix argument, first prompt for a
@@ -5227,10 +5227,393 @@ Disable the mode if ARG is a negative number.
 The mode's hook is called both when the mode is enabled and when
 it is disabled.
 
-(fn &optional ARG)" t nil) (register-definition-prefixes "ace-window" '("ace-window-mode" "aw-")) (provide 'ace-window-autoloads))))
+(fn &optional ARG)" t nil) (register-definition-prefixes "ace-window" '("ace-window-mode" "aw-")) (provide 'ace-window-autoloads)) "restart-emacs" ((restart-emacs restart-emacs-autoloads) (autoload 'restart-emacs-handle-command-line-args "restart-emacs" "Handle the --restart-emacs-desktop command line argument.
 
-#s(hash-table size 65 test eq rehash-size 1.5 rehash-threshold 0.8125 data (org-elpa #s(hash-table size 97 test equal rehash-size 1.5 rehash-threshold 0.8125 data (version 1 "melpa" nil "gnu-elpa-mirror" nil "emacsmirror-mirror" nil "straight" nil "use-package" nil "bind-key" nil "doom-themes" nil "cl-lib" nil "all-the-icons" nil "selectrum" nil "projectile" nil "pkg-info" nil "epl" nil "yasnippet" nil "yasnippet-snippets" nil "company" nil "magit" nil "dash" nil "git-commit" nil "transient" nil "with-editor" nil "hl-line" nil "paren" nil "symbol-overlay" nil "seq" nil "which-key" nil "consult" nil "consult-flycheck" nil "flycheck" nil "let-alist" nil "marginalia" nil "embark" nil "embark-consult" nil "orderless" nil "prescient" nil "company-prescient" nil "selectrum-prescient" nil "rg" nil "wgrep" nil "git-gutter" nil "git-timemachine" nil "imenu-list" nil "buffer-move" nil "doom-modeline" nil "shrink-path" nil "s" nil "f" nil "org" (org :type git :repo "https://code.orgmode.org/bzg/org-mode.git" :local-repo "org") "babel" nil "org-bullets" nil "haskell-mode" nil "rustic" nil "xterm-color" nil "markdown-mode" nil "spinner" nil "ht" nil "eglot" nil "jsonrpc" nil "flymake" nil "eldoc" nil "project" nil "xref" nil "dumb-jump" nil "popup" nil "protobuf-mode" nil "iedit" nil "multiple-cursors" nil "expand-region" nil "duplicate-thing" nil "ace-window" nil "avy" nil)) melpa #s(hash-table size 97 test equal rehash-size 1.5 rehash-threshold 0.8125 data (version 2 "gnu-elpa-mirror" nil "emacsmirror-mirror" nil "straight" nil "use-package" (use-package :type git :flavor melpa :files (:defaults (:exclude "bind-key.el" "bind-chord.el" "use-package-chords.el" "use-package-ensure-system-package.el") "use-package-pkg.el") :host github :repo "jwiegley/use-package") "bind-key" (bind-key :type git :flavor melpa :files ("bind-key.el" "bind-key-pkg.el") :host github :repo "jwiegley/use-package") "doom-themes" (doom-themes :type git :flavor melpa :files (:defaults "themes/*.el" "doom-themes-pkg.el") :host github :repo "hlissner/emacs-doom-themes") "cl-lib" nil "all-the-icons" (all-the-icons :type git :flavor melpa :files (:defaults "data" "all-the-icons-pkg.el") :host github :repo "domtronn/all-the-icons.el") "selectrum" (selectrum :type git :flavor melpa :host github :repo "raxod502/selectrum") "projectile" (projectile :type git :flavor melpa :files ("projectile.el" "projectile-pkg.el") :host github :repo "bbatsov/projectile") "pkg-info" (pkg-info :type git :flavor melpa :host github :repo "emacsorphanage/pkg-info") "epl" (epl :type git :flavor melpa :host github :repo "cask/epl") "yasnippet" (yasnippet :type git :flavor melpa :files ("yasnippet.el" "snippets" "yasnippet-pkg.el") :host github :repo "joaotavora/yasnippet") "yasnippet-snippets" (yasnippet-snippets :type git :flavor melpa :files ("*.el" "snippets" ".nosearch" "yasnippet-snippets-pkg.el") :host github :repo "AndreaCrotti/yasnippet-snippets") "company" (company :type git :flavor melpa :host github :repo "company-mode/company-mode") "magit" (magit :type git :flavor melpa :files ("lisp/magit" "lisp/magit*.el" "lisp/git-rebase.el" "Documentation/magit.texi" "Documentation/AUTHORS.md" "LICENSE" (:exclude "lisp/magit-libgit.el") "magit-pkg.el") :host github :repo "magit/magit") "dash" (dash :type git :flavor melpa :files ("dash.el" "dash.texi" "dash-pkg.el") :host github :repo "magnars/dash.el") "git-commit" (git-commit :type git :flavor melpa :files ("lisp/git-commit.el" "git-commit-pkg.el") :host github :repo "magit/magit") "transient" (transient :type git :flavor melpa :files ("lisp/*.el" "docs/transient.texi" "transient-pkg.el") :host github :repo "magit/transient") "with-editor" (with-editor :type git :flavor melpa :host github :repo "magit/with-editor") "hl-line" nil "paren" nil "symbol-overlay" (symbol-overlay :type git :flavor melpa :host github :repo "wolray/symbol-overlay") "seq" nil "which-key" (which-key :type git :flavor melpa :host github :repo "justbur/emacs-which-key") "consult" (consult :type git :flavor melpa :files (:defaults (:exclude "consult-flycheck.el") "consult-pkg.el") :host github :repo "minad/consult") "consult-flycheck" (consult-flycheck :type git :flavor melpa :files ("consult-flycheck.el" "consult-flycheck-pkg.el") :host github :repo "minad/consult") "flycheck" (flycheck :type git :flavor melpa :host github :repo "flycheck/flycheck") "let-alist" nil "marginalia" (marginalia :type git :flavor melpa :host github :repo "minad/marginalia") "embark" (embark :type git :flavor melpa :files ("embark.el" "embark.texi" "embark-pkg.el") :host github :repo "oantolin/embark") "embark-consult" (embark-consult :type git :flavor melpa :files ("embark-consult.el" "embark-consult-pkg.el") :host github :repo "oantolin/embark") "orderless" (orderless :type git :flavor melpa :host github :repo "oantolin/orderless") "prescient" (prescient :type git :flavor melpa :files ("prescient.el" "prescient-pkg.el") :host github :repo "raxod502/prescient.el") "company-prescient" (company-prescient :type git :flavor melpa :files ("company-prescient.el" "company-prescient-pkg.el") :host github :repo "raxod502/prescient.el") "selectrum-prescient" (selectrum-prescient :type git :flavor melpa :files ("selectrum-prescient.el" "selectrum-prescient-pkg.el") :host github :repo "raxod502/prescient.el") "rg" (rg :type git :flavor melpa :host github :repo "dajva/rg.el") "wgrep" (wgrep :type git :flavor melpa :files ("wgrep.el" "wgrep-pkg.el") :host github :repo "mhayashi1120/Emacs-wgrep") "git-gutter" (git-gutter :type git :flavor melpa :host github :repo "emacsorphanage/git-gutter") "git-timemachine" (git-timemachine :type git :flavor melpa :host gitlab :repo "pidu/git-timemachine") "imenu-list" (imenu-list :type git :flavor melpa :host github :repo "bmag/imenu-list") "buffer-move" (buffer-move :type git :flavor melpa :host github :repo "lukhas/buffer-move") "doom-modeline" (doom-modeline :type git :flavor melpa :host github :repo "seagle0128/doom-modeline") "shrink-path" (shrink-path :type git :flavor melpa :host gitlab :repo "bennya/shrink-path.el") "s" (s :type git :flavor melpa :files ("s.el" "s-pkg.el") :host github :repo "magnars/s.el") "f" (f :type git :flavor melpa :files ("f.el" "f-pkg.el") :host github :repo "rejeep/f.el") "babel" (babel :type git :flavor melpa :host github :repo "juergenhoetzel/babel") "org-bullets" (org-bullets :type git :flavor melpa :host github :repo "integral-dw/org-bullets") "haskell-mode" (haskell-mode :type git :flavor melpa :files (:defaults "NEWS" "logo.svg" "haskell-mode-pkg.el") :host github :repo "haskell/haskell-mode") "rustic" (rustic :type git :flavor melpa :host github :repo "brotzeit/rustic") "xterm-color" (xterm-color :type git :flavor melpa :host github :repo "atomontage/xterm-color") "markdown-mode" (markdown-mode :type git :flavor melpa :host github :repo "jrblevin/markdown-mode") "spinner" nil "ht" (ht :type git :flavor melpa :files ("ht.el" "ht-pkg.el") :host github :repo "Wilfred/ht.el") "eglot" (eglot :type git :flavor melpa :host github :repo "joaotavora/eglot") "jsonrpc" nil "flymake" nil "eldoc" nil "project" nil "xref" nil "dumb-jump" (dumb-jump :type git :flavor melpa :host github :repo "jacktasia/dumb-jump") "popup" (popup :type git :flavor melpa :files ("popup.el" "popup-pkg.el") :host github :repo "auto-complete/popup-el") "protobuf-mode" (protobuf-mode :type git :flavor melpa :files ("editors/protobuf-mode.el" "protobuf-mode-pkg.el") :host github :repo "google/protobuf") "iedit" (iedit :type git :flavor melpa :host github :repo "victorhge/iedit") "multiple-cursors" (multiple-cursors :type git :flavor melpa :host github :repo "magnars/multiple-cursors.el") "expand-region" (expand-region :type git :flavor melpa :host github :repo "magnars/expand-region.el") "duplicate-thing" (duplicate-thing :type git :flavor melpa :host github :repo "ongaeshi/duplicate-thing") "ace-window" (ace-window :type git :flavor melpa :host github :repo "abo-abo/ace-window") "avy" (avy :type git :flavor melpa :host github :repo "abo-abo/avy"))) gnu-elpa-mirror #s(hash-table size 65 test equal rehash-size 1.5 rehash-threshold 0.8125 data (version 3 "emacsmirror-mirror" nil "straight" nil "cl-lib" nil "hl-line" nil "paren" nil "seq" nil "let-alist" (let-alist :type git :host github :repo "emacs-straight/let-alist" :files ("*" (:exclude ".git"))) "spinner" (spinner :type git :host github :repo "emacs-straight/spinner" :files ("*" (:exclude ".git"))) "jsonrpc" (jsonrpc :type git :host github :repo "emacs-straight/jsonrpc" :files ("*" (:exclude ".git"))) "flymake" (flymake :type git :host github :repo "emacs-straight/flymake" :files ("*" (:exclude ".git"))) "eldoc" (eldoc :type git :host github :repo "emacs-straight/eldoc" :files ("*" (:exclude ".git"))) "project" (project :type git :host github :repo "emacs-straight/project" :files ("*" (:exclude ".git"))) "xref" (xref :type git :host github :repo "emacs-straight/xref" :files ("*" (:exclude ".git"))))) emacsmirror-mirror #s(hash-table size 65 test equal rehash-size 1.5 rehash-threshold 0.8125 data (version 2 "straight" (straight :type git :host github :repo "emacsmirror/straight") "cl-lib" nil "hl-line" nil "paren" nil "seq" nil))))
+The value of the argument is the desktop file from which the frames should be
+restored.  IGNORED are ignored.
 
-("org-elpa" "melpa" "gnu-elpa-mirror" "emacsmirror-mirror" "straight" "emacs" "use-package" "bind-key" "doom-themes" "cl-lib" "all-the-icons" "selectrum" "projectile" "pkg-info" "epl" "yasnippet" "yasnippet-snippets" "company" "magit" "dash" "git-commit" "transient" "with-editor" "hl-line" "paren" "symbol-overlay" "seq" "which-key" "consult" "consult-flycheck" "flycheck" "let-alist" "marginalia" "embark" "embark-consult" "orderless" "prescient" "company-prescient" "selectrum-prescient" "rg" "wgrep" "git-gutter" "git-timemachine" "imenu-list" "buffer-move" "doom-modeline" "shrink-path" "s" "f" "org" "babel" "org-bullets" "haskell-mode" "rustic" "xterm-color" "markdown-mode" "spinner" "ht" "eglot" "jsonrpc" "flymake" "eldoc" "project" "xref" "dumb-jump" "popup" "protobuf-mode" "multiple-cursors" "expand-region" "duplicate-thing" "ace-window" "avy" "iedit")
+(fn &rest IGNORED)" nil nil) (add-to-list 'command-switch-alist '("--restart-emacs-desktop" . restart-emacs-handle-command-line-args)) (autoload 'restart-emacs "restart-emacs" "Restart Emacs.
+
+When called interactively ARGS is interpreted as follows
+
+- with a single `universal-argument' (`C-u') Emacs is restarted
+  with `--debug-init' flag
+- with two `universal-argument' (`C-u') Emacs is restarted with
+  `-Q' flag
+- with three `universal-argument' (`C-u') the user prompted for
+  the arguments
+
+When called non-interactively ARGS should be a list of arguments
+with which Emacs should be restarted.
+
+(fn &optional ARGS)" t nil) (autoload 'restart-emacs-start-new-emacs "restart-emacs" "Start a new instance of Emacs.
+
+When called interactively ARGS is interpreted as follows
+
+- with a single `universal-argument' (`C-u') the new Emacs is started
+  with `--debug-init' flag
+- with two `universal-argument' (`C-u') the new Emacs is started with
+  `-Q' flag
+- with three `universal-argument' (`C-u') the user prompted for
+  the arguments
+
+When called non-interactively ARGS should be a list of arguments
+with which the new Emacs should be started.
+
+(fn &optional ARGS)" t nil) (register-definition-prefixes "restart-emacs" '("restart-emacs-")) (provide 'restart-emacs-autoloads)) "backup-walker" ((backup-walker backup-walker-autoloads) (autoload 'backup-walker-start "backup-walker" "start walking with the latest backup
+
+with universal arg, ask for a file-name.
+
+(fn ORIGINAL-FILE)" t nil) (register-definition-prefixes "backup-walker" '("backup-walker-")) (provide 'backup-walker-autoloads)) "org-brain" ((org-brain org-brain-autoloads) (autoload 'org-brain-update-id-locations "org-brain" "Scan `org-brain-files' using `org-id-update-id-locations'." t nil) (autoload 'org-brain-get-id "org-brain" "Get ID of headline at point, creating one if it doesn't exist.
+Run `org-brain-new-entry-hook' if a new ID is created." t nil) (autoload 'org-brain-switch-brain "org-brain" "Choose another DIRECTORY to be your `org-brain-path'.
+
+(fn DIRECTORY)" t nil) (autoload 'org-brain-add-entry "org-brain" "Add a new entry named TITLE.
+
+(fn TITLE)" t nil) (autoload 'org-brain-open-resource "org-brain" "Choose and open a resource from ENTRY.
+If run with `\\[universal-argument]' then also choose from descendants of ENTRY.
+Uses `org-brain-entry-at-pt' for ENTRY, or asks for it if none at point.
+
+(fn ENTRY)" t nil) (autoload 'org-brain-add-child "org-brain" "Add external CHILDREN (a list of entries) to ENTRY.
+If called interactively use `org-brain-entry-at-pt' and let user choose entry.
+Using `\\[universal-argument]' will use `org-brain-button-at-point' as ENTRY.
+If chosen CHILD entry doesn't exist, create it as a new file.
+Several children can be added, by using `org-brain-entry-separator'.
+If VERBOSE is non-nil then display a message.
+
+(fn ENTRY CHILDREN &optional VERBOSE)" t nil) (autoload 'org-brain-add-child-headline "org-brain" "Create new internal child headline(s) to ENTRY named CHILD-NAMES.
+Several children can be created, by using `org-brain-entry-separator'.
+If called interactively use `org-brain-entry-at-pt' and prompt for children.
+Using `\\[universal-argument]' will use `org-brain-button-at-point' as ENTRY.
+If VERBOSE is non-nil then display a message.
+
+(fn ENTRY CHILD-NAMES &optional VERBOSE)" t nil) (autoload 'org-brain-remove-child "org-brain" "Remove CHILD from ENTRY.
+If called interactively use `org-brain-entry-at-point' and prompt for CHILD.
+Using `\\[universal-argument]' will use `org-brain-button-at-point' as ENTRY.
+If VERBOSE is non-nil then display a message.
+
+(fn ENTRY CHILD &optional VERBOSE)" t nil) (autoload 'org-brain-add-parent "org-brain" "Add external PARENTS (a list of entries) to ENTRY.
+If called interactively use `org-brain-entry-at-pt' and prompt for PARENT.
+Using `\\[universal-argument]' will use `org-brain-button-at-point' as ENTRY.
+
+If chosen parent entry doesn't exist, create it as a new file.
+Several parents can be added, by using `org-brain-entry-separator'.
+If VERBOSE is non-nil then display a message.
+
+(fn ENTRY PARENTS &optional VERBOSE)" t nil) (autoload 'org-brain-remove-parent "org-brain" "Remove PARENT from ENTRY.
+If called interactively use `org-brain-entry-at-pt' and prompt for PARENT.
+Using `\\[universal-argument]' will use `org-brain-button-at-point' as ENTRY.
+
+(fn ENTRY PARENT &optional VERBOSE)" t nil) (autoload 'org-brain-add-friendship "org-brain" "Add a new FRIENDS (a list of entries) to ENTRY.
+If called interactively use `org-brain-entry-at-pt' and prompt for FRIENDS.
+Using `\\[universal-argument]' will use `org-brain-button-at-point' as ENTRY.
+
+If chosen friend entry doesn't exist, create it as a new file.
+Several friends can be added, by using `org-brain-entry-separator'.
+If VERBOSE is non-nil then display a message.
+
+(fn ENTRY FRIENDS &optional VERBOSE)" t nil) (autoload 'org-brain-remove-friendship "org-brain" "Remove friendship between ENTRY1 and ENTRY2.
+If ONEWAY is t, then remove ENTRY2 as a friend of ENTRY1, but not vice versa.
+
+If run interactively, use `org-brain-entry-at-pt' as ENTRY1 and prompt for ENTRY2.
+Using `\\[universal-argument]' will use `org-brain-button-at-point' as ENTRY1.
+If VERBOSE is non-nil then display a message.
+
+(fn ENTRY1 ENTRY2 &optional ONEWAY VERBOSE)" t nil) (autoload 'org-brain-goto "org-brain" "Goto buffer and position of org-brain ENTRY.
+If ENTRY isn't specified, ask for the ENTRY.
+Unless GOTO-FILE-FUNC is nil, use `pop-to-buffer-same-window' for opening the entry.
+
+(fn &optional ENTRY GOTO-FILE-FUNC)" t nil) (autoload 'org-brain-goto-other-window "org-brain" "Goto buffer and position of org-brain ENTRY in other window.
+If ENTRY isn't specified, ask for the ENTRY.
+
+(fn &optional ENTRY)" t nil) (autoload 'org-brain-goto-end "org-brain" "Like `org-brain-goto', but visits the end of ENTRY.
+If SAME-WINDOW is t, use the current window.
+If ENTRY isn't specified, ask for the ENTRY.
+
+(fn &optional ENTRY SAME-WINDOW)" t nil) (autoload 'org-brain-goto-current "org-brain" "Use `org-brain-goto' on `org-brain-entry-at-pt', in other window..
+If run with `\\[universal-argument]', or SAME-WINDOW as t, use current window.
+
+(fn &optional SAME-WINDOW)" t nil) (autoload 'org-brain-goto-child "org-brain" "Goto a child of ENTRY.
+If run interactively, get ENTRY from context.
+If ALL is nil, choose only between externally linked children.
+
+(fn ENTRY &optional ALL)" t nil) (autoload 'org-brain-goto-parent "org-brain" "Goto a parent of ENTRY.
+If run interactively, get ENTRY from context.
+If ALL is nil, choose only between externally linked parents.
+
+(fn ENTRY &optional ALL)" t nil) (autoload 'org-brain-visualize-parent "org-brain" "Visualize a parent of ENTRY, preferring local parents.
+This allows the user to quickly jump up the hierarchy.
+
+(fn ENTRY)" t nil) (autoload 'org-brain-goto-friend "org-brain" "Goto a friend of ENTRY.
+If run interactively, get ENTRY from context.
+
+(fn ENTRY)" t nil) (autoload 'org-brain-refile "org-brain" "Run `org-refile' to a heading in `org-brain-files', with set MAX-LEVEL.
+When in `org-brain-visualize-mode' the current entry will be refiled.
+If MAX-LEVEL isn't given, use `org-brain-refile-max-level'.
+After refiling, all headlines will be given an id.
+
+(fn MAX-LEVEL)" t nil) (autoload 'org-brain-change-local-parent "org-brain" "Refile ENTRY to be a local child of PARENT.
+Entries are relinked so existing parent-child relationships are unaffected.
+
+If ENTRY is not supplied, the entry at point is used.
+If PARENT is not supplied, it is prompted for
+among the list of ENTRY's linked parents.
+Returns the new refiled entry.
+
+(fn &optional ENTRY PARENT)" t nil) (autoload 'org-brain-rename-file "org-brain" "Rename FILE-ENTRY to NEW-NAME.
+Both arguments should be relative to `org-brain-path' and should
+not contain `org-brain-files-extension'.
+
+(fn FILE-ENTRY NEW-NAME)" t nil) (autoload 'org-brain-delete-entry "org-brain" "Delete ENTRY and all of its local children.
+If run interactively, ask for the ENTRY.
+If NOCONFIRM is nil, ask if we really want to delete.
+
+(fn ENTRY &optional NOCONFIRM)" t nil) (autoload 'org-brain-insert-relationships "org-brain" "Insert an `org-mode' list of relationships to ENTRY.
+Local children are not included in the list.
+If run interactively, get ENTRY from context.
+
+Normally the list is inserted at point, but if RECURSIVE is t
+insert at end of ENTRY.  Then recurse in the local (grand)children
+of ENTRY and insert there too.
+
+(fn ENTRY &optional RECURSIVE)" t nil) (autoload 'org-brain-archive "org-brain" "Use `org-archive-subtree-default' on ENTRY.
+If run interactively, get ENTRY from context.
+Before archiving, recursively run `org-brain-insert-relationships' on ENTRY.
+Remove external relationships from ENTRY, in order to clean up the brain.
+
+(fn ENTRY)" t nil) (autoload 'org-brain-pin "org-brain" "Change if ENTRY is pinned or not.
+If run interactively, get ENTRY from context.
+Using `\\[universal-argument]' will use `org-brain-button-at-point' as ENTRY.
+
+If STATUS is positive, pin the entry.  If negative, remove the pin.
+If STATUS is omitted, toggle between pinned / not pinned.
+
+(fn ENTRY &optional STATUS)" t nil) (autoload 'org-brain-select "org-brain" "Toggle selection of ENTRY.
+If run interactively, get ENTRY from context.
+
+If STATUS is positive, select ENTRY.  If negative, unselect it.
+If STATUS is omitted, toggle between selected / not selected.
+
+(fn ENTRY &optional STATUS)" t nil) (autoload 'org-brain-clear-selected "org-brain" "Clear the selected list." t nil) (autoload 'org-brain-set-title "org-brain" "Set the name of ENTRY to TITLE.
+If run interactively, get ENTRY from context and prompt for TITLE.
+
+(fn ENTRY TITLE)" t nil) (autoload 'org-brain-set-tags "org-brain" "Modify the ENTRY tags.
+Use `org-set-tags-command' on headline ENTRY.
+Instead sets #+FILETAGS on file ENTRY.
+If run interactively, get ENTRY from context.
+
+(fn ENTRY)" t nil) (autoload 'org-brain-add-nickname "org-brain" "ENTRY gets a new NICKNAME.
+If run interactively use `org-brain-entry-at-pt' and prompt for NICKNAME.
+
+(fn ENTRY NICKNAME)" t nil) (autoload 'org-brain-headline-to-file "org-brain" "Convert headline ENTRY to a file entry.
+Prompt for name of the new file.
+If interactive, also prompt for ENTRY.
+
+(fn ENTRY)" t nil) (autoload 'org-brain-ensure-ids-in-buffer "org-brain" "Run `org-brain-get-id' on all headlines in current buffer.
+Only works if in an `org-mode' buffer inside `org-brain-path'.
+Suitable for use with `before-save-hook'." t nil) (autoload 'org-brain-agenda "org-brain" "Like `org-agenda', but only for `org-brain-files'." t nil) (autoload 'org-brain-create-relationships-from-links "org-brain" "Add relationships for brain: links in `org-brain-path'.
+Only create relationships to other files, not to headline entries.
+
+This function is meant to be used in order to convert old
+org-brain setups to the system introduced in version 0.4. Please
+make a backup of your `org-brain-path' before running this
+function." t nil) (autoload 'org-brain-visualize-follow "org-brain" "Set if `org-brain-visualize' SHOULD-FOLLOW the current entry or not.
+When following, the visualized entry will be shown in a separate
+buffer when changing the visualized entry.
+If run interactively, toggle following on/off.
+
+(fn SHOULD-FOLLOW)" t nil) (autoload 'org-brain-visualize "org-brain" "View a concept map with ENTRY at the center.
+
+When run interactively, prompt for ENTRY and suggest
+`org-brain-entry-at-pt'.  By default, the choices presented is
+determined by `org-brain-visualize-default-choices': 'all will
+show all entries, 'files will only show file entries and 'root
+will only show files in the root of `org-brain-path'.
+
+You can override `org-brain-visualize-default-choices':
+  `\\[universal-argument]' will use 'all.
+  `\\[universal-argument] \\[universal-argument]' will use 'files.
+  `\\[universal-argument] \\[universal-argument] \\[universal-argument]' will use 'root.
+
+Unless NOFOCUS is non-nil, the `org-brain-visualize' buffer will gain focus.
+Unless NOHISTORY is non-nil, add the entry to `org-brain--vis-history'.
+Setting NOFOCUS to t implies also having NOHISTORY as t.
+Unless WANDER is t, `org-brain-stop-wandering' will be run.
+
+(fn ENTRY &optional NOFOCUS NOHISTORY WANDER)" t nil) (autoload 'org-brain-visualize-dwim "org-brain" "Switch to the *org-brain* buffer.
+If there's no such buffer, or if already there, run `org-brain-visualize'." t nil) (autoload 'org-brain-visualize-entry-at-pt "org-brain" "Use `org-brain-visualize' on the `org-brain-entry-at-pt'.
+Useful if wanting to visualize the current `org-mode' entry." t nil) (autoload 'org-brain-visualize-random "org-brain" "Run `org-brain-visualize' on a random org-brain entry.
+If RESTRICT-TO is given, then only choose among those entries.
+
+If called interactively with `\\[universal-argument]' then
+restrict to descendants of the visualized entry.
+
+(fn &optional RESTRICT-TO)" t nil) (autoload 'org-brain-select-button "org-brain" "Toggle selection of the entry linked to by the button at point." t nil) (autoload 'org-brain-select-dwim "org-brain" "Use `org-brain-select-button' or `org-brain-select' depending on context.
+If run with `\\[universal-argument\\]' (ARG is non nil)
+then always use `org-brain-select'.
+
+(fn ARG)" t nil) (register-definition-prefixes "org-brain" '("org-brain-")) (provide 'org-brain-autoloads)) "async" ((dired-async smtpmail-async async async-bytecomp async-autoloads async-pkg) (autoload 'async-start-process "async" "Start the executable PROGRAM asynchronously named NAME.  See `async-start'.
+PROGRAM is passed PROGRAM-ARGS, calling FINISH-FUNC with the
+process object when done.  If FINISH-FUNC is nil, the future
+object will return the process object when the program is
+finished.  Set DEFAULT-DIRECTORY to change PROGRAM's current
+working directory.
+
+(fn NAME PROGRAM FINISH-FUNC &rest PROGRAM-ARGS)" nil nil) (autoload 'async-start "async" "Execute START-FUNC (often a lambda) in a subordinate Emacs process.
+When done, the return value is passed to FINISH-FUNC.  Example:
+
+    (async-start
+       ;; What to do in the child process
+       (lambda ()
+         (message \"This is a test\")
+         (sleep-for 3)
+         222)
+
+       ;; What to do when it finishes
+       (lambda (result)
+         (message \"Async process done, result should be 222: %s\"
+                  result)))
+
+If FINISH-FUNC is nil or missing, a future is returned that can
+be inspected using `async-get', blocking until the value is
+ready.  Example:
+
+    (let ((proc (async-start
+                   ;; What to do in the child process
+                   (lambda ()
+                     (message \"This is a test\")
+                     (sleep-for 3)
+                     222))))
+
+        (message \"I'm going to do some work here\") ;; ....
+
+        (message \"Waiting on async process, result should be 222: %s\"
+                 (async-get proc)))
+
+If you don't want to use a callback, and you don't care about any
+return value from the child process, pass the `ignore' symbol as
+the second argument (if you don't, and never call `async-get', it
+will leave *emacs* process buffers hanging around):
+
+    (async-start
+     (lambda ()
+       (delete-file \"a remote file on a slow link\" nil))
+     'ignore)
+
+Note: Even when FINISH-FUNC is present, a future is still
+returned except that it yields no value (since the value is
+passed to FINISH-FUNC).  Call `async-get' on such a future always
+returns nil.  It can still be useful, however, as an argument to
+`async-ready' or `async-wait'.
+
+(fn START-FUNC &optional FINISH-FUNC)" nil nil) (register-definition-prefixes "async" '("async-")) (autoload 'async-byte-recompile-directory "async-bytecomp" "Compile all *.el files in DIRECTORY asynchronously.
+All *.elc files are systematically deleted before proceeding.
+
+(fn DIRECTORY &optional QUIET)" nil nil) (defvar async-bytecomp-package-mode nil "Non-nil if Async-Bytecomp-Package mode is enabled.
+See the `async-bytecomp-package-mode' command
+for a description of this minor mode.
+Setting this variable directly does not take effect;
+either customize it (see the info node `Easy Customization')
+or call the function `async-bytecomp-package-mode'.") (custom-autoload 'async-bytecomp-package-mode "async-bytecomp" nil) (autoload 'async-bytecomp-package-mode "async-bytecomp" "Byte compile asynchronously packages installed with package.el.
+Async compilation of packages can be controlled by
+`async-bytecomp-allowed-packages'.
+
+If called interactively, toggle `Async-Bytecomp-Package mode'.
+If the prefix argument is positive, enable the mode, and if it is
+zero or negative, disable the mode.
+
+If called from Lisp, toggle the mode if ARG is `toggle'.  Enable
+the mode if ARG is nil, omitted, or is a positive number.
+Disable the mode if ARG is a negative number.
+
+The mode's hook is called both when the mode is enabled and when
+it is disabled.
+
+(fn &optional ARG)" t nil) (autoload 'async-byte-compile-file "async-bytecomp" "Byte compile Lisp code FILE asynchronously.
+
+Same as `byte-compile-file' but asynchronous.
+
+(fn FILE)" t nil) (register-definition-prefixes "async-bytecomp" '("async-byte")) (defvar dired-async-mode nil "Non-nil if Dired-Async mode is enabled.
+See the `dired-async-mode' command
+for a description of this minor mode.
+Setting this variable directly does not take effect;
+either customize it (see the info node `Easy Customization')
+or call the function `dired-async-mode'.") (custom-autoload 'dired-async-mode "dired-async" nil) (autoload 'dired-async-mode "dired-async" "Do dired actions asynchronously.
+
+If called interactively, toggle `Dired-Async mode'.  If the
+prefix argument is positive, enable the mode, and if it is zero
+or negative, disable the mode.
+
+If called from Lisp, toggle the mode if ARG is `toggle'.  Enable
+the mode if ARG is nil, omitted, or is a positive number.
+Disable the mode if ARG is a negative number.
+
+The mode's hook is called both when the mode is enabled and when
+it is disabled.
+
+(fn &optional ARG)" t nil) (autoload 'dired-async-do-copy "dired-async" "Run \342\200\230dired-do-copy\342\200\231 asynchronously.
+
+(fn &optional ARG)" t nil) (autoload 'dired-async-do-symlink "dired-async" "Run \342\200\230dired-do-symlink\342\200\231 asynchronously.
+
+(fn &optional ARG)" t nil) (autoload 'dired-async-do-hardlink "dired-async" "Run \342\200\230dired-do-hardlink\342\200\231 asynchronously.
+
+(fn &optional ARG)" t nil) (autoload 'dired-async-do-rename "dired-async" "Run \342\200\230dired-do-rename\342\200\231 asynchronously.
+
+(fn &optional ARG)" t nil) (register-definition-prefixes "dired-async" '("dired-async-")) (register-definition-prefixes "smtpmail-async" '("async-smtpmail-")) (provide 'async-autoloads)) "org-download" ((org-download-autoloads org-download) (autoload 'org-download-enable "org-download" "Enable org-download." nil nil) (register-definition-prefixes "org-download" '("org-download-")) (provide 'org-download-autoloads)) "org-journal" ((org-journal org-journal-autoloads) (add-hook 'calendar-today-visible-hook 'org-journal-mark-entries) (add-hook 'calendar-today-invisible-hook 'org-journal-mark-entries) (autoload 'org-journal-mode "org-journal" "Mode for writing or viewing entries written in the journal.
+
+(fn)" t nil) (define-obsolete-function-alias 'org-journal-open-next-entry 'org-journal-next-entry "2.1.0") (define-obsolete-function-alias 'org-journal-open-previous-entry 'org-journal-previous-entry "2.1.0") (autoload 'org-journal-convert-created-property-timestamps "org-journal" "Convert CREATED property timestamps to `org-journal-created-property-timestamp-format'.
+
+(fn OLD-FORMAT)" t nil) (autoload 'org-journal-new-entry "org-journal" "Open today's journal file and start a new entry.
+
+With a PREFIX arg, open the today's file, create a heading if it doesn't exist yet,
+but do not create a new entry.
+
+If given a TIME, create an entry for the time's day. If no TIME was given,
+use the current time (which is interpreted as belonging to yesterday if
+smaller than `org-extend-today-until`).
+
+Whenever a journal entry is created the `org-journal-after-entry-create-hook'
+hook is run.
+
+(fn PREFIX &optional TIME)" t nil) (autoload 'org-journal-new-date-entry "org-journal" "Open the journal for the date indicated by point and start a new entry.
+
+If the date is not today, it won't be given a time heading. With one prefix (C-u),
+don't add a new heading.
+
+If the date is in the future, create a schedule entry, unless two universal prefix
+arguments (C-u C-u) are given. In that case insert just the heading.
+
+(fn PREFIX &optional EVENT)" t nil) (autoload 'org-journal-new-scheduled-entry "org-journal" "Create a new entry in the future with an active timestamp.
+
+With non-nil prefix argument create a regular entry instead of a TODO entry.
+
+(fn PREFIX &optional SCHEDULED-TIME)" t nil) (autoload 'org-journal-reschedule-scheduled-entry "org-journal" "Reschedule an entry in the future.
+
+(fn &optional TIME)" t nil) (autoload 'org-journal-open-current-journal-file "org-journal" "Open the current journal file" t nil) (autoload 'org-journal-invalidate-cache "org-journal" "Clear `org-journal--dates' hash table, and the cache file." t nil) (autoload 'org-journal-mark-entries "org-journal" "Mark days in the calendar for which a journal entry is present." t nil) (autoload 'org-journal-read-entry "org-journal" "Open journal entry for selected date for viewing.
+
+(fn ARG &optional EVENT)" t nil) (autoload 'org-journal-display-entry "org-journal" "Display journal entry for selected date in another window.
+
+(fn ARG &optional EVENT)" t nil) (autoload 'org-journal-read-or-display-entry "org-journal" "Read an entry for the TIME and either select the new window when NOSELECT
+is nil or avoid switching when NOSELECT is non-nil.
+
+(fn TIME &optional NOSELECT)" nil nil) (autoload 'org-journal-next-entry "org-journal" "Go to the next journal entry." t nil) (autoload 'org-journal-previous-entry "org-journal" "Go to the previous journal entry." t nil) (autoload 'org-journal-search "org-journal" "Search for a string in the journal files.
+
+See `org-read-date' for information on ways to specify dates.
+If a prefix argument is given, search all dates.
+
+(fn STR &optional PERIOD-NAME)" t nil) (autoload 'org-journal-search-calendar-week "org-journal" "Search for a string within a current calendar-mode week entries.
+
+(fn STR)" t nil) (autoload 'org-journal-search-calendar-month "org-journal" "Search for a string within a current calendar-mode month entries.
+
+(fn STR)" t nil) (autoload 'org-journal-search-calendar-year "org-journal" "Search for a string within a current calendar-mode year entries.
+
+(fn STR)" t nil) (autoload 'org-journal-search-forever "org-journal" "Search for a string within all entries.
+
+(fn STR)" t nil) (autoload 'org-journal-search-future "org-journal" "Search for a string within all future entries.
+
+(fn STR)" t nil) (autoload 'org-journal-search-future-scheduled "org-journal" "Search for TODOs within all future entries." t nil) (add-hook 'org-journal-mode-hook (lambda nil (add-hook org-journal-encrypt-on 'org-journal-encryption-hook nil t))) (register-definition-prefixes "org-journal" '("org-journal-")) (provide 'org-journal-autoloads))))
+
+#s(hash-table size 65 test eq rehash-size 1.5 rehash-threshold 0.8125 data (org-elpa #s(hash-table size 97 test equal rehash-size 1.5 rehash-threshold 0.8125 data (version 1 "melpa" nil "gnu-elpa-mirror" nil "emacsmirror-mirror" nil "straight" nil "use-package" nil "bind-key" nil "doom-themes" nil "cl-lib" nil "all-the-icons" nil "selectrum" nil "projectile" nil "pkg-info" nil "epl" nil "yasnippet" nil "yasnippet-snippets" nil "company" nil "magit" nil "dash" nil "git-commit" nil "transient" nil "with-editor" nil "hl-line" nil "paren" nil "symbol-overlay" nil "seq" nil "which-key" nil "consult" nil "consult-flycheck" nil "flycheck" nil "let-alist" nil "marginalia" nil "embark" nil "embark-consult" nil "orderless" nil "prescient" nil "company-prescient" nil "selectrum-prescient" nil "rg" nil "wgrep" nil "git-gutter" nil "git-timemachine" nil "imenu-list" nil "buffer-move" nil "doom-modeline" nil "shrink-path" nil "s" nil "f" nil "org" (org :type git :repo "https://code.orgmode.org/bzg/org-mode.git" :local-repo "org") "babel" nil "org-bullets" nil "haskell-mode" nil "rustic" nil "xterm-color" nil "markdown-mode" nil "spinner" nil "ht" nil "eglot" nil "jsonrpc" nil "flymake" nil "eldoc" nil "project" nil "xref" nil "dumb-jump" nil "popup" nil "protobuf-mode" nil "iedit" nil "multiple-cursors" nil "expand-region" nil "duplicate-thing" nil "ace-window" nil "avy" nil "restart-emacs" nil "backup-walker" nil "org-brain" nil "org-download" nil "async" nil "org-journal" nil)) melpa #s(hash-table size 97 test equal rehash-size 1.5 rehash-threshold 0.8125 data (version 2 "gnu-elpa-mirror" nil "emacsmirror-mirror" nil "straight" nil "use-package" (use-package :type git :flavor melpa :files (:defaults (:exclude "bind-key.el" "bind-chord.el" "use-package-chords.el" "use-package-ensure-system-package.el") "use-package-pkg.el") :host github :repo "jwiegley/use-package") "bind-key" (bind-key :type git :flavor melpa :files ("bind-key.el" "bind-key-pkg.el") :host github :repo "jwiegley/use-package") "doom-themes" (doom-themes :type git :flavor melpa :files (:defaults "themes/*.el" "doom-themes-pkg.el") :host github :repo "hlissner/emacs-doom-themes") "cl-lib" nil "all-the-icons" (all-the-icons :type git :flavor melpa :files (:defaults "data" "all-the-icons-pkg.el") :host github :repo "domtronn/all-the-icons.el") "selectrum" (selectrum :type git :flavor melpa :host github :repo "raxod502/selectrum") "projectile" (projectile :type git :flavor melpa :files ("projectile.el" "projectile-pkg.el") :host github :repo "bbatsov/projectile") "pkg-info" (pkg-info :type git :flavor melpa :host github :repo "emacsorphanage/pkg-info") "epl" (epl :type git :flavor melpa :host github :repo "cask/epl") "yasnippet" (yasnippet :type git :flavor melpa :files ("yasnippet.el" "snippets" "yasnippet-pkg.el") :host github :repo "joaotavora/yasnippet") "yasnippet-snippets" (yasnippet-snippets :type git :flavor melpa :files ("*.el" "snippets" ".nosearch" "yasnippet-snippets-pkg.el") :host github :repo "AndreaCrotti/yasnippet-snippets") "company" (company :type git :flavor melpa :host github :repo "company-mode/company-mode") "magit" (magit :type git :flavor melpa :files ("lisp/magit" "lisp/magit*.el" "lisp/git-rebase.el" "Documentation/magit.texi" "Documentation/AUTHORS.md" "LICENSE" (:exclude "lisp/magit-libgit.el") "magit-pkg.el") :host github :repo "magit/magit") "dash" (dash :type git :flavor melpa :files ("dash.el" "dash.texi" "dash-pkg.el") :host github :repo "magnars/dash.el") "git-commit" (git-commit :type git :flavor melpa :files ("lisp/git-commit.el" "git-commit-pkg.el") :host github :repo "magit/magit") "transient" (transient :type git :flavor melpa :files ("lisp/*.el" "docs/transient.texi" "transient-pkg.el") :host github :repo "magit/transient") "with-editor" (with-editor :type git :flavor melpa :host github :repo "magit/with-editor") "hl-line" nil "paren" nil "symbol-overlay" (symbol-overlay :type git :flavor melpa :host github :repo "wolray/symbol-overlay") "seq" nil "which-key" (which-key :type git :flavor melpa :host github :repo "justbur/emacs-which-key") "consult" (consult :type git :flavor melpa :files (:defaults (:exclude "consult-flycheck.el") "consult-pkg.el") :host github :repo "minad/consult") "consult-flycheck" (consult-flycheck :type git :flavor melpa :files ("consult-flycheck.el" "consult-flycheck-pkg.el") :host github :repo "minad/consult") "flycheck" (flycheck :type git :flavor melpa :host github :repo "flycheck/flycheck") "let-alist" nil "marginalia" (marginalia :type git :flavor melpa :host github :repo "minad/marginalia") "embark" (embark :type git :flavor melpa :files ("embark.el" "embark.texi" "embark-pkg.el") :host github :repo "oantolin/embark") "embark-consult" (embark-consult :type git :flavor melpa :files ("embark-consult.el" "embark-consult-pkg.el") :host github :repo "oantolin/embark") "orderless" (orderless :type git :flavor melpa :host github :repo "oantolin/orderless") "prescient" (prescient :type git :flavor melpa :files ("prescient.el" "prescient-pkg.el") :host github :repo "raxod502/prescient.el") "company-prescient" (company-prescient :type git :flavor melpa :files ("company-prescient.el" "company-prescient-pkg.el") :host github :repo "raxod502/prescient.el") "selectrum-prescient" (selectrum-prescient :type git :flavor melpa :files ("selectrum-prescient.el" "selectrum-prescient-pkg.el") :host github :repo "raxod502/prescient.el") "rg" (rg :type git :flavor melpa :host github :repo "dajva/rg.el") "wgrep" (wgrep :type git :flavor melpa :files ("wgrep.el" "wgrep-pkg.el") :host github :repo "mhayashi1120/Emacs-wgrep") "git-gutter" (git-gutter :type git :flavor melpa :host github :repo "emacsorphanage/git-gutter") "git-timemachine" (git-timemachine :type git :flavor melpa :host gitlab :repo "pidu/git-timemachine") "imenu-list" (imenu-list :type git :flavor melpa :host github :repo "bmag/imenu-list") "buffer-move" (buffer-move :type git :flavor melpa :host github :repo "lukhas/buffer-move") "doom-modeline" (doom-modeline :type git :flavor melpa :host github :repo "seagle0128/doom-modeline") "shrink-path" (shrink-path :type git :flavor melpa :host gitlab :repo "bennya/shrink-path.el") "s" (s :type git :flavor melpa :files ("s.el" "s-pkg.el") :host github :repo "magnars/s.el") "f" (f :type git :flavor melpa :files ("f.el" "f-pkg.el") :host github :repo "rejeep/f.el") "babel" (babel :type git :flavor melpa :host github :repo "juergenhoetzel/babel") "org-bullets" (org-bullets :type git :flavor melpa :host github :repo "integral-dw/org-bullets") "haskell-mode" (haskell-mode :type git :flavor melpa :files (:defaults "NEWS" "logo.svg" "haskell-mode-pkg.el") :host github :repo "haskell/haskell-mode") "rustic" (rustic :type git :flavor melpa :host github :repo "brotzeit/rustic") "xterm-color" (xterm-color :type git :flavor melpa :host github :repo "atomontage/xterm-color") "markdown-mode" (markdown-mode :type git :flavor melpa :host github :repo "jrblevin/markdown-mode") "spinner" nil "ht" (ht :type git :flavor melpa :files ("ht.el" "ht-pkg.el") :host github :repo "Wilfred/ht.el") "eglot" (eglot :type git :flavor melpa :host github :repo "joaotavora/eglot") "jsonrpc" nil "flymake" nil "eldoc" nil "project" nil "xref" nil "dumb-jump" (dumb-jump :type git :flavor melpa :host github :repo "jacktasia/dumb-jump") "popup" (popup :type git :flavor melpa :files ("popup.el" "popup-pkg.el") :host github :repo "auto-complete/popup-el") "protobuf-mode" (protobuf-mode :type git :flavor melpa :files ("editors/protobuf-mode.el" "protobuf-mode-pkg.el") :host github :repo "google/protobuf") "iedit" (iedit :type git :flavor melpa :host github :repo "victorhge/iedit") "multiple-cursors" (multiple-cursors :type git :flavor melpa :host github :repo "magnars/multiple-cursors.el") "expand-region" (expand-region :type git :flavor melpa :host github :repo "magnars/expand-region.el") "duplicate-thing" (duplicate-thing :type git :flavor melpa :host github :repo "ongaeshi/duplicate-thing") "ace-window" (ace-window :type git :flavor melpa :host github :repo "abo-abo/ace-window") "avy" (avy :type git :flavor melpa :host github :repo "abo-abo/avy") "restart-emacs" (restart-emacs :type git :flavor melpa :host github :repo "iqbalansari/restart-emacs") "backup-walker" (backup-walker :type git :flavor melpa :host github :repo "lewang/backup-walker") "org-brain" (org-brain :type git :flavor melpa :host github :repo "Kungsgeten/org-brain") "org-download" (org-download :type git :flavor melpa :host github :repo "abo-abo/org-download") "async" (async :type git :flavor melpa :host github :repo "jwiegley/emacs-async") "org-journal" (org-journal :type git :flavor melpa :host github :repo "bastibe/org-journal"))) gnu-elpa-mirror #s(hash-table size 65 test equal rehash-size 1.5 rehash-threshold 0.8125 data (version 3 "emacsmirror-mirror" nil "straight" nil "cl-lib" nil "hl-line" nil "paren" nil "seq" nil "let-alist" (let-alist :type git :host github :repo "emacs-straight/let-alist" :files ("*" (:exclude ".git"))) "spinner" (spinner :type git :host github :repo "emacs-straight/spinner" :files ("*" (:exclude ".git"))) "jsonrpc" (jsonrpc :type git :host github :repo "emacs-straight/jsonrpc" :files ("*" (:exclude ".git"))) "flymake" (flymake :type git :host github :repo "emacs-straight/flymake" :files ("*" (:exclude ".git"))) "eldoc" (eldoc :type git :host github :repo "emacs-straight/eldoc" :files ("*" (:exclude ".git"))) "project" (project :type git :host github :repo "emacs-straight/project" :files ("*" (:exclude ".git"))) "xref" (xref :type git :host github :repo "emacs-straight/xref" :files ("*" (:exclude ".git"))))) emacsmirror-mirror #s(hash-table size 65 test equal rehash-size 1.5 rehash-threshold 0.8125 data (version 2 "straight" (straight :type git :host github :repo "emacsmirror/straight") "cl-lib" nil "hl-line" nil "paren" nil "seq" nil))))
+
+("org-elpa" "melpa" "gnu-elpa-mirror" "emacsmirror-mirror" "straight" "emacs" "use-package" "bind-key" "doom-themes" "cl-lib" "all-the-icons" "selectrum" "projectile" "pkg-info" "epl" "yasnippet" "yasnippet-snippets" "company" "magit" "dash" "git-commit" "transient" "with-editor" "hl-line" "paren" "symbol-overlay" "seq" "which-key" "consult" "consult-flycheck" "flycheck" "let-alist" "marginalia" "embark" "embark-consult" "orderless" "prescient" "company-prescient" "selectrum-prescient" "rg" "wgrep" "git-gutter" "git-timemachine" "imenu-list" "buffer-move" "doom-modeline" "shrink-path" "s" "f" "org" "babel" "org-bullets" "org-brain" "org-download" "async" "org-journal" "haskell-mode" "rustic" "xterm-color" "markdown-mode" "spinner" "ht" "eglot" "jsonrpc" "flymake" "eldoc" "project" "xref" "dumb-jump" "popup" "protobuf-mode" "multiple-cursors" "expand-region" "duplicate-thing" "ace-window" "avy" "iedit" "restart-emacs" "backup-walker")
 
 t
