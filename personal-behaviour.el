@@ -2,11 +2,7 @@
 
 (use-package multiple-cursors
   :straight t
-<<<<<<< HEAD
-  :bind (("C-c e m" . #'mc/edit-lines )
-=======
   :bind (("C-c e e" . #'mc/edit-lines )
->>>>>>> ffbb5f161f79fa81da1acde89d5a3ab012fd82c4
          ("C-c e d" . #'mc/mark-all-dwim )))
 
 (use-package expand-region
@@ -30,9 +26,7 @@
 
 (use-package ace-window
   :straight t
-<<<<<<< HEAD
-  :bind (("C-x o" . #'ace-window))) 
-=======
+  :bind (("C-x o" . #'ace-window))
   :config
   (ace-window-display-mode)
   :custom
@@ -45,4 +39,3 @@
 
 ;; Parenthesis
 (electric-pair-mode)
->>>>>>> ffbb5f161f79fa81da1acde89d5a3ab012fd82c4
