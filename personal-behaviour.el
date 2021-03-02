@@ -39,3 +39,23 @@
 
 ;; Parenthesis
 (electric-pair-mode)
+
+;;Emacs Close and backup
+(use-package restart-emacs
+  :straight t
+  :bind ("C-x C-c" . restart-emacs)
+  )
+
+(desktop-save-mode 1)
+(setq desktop-restore-eager 10)
+(setq save-place-file "~/.emacs.d/var/saveplace")
+
+(setq backup-directory-alist '(("." . "~/.emacs.d/var/backups")))
+(setq delete-old-versions t)
+(setq kept-old-versions 1000)
+(setq vc-make-backup-files t)
+(setq version-control t)
+
+(use-package backup-walker
+  :straight t
+  :commands backup-walker-start)
