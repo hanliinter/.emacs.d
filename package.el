@@ -99,8 +99,10 @@
          ((dashboard-mode eshell-mode shell-mode term-mode vterm-mode) .
           (lambda () (setq-local global-hl-line-mode nil)))))
 
+
 (use-package magit-todos
   :straight t)
+
 
 (use-package hl-todo
   :straight t
