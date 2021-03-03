@@ -85,7 +85,7 @@
 		     (eq current-tick (buffer-chars-modified-tick)))
 	    (company-complete-common))))
       (company-complete-common)))
-
+;; TODO 
 
 (use-package magit
   :straight t
@@ -98,6 +98,21 @@
   :hook ((after-init . global-hl-line-mode)
          ((dashboard-mode eshell-mode shell-mode term-mode vterm-mode) .
           (lambda () (setq-local global-hl-line-mode nil)))))
+
+(use-package magit-todos
+  :straight t)
+
+(use-package hl-todo
+  :straight t
+  :config
+(setq hl-todo-keyword-faces
+      '(("TODO"   . "#FF0000")
+        ("FIXME"  . "#FF0000")
+        ("DEBUG"  . "#A020F0")
+        ("GOTCHA" . "#FF4500")
+        ("STUB"   . "#1E90FF")))
+
+  )
 
 ;; Highlight matching parens
 (use-package paren

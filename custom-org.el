@@ -51,6 +51,27 @@
   :straight t)
 
 
+(use-package org-super-agenda
+  :straight t)
+
+(use-package org-fancy-priorities
+  :straight t
+  :ensure t
+  :hook
+  (org-mode . org-fancy-priorities-mode)
+  :config
+  (setq org-fancy-priorities-list '("⚡" "⬆" "⬇" "☕")))
+
+(setq org-fancy-priorities-list '((?A . "❗")
+                                  (?B . "⬆")
+                                  (?C . "⬇")
+                                  (?D . "☕")
+                                  (?1 . "⚡")
+                                  (?2 . "⮬")
+                                  (?3 . "⮮")
+                                  (?4 . "☕")
+                                  (?I . "Important")))
+
 (setq org-agenda-files (quote ("~/Org/Inbox.org" "~/Org/Projects")))
 
 (setq org-use-fast-todo-selection t)
