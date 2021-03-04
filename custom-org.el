@@ -50,6 +50,8 @@
 (use-package org-journal
   :straight t)
 
+(use-package org-pomodoro
+  :straight t)
 
 (use-package org-super-agenda
   :straight t)
@@ -116,3 +118,16 @@
                "* PHONE %? :PHONE:\n%U" :clock-in t :clock-resume t)
               ("h" "Habit" entry (file "~/Org/Refile.org")
                "* NEXT %?\n%U\n%a\nSCHEDULED: %(format-time-string \"%<<%Y-%m-%d %a .+1d/3d>>\")\n:PROPERTIES:\n:STYLE: habit\n:REPEAT_TO_STATE: NEXT\n:END:\n"))))
+
+;; org refile targets should include the current file, agenda file, target archive file and the open buffer
+
+(setq org-refile-targets
+      '((nil . (:maxlevel . 9))
+	(org-agenda-files .  (:level . 1))
+	(org-buffer-list  . (:maxlevel . 9))
+	)
+
+      )
+
+(setq org-refile-use-outline-path 'file)
+(setq org-outline-path-complete-in-steps nil)
