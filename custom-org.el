@@ -7,13 +7,15 @@
   :bind (("C-c a" . org-agenda)
          ("C-c b" . org-switchb)
          ("C-c x" . org-capture)
-         :map org-mode-map
-         ("<" . (lambda ()
-                  "Insert org template."
-                  (interactive)
-                  (if (or (region-active-p) (looking-back "^\s*" 1))
-                      (org-hydra/body)
-                    (self-insert-command 1)))))
+         ;; :map org-mode-map
+         ;; ("<" . (lambda ()
+         ;;          "Insert org template."
+         ;;          (interactive)
+         ;;          (if (or (region-active-p) (looking-back "^\s*" 1))
+         ;;              (org-hydra/body)
+         ;;            (self-insert-command 1))))
+
+	 )
   :hook (((org-babel-after-execute org-mode) . org-redisplay-inline-images) ; display image
          (org-mode . (lambda ()
                        "Beautify org symbols."
@@ -24,6 +26,30 @@
                               (setq show-paren-mode nil))))
 
   )
+
+
+;; (defun try-expand
+
+;;   ("s" (hot-expand "<s"))
+;;   ("e" (hot-expand "<e"))
+;;   ("q" (hot-expand "<q"))
+;;   ("v" (hot-expand "<v"))
+;;   ("c" (hot-expand "<c"))
+;;   ("l" (hot-expand "<l"))
+;;   ("h" (hot-expand "<h"))
+;;   ("a" (hot-expand "<a"))
+;;   ("L" (hot-expand "<L"))
+;;   ("i" (hot-expand "<i"))
+;;   ("I" (hot-expand "<I"))
+;;   ("H" (hot-expand "<H"))
+;;   ("A" (hot-expand "<A"))
+;;   ("<" self-insert-command "ins")
+;;   ("o" nil "quit"))
+
+;; (defun hot-expand (str)
+;;   "Expand org template."
+;;   (insert str)
+;;   (org-try-structure-completion))
 
 
 (use-package babel
@@ -131,3 +157,4 @@
 
 (setq org-refile-use-outline-path 'file)
 (setq org-outline-path-complete-in-steps nil)
+
