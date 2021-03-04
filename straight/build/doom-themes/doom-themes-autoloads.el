@@ -27,6 +27,22 @@
 
 ;;;***
 
+;;;### (autoloads nil "doom-ayu-light-theme" "doom-ayu-light-theme.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from doom-ayu-light-theme.el
+
+(register-definition-prefixes "doom-ayu-light-theme" '("doom-ayu-light"))
+
+;;;***
+
+;;;### (autoloads nil "doom-ayu-mirage-theme" "doom-ayu-mirage-theme.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from doom-ayu-mirage-theme.el
+
+(register-definition-prefixes "doom-ayu-mirage-theme" '("doom-ayu-mirage"))
+
+;;;***
+
 ;;;### (autoloads nil "doom-challenger-deep-theme" "doom-challenger-deep-theme.el"
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-challenger-deep-theme.el
@@ -104,6 +120,22 @@
 ;;; Generated autoloads from doom-henna-theme.el
 
 (register-definition-prefixes "doom-henna-theme" '("doom-henna"))
+
+;;;***
+
+;;;### (autoloads nil "doom-homage-black-theme" "doom-homage-black-theme.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from doom-homage-black-theme.el
+
+(register-definition-prefixes "doom-homage-black-theme" '("doom-homage-black"))
+
+;;;***
+
+;;;### (autoloads nil "doom-homage-white-theme" "doom-homage-white-theme.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from doom-homage-white-theme.el
+
+(register-definition-prefixes "doom-homage-white-theme" '("doom-homage-white"))
 
 ;;;***
 
@@ -280,6 +312,14 @@
 ;;; Generated autoloads from doom-peacock-theme.el
 
 (register-definition-prefixes "doom-peacock-theme" '("doom-peacock"))
+
+;;;***
+
+;;;### (autoloads nil "doom-plain-dark-theme" "doom-plain-dark-theme.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from doom-plain-dark-theme.el
+
+(register-definition-prefixes "doom-plain-dark-theme" '("doom-plain-"))
 
 ;;;***
 

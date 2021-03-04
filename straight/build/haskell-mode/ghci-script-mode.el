@@ -1,0 +1,1 @@
+/Users/Hanli/.emacs.d/straight/repos/haskell-mode/ghci-script-mode.el

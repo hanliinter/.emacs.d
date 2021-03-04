@@ -19,10 +19,11 @@
 
 (straight-use-package 'use-package)
 
+
 (setq theme-file "~/.emacs.d/theme.el")
 (load-file theme-file)
-
-
+(straight-use-package 'selectrum)
+(selectrum-mode +1)
 (setq package-file "~/.emacs.d/package.el")
 (load-file package-file)
 
@@ -30,3 +31,12 @@
 (load-file custom-file)
 (setq custom-org "~/.emacs.d/custom-org.el")
 (load-file custom-org)
+
+(setq language-file "~/.emacs.d/lang/general.el")
+(load-file language-file)
+
+(setq global-basic-config-file "~/.emacs.d/global-basic.el")
+(load-file global-basic-config-file)
+
+(setq personal-behaviour-file "~/.emacs.d/personal-behaviour.el")
+(load-file personal-behaviour-file)

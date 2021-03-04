@@ -1,0 +1,3 @@
+[submodule "straight/repos/git-gutter"]
+	path = straight/repos/git-gutter
+	url = https://github.com/emacsorphanage/git-gutter.git

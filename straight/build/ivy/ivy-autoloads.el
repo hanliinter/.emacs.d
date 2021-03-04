@@ -6,7 +6,7 @@
 ;;;### (autoloads nil "colir" "colir.el" (0 0 0 0))
 ;;; Generated autoloads from colir.el
 
-(register-definition-prefixes "colir" '("colir-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "colir" '("colir-")))
 
 ;;;***
 
@@ -138,14 +138,14 @@ Switch to one of the window views stored by `ivy-push-view'." t nil)
 (autoload 'ivy-switch-buffer-other-window "ivy" "\
 Switch to another buffer in another window." t nil)
 
-(register-definition-prefixes "ivy" '("ivy-" "with-ivy-window"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "ivy" '("ivy-" "with-ivy-window")))
 
 ;;;***
 
 ;;;### (autoloads nil "ivy-overlay" "ivy-overlay.el" (0 0 0 0))
 ;;; Generated autoloads from ivy-overlay.el
 
-(register-definition-prefixes "ivy-overlay" '("ivy-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "ivy-overlay" '("ivy-")))
 
 ;;;***
 

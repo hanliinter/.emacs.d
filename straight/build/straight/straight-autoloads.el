@@ -52,7 +52,7 @@ package name as a string. In that case, the return value of the
 function is used as the value of NO-BUILD instead. In any case,
 if NO-BUILD is non-nil, then processing halts here. Otherwise,
 the package is built and activated. Note that if the package
-recipe has a nil `:build' entry, then NO-BUILD is ignored
+recipe has a non-nil `:no-build' entry, then NO-BUILD is ignored
 and processing always stops before building and activation
 occurs.
 
@@ -98,7 +98,7 @@ MELPA-STYLE-RECIPE is as for `straight-use-package'.
 Register a recipe repository using MELPA-STYLE-RECIPE.
 This registers the recipe and builds it if it is already cloned.
 Note that you probably want the recipe for a recipe repository to
-include a nil `:build' property, to unconditionally
+include a non-nil `:no-build' property, to unconditionally
 inhibit the build phase.
 
 This function also adds the recipe repository to
@@ -369,10 +369,10 @@ ARGS may be any of the following keywords and their respective values:
       formatted as markdown for submitting as an issue.
 
   - :user-dir String
-      If non-nil, the test is run with `user-emacs-directory' set to STRING.
+      If non-nil, the test is run with `emacs-user-dir' set to STRING.
       Otherwise, a temporary directory is created and used.
       Unless absolute, paths are expanded relative to the variable
-      `temporary-file-directory'.
+      `temproary-file-directory'.
 
 ARGS are accessible within the :pre/:post-bootsrap phases via the
 locally bound plist, straight-bug-report-args.

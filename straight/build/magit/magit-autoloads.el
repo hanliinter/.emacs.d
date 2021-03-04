@@ -68,11 +68,19 @@ We recommend that you bind \"C-c g\" instead of \"C-c M-g\" to
 but the \"C-c <letter>\" namespace is strictly reserved for
 users; preventing Magit from using it by default.
 
+The Magit documentation recommended binding \"C-x g\" to
+`magit-status' for more than a decade before Emacs developers
+decided it was okay to knowingly ignore that precedent and bind
+it to `revert-buffer' instead.  As described above Magit tries
+hard not to override a binding that was added by the user; but
+because this binding is not actually added by the user, Magit
+exempt it from this protection.  See #4311.
+
 Also see info node `(magit)Commands for Buffers Visiting Files'.")
 
 (custom-autoload 'magit-define-global-key-bindings "magit" t)
 
-(defun magit-maybe-define-global-key-bindings nil (when magit-define-global-key-bindings (let ((map (current-global-map))) (dolist (elt '(("C-x g" . magit-status) ("C-x M-g" . magit-dispatch) ("C-c M-g" . magit-file-dispatch))) (let ((key (kbd (car elt))) (def (cdr elt))) (unless (or (lookup-key map key) (where-is-internal def (make-sparse-keymap) t)) (define-key map key def)))))))
+(defun magit-maybe-define-global-key-bindings nil (when magit-define-global-key-bindings (let ((map (current-global-map))) (dolist (elt '(("C-x g" . magit-status) ("C-x M-g" . magit-dispatch) ("C-c M-g" . magit-file-dispatch))) (let* ((key (kbd (car elt))) (ours (cdr elt)) (theirs (lookup-key map key))) (unless (or (and theirs (not (eq theirs 'revert-buffer))) (where-is-internal ours (make-sparse-keymap) t)) (define-key map key ours)))))))
 
 (if after-init-time (magit-maybe-define-global-key-bindings) (add-hook 'after-init-hook 'magit-maybe-define-global-key-bindings t))
  (autoload 'magit-dispatch "magit" nil t)

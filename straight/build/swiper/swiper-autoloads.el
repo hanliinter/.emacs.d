@@ -42,7 +42,7 @@ Like `swiper-isearch' but the first result is before the point.
 
 \(fn &optional INITIAL-INPUT)" t nil)
 
-(register-definition-prefixes "swiper" '("swiper-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "swiper" '("swiper-")))
 
 ;;;***
 
