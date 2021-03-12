@@ -43,7 +43,6 @@
 ;;Emacs Close and backup
 (use-package restart-emacs
   :straight t
-  :bind ("C-x C-c" . restart-emacs)
   )
 
 (desktop-save-mode 1)
