@@ -39,7 +39,7 @@ displayed in the example above.
 
 (function-put 'let-alist 'lisp-indent-function '1)
 
-(register-definition-prefixes "let-alist" '("let-alist--"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "let-alist" '("let-alist--")))
 
 ;;;***
 

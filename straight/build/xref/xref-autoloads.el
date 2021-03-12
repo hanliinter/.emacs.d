@@ -90,7 +90,7 @@ FILES must be a list of absolute file names.
 
 \(fn REGEXP FILES)" nil nil)
 
-(register-definition-prefixes "xref" '("xref-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "xref" '("xref-")))
 
 ;;;***
 

@@ -1,1 +1,1 @@
-/Users/Hanli/.emacs.d/straight/repos/rg.el/rg-info-hack.el
+/home/hanli/.emacs.d/straight/repos/rg.el/rg-info-hack.el

@@ -1,1 +1,1 @@
-/Users/Hanli/.emacs.d/straight/repos/embark/embark.el
+/home/hanli/.emacs.d/straight/repos/embark/embark.el

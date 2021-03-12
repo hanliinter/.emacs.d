@@ -1,1 +1,1 @@
-/Users/Hanli/.emacs.d/straight/repos/haskell-mode/ghci-script-mode.el
+/home/hanli/.emacs.d/straight/repos/haskell-mode/ghci-script-mode.el

@@ -1,1 +1,1 @@
-/Users/Hanli/.emacs.d/straight/repos/doom-modeline/doom-modeline.el
+/home/hanli/.emacs.d/straight/repos/doom-modeline/doom-modeline.el

@@ -1,1 +1,1 @@
-/Users/Hanli/.emacs.d/straight/repos/all-the-icons.el/all-the-icons.el
+/home/hanli/.emacs.d/straight/repos/all-the-icons.el/all-the-icons.el

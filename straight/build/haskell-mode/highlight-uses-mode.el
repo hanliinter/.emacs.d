@@ -1,1 +1,1 @@
-/Users/Hanli/.emacs.d/straight/repos/haskell-mode/highlight-uses-mode.el
+/home/hanli/.emacs.d/straight/repos/haskell-mode/highlight-uses-mode.el

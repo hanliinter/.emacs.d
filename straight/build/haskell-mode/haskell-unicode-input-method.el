@@ -1,1 +1,1 @@
-/Users/Hanli/.emacs.d/straight/repos/haskell-mode/haskell-unicode-input-method.el
+/home/hanli/.emacs.d/straight/repos/haskell-mode/haskell-unicode-input-method.el

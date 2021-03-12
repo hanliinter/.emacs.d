@@ -1,1 +1,1 @@
-/Users/Hanli/.emacs.d/straight/repos/org/lisp/ox-beamer.el
+/home/hanli/.emacs.d/straight/repos/org/lisp/ox-beamer.el

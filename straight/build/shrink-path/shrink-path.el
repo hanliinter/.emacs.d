@@ -1,1 +1,1 @@
-/Users/Hanli/.emacs.d/straight/repos/shrink-path.el/shrink-path.el
+/home/hanli/.emacs.d/straight/repos/shrink-path.el/shrink-path.el

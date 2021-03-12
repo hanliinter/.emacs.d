@@ -10,7 +10,7 @@
 (autoload 'consult-flycheck "consult-flycheck" "\
 Jump to flycheck error." t nil)
 
-(register-definition-prefixes "consult-flycheck" '("consult-flycheck--candidates"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "consult-flycheck" '("consult-flycheck--")))
 
 ;;;***
 

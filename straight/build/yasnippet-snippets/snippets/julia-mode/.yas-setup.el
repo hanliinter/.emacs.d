@@ -1,1 +1,1 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/julia-mode/.yas-setup.el
+/home/hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/julia-mode/.yas-setup.el

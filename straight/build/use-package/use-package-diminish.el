@@ -1,1 +1,1 @@
-/Users/Hanli/.emacs.d/straight/repos/use-package/use-package-diminish.el
+/home/hanli/.emacs.d/straight/repos/use-package/use-package-diminish.el

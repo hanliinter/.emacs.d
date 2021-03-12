@@ -6,7 +6,7 @@
 ;;;### (autoloads nil "s" "s.el" (0 0 0 0))
 ;;; Generated autoloads from s.el
 
-(register-definition-prefixes "s" '("s-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "s" '("s-")))
 
 ;;;***
 

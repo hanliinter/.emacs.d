@@ -1,1 +1,1 @@
-/Users/Hanli/.emacs.d/straight/repos/company-mode/company-capf.el
+/home/hanli/.emacs.d/straight/repos/company-mode/company-capf.el

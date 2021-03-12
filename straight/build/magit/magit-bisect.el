@@ -1,1 +1,1 @@
-/Users/Hanli/.emacs.d/straight/repos/magit/lisp/magit-bisect.el
+/home/hanli/.emacs.d/straight/repos/magit/lisp/magit-bisect.el

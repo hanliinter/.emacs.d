@@ -18,6 +18,7 @@
   (load bootstrap-file nil 'nomessage))
 
 (straight-use-package 'use-package)
+(straight-use-package 'org)
 
 
 (setq theme-file "~/.emacs.d/theme.el")
@@ -40,3 +41,8 @@
 
 (setq personal-behaviour-file "~/.emacs.d/personal-behaviour.el")
 (load-file personal-behaviour-file)
+
+(unless (display-graphic-p)
+  (setq terminal-configuration-file "~/.emacs.d/terminal.el")
+  (load-file terminal-configuration-file)
+  )

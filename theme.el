@@ -13,7 +13,6 @@
 (use-package all-the-icons
   :straight t)
 
-
 (cond
  ((string-equal system-type "windows-nt") ; Microsoft Windows
   (when (member "Sarasa Mono SC" (font-family-list))

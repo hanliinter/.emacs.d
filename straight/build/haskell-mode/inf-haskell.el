@@ -1,1 +1,1 @@
-/Users/Hanli/.emacs.d/straight/repos/haskell-mode/inf-haskell.el
+/home/hanli/.emacs.d/straight/repos/haskell-mode/inf-haskell.el

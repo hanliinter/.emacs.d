@@ -73,9 +73,7 @@ ARG is omitted or nil.
 
 Flycheck mode is enabled in all buffers where
 `flycheck-mode-on-safe' would do it.
-
-See `flycheck-mode' for more information on
-Flycheck mode.
+See `flycheck-mode' for more information on Flycheck mode.
 
 \(fn &optional ARG)" t nil)
 
@@ -273,7 +271,7 @@ SYMBOL with `flycheck-def-executable-var'.
 
 (function-put 'flycheck-define-checker 'doc-string-elt '2)
 
-(register-definition-prefixes "flycheck" '("flycheck-" "help-flycheck-checker-d" "list-flycheck-errors"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "flycheck" '("flycheck-" "help-flycheck-checker-d" "list-flycheck-errors")))
 
 ;;;***
 
@@ -281,14 +279,14 @@ SYMBOL with `flycheck-def-executable-var'.
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from flycheck-buttercup.el
 
-(register-definition-prefixes "flycheck-buttercup" '("flycheck-buttercup-format-error-list"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "flycheck-buttercup" '("flycheck-buttercup-format-error-list")))
 
 ;;;***
 
 ;;;### (autoloads nil "flycheck-ert" "flycheck-ert.el" (0 0 0 0))
 ;;; Generated autoloads from flycheck-ert.el
 
-(register-definition-prefixes "flycheck-ert" '("flycheck-er"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "flycheck-ert" '("flycheck-er")))
 
 ;;;***
 

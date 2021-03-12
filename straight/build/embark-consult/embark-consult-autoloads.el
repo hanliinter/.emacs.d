@@ -7,7 +7,7 @@
 ;;;;;;  0))
 ;;; Generated autoloads from embark-consult.el
 
-(register-definition-prefixes "embark-consult" '("embark-consult-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "embark-consult" '("embark-consult-")))
 
 ;;;***
 

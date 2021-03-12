@@ -40,7 +40,9 @@ INTERACTIVE is t if called interactively.
 (autoload 'eglot-ensure "eglot" "\
 Start Eglot session for current buffer if there isn't one." nil nil)
 
-(register-definition-prefixes "eglot" '("eglot-"))
+(put 'eglot-workspace-configuration 'safe-local-variable 'listp)
+
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "eglot" '("eglot-")))
 
 ;;;***
 

@@ -1,1 +1,1 @@
-/Users/Hanli/.emacs.d/straight/repos/let-alist/let-alist.el
+/home/hanli/.emacs.d/straight/repos/let-alist/let-alist.el

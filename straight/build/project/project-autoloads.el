@@ -197,19 +197,6 @@ Execute an extended command in project root." t nil)
 
 (function-put 'project-execute-extended-command 'interactive-only 'command-execute)
 
-(defvar project-switch-commands '((project-find-file "Find file") (project-find-regexp "Find regexp") (project-dired "Dired") (project-vc-dir "VC-Dir") (project-eshell "Eshell")) "\
-Alist mapping commands to descriptions.
-Used by `project-switch-project' to construct a dispatch menu of
-commands available upon \"switching\" to another project.
-
-Each element is of the form (COMMAND LABEL &optional KEY) where
-COMMAND is the command to run when KEY is pressed.  LABEL is used
-to distinguish the menu entries in the dispatch menu.  If KEY is
-absent, COMMAND must be bound in `project-prefix-map', and the
-key is looked up in that map.")
-
-(custom-autoload 'project-switch-commands "project" t)
-
 (autoload 'project-switch-project "project" "\
 \"Switch\" to another project by running an Emacs command.
 The available commands are presented as a dispatch menu
@@ -220,7 +207,7 @@ to directory DIR.
 
 \(fn DIR)" t nil)
 
-(register-definition-prefixes "project" '("project-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "project" '("project-")))
 
 ;;;***
 

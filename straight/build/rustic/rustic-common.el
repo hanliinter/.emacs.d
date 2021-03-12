@@ -1,1 +1,1 @@
-/Users/Hanli/.emacs.d/straight/repos/rustic/rustic-common.el
+/home/hanli/.emacs.d/straight/repos/rustic/rustic-common.el

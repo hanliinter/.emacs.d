@@ -1,1 +1,1 @@
-/Users/Hanli/.emacs.d/straight/repos/project/project.el
+/home/hanli/.emacs.d/straight/repos/project/project.el

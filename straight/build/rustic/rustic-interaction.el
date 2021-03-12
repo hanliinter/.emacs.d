@@ -1,1 +1,1 @@
-/Users/Hanli/.emacs.d/straight/repos/rustic/rustic-interaction.el
+/home/hanli/.emacs.d/straight/repos/rustic/rustic-interaction.el

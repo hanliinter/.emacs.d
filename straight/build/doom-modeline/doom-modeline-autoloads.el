@@ -69,20 +69,14 @@ or call the function `doom-modeline-mode'.")
 (autoload 'doom-modeline-mode "doom-modeline" "\
 Toggle doom-modeline on or off.
 
-If called interactively, toggle `Doom-Modeline mode'.  If the
-prefix argument is positive, enable the mode, and if it is zero
-or negative, disable the mode.
-
-If called from Lisp, toggle the mode if ARG is `toggle'.  Enable
-the mode if ARG is nil, omitted, or is a positive number.
-Disable the mode if ARG is a negative number.
-
-The mode's hook is called both when the mode is enabled and when
-it is disabled.
+If called interactively, enable Doom-Modeline mode if ARG is
+positive, and disable it if ARG is zero or negative.  If called
+from Lisp, also enable the mode if ARG is omitted or nil, and
+toggle it if ARG is `toggle'; disable the mode otherwise.
 
 \(fn &optional ARG)" t nil)
 
-(register-definition-prefixes "doom-modeline" '("doom-modeline-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-modeline" '("doom-modeline-")))
 
 ;;;***
 
@@ -90,7 +84,7 @@ it is disabled.
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-modeline-core.el
 
-(register-definition-prefixes "doom-modeline-core" '("doom-modeline"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-modeline-core" '("doom-modeline")))
 
 ;;;***
 
@@ -104,7 +98,7 @@ it is disabled.
  (autoload 'doom-modeline-env-setup-elixir "doom-modeline-env")
  (autoload 'doom-modeline-env-setup-rust "doom-modeline-env")
 
-(register-definition-prefixes "doom-modeline-env" '("doom-modeline-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-modeline-env" '("doom-modeline-")))
 
 ;;;***
 
@@ -112,7 +106,7 @@ it is disabled.
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from doom-modeline-segments.el
 
-(register-definition-prefixes "doom-modeline-segments" '("doom-modeline-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "doom-modeline-segments" '("doom-modeline-")))
 
 ;;;***
 

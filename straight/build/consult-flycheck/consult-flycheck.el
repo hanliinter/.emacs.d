@@ -1,1 +1,1 @@
-/Users/Hanli/.emacs.d/straight/repos/consult/consult-flycheck.el
+/home/hanli/.emacs.d/straight/repos/consult/consult-flycheck.el

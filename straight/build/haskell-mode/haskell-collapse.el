@@ -1,1 +1,1 @@
-/Users/Hanli/.emacs.d/straight/repos/haskell-mode/haskell-collapse.el
+/home/hanli/.emacs.d/straight/repos/haskell-mode/haskell-collapse.el

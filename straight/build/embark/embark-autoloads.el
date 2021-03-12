@@ -32,6 +32,20 @@ ARG is the prefix argument.
 
 \(fn &optional ARG)" t nil)
 
+(autoload 'embark-default-action "embark" "\
+Run the default action on the current target.
+The target of the action is chosen by `embark-target-finders'.
+
+If the target comes from minibuffer completion, then the default
+action is the command that opened the minibuffer in the first
+place, unless overidden by `embark-default-action-overrides'.
+
+For targets that do not come from minibuffer completion
+\(typically some thing at point in a regular buffer) and whose
+type is not listed in `embark-default-action-overrides', the
+default action is given by whatever binding RET has in the action
+keymap for the target's type." t nil)
+
 (autoload 'embark-become "embark" "\
 Make current command become a different command.
 Take the current minibuffer input as initial input for new
@@ -100,7 +114,7 @@ Create a type-specific buffer to manage current candidates.
 The variable `embark-exporters-alist' controls how to make the
 buffer for each type of completion." t nil)
 
-(register-definition-prefixes "embark" '("embark-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "embark" '("embark-")))
 
 ;;;***
 

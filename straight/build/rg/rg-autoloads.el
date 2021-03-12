@@ -116,21 +116,21 @@ files with the same name pattern still will be searched.
  (autoload 'rg-literal "rg.el" "" t)
  (autoload 'rg "rg.el" "" t)
 
-(register-definition-prefixes "rg" '("kill-rg" "rg-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "rg" '("kill-rg" "rg-")))
 
 ;;;***
 
 ;;;### (autoloads nil "rg-header" "rg-header.el" (0 0 0 0))
 ;;; Generated autoloads from rg-header.el
 
-(register-definition-prefixes "rg-header" '("rg-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "rg-header" '("rg-")))
 
 ;;;***
 
 ;;;### (autoloads nil "rg-history" "rg-history.el" (0 0 0 0))
 ;;; Generated autoloads from rg-history.el
 
-(register-definition-prefixes "rg-history" '("rg-history-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "rg-history" '("rg-history-")))
 
 ;;;***
 
@@ -140,7 +140,7 @@ files with the same name pattern still will be searched.
 (autoload 'rg-list-searches "rg-ibuffer" "\
 List all `rg-mode' buffers in `ibuffer'." t nil)
 
-(register-definition-prefixes "rg-ibuffer" '("rg-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "rg-ibuffer" '("rg-")))
 
 ;;;***
 
@@ -150,7 +150,7 @@ List all `rg-mode' buffers in `ibuffer'." t nil)
  (autoload 'rg-isearch-current-dir "rg-isearch.el" "" t)
  (autoload 'rg-isearch-project "rg-isearch.el" "" t)
 
-(register-definition-prefixes "rg-isearch" '("rg-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "rg-isearch" '("rg-get-isearch-string")))
 
 ;;;***
 
@@ -164,14 +164,14 @@ If prefix is not supplied `rg-keymap-prefix' is used.
 
 \(fn &optional PREFIX)" t nil)
 
-(register-definition-prefixes "rg-menu" '("rg-menu"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "rg-menu" '("rg-menu-")))
 
 ;;;***
 
 ;;;### (autoloads nil "rg-result" "rg-result.el" (0 0 0 0))
 ;;; Generated autoloads from rg-result.el
 
-(register-definition-prefixes "rg-result" '("rg-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "rg-result" '("rg-")))
 
 ;;;***
 
@@ -183,7 +183,7 @@ Setup wgrep rg support." nil nil)
 
 (add-hook 'rg-mode-hook 'wgrep-rg-setup)
 
-(register-definition-prefixes "wgrep-rg" '("wgrep-rg-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "wgrep-rg" '("wgrep-rg-")))
 
 ;;;***
 

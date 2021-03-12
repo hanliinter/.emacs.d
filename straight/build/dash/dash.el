@@ -1,1 +1,1 @@
-/Users/Hanli/.emacs.d/straight/repos/dash.el/dash.el
+/home/hanli/.emacs.d/straight/repos/dash.el/dash.el

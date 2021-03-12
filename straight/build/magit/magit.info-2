@@ -2413,9 +2413,9 @@ Appendix C Keystroke Index
 * f u:                                   Fetching.            (line  23)
 * F u:                                   Pulling.             (line  22)
 * g:                                     Automatic Refreshing of Magit Buffers.
-                                                              (line  24)
+                                                              (line  25)
 * G:                                     Automatic Refreshing of Magit Buffers.
-                                                              (line  33)
+                                                              (line  34)
 * j:                                     Commands Available in Diffs.
                                                               (line  45)
 * k:                                     Viewing Git Output.  (line  24)
@@ -3015,9 +3015,9 @@ Appendix D Command Index
 * magit-reflog-head:                     Reflog.              (line  19)
 * magit-reflog-other:                    Reflog.              (line  15)
 * magit-refresh:                         Automatic Refreshing of Magit Buffers.
-                                                              (line  24)
+                                                              (line  25)
 * magit-refresh-all:                     Automatic Refreshing of Magit Buffers.
-                                                              (line  33)
+                                                              (line  34)
 * magit-remote:                          Remote Commands.     (line  13)
 * magit-remote-add:                      Remote Commands.     (line  50)
 * magit-remote-configure:                Remote Commands.     (line  33)
@@ -3205,7 +3205,7 @@ Appendix E Function Index
 * ido-enter-magit-status:                Status Buffer.       (line  72)
 * magit-add-section-hook:                Section Hooks.       (line  20)
 * magit-after-save-refresh-status:       Automatic Refreshing of Magit Buffers.
-                                                              (line  58)
+                                                              (line  59)
 * magit-branch-or-checkout:              Branch Commands.     (line 257)
 * magit-branch-orphan:                   Branch Commands.     (line 252)
 * magit-branch-shelve:                   Auxiliary Branch Commands.
@@ -3501,9 +3501,10 @@ Appendix F Variable Index
 * magit-clone-set-remote.pushDefault:    Cloning Repository.  (line  78)
 * magit-clone-url-format:                Cloning Repository.  (line 124)
 * magit-commit-ask-to-stage:             Initiating a Commit. (line  75)
-* magit-commit-extend-override-date:     Initiating a Commit. (line  80)
-* magit-commit-reword-override-date:     Initiating a Commit. (line  84)
-* magit-commit-squash-confirm:           Initiating a Commit. (line  88)
+* magit-commit-extend-override-date:     Initiating a Commit. (line  84)
+* magit-commit-reword-override-date:     Initiating a Commit. (line  88)
+* magit-commit-show-diff:                Initiating a Commit. (line  80)
+* magit-commit-squash-confirm:           Initiating a Commit. (line  92)
 * magit-completing-read-function:        Support for Completion Frameworks.
                                                               (line  27)
 * magit-define-global-key-bindings:      Default Bindings.    (line   6)
@@ -3570,10 +3571,10 @@ Appendix F Variable Index
 * magit-reflog-margin:                   Reflog.              (line  23)
 * magit-refresh-args:                    Refreshing Buffers.  (line  55)
 * magit-refresh-buffer-hook:             Automatic Refreshing of Magit Buffers.
-                                                              (line  42)
+                                                              (line  43)
 * magit-refresh-function:                Refreshing Buffers.  (line  49)
 * magit-refresh-status-buffer:           Automatic Refreshing of Magit Buffers.
-                                                              (line  48)
+                                                              (line  49)
 * magit-refs-filter-alist:               References Buffer.   (line 159)
 * magit-refs-focus-column-width:         References Buffer.   (line  82)
 * magit-refs-margin:                     References Buffer.   (line  97)

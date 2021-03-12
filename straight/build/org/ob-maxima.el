@@ -1,1 +1,1 @@
-/Users/Hanli/.emacs.d/straight/repos/org/lisp/ob-maxima.el
+/home/hanli/.emacs.d/straight/repos/org/lisp/ob-maxima.el

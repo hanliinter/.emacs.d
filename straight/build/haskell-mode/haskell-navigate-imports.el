@@ -1,1 +1,1 @@
-/Users/Hanli/.emacs.d/straight/repos/haskell-mode/haskell-navigate-imports.el
+/home/hanli/.emacs.d/straight/repos/haskell-mode/haskell-navigate-imports.el

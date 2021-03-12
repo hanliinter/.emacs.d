@@ -1,1 +1,1 @@
-/Users/Hanli/.emacs.d/straight/repos/emacs-doom-themes/themes/doom-monokai-spectrum-theme.el
+/home/hanli/.emacs.d/straight/repos/emacs-doom-themes/themes/doom-monokai-spectrum-theme.el

@@ -1,1 +1,1 @@
-/Users/Hanli/.emacs.d/straight/repos/org-fancy-priorities/org-fancy-priorities.el
+/home/hanli/.emacs.d/straight/repos/org-fancy-priorities/org-fancy-priorities.el

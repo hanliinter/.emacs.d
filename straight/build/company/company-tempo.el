@@ -1,1 +1,1 @@
-/Users/Hanli/.emacs.d/straight/repos/company-mode/company-tempo.el
+/home/hanli/.emacs.d/straight/repos/company-mode/company-tempo.el

@@ -1,1 +1,1 @@
-/Users/Hanli/.emacs.d/straight/repos/org/lisp/org-mobile.el
+/home/hanli/.emacs.d/straight/repos/org/lisp/org-mobile.el

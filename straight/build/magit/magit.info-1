@@ -31,7 +31,7 @@ to perform almost all of their daily version control tasks directly from
 within Emacs.  While many fine Git clients exist, only Magit and Git
 itself deserve to be called porcelains.
 
-This manual is for Magit version 2.90.1 (v2.90.1-1157-g10a931f15+1).
+This manual is for Magit version 2.90.1 (v2.90.1-1210-gfb25d4e9c+1).
 
      Copyright (C) 2015-2021 Jonas Bernoulli <jonas@bernoul.li>
 
@@ -974,7 +974,8 @@ are refreshed.  The status buffer can be automatically refreshed
 whenever a buffer is saved to a file inside the respective repository by
 adding a hook, like so:
 
-     (add-hook 'after-save-hook 'magit-after-save-refresh-status t)
+     (with-eval-after-load 'magit-mode
+       (add-hook 'after-save-hook 'magit-after-save-refresh-status t))
 
    Automatically refreshing Magit buffers ensures that the displayed
 information is up-to-date most of the time but can lead to a noticeable
@@ -1910,13 +1911,13 @@ telling Magit to ask fewer questions.
 
         • Publishing:
 
-          ‘set-and-push’ When pushing to the upstream or the push-remote
-          and that isn’t actually configured yet, then the user can
-          first set the target.  If s/he confirms the default too
-          quickly, then s/he might end up pushing to the wrong branch
-          and if the remote repository is configured to disallow fixing
-          such mistakes, then that can be quite embarrassing and
-          annoying.
+             • ‘set-and-push’ When pushing to the upstream or the
+               push-remote and that isn’t actually configured yet, then
+               the user can first set the target.  If s/he confirms the
+               default too quickly, then s/he might end up pushing to
+               the wrong branch and if the remote repository is
+               configured to disallow fixing such mistakes, then that
+               can be quite embarrassing and annoying.
 
         • Edit published history:
 
@@ -5147,6 +5148,10 @@ Also see *note (gitman)git-commit::.
      Whether to ask to stage all unstaged changes when committing and
      nothing is staged.
 
+ -- User Option: magit-commit-show-diff
+
+     Whether the relevant diff is automatically shown when committing.
+
  -- User Option: magit-commit-extend-override-date
 
      Whether using ‘magit-commit-extend’ changes the committer date.
@@ -5163,6 +5168,18 @@ Also see *note (gitman)git-commit::.
      only affects ‘magit-commit-squash’ and ‘magit-commit-fixup’.  The
      "instant" variants always require confirmation because making an
      error while using those is harder to recover from.
+
+   • User Option magit-post-commit-hook
+
+     Hook run after creating a commit without the user editing a
+     message.
+
+     This hook is run by ‘magit-refresh’ if ‘this-command’ is a member
+     of ‘magit-post-stage-hook-commands’.  This only includes commands
+     named ‘magit-commit-*’ that do *not* require that the user edits
+     the commit message in a buffer.
+
+     Also see ‘git-commit-post-finish-hook’.
 
 
 File: magit.info,  Node: Editing Commit Messages,  Prev: Initiating a Commit,  Up: Committing
@@ -5565,7 +5582,7 @@ them.  Those features are available from separate transient command.
  -- User Option: magit-branch-direct-configure
 
      This option controls whether the transient command ‘magit-branch’
-     can be used directly change the values Git variables.  This
+     can be used to directly change the values of Git variables.  This
      defaults to ‘t’ (to avoid changing key bindings).  When set to
      ‘nil’, then no variables are displayed by that transient command,
      and its suffix command ‘magit-branch-configure’ has to be used
@@ -5611,8 +5628,8 @@ them.  Those features are available from separate transient command.
 
 ‘b c’     (‘magit-branch-and-checkout’)
 
-     This command creates a new branch like ‘magit-branch’, but then
-     also checks it out.
+     This command creates a new branch like ‘magit-branch-create’, but
+     then also checks it out.
 
      Also see option ‘magit-branch-prefer-remote-upstream’.
 
@@ -7485,7 +7502,7 @@ Also see *note (gitman)git-tag::.
 ‘t t’     (‘magit-tag-create’)
 
      This command creates a new tag with the given NAME at REV.  With a
-     prefix argument it creates an annotate tag.
+     prefix argument it creates an annotated tag.
 
 ‘t r’     (‘magit-tag-release’)
 

@@ -1,1 +1,1 @@
-/Users/Hanli/.emacs.d/straight/repos/magit/lisp/magit-log.el
+/home/hanli/.emacs.d/straight/repos/magit/lisp/magit-log.el

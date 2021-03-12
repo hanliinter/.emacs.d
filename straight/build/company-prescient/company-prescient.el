@@ -1,1 +1,1 @@
-/Users/Hanli/.emacs.d/straight/repos/prescient.el/company-prescient.el
+/home/hanli/.emacs.d/straight/repos/prescient.el/company-prescient.el

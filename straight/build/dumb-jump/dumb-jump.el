@@ -1,1 +1,1 @@
-/Users/Hanli/.emacs.d/straight/repos/dumb-jump/dumb-jump.el
+/home/hanli/.emacs.d/straight/repos/dumb-jump/dumb-jump.el

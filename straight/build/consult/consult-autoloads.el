@@ -19,12 +19,6 @@ Jump to an outline heading, obtained by matching against `outline-regexp'.
 This command supports candidate preview.
 The symbol at point is added to the future history." t nil)
 
-(autoload 'consult-error "consult" "\
-Jump to a compilation error in the current buffer.
-
-This command works in compilation buffers and grep buffers.
-The command supports preview of the currently selected error." t nil)
-
 (autoload 'consult-mark "consult" "\
 Jump to a marker in the buffer-local `mark-ring'.
 
@@ -45,6 +39,33 @@ This command obeys narrowing. Optionally INITIAL input can be provided.
 The symbol at point and the last `isearch-string' is added to the future history.
 
 \(fn &optional INITIAL)" t nil)
+
+(autoload 'consult-keep-lines "consult" "\
+Select a subset of the lines in the current buffer with live preview.
+
+The selected lines are kept and the other lines are deleted. When called
+interactively, the lines selected are those that match the minibuffer input.
+When called from elisp, the filtering is performed by a FILTER function. This
+command obeys narrowing.
+
+FILTER is the filter function.
+INITIAL is the initial input.
+
+\(fn &optional FILTER INITIAL)" t nil)
+
+(autoload 'consult-focus-lines "consult" "\
+Hide or show lines using overlays.
+
+The selected lines are shown and the other lines hidden. When called
+interactively, the lines selected are those that match the minibuffer input.
+With optional prefix argument SHOW reveal the hidden lines. When called from
+elisp, the filtering is performed by a FILTER function. This command obeys
+narrowing.
+
+FILTER is the filter function.
+INITIAL is the initial input.
+
+\(fn &optional SHOW FILTER INITIAL)" t nil)
 
 (autoload 'consult-goto-line "consult" "\
 Read line number and jump to the line with preview.
@@ -280,7 +301,22 @@ See `consult-grep' for more details regarding the asynchronous search.
 
 \(fn &optional INITIAL)" t nil)
 
-(register-definition-prefixes "consult" '("consult-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "consult" '("consult-")))
+
+;;;***
+
+;;;### (autoloads nil "consult-compile" "consult-compile.el" (0 0
+;;;;;;  0 0))
+;;; Generated autoloads from consult-compile.el
+
+(autoload 'consult-compile-error "consult-compile" "\
+Jump to a compilation error in the current buffer.
+
+This command collects entries from compilation buffers and grep
+buffers related to the current buffer.  The command supports
+preview of the currently selected error." t nil)
+
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "consult-compile" '("consult-compile--")))
 
 ;;;***
 
@@ -291,7 +327,7 @@ See `consult-grep' for more details regarding the asynchronous search.
 (autoload 'consult-flymake "consult-flymake" "\
 Jump to Flymake diagnostic." t nil)
 
-(register-definition-prefixes "consult-flymake" '("consult-flymake--candidates"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "consult-flymake" '("consult-flymake--")))
 
 ;;;***
 
@@ -299,7 +335,7 @@ Jump to Flymake diagnostic." t nil)
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from consult-icomplete.el
 
-(register-definition-prefixes "consult-icomplete" '("consult-icomplete--refresh"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "consult-icomplete" '("consult-icomplete--refresh")))
 
 ;;;***
 
@@ -307,7 +343,23 @@ Jump to Flymake diagnostic." t nil)
 ;;;;;;  (0 0 0 0))
 ;;; Generated autoloads from consult-selectrum.el
 
-(register-definition-prefixes "consult-selectrum" '("consult-selectrum--"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "consult-selectrum" '("consult-selectrum--")))
+
+;;;***
+
+;;;### (autoloads nil "consult-xref" "consult-xref.el" (0 0 0 0))
+;;; Generated autoloads from consult-xref.el
+
+(autoload 'consult-xref "consult-xref" "\
+Show xrefs with preview in the minibuffer.
+
+This function can be used for `xref-show-xrefs-function'.
+See `xref-show-xrefs-function' for the description of the
+FETCHER and ALIST arguments.
+
+\(fn FETCHER &optional ALIST)" nil nil)
+
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "consult-xref" '("consult-xref--")))
 
 ;;;***
 

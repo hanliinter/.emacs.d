@@ -1,1 +1,1 @@
-/Users/Hanli/.emacs.d/straight/repos/haskell-mode/haskell-mode-pkg.el
+/home/hanli/.emacs.d/straight/repos/haskell-mode/haskell-mode-pkg.el

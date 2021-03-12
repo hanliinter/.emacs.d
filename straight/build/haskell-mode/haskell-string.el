@@ -1,1 +1,1 @@
-/Users/Hanli/.emacs.d/straight/repos/haskell-mode/haskell-string.el
+/home/hanli/.emacs.d/straight/repos/haskell-mode/haskell-string.el

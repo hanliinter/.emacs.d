@@ -1,1 +1,1 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c++-mode/.yas-setup.el
+/home/hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/c++-mode/.yas-setup.el

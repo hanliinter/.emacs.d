@@ -1,1 +1,1 @@
-/Users/Hanli/.emacs.d/straight/repos/use-package/use-package.texi
+/home/hanli/.emacs.d/straight/repos/use-package/use-package.texi

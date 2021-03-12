@@ -1,1 +1,1 @@
-/Users/Hanli/.emacs.d/straight/repos/xterm-color/xterm-color.el
+/home/hanli/.emacs.d/straight/repos/xterm-color/xterm-color.el

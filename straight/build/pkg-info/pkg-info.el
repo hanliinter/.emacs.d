@@ -1,1 +1,1 @@
-/Users/Hanli/.emacs.d/straight/repos/pkg-info/pkg-info.el
+/home/hanli/.emacs.d/straight/repos/pkg-info/pkg-info.el

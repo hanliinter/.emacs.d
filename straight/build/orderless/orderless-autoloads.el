@@ -29,7 +29,7 @@ returns nil.  In any other case it \"completes\" STRING to
 itself, without moving POINT.
 This function is part of the `orderless' completion style.
 
-\(fn STRING TABLE PRED POINT &optional METADATA)" nil nil)
+\(fn STRING TABLE PRED POINT)" nil nil)
 
 (add-to-list 'completion-styles-alist '(orderless orderless-try-completion orderless-all-completions "Completion of multiple components, in any order."))
 
@@ -42,7 +42,7 @@ a value in `ivy-re-builders-alist'.
 
 (with-eval-after-load 'ivy (add-to-list 'ivy-highlight-functions-alist '(orderless-ivy-re-builder . orderless-ivy-highlight)))
 
-(register-definition-prefixes "orderless" '("orderless-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "orderless" '("orderless-")))
 
 ;;;***
 

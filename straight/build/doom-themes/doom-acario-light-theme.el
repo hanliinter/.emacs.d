@@ -1,1 +1,1 @@
-/Users/Hanli/.emacs.d/straight/repos/emacs-doom-themes/themes/doom-acario-light-theme.el
+/home/hanli/.emacs.d/straight/repos/emacs-doom-themes/themes/doom-acario-light-theme.el

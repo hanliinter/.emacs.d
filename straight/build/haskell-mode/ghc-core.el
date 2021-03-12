@@ -1,1 +1,1 @@
-/Users/Hanli/.emacs.d/straight/repos/haskell-mode/ghc-core.el
+/home/hanli/.emacs.d/straight/repos/haskell-mode/ghc-core.el

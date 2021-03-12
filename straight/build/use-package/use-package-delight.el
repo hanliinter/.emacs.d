@@ -1,1 +1,1 @@
-/Users/Hanli/.emacs.d/straight/repos/use-package/use-package-delight.el
+/home/hanli/.emacs.d/straight/repos/use-package/use-package-delight.el

@@ -1,1 +1,1 @@
-/Users/Hanli/.emacs.d/straight/repos/straight.el/straight.el
+/home/hanli/.emacs.d/straight/repos/straight.el/straight.el

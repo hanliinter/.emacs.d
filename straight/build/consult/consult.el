@@ -1,1 +1,1 @@
-/Users/Hanli/.emacs.d/straight/repos/consult/consult.el
+/home/hanli/.emacs.d/straight/repos/consult/consult.el

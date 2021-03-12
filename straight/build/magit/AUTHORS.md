@@ -1,1 +1,1 @@
-/Users/Hanli/.emacs.d/straight/repos/magit/Documentation/AUTHORS.md
+/home/hanli/.emacs.d/straight/repos/magit/Documentation/AUTHORS.md

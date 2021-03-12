@@ -1,1 +1,1 @@
-/Users/Hanli/.emacs.d/straight/repos/with-editor/with-editor.el
+/home/hanli/.emacs.d/straight/repos/with-editor/with-editor.el

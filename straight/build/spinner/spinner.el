@@ -1,1 +1,1 @@
-/Users/Hanli/.emacs.d/straight/repos/spinner/spinner.el
+/home/hanli/.emacs.d/straight/repos/spinner/spinner.el

@@ -60,7 +60,7 @@ See info node `(transient)Modifying Existing Transients'.
 
 (function-put 'transient-remove-suffix 'lisp-indent-function 'defun)
 
-(register-definition-prefixes "transient" '("transient-"))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "transient" '("transient-")))
 
 ;;;***
 

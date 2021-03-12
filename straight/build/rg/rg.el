@@ -1,1 +1,1 @@
-/Users/Hanli/.emacs.d/straight/repos/rg.el/rg.el
+/home/hanli/.emacs.d/straight/repos/rg.el/rg.el

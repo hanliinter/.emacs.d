@@ -1,1 +1,1 @@
-/Users/Hanli/.emacs.d/straight/repos/flycheck/flycheck-buttercup.el
+/home/hanli/.emacs.d/straight/repos/flycheck/flycheck-buttercup.el

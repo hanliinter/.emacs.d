@@ -1,1 +1,1 @@
-/Users/Hanli/.emacs.d/straight/repos/eglot/eglot.el
+/home/hanli/.emacs.d/straight/repos/eglot/eglot.el

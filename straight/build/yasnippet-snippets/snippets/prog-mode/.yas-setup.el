@@ -1,1 +1,1 @@
-/Users/Hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/prog-mode/.yas-setup.el
+/home/hanli/.emacs.d/straight/repos/yasnippet-snippets/snippets/prog-mode/.yas-setup.el
