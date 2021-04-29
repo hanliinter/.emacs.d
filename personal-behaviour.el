@@ -95,3 +95,10 @@
 
 
 (menu-bar-mode -1)
+
+(use-package easy-kill
+  :straight t
+  :config 
+  (global-set-key [remap kill-ring-save] #'easy-kill)
+  (global-set-key [remap mark-sexp] #'easy-mark)
+  )
