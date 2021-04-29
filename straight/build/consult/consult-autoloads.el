@@ -44,8 +44,9 @@ The symbol at point and the last `isearch-string' is added to the future history
 Select a subset of the lines in the current buffer with live preview.
 
 The selected lines are kept and the other lines are deleted. When called
-interactively, the lines selected are those that match the minibuffer input.
-When called from elisp, the filtering is performed by a FILTER function. This
+interactively, the lines selected are those that match the minibuffer input. In
+order to match the inverse of the input, prefix the input with `! '. When
+called from elisp, the filtering is performed by a FILTER function. This
 command obeys narrowing.
 
 FILTER is the filter function.
@@ -57,10 +58,10 @@ INITIAL is the initial input.
 Hide or show lines using overlays.
 
 The selected lines are shown and the other lines hidden. When called
-interactively, the lines selected are those that match the minibuffer input.
-With optional prefix argument SHOW reveal the hidden lines. When called from
-elisp, the filtering is performed by a FILTER function. This command obeys
-narrowing.
+interactively, the lines selected are those that match the minibuffer input. In
+order to match the inverse of the input, prefix the input with `! '. With
+optional prefix argument SHOW reveal the hidden lines. When called from elisp,
+the filtering is performed by a FILTER function. This command obeys narrowing.
 
 FILTER is the filter function.
 INITIAL is the initial input.
@@ -87,6 +88,18 @@ Prompt for completion of region in the minibuffer if non-unique.
 The function is called with 4 arguments: START END COLLECTION PREDICATE.
 The arguments and expected return value are as specified for
 `completion-in-region'. Use as a value for `completion-in-region-function'.
+
+The function can be configured via `consult-config'.
+
+    (setf (alist-get #'consult-completion-in-region consult-config)
+      '(:completion-styles (basic)))
+
+These configuration options are supported:
+
+    * :cycle-threshold - Cycling threshold (def: `completion-cycle-threshold')
+    * :completion-styles - Use completion styles (def: `completion-styles')
+    * :require-match - Require matches when completing (def: nil)
+    * :prompt - The prompt string shown in the minibuffer
 
 \(fn START END COLLECTION &optional PREDICATE)" nil nil)
 
@@ -344,6 +357,14 @@ Jump to Flymake diagnostic." t nil)
 ;;; Generated autoloads from consult-selectrum.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "consult-selectrum" '("consult-selectrum--")))
+
+;;;***
+
+;;;### (autoloads nil "consult-vertico" "consult-vertico.el" (0 0
+;;;;;;  0 0))
+;;; Generated autoloads from consult-vertico.el
+
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "consult-vertico" '("consult-vertico--")))
 
 ;;;***
 

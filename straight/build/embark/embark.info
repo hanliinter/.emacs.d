@@ -141,7 +141,7 @@ determined by the context:
 
    If you want a reminder of which actions are available after running
 ‘embark-act’ type ‘C-h’ which will prompt you for an action with
-completion, and remind you of the keybindings.
+completion, and remind you of the key bindings.
 
    Everything is easily configurable: determining the current target,
 classifying it, and deciding which actions are offered for each type in
@@ -155,8 +155,8 @@ keymaps containing bindings for the actions.  (To examine the available
 categories and their associated keymaps, you can use ‘C-h v
 embark-keymap-alist’ or customize that variable.)  For example, in the
 default configuration the type ‘file’ is associated with the symbol
-‘embark-file-keymap’.  That symbol names a keymap with single-letter
-keybindings for common Emacs file commands, for instance ‘c’ is bound to
+‘embark-file-keymap’.  That symbol names a keymap with single-letter key
+bindings for common Emacs file commands, for instance ‘c’ is bound to
 ‘copy-file’.  This means that if you are in the minibuffer after running
 a command that prompts for a file, such as ‘find-file’ or ‘rename-file’,
 you can copy a file by running ‘embark-act’ and then pressing ‘c’.
@@ -164,8 +164,8 @@ you can copy a file by running ‘embark-act’ and then pressing ‘c’.
    These action keymaps are very convenient but not strictly necessary
 when using ‘embark-act’: you can use any command that reads from the
 minibuffer as an action and the target of the action will be inserted at
-the first minibuffer prompt.  After running ‘embark-act’ all of your
-keybindings and even ‘execute-extended-command’ can be used to run a
+the first minibuffer prompt.  After running ‘embark-act’ all of your key
+bindings and even ‘execute-extended-command’ can be used to run a
 command.  For example, if you want to replace all occurrences of the
 symbol at point, just use ‘M-%’ as the action, there is no need to bind
 ‘query-replace’ in one of Embark’s keymaps.  Also, those action keymaps
@@ -193,7 +193,7 @@ missing metadata, is highly recommended for use with Embark.
    Embark’s default configuration has actions for the following target
 types: files, buffers, symbols, packages, URLs, bookmarks, and as a
 somewhat special case, actions for when the region is active.  You can
-read about the default actions and their keybindings
+read about the default actions and their key bindings
 (https://github.com/oantolin/embark/wiki/Default-Actions) on the GitHub
 project wiki.
 
@@ -371,16 +371,16 @@ If you want a reminder of which actions are available after running
 ‘embark-act’, use ‘embark-keymap-help’, which is bound to ‘C-h’ in all
 of Embark’s action keymaps.  That command will prompt you for the name
 of an action with completion (but feel free to enter a command not among
-the offered candidates!), and will also remind you of the keybindings.
-You can press ‘@’ at the prompt and then one of the keybindings to enter
-the name of the corresponding action.
+the offered candidates!), and will also remind you of the key bindings.
+You can press ‘@’ at the prompt and then one of the key bindings to
+enter the name of the corresponding action.
 
    If you find you prefer entering actions that way, you can configure
 embark to always prompt you for actions by setting the variable
 ‘embark-prompter’ to ‘embark-completing-read-prompter’.
 
    If you want to see the actions and their key bindings, but want to
-use the keybindings rather than completing the command name, you can
+use the key bindings rather than completing the command name, you can
 install which-key (https://github.com/justbur/emacs-which-key) and
 configure Embark as follows:
 
@@ -689,7 +689,7 @@ annotation functions for the list view in Embark Collect buffers.
      automatically.
 
    • If you don’t install Marginalia, you will see only the annotations
-     that come with Emacs (such as keybindings in ‘M-x’, or the unicode
+     that come with Emacs (such as key bindings in ‘M-x’, or the unicode
      characters in ‘C-x 8 RET’).
 
    Other small changes:
@@ -714,19 +714,19 @@ Node: Top206
 Node: Breaking news1155
 Node: Overview4114
 Node: Acting on targets4373
-Node: Working with sets of possible targets8887
-Node: Switching to a different command without losing what you've typed11869
-Node: Configuration14448
-Node: Quick start14891
-Node: Showing a reminder of available actions17247
-Node: Quitting the minibuffer after an action18665
-Node: Allowing the target to be edited before acting on it20414
-Node: Running some setup after injecting the target21734
-Node: Creating your own keymaps22954
-Node: Defining actions for new categories of targets23938
-Node: New minibuffer target example - tab-bar tabs24698
-Node: New target example in regular buffers - short Wikipedia links29909
-Node: Embark Marginalia and Consult31654
+Node: Working with sets of possible targets8891
+Node: Switching to a different command without losing what you've typed11873
+Node: Configuration14452
+Node: Quick start14895
+Node: Showing a reminder of available actions17251
+Node: Quitting the minibuffer after an action18672
+Node: Allowing the target to be edited before acting on it20421
+Node: Running some setup after injecting the target21741
+Node: Creating your own keymaps22961
+Node: Defining actions for new categories of targets23945
+Node: New minibuffer target example - tab-bar tabs24705
+Node: New target example in regular buffers - short Wikipedia links29916
+Node: Embark Marginalia and Consult31661
 
 End Tag Table
 

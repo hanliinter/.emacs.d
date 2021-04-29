@@ -15,7 +15,7 @@ Major mode for Rust code.
 
 (add-to-list 'auto-mode-alist '("\\.rs\\'" . rustic-mode))
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "rustic" '("rust")))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "rustic" '("rustic-")))
 
 ;;;***
 
@@ -145,10 +145,12 @@ If running with prefix command `C-u', read whole command from minibuffer.
 
 (autoload 'rustic-compile "rustic-compile" "\
 Compile rust project.
-If called without arguments use `rustic-compile-command'.
 
-Otherwise use provided argument ARG and store it in
-`compilation-arguments'.
+If `compilation-read-command' is non-nil or if called with prefix
+argument ARG then read the command in the minibuffer.  Otherwise
+use `rustic-compile-command'.
+
+In either store the used command in `compilation-arguments'.
 
 \(fn &optional ARG)" t nil)
 

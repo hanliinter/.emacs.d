@@ -5,10 +5,18 @@
 	doom-themes-enable-italic t)
 
   ;;(load-theme 'doom-nord-light t)
-  (load-theme 'doom-nord t)
+  ;;(load-theme 'modus-vivendi t)
+
+  ;;modus-vivendi
+  ;;modus-operandi
 
   )
 
+(use-package modus-themes
+  :straight t
+  )
+
+(load-theme 'modus-vivendi t)
 
 (use-package all-the-icons
   :straight t)
@@ -21,8 +29,8 @@
   (when (member "Menlo" (font-family-list))
     (set-frame-font "Menlo-14" t t)))
  ((string-equal system-type "gnu/linux") ; linux
-  (when (member "DejaVu Sans Mono" (font-family-list))
-    (set-frame-font "DejaVu Sans Mono" t t))))
+  (when (member "Sarasa Mono SC" (font-family-list))
+    (set-frame-font "Sarasa Mono SC-18" t t))))
 
 
 (set-fontset-font

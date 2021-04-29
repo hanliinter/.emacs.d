@@ -17,7 +17,7 @@
 (setq frame-title-format '("Hanli - %b")
       icon-title-format frame-title-format)
 
-(menu-bar-mode nil)
+(menu-bar-mode -1)
 (tool-bar-mode -1)
 
 ;; Move buffers between windows
@@ -43,3 +43,17 @@
       :ensure t
       :defer t
       :hook (after-init . doom-modeline-init))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   '("c7f364aeea0458b6368815558cbf1f54bbdcc1dde8a14b5260eb82b76c0ffc7b" default)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(org-ellipsis ((t (:foreground nil))))
+ '(symbol-overlay-default-face ((t (:inherit (region bold))))))

@@ -13,6 +13,22 @@ This function is meant to be added to `minibuffer-setup-hook'." (setq-local emba
 
 (add-hook 'minibuffer-setup-hook #'embark--record-this-command)
 
+(autoload 'embark-prefix-help-command "embark" "\
+Prompt for and run a command bound in the prefix used to reach this command.
+The prefix described consists of all but the last event of the
+key sequence that ran this command.  This function is intended to
+be used as a value for `prefix-help-command'.
+
+In addition to using completion to select a command, you can also
+type @ and the key binding (without the prefix)." t nil)
+
+(autoload 'embark-bindings "embark" "\
+Explore all current command key bindings with `completing-read'.
+The selected command will be executed.  The set of key bindings can
+be restricted by passing a PREFIX key.
+
+\(fn &optional PREFIX)" t nil)
+
 (autoload 'embark-act "embark" "\
 Prompt the user for an action and perform it.
 The target of the action is chosen by `embark-target-finders'.
@@ -49,7 +65,7 @@ keymap for the target's type." t nil)
 (autoload 'embark-become "embark" "\
 Make current command become a different command.
 Take the current minibuffer input as initial input for new
-command.  The new command can be run normally using keybindings or
+command.  The new command can be run normally using key bindings or
 \\[execute-extended-command], but if the current command is found in a keymap in
 `embark-become-keymaps', that keymap is activated to provide
 convenient access to the other commands in it.
