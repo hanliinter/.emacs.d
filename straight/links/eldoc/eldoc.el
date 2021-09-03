@@ -1,1 +1,0 @@
-c:/Users/h.wang/.emacs.d/straight/repos/eldoc/eldoc.el

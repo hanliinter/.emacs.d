@@ -1,1 +1,0 @@
-c:/Users/h.wang/.emacs.d/straight/repos/use-package/use-package-delight.el

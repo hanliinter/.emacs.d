@@ -11,3 +11,4 @@ straight/
 
 *.desktop
 *.lock
+eln-cache/
