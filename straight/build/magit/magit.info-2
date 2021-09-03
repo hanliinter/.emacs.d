@@ -1,4 +1,4 @@
-This is magit.info, produced by makeinfo version 6.7 from magit.texi.
+This is magit.info, produced by makeinfo version 6.8 from magit.texi.
 
      Copyright (C) 2015-2021 Jonas Bernoulli <jonas@bernoul.li>
 
@@ -16,6 +16,69 @@ INFO-DIR-SECTION Emacs
 START-INFO-DIR-ENTRY
 * Magit: (magit).       Using Git from Emacs with Magit.
 END-INFO-DIR-ENTRY
+
+
+File: magit.info,  Node: Subtree,  Next: Worktree,  Prev: Submodules,  Up: Miscellaneous
+
+8.4 Subtree
+===========
+
+Also see *note (gitman)git-subtree::.
+
+‘O’     (‘magit-subtree’)
+
+     This transient prefix command binds the two sub-transients; one for
+     importing a subtree and one for exporting a subtree.
+
+‘O i’     (‘magit-subtree-import’)
+
+     This transient prefix command binds the following suffix commands
+     along with the appropriate infix arguments and displays them in a
+     temporary buffer until a suffix is invoked.
+
+     The suffixes of this command import subtrees.
+
+     If the ‘--prefix’ argument is set, then the suffix commands use
+     that prefix without prompting the user.  If it is unset, then they
+     read the prefix in the minibuffer.
+
+‘O i a’     (‘magit-subtree-add’)
+
+     This command adds COMMIT from REPOSITORY as a new subtree at
+     PREFIX.
+
+‘O i c’     (‘magit-subtree-add-commit’)
+
+     This command add COMMIT as a new subtree at PREFIX.
+
+‘O i m’     (‘magit-subtree-merge’)
+
+     This command merges COMMIT into the PREFIX subtree.
+
+‘O i f’     (‘magit-subtree-pull’)
+
+     This command pulls COMMIT from REPOSITORY into the PREFIX subtree.
+
+‘O e’     (‘magit-subtree-export’)
+
+     This transient prefix command binds the following suffix commands
+     along with the appropriate infix arguments and displays them in a
+     temporary buffer until a suffix is invoked.
+
+     The suffixes of this command export subtrees.
+
+     If the ‘--prefix’ argument is set, then the suffix commands use
+     that prefix without prompting the user.  If it is unset, then they
+     read the prefix in the minibuffer.
+
+‘O e p’     (‘magit-subtree-push’)
+
+     This command extract the history of the subtree PREFIX and pushes
+     it to REF on REPOSITORY.
+
+‘O e s’     (‘magit-subtree-split’)
+
+     This command extracts the history of the subtree PREFIX.
 
 
 File: magit.info,  Node: Worktree,  Next: Common Commands,  Prev: Subtree,  Up: Miscellaneous
@@ -61,7 +124,19 @@ File: magit.info,  Node: Common Commands,  Next: Wip Modes,  Prev: Worktree,  Up
 8.6 Common Commands
 ===================
 
-These are some of the commands that can be used in all buffers whose
+ -- Command: magit-switch-to-repository-buffer
+ -- Command: magit-switch-to-repository-buffer-other-window
+ -- Command: magit-switch-to-repository-buffer-other-frame
+ -- Command: magit-display-repository-buffer
+
+     These commands read any existing Magit buffer that belongs to the
+     current repository from the user and then switch to the selected
+     buffer (without refreshing it).
+
+     The last variant uses ‘magit-display-buffer’ to do so and thus
+     respects ‘magit-display-buffer-function’.
+
+   These are some of the commands that can be used in all buffers whose
 major-modes derive from ‘magit-mode’.  There are other common commands
 beside the ones below, but these didn’t fit well anywhere else.
 
@@ -870,14 +945,6 @@ the faster ‘vfork’ will be used.  (The creation of child processes still
 takes about twice as long on Darwin compared to Linux.)  See (1) for
 more information.
 
-   On Catalina, and potentially other macOS releases, there may be a
-performance problem where any action takes 20 times longer on Darwin
-than on Linux.  This can be worked around by setting
-‘magit-git-executable’ to the absolute path of the ‘git’ executable,
-instead of relying on resolving the ‘$PATH’.  You should not do that if
-you want to use Magit on remote machines using Tramp and if ‘git’ is not
-installed in the same location on those machines.
-
    ---------- Footnotes ----------
 
    (1) 
@@ -902,7 +969,7 @@ File: magit.info,  Node: Default Bindings,  Prev: Performance,  Up: Essential Se
      ‘C-x M-g’   ‘magit-dispatch’
      ‘C-c M-g’   ‘magit-file-dispatch’
 
-     These bindings may be added when ‘after-init-hook’ is called.  Each
+     These bindings may be added when ‘after-init-hook’ is run.  Each
      binding is added if and only if at that time no other key is bound
      to the same command and no other command is bound to the same key.
      In other words we try to avoid adding bindings that are
@@ -914,8 +981,14 @@ File: magit.info,  Node: Default Bindings,  Prev: Performance,  Up: Essential Se
      or autoloaded) and to increase the likelihood that all the
      potentially conflicting user bindings have already been added.
 
-     Setting this variable after the hook has already been called has no
-     effect.
+     To set this variable use either ‘setq’ or the Custom interface.  Do
+     not use the function ‘customize-set-variable’ because doing that
+     would cause Magit to be loaded immediately when that form is
+     evaluated (this differs from ‘custom-set-variables’, which doesn’t
+     load the libraries that define the customized variables).
+
+     Setting this variable to nil has no effect if that is done after
+     the key bindings have already been added.
 
      We recommend that you bind ‘C-c g’ instead of ‘C-c M-g’ to
      ‘magit-file-dispatch’.  The former is a much better binding but the
@@ -1047,6 +1120,21 @@ side-effects, but that should be avoided.
      and add a section containing git’s standard error in the current
      repository’s process buffer.
 
+ -- Function: magit-process-git destination &rest args
+
+     Calls Git synchronously in a separate process, returning its exit
+     code.  DESTINATION specifies how to handle the output, like for
+     ‘call-process’, except that file handlers are supported.  Enables
+     Cygwin’s "noglob" option during the call and ensures unix eol
+     conversion.
+
+ -- Function: magit-process-file process &optional infile buffer display
+          &rest args
+
+     Processes files synchronously in a separate process.  Identical to
+     ‘process-file’ but temporarily enables Cygwin’s "noglob" option
+     during the call and ensures unix eol conversion.
+
    If an error occurs when using one of the above functions, then that
 is usually due to a bug, i.e.  using an argument which is not actually
 supported.  Such errors are usually not reported, but when they occur we
@@ -1118,15 +1206,6 @@ refresh because that also automatically moves to the next change.
      filesystem, this function actually runs git asynchronously.  But
      then it waits for the process to return, so the function itself is
      synchronous.
-
- -- Function: magit-run-git-with-logfile file &rest args
-
-     Calls git synchronously with ARGS.  The process’s output is saved
-     in FILE.  This is rarely useful and so this function might be
-     removed in the future.
-
-     This function actually runs git asynchronously.  But then it waits
-     for the process to return, so the function itself is synchronous.
 
  -- Function: magit-git &rest args
 
@@ -1908,6 +1987,8 @@ A.2 FAQ - Issues and Errors
 * My Git hooks work on the command-line but not inside Magit::
 * git-commit-mode isn't used when committing from the command-line::
 * Point ends up inside invisible text when jumping to a file-visiting buffer::
+* I am unable to stage when using Tramp from MS Windows::
+* I am no longer able to save popup defaults::
 
 
 File: magit.info,  Node: Magit is slow,  Next: I changed several thousand files at once and now Magit is unusable,  Up: FAQ - Issues and Errors
@@ -2113,7 +2194,7 @@ that succeeds, do nothing else.  Otherwise start ‘emacs &’ (and
 ‘init.el’ must call ‘server-start’) and try to use ‘emacsclient’ again.
 
 
-File: magit.info,  Node: Point ends up inside invisible text when jumping to a file-visiting buffer,  Prev: git-commit-mode isn't used when committing from the command-line,  Up: FAQ - Issues and Errors
+File: magit.info,  Node: Point ends up inside invisible text when jumping to a file-visiting buffer,  Next: I am unable to stage when using Tramp from MS Windows,  Prev: git-commit-mode isn't used when committing from the command-line,  Up: FAQ - Issues and Errors
 
 A.2.12 Point ends up inside invisible text when jumping to a file-visiting buffer
 ---------------------------------------------------------------------------------
@@ -2124,6 +2205,43 @@ file at the respective position.  One solution to this problem is to use
 visible.  If that is too drastic for your taste, then you may instead
 use ‘magit-diff-visit-file-hook’ to reveal the text, possibly using
 ‘reveal-post-command’ or for Org buffers ‘org-reveal’.
+
+
+File: magit.info,  Node: I am unable to stage when using Tramp from MS Windows,  Next: I am no longer able to save popup defaults,  Prev: Point ends up inside invisible text when jumping to a file-visiting buffer,  Up: FAQ - Issues and Errors
+
+A.2.13 I am unable to stage when using Tramp from MS Windows
+------------------------------------------------------------
+
+Magit may be unable to stage (or otherwise apply) individual hunks when
+you are connected to remote machine using Tramp and the local machine
+uses MS Windows.
+
+   There appears to be a problem with ‘process-send-eof’ in this
+scenario, as mentioned at the end of ‘tramp-tests.el’.  I have contacted
+the Tramp maintainer about this.  For now this unfortunately means that
+it just doesn’t work and we cannot do anything about it.  If you have
+more information, then please comment on
+<https://github.com/magit/magit/issues/3624>.
+
+
+File: magit.info,  Node: I am no longer able to save popup defaults,  Prev: I am unable to stage when using Tramp from MS Windows,  Up: FAQ - Issues and Errors
+
+A.2.14 I am no longer able to save popup defaults
+-------------------------------------------------
+
+Magit used to use Magit-Popup to implement the transient popup menus.
+Now it used Transient instead, which is Magit-Popup’s successor.
+
+   In the older Magit-Popup menus, it was possible to save user settings
+(e.g.  setting the gpg signing key for commits) by using ‘C-c C-c’ in
+the popup buffer.  This would dismiss the popup, but save the settings
+as the defaults for future popups.
+
+   When switching to Transient menus, this functionality is now
+available via ‘C-x C-s’ instead; the ‘C-x’ prefix has other options as
+well when using Transient, which will be displayed when it is typed.
+See <https://magit.vc/manual/transient/Saving-Values.html#Saving-Values>
+for more details.
 
 
 File: magit.info,  Node: Debugging Tools,  Next: Keystroke Index,  Prev: FAQ,  Up: Top
@@ -2214,16 +2332,16 @@ Appendix C Keystroke Index
 * % g:                                   Worktree.            (line  30)
 * % k:                                   Worktree.            (line  25)
 * % m:                                   Worktree.            (line  21)
-* +:                                     Log Buffer.          (line  61)
+* +:                                     Log Buffer.          (line  72)
 * + <1>:                                 Refreshing Diffs.    (line  69)
-* -:                                     Log Buffer.          (line  65)
+* -:                                     Log Buffer.          (line  76)
 * - <1>:                                 Refreshing Diffs.    (line  65)
 * 0:                                     Refreshing Diffs.    (line  73)
 * 1:                                     Section Visibility.  (line  26)
 * 2:                                     Section Visibility.  (line  27)
 * 3:                                     Section Visibility.  (line  28)
 * 4:                                     Section Visibility.  (line  29)
-* =:                                     Log Buffer.          (line  55)
+* =:                                     Log Buffer.          (line  66)
 * ^:                                     Section Movement.    (line  31)
 * a:                                     Applying.            (line  33)
 * A:                                     Cherry Picking.      (line   8)
@@ -2357,7 +2475,7 @@ Appendix C Keystroke Index
                                                               (line  42)
 * C-c M-s:                               Editing Commit Messages.
                                                               (line  34)
-* C-w:                                   Common Commands.     (line  10)
+* C-w:                                   Common Commands.     (line  22)
 * C-x g:                                 Status Buffer.       (line  22)
 * C-x u:                                 Editing Rebase Sequences.
                                                               (line  94)
@@ -2378,7 +2496,7 @@ Appendix C Keystroke Index
 * d u:                                   Diffing.             (line  57)
 * d w:                                   Diffing.             (line  45)
 * D w:                                   Refreshing Diffs.    (line  29)
-* DEL:                                   Log Buffer.          (line  45)
+* DEL:                                   Log Buffer.          (line  56)
 * DEL <1>:                               Commands Available in Diffs.
                                                               (line  60)
 * DEL <2>:                               Blaming.             (line  89)
@@ -2416,7 +2534,8 @@ Appendix C Keystroke Index
                                                               (line  25)
 * G:                                     Automatic Refreshing of Magit Buffers.
                                                               (line  34)
-* j:                                     Commands Available in Diffs.
+* j:                                     Log Buffer.          (line  35)
+* j <1>:                                 Commands Available in Diffs.
                                                               (line  45)
 * k:                                     Viewing Git Output.  (line  24)
 * k <1>:                                 Applying.            (line  40)
@@ -2479,8 +2598,8 @@ Appendix C Keystroke Index
 * M-p <2>:                               Editing Rebase Sequences.
                                                               (line  43)
 * M-w:                                   Blaming.             (line 127)
-* M-w <1>:                               Common Commands.     (line  28)
-* M-x magit-debug-git-executable:        Git Executable.      (line  45)
+* M-w <1>:                               Common Commands.     (line  40)
+* M-x magit-debug-git-executable:        Git Executable.      (line  55)
 * M-x magit-debug-git-executable <1>:    Debugging Tools.     (line  36)
 * M-x magit-describe-section-briefly:    Section Types and Values.
                                                               (line  13)
@@ -2497,7 +2616,7 @@ Appendix C Keystroke Index
 * M-x magit-toggle-verbose-refresh:      Debugging Tools.     (line  30)
 * M-x magit-unstage-file:                Staging from File-Visiting Buffers.
                                                               (line  18)
-* M-x magit-version:                     Git Executable.      (line  17)
+* M-x magit-version:                     Git Executable.      (line  60)
 * M-x magit-version <1>:                 Debugging Tools.     (line  10)
 * M-x magit-wip-commit:                  Wip Modes.           (line  88)
 * M-x with-editor-debug:                 Debugging Tools.     (line  44)
@@ -2581,7 +2700,7 @@ Appendix C Keystroke Index
 * s <1>:                                 Editing Rebase Sequences.
                                                               (line  59)
 * S-<tab>:                               Section Visibility.  (line  22)
-* SPC:                                   Log Buffer.          (line  35)
+* SPC:                                   Log Buffer.          (line  46)
 * SPC <1>:                               Commands Available in Diffs.
                                                               (line  56)
 * SPC <2>:                               Blaming.             (line  79)
@@ -2732,7 +2851,7 @@ Appendix D Command Index
                                                               (line  59)
 * git-rebase-undo:                       Editing Rebase Sequences.
                                                               (line  94)
-* ido-enter-magit-status:                Status Buffer.       (line  72)
+* ido-enter-magit-status:                Status Buffer.       (line  99)
 * magit-am:                              Maildir Patches.     (line   8)
 * magit-am-abort:                        Maildir Patches.     (line  43)
 * magit-am-apply-maildir:                Maildir Patches.     (line  21)
@@ -2782,8 +2901,8 @@ Appendix D Command Index
 * magit-branch-configure <3>:            Branch Commands.     (line  32)
 * magit-branch-create:                   Branch Commands.     (line  57)
 * magit-branch-delete:                   Branch Commands.     (line 147)
-* magit-branch-or-checkout:              Branch Commands.     (line 257)
-* magit-branch-orphan:                   Branch Commands.     (line 252)
+* magit-branch-or-checkout:              Branch Commands.     (line 267)
+* magit-branch-orphan:                   Branch Commands.     (line 262)
 * magit-branch-rename:                   Branch Commands.     (line 153)
 * magit-branch-reset:                    Branch Commands.     (line 131)
 * magit-branch-shelve:                   Auxiliary Branch Commands.
@@ -2820,10 +2939,10 @@ Appendix D Command Index
 * magit-commit-instant-squash:           Initiating a Commit. (line  63)
 * magit-commit-reword:                   Initiating a Commit. (line  33)
 * magit-commit-squash:                   Initiating a Commit. (line  55)
-* magit-copy-buffer-revision:            Common Commands.     (line  28)
-* magit-copy-section-value:              Common Commands.     (line  10)
+* magit-copy-buffer-revision:            Common Commands.     (line  40)
+* magit-copy-section-value:              Common Commands.     (line  22)
 * magit-cycle-margin-style:              Log Margin.          (line  70)
-* magit-debug-git-executable:            Git Executable.      (line  45)
+* magit-debug-git-executable:            Git Executable.      (line  55)
 * magit-debug-git-executable <1>:        Debugging Tools.     (line  36)
 * magit-describe-section-briefly:        Section Types and Values.
                                                               (line  13)
@@ -2846,9 +2965,9 @@ Appendix D Command Index
 * magit-diff-refresh <1>:                Refreshing Diffs.    (line  17)
 * magit-diff-save-default-arguments:     Refreshing Diffs.    (line  29)
 * magit-diff-set-default-arguments:      Refreshing Diffs.    (line  22)
-* magit-diff-show-or-scroll-down:        Log Buffer.          (line  45)
+* magit-diff-show-or-scroll-down:        Log Buffer.          (line  56)
 * magit-diff-show-or-scroll-down <1>:    Blaming.             (line  89)
-* magit-diff-show-or-scroll-up:          Log Buffer.          (line  35)
+* magit-diff-show-or-scroll-up:          Log Buffer.          (line  46)
 * magit-diff-show-or-scroll-up <1>:      Blaming.             (line  79)
 * magit-diff-staged:                     Diffing.             (line  51)
 * magit-diff-switch-range-type:          Refreshing Diffs.    (line  41)
@@ -2875,6 +2994,7 @@ Appendix D Command Index
 * magit-diff-working-tree:               Diffing.             (line  45)
 * magit-discard:                         Applying.            (line  40)
 * magit-dispatch:                        Transient Commands.  (line  18)
+* magit-display-repository-buffer:       Common Commands.     (line   9)
 * magit-ediff:                           Ediffing.            (line  21)
 * magit-ediff-compare:                   Ediffing.            (line  26)
 * magit-ediff-dwim:                      Ediffing.            (line   9)
@@ -2939,10 +3059,11 @@ Appendix D Command Index
                                                               (line  77)
 * magit-log-bury-buffer:                 Log Buffer.          (line  14)
 * magit-log-current:                     Logging.             (line  35)
-* magit-log-double-commit-limit:         Log Buffer.          (line  61)
-* magit-log-half-commit-limit:           Log Buffer.          (line  65)
+* magit-log-double-commit-limit:         Log Buffer.          (line  72)
+* magit-log-half-commit-limit:           Log Buffer.          (line  76)
 * magit-log-head:                        Logging.             (line  48)
 * magit-log-move-to-parent:              Log Buffer.          (line  29)
+* magit-log-move-to-revision:            Log Buffer.          (line  35)
 * magit-log-other:                       Logging.             (line  41)
 * magit-log-refresh:                     Refreshing Logs.     (line  11)
 * magit-log-refresh <1>:                 Refreshing Logs.     (line  17)
@@ -2951,7 +3072,7 @@ Appendix D Command Index
 * magit-log-select-pick:                 Select from Log.     (line  20)
 * magit-log-select-quit:                 Select from Log.     (line  26)
 * magit-log-set-default-arguments:       Refreshing Logs.     (line  22)
-* magit-log-toggle-commit-limit:         Log Buffer.          (line  55)
+* magit-log-toggle-commit-limit:         Log Buffer.          (line  66)
 * magit-log-trace-definition:            Commands for Buffers Visiting Files.
                                                               (line  84)
 * magit-margin-settings:                 Log Margin.          (line  57)
@@ -3118,6 +3239,7 @@ Appendix D Command Index
 * magit-stash-show <1>:                  Stashing.            (line  77)
 * magit-stash-worktree:                  Stashing.            (line  26)
 * magit-status:                          Status Buffer.       (line  22)
+* magit-status-quick:                    Status Buffer.       (line  72)
 * magit-submodule:                       Submodule Transient. (line   6)
 * magit-submodule-add:                   Submodule Transient. (line  20)
 * magit-submodule-fetch:                 Fetching.            (line  54)
@@ -3135,6 +3257,11 @@ Appendix D Command Index
 * magit-subtree-pull:                    Subtree.             (line  38)
 * magit-subtree-push:                    Subtree.             (line  54)
 * magit-subtree-split:                   Subtree.             (line  59)
+* magit-switch-to-repository-buffer:     Common Commands.     (line   6)
+* magit-switch-to-repository-buffer-other-frame: Common Commands.
+                                                              (line   8)
+* magit-switch-to-repository-buffer-other-window: Common Commands.
+                                                              (line   7)
 * magit-tag:                             Tagging.             (line   8)
 * magit-tag-create:                      Tagging.             (line  14)
 * magit-tag-delete:                      Tagging.             (line  39)
@@ -3153,7 +3280,7 @@ Appendix D Command Index
                                                               (line  18)
 * magit-unstage-file <1>:                Commands for Buffers Visiting Files.
                                                               (line  33)
-* magit-version:                         Git Executable.      (line  17)
+* magit-version:                         Git Executable.      (line  60)
 * magit-version <1>:                     Debugging Tools.     (line  10)
 * magit-visit-ref:                       References Buffer.   (line 181)
 * magit-wip-commit:                      Wip Modes.           (line  88)
@@ -3202,12 +3329,12 @@ Appendix E Function Index
                                                               (line  37)
 * git-commit-turn-on-flyspell:           Commit Mode and Hooks.
                                                               (line  42)
-* ido-enter-magit-status:                Status Buffer.       (line  72)
+* ido-enter-magit-status:                Status Buffer.       (line  99)
 * magit-add-section-hook:                Section Hooks.       (line  20)
 * magit-after-save-refresh-status:       Automatic Refreshing of Magit Buffers.
                                                               (line  59)
-* magit-branch-or-checkout:              Branch Commands.     (line 257)
-* magit-branch-orphan:                   Branch Commands.     (line 252)
+* magit-branch-or-checkout:              Branch Commands.     (line 267)
+* magit-branch-orphan:                   Branch Commands.     (line 262)
 * magit-branch-shelve:                   Auxiliary Branch Commands.
                                                               (line   9)
 * magit-branch-unshelve:                 Auxiliary Branch Commands.
@@ -3244,6 +3371,7 @@ Appendix E Function Index
 * magit-display-buffer-same-window-except-diff-v1: Switching Buffers.
                                                               (line  53)
 * magit-display-buffer-traditional:      Switching Buffers.   (line  45)
+* magit-display-repository-buffer:       Common Commands.     (line   9)
 * magit-file-checkout:                   Commands for Buffers Visiting Files.
                                                               (line 135)
 * magit-file-delete:                     Commands for Buffers Visiting Files.
@@ -3262,7 +3390,7 @@ Appendix E Function Index
                                                               (line  17)
 * magit-get-section:                     Matching Sections.   (line  16)
 * magit-git:                             Calling Git for Effect.
-                                                              (line  59)
+                                                              (line  50)
 * magit-git-exit-code:                   Getting a Value from Git.
                                                               (line  10)
 * magit-git-failure:                     Getting a Value from Git.
@@ -3276,7 +3404,7 @@ Appendix E Function Index
 * magit-git-lines:                       Getting a Value from Git.
                                                               (line  44)
 * magit-git-str:                         Getting a Value from Git.
-                                                              (line  72)
+                                                              (line  87)
 * magit-git-string:                      Getting a Value from Git.
                                                               (line  38)
 * magit-git-success:                     Getting a Value from Git.
@@ -3284,7 +3412,7 @@ Appendix E Function Index
 * magit-git-true:                        Getting a Value from Git.
                                                               (line  24)
 * magit-git-wash:                        Calling Git for Effect.
-                                                              (line  64)
+                                                              (line  55)
 * magit-hunk-set-window-start:           Section Movement.    (line  51)
 * magit-ido-completing-read:             Support for Completion Frameworks.
                                                               (line  48)
@@ -3357,37 +3485,39 @@ Appendix E Function Index
 * magit-mode-display-buffer:             Refreshing Buffers.  (line  33)
 * magit-mode-quit-window:                Quitting Windows.    (line  34)
 * magit-mode-setup:                      Refreshing Buffers.  (line  17)
+* magit-process-file:                    Getting a Value from Git.
+                                                              (line  67)
+* magit-process-git:                     Getting a Value from Git.
+                                                              (line  59)
 * magit-push-implicitly:                 Pushing.             (line  83)
 * magit-push-to-remote:                  Pushing.             (line 101)
 * magit-region-sections:                 Section Selection.   (line  10)
 * magit-region-values:                   Section Selection.   (line  37)
-* magit-repolist-column-branch:          Repository List.     (line  44)
-* magit-repolist-column-branches:        Repository List.     (line  53)
-* magit-repolist-column-flag:            Repository List.     (line  61)
-* magit-repolist-column-ident:           Repository List.     (line  30)
-* magit-repolist-column-path:            Repository List.     (line  35)
-* magit-repolist-column-stashes:         Repository List.     (line  57)
+* magit-repolist-column-branch:          Repository List.     (line  50)
+* magit-repolist-column-branches:        Repository List.     (line  59)
+* magit-repolist-column-flag:            Repository List.     (line  67)
+* magit-repolist-column-ident:           Repository List.     (line  36)
+* magit-repolist-column-path:            Repository List.     (line  41)
+* magit-repolist-column-stashes:         Repository List.     (line  63)
 * magit-repolist-column-unpulled-from-pushremote: Repository List.
-                                                              (line  81)
+                                                              (line  87)
 * magit-repolist-column-unpulled-from-upstream: Repository List.
-                                                              (line  76)
+                                                              (line  82)
 * magit-repolist-column-unpushed-to-pushremote: Repository List.
-                                                              (line  91)
+                                                              (line  97)
 * magit-repolist-column-unpushed-to-upstream: Repository List.
-                                                              (line  86)
-* magit-repolist-column-upstream:        Repository List.     (line  48)
-* magit-repolist-column-version:         Repository List.     (line  39)
+                                                              (line  92)
+* magit-repolist-column-upstream:        Repository List.     (line  54)
+* magit-repolist-column-version:         Repository List.     (line  45)
 * magit-restore-window-configuration:    Quitting Windows.    (line  23)
 * magit-run-git:                         Calling Git for Effect.
                                                               (line  36)
 * magit-run-git-async:                   Calling Git for Effect.
-                                                              (line  74)
+                                                              (line  65)
 * magit-run-git-with-editor:             Calling Git for Effect.
-                                                              (line  87)
+                                                              (line  78)
 * magit-run-git-with-input:              Calling Git for Effect.
                                                               (line  40)
-* magit-run-git-with-logfile:            Calling Git for Effect.
-                                                              (line  50)
 * magit-save-window-configuration:       Switching Buffers.   (line  89)
 * magit-section-case:                    Matching Sections.   (line  71)
 * magit-section-hide:                    Section Visibility.  (line  49)
@@ -3401,14 +3531,20 @@ Appendix E Function Index
 * magit-section-toggle-children:         Section Visibility.  (line  68)
 * magit-section-value-if:                Matching Sections.   (line  61)
 * magit-start-git:                       Calling Git for Effect.
-                                                              (line  99)
+                                                              (line  90)
 * magit-start-process:                   Calling Git for Effect.
-                                                              (line 118)
+                                                              (line 109)
 * magit-stashes-maybe-update-stash-buffer: Section Movement.  (line 106)
 * magit-status-maybe-update-blob-buffer: Section Movement.    (line 100)
 * magit-status-maybe-update-revision-buffer: Section Movement.
                                                               (line  88)
 * magit-status-maybe-update-stash-buffer: Section Movement.   (line  94)
+* magit-status-quick:                    Status Buffer.       (line  72)
+* magit-switch-to-repository-buffer:     Common Commands.     (line   6)
+* magit-switch-to-repository-buffer-other-frame: Common Commands.
+                                                              (line   8)
+* magit-switch-to-repository-buffer-other-window: Common Commands.
+                                                              (line   7)
 * magit-wip-log:                         Wip Modes.           (line  48)
 * magit-wip-log-current:                 Wip Modes.           (line  57)
 * with-editor-usage-message:             Commit Mode and Hooks.
@@ -3535,21 +3671,21 @@ Appendix F Variable Index
 * magit-generate-buffer-name-function:   Naming Buffers.      (line   6)
 * magit-git-debug:                       Viewing Git Output.  (line  28)
 * magit-git-debug <1>:                   Getting a Value from Git.
-                                                              (line  64)
-* magit-git-executable:                  Git Executable.      (line  39)
+                                                              (line  79)
+* magit-git-executable:                  Git Executable.      (line  26)
 * magit-git-global-arguments:            Global Git Arguments.
                                                               (line   6)
 * magit-keep-region-overlay:             The Selection.       (line  52)
 * magit-list-refs-sortby:                Additional Completion Options.
                                                               (line   6)
-* magit-log-auto-more:                   Log Buffer.          (line  69)
+* magit-log-auto-more:                   Log Buffer.          (line  80)
 * magit-log-buffer-file-locked:          Commands for Buffers Visiting Files.
                                                               (line  88)
 * magit-log-margin:                      Log Margin.          (line  12)
 * magit-log-margin-show-committer-date:  Log Margin.          (line  49)
 * magit-log-section-commit-count:        Status Sections.     (line 136)
 * magit-log-select-margin:               Select from Log.     (line  30)
-* magit-log-show-refname-after-summary:  Log Buffer.          (line  75)
+* magit-log-show-refname-after-summary:  Log Buffer.          (line  86)
 * magit-log-trace-definition-function:   Commands Available in Diffs.
                                                               (line  18)
 * magit-module-sections-hook:            Status Module Sections.
@@ -3559,6 +3695,7 @@ Appendix F Variable Index
 * magit-no-confirm:                      Action Confirmation. (line  18)
 * magit-pop-revision-stack-format:       Using the Revision Stack.
                                                               (line  35)
+* magit-post-commit-hook:                Initiating a Commit. (line 101)
 * magit-post-display-buffer-hook:        Switching Buffers.   (line  95)
 * magit-pre-display-buffer-hook:         Switching Buffers.   (line  84)
 * magit-prefer-remote-upstream:          Branch Git Variables.
@@ -3566,7 +3703,7 @@ Appendix F Variable Index
 * magit-prefix-use-buffer-arguments:     Transient Arguments and Buffer Variables.
                                                               (line  64)
 * magit-process-raise-error:             Calling Git for Effect.
-                                                              (line 145)
+                                                              (line 136)
 * magit-pull-or-fetch:                   Fetching.            (line  59)
 * magit-reflog-margin:                   Reflog.              (line  23)
 * magit-refresh-args:                    Refreshing Buffers.  (line  55)
@@ -3586,6 +3723,7 @@ Appendix F Variable Index
 * magit-refs-show-remote-prefix:         References Buffer.   (line  62)
 * magit-remote-add-set-remote.pushDefault: Remote Commands.   (line  92)
 * magit-remote-direct-configure:         Remote Commands.     (line  21)
+* magit-remote-git-executable:           Git Executable.      (line  33)
 * magit-repolist-columns:                Repository List.     (line  14)
 * magit-repository-directories:          Status Buffer.       (line  58)
 * magit-revision-filter-files-on-follow: Revision Buffer.     (line  64)
@@ -3611,7 +3749,7 @@ Appendix F Variable Index
 * magit-status-sections-hook:            Status Sections.     (line  10)
 * magit-submodule-list-columns:          Listing Submodules.  (line  21)
 * magit-this-process:                    Calling Git for Effect.
-                                                              (line 140)
+                                                              (line 131)
 * magit-uniquify-buffer-names:           Naming Buffers.      (line  74)
 * magit-unstage-committed:               Staging and Unstaging.
                                                               (line  56)

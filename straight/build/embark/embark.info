@@ -1,4 +1,4 @@
-This is embark.info, produced by makeinfo version 6.7 from embark.texi.
+This is embark.info, produced by makeinfo version 6.8 from embark.texi.
 
 INFO-DIR-SECTION Emacs
 START-INFO-DIR-ENTRY
@@ -6,16 +6,18 @@ START-INFO-DIR-ENTRY
 END-INFO-DIR-ENTRY
 
 
-File: embark.info,  Node: Top,  Next: Breaking news,  Up: (dir)
+File: embark.info,  Node: Top,  Next: Breaking News,  Up: (dir)
 
 Embark: Emacs Mini-Buffer Actions Rooted in Keymaps
 ***************************************************
 
 * Menu:
 
-* Breaking news::
+* Breaking News::
 * Overview::
-* Configuration::
+* Quick start::
+* Advanced configuration::
+* How does Embark call the actions?::
 * Embark, Marginalia and Consult: Embark Marginalia and Consult.
 
 — The Detailed Node Listing —
@@ -26,9 +28,8 @@ Overview
 * Working with sets of possible targets::
 * Switching to a different command without losing what you've typed::
 
-Configuration
+Advanced configuration
 
-* Quick start::
 * Showing a reminder of available actions::
 * Quitting the minibuffer after an action::
 * Allowing the target to be edited before acting on it::
@@ -41,67 +42,32 @@ Defining actions for new categories of targets
 * New minibuffer target example - tab-bar tabs::
 * New target example in regular buffers - short Wikipedia links::
 
+How does Embark call the actions?
+
+* Non-interactive functions as actions::
+
 
 
-File: embark.info,  Node: Breaking news,  Next: Overview,  Prev: Top,  Up: Top
+File: embark.info,  Node: Breaking News,  Next: Overview,  Prev: Top,  Up: Top
 
-1 Breaking news
+1 Breaking News
 ***************
 
-(That is, news about things breaking!)
+   • The pre-action, post-action and setup hook system has been made
+     more uniform and convenient.  If you wrote your own hooks of any of
+     those types you’ll have to update your configuration.  Updating is
+     easy, see the docstrings of the new ‘embark-pre-action-hooks’,
+     ‘embark-setup-action-hooks’ and ‘embark-post-action-hooks’
+     variables for details.
 
-   • The command ‘embark-act-noexit’ has been removed and a variable
-     ‘embark-quit-after-action’ now controls whether ‘embark-act’ quits
-     the minibuffer or not.  (Also note that the word “exit” in
-     ‘embark-act-noexit’ was used incorrectly according to Emacs’s
-     terminology: exiting the minibuffer means accepting the input, like
-     when you press ‘RET’; and what ‘embark-act-noexit’ did was more
-     like pressing ‘C-g’ which Emacs calls aborting or quitting.)
-   • If a recent update to Embark made it stop working with certain
-     Consult (https://github.com/minad/consult/) commands, just install
-     and load the new embark-consult package (available on Melpa).  In
-     addition to the prior functionality for Consult, this package also
-     contains an ‘embark-consult-preview-at-point’ that triggers a
-     Consult preview for the entry at point in an auto-updating Embark
-     Collect buffer, and an ‘embark-consult-preview-minor-mode’ to run
-     the Consult preview automatically as you move around the collect
-     buffer.
-
-          (use-package embark-consult
-            :ensure t
-            :after (embark consult)
-            :demand t ; only necessary if you have the hook below
-            ;; if you want to have consult previews as you move around an
-            ;; auto-updating embark collect buffer
-            :hook
-            (embark-collect-mode . embark-consult-preview-minor-mode))
-
-   • The “occur” subsystem has been overhauled and renamed “collect”.
-     There are aliases for the old command and variable names with
-     “occur” in them, but those will be gone in a couple of months.  So
-     please update your configuration.
-
-     (The “occur” name came from ‘ivy-occur’ but since both ‘occur’ and
-     ‘helm-occur’ use ‘occur’ in a different sense, and ‘occur’ is
-     obviously older than ‘ivy-occur’, I decided to avoid the
-     ‘embark-occur’ name.  The new ‘embark-collect’ name is much more
-     self-explanatory too.)
-
-   • The system for configuring targets and candidate collections has
-     been greatly simplified, so if you wrote your own target finders or
-     candidate collectors, you will need to tweak them to return ‘(cons
-     type previous-return-value)’.  This change means separate
-     classifiers are no longer needed (or supported!).
-
-   • If you are already an Embark user and an update caused you to lose
-     the package and symbol actions, install Marginalia
-     (https://github.com/minad/marginalia), activate ‘marginalia-mode’
-     and you should be good to go.  If you want to read more about these
-     changes see the last section
-     (https://github.com/oantolin/embark#embark-marginalia-and-consult).
+   • Embark uses something it calls _indicators_ to notify the user of
+     what the target of actions is and which actions are available.  The
+     indicator protocol is in a state of flux, so please update before
+     reporting any bugs and, if you are using the which-key indicator,
+     please check the wiki to make sure you have the latest version.
 
 
-File: embark.info,  Node: Overview,  Next: Configuration,  Prev: Breaking news,  Up: Top
+File: embark.info,  Node: Overview,  Next: Quick start,  Prev: Breaking News,  Up: Top
 
 2 Overview
 **********
@@ -123,14 +89,16 @@ accessed through the ‘embark-act’ command (which you should bind to a
 convenient key), offering you relevant _actions_ to use on a _target_
 determined by the context:
 
-   • In the minibuffer, the target is the current best completion
+   • In the minibuffer, the target is the current top completion
      candidate.
    • In the ‘*Completions*’ buffer the target is the completion at
      point.
    • In a regular buffer, the target is the region if active, or else
-     the file, symbol or URL at point.
+     the file, symbol, URL, s-expression or defun at point.
 
-   The type of actions offered depend on the type of the target:
+   Multiple targets can be present at the same location and you can
+cycle between them by repeating the ‘embark-act’ key binding.  The type
+of actions offered depend on the type of the target:
 
    • For files you get offered actions like deleting, copying, renaming,
      visiting in another window, running a shell command on the file,
@@ -217,8 +185,8 @@ sets:
    • The ‘embark-collect-live’ variant of ‘embark-collect-snapshot’
      produces “live” Embark Collect buffers, meaning they auto-update as
      the set of candidates changes.  Most users of visual completion UIs
-     such as Icomplete, Selectrum or Ivy will probably either not want
-     to use this, to avoid seeing double, or to configure their
+     such as Vertico, Icomplete, Selectrum or Ivy will probably either
+     not want to use this, to avoid seeing double, or to configure their
      completion UI to hide while using ‘embark-collect-live’.  See the
      Embark wiki for sample configuration for Selectrum
      (https://github.com/oantolin/embark/wiki/Additional-Configuration#pause-selectrum-while-using-embark-collect-live).
@@ -229,19 +197,13 @@ sets:
      buffers, you get an Ibuffer buffer; and if they are packages you
      get a buffer in package menu mode.
 
-     There is also support for exporting a list of grep results to an
-     honest grep-mode buffer, on which you can even use wgrep
-     (https://github.com/mhayashi1120/Emacs-wgrep) if you wish.  In
-     order to make use of this exporter you will need a command that
-     prompts you in the minibuffer for a grep result line.  In the near
-     future you will be able to configure Emacs 28 to use
-     ‘xref-show-definitions-completing-read’ as the value of
-     ‘xref-show-xrefs-function’ and ‘xref-show-definitions-function’.
-     With that configuration, ‘project-find-regexp’, for example, with
-     use the minibuffer to offers search results.  Additionally, today,
-     you can use the grepping commands from the Consult
+     If you use the grepping commands from the Consult
      (https://github.com/minad/consult/) package, ‘consult-grep’,
-     ‘consult-git-grep’ or ‘consult-ripgrep’.
+     ‘consult-git-grep’ or ‘consult-ripgrep’, then you’ll probably want
+     to install and load the ‘embark-consult’ package, which adds
+     support for exporting a list of grep results to an honest grep-mode
+     buffer, on which you can even use wgrep
+     (https://github.com/mhayashi1120/Emacs-wgrep) if you wish.
 
    These are always available as “actions” (although they do not act on
 just the current target but on all candidates) for ‘embark-act’ and are
@@ -263,15 +225,15 @@ opened the file I had in mind yet!  I’ll use this situation as a running
 example to illustrate ‘embark-become’.  When this happens I can, of
 course, press ‘C-g’ and then run ‘find-file’ and open the file, but this
 requires retyping the portion of the file name you already typed.  This
-process can be streamlined with ‘embark-become’: will still in the
+process can be streamlined with ‘embark-become’: while still in the
 ‘switch-to-buffer’ you can run ‘embark-become’ and effectively make the
 ‘switch-to-buffer’ command become ‘find-file’ for this run.
 
    You can bind ‘embark-become’ to a key in ‘minibuffer-local-map’, but
 it is also available as an action under the letter ‘B’ (uppercase), so
 you don’t need a binding if you already have one for ‘embark-act’.  So,
-assuming I have ‘embark-act’ bound to, say, ‘C-S-a’, once I realize I
-haven’t open the file I can type ‘C-S-a B C-x C-f’ to have
+assuming I have ‘embark-act’ bound to, say, ‘C-.’, once I realize I
+haven’t open the file I can type ‘C-. B C-x C-f’ to have
 ‘switch-to-buffer’ become ‘find-file’ without losing what I have already
 typed in the minibuffer.
 
@@ -288,29 +250,13 @@ a buffer for a file I haven’t opened yet, ‘embark-become’ finds that the
 command I ran, ‘switch-to-buffer’, is in the keymap
 ‘embark-become-file+buffer-map’, so it activates that keymap (and any
 others that also contain a binding for ‘switch-to-buffer’).  The end
-result is that I can type ‘C-S-a B f’ to switch to ‘find-file’.
+result is that I can type ‘C-. B f’ to switch to ‘find-file’.
 
 
-File: embark.info,  Node: Configuration,  Next: Embark Marginalia and Consult,  Prev: Overview,  Up: Top
+File: embark.info,  Node: Quick start,  Next: Advanced configuration,  Prev: Overview,  Up: Top
 
-3 Configuration
-***************
-
-* Menu:
-
-* Quick start::
-* Showing a reminder of available actions::
-* Quitting the minibuffer after an action::
-* Allowing the target to be edited before acting on it::
-* Running some setup after injecting the target::
-* Creating your own keymaps::
-* Defining actions for new categories of targets::
-
-
-File: embark.info,  Node: Quick start,  Next: Showing a reminder of available actions,  Up: Configuration
-
-3.1 Quick start
-===============
+3 Quick start
+*************
 
 The easiest way to install Embark is from Melpa.  It is highly
 recommended to also install Marginalia
@@ -326,8 +272,24 @@ reasonable starting configuration:
 
      (use-package embark
        :ensure t
+
        :bind
-       ("C-S-a" . embark-act))              ; pick some comfortable binding
+       (("C-." . embark-act)         ;; pick some comfortable binding
+        ("C-;" . embark-dwim)        ;; good alternative: M-.
+        ("C-h B" . embark-bindings)) ;; alternative for `describe-bindings'
+
+       :init
+
+       ;; Optionally replace the key help with a completing-read interface
+       (setq prefix-help-command #'embark-prefix-help-command)
+
+       :config
+
+       ;; Hide the mode line of the Embark live/completions buffers
+       (add-to-list 'display-buffer-alist
+                    '("\\`\\*Embark Collect \\(Live\\|Completions\\)\\*"
+                      nil
+                      (window-parameters (mode-line-format . none)))))
 
      ;; Consult users will also want the embark-consult package.
      (use-package embark-consult
@@ -337,7 +299,7 @@ reasonable starting configuration:
        ;; if you want to have consult previews as you move around an
        ;; auto-updating embark collect buffer
        :hook
-       (embark-collect-mode . embark-consult-preview-minor-mode))
+       (embark-collect-mode . consult-preview-at-point-mode))
 
    Other Embark commands such as ‘embark-become’,
 ‘embark-collect-snapshot’, ‘embark-collect-live’, ‘embark-export’ can be
@@ -348,11 +310,18 @@ bind them directly, you’ll probably want to bind them in
 ‘minibuffer-local-map’, since they are most useful in the minibuffer (in
 fact, ‘embark-become’ only works in the minibuffer).
 
+   The command ‘embark-dwim’ executes the default action at point.
+Another good keybinding for ‘embark-dwim’ is ‘M-.’ since ‘embark-dwim’
+acts like ‘xref-find-definitions’ on the symbol at point.  ‘C-.’ can be
+seen as a right-click context menu at point and ‘M-.’ acts like
+left-click.  The keybindings are mnemonic, both act at the point (‘.’).
+
    Embark needs to know what your minibuffer completion system considers
 to be the list of candidates and which one is the current one.  Embark
 works out of the box if you use Emacs’s default tab completion, the
 built-in ‘icomplete-mode’ or ‘fido-mode’, or the third-party packages
-Selectrum (https://github.com/raxod502/selectrum/) or Ivy
+Vertico (https://github.com/minad/vertico), Selectrum
+(https://github.com/raxod502/selectrum/) or Ivy
 (https://github.com/abo-abo/swiper).
 
    If you are a Helm (https://emacs-helm.github.io/helm/) or Ivy
@@ -362,9 +331,24 @@ minibuffer completion candidates.  (Embark does come with Ivy
 integration despite this.)
 
 
-File: embark.info,  Node: Showing a reminder of available actions,  Next: Quitting the minibuffer after an action,  Prev: Quick start,  Up: Configuration
+File: embark.info,  Node: Advanced configuration,  Next: How does Embark call the actions?,  Prev: Quick start,  Up: Top
 
-3.2 Showing a reminder of available actions
+4 Advanced configuration
+************************
+
+* Menu:
+
+* Showing a reminder of available actions::
+* Quitting the minibuffer after an action::
+* Allowing the target to be edited before acting on it::
+* Running some setup after injecting the target::
+* Creating your own keymaps::
+* Defining actions for new categories of targets::
+
+
+File: embark.info,  Node: Showing a reminder of available actions,  Next: Quitting the minibuffer after an action,  Up: Advanced configuration
+
+4.1 Showing a reminder of available actions
 ===========================================
 
 If you want a reminder of which actions are available after running
@@ -391,9 +375,9 @@ configure Embark as follows:
            embark-become-indicator embark-action-indicator)
 
 
-File: embark.info,  Node: Quitting the minibuffer after an action,  Next: Allowing the target to be edited before acting on it,  Prev: Showing a reminder of available actions,  Up: Configuration
+File: embark.info,  Node: Quitting the minibuffer after an action,  Next: Allowing the target to be edited before acting on it,  Prev: Showing a reminder of available actions,  Up: Advanced configuration
 
-3.3 Quitting the minibuffer after an action
+4.2 Quitting the minibuffer after an action
 ===========================================
 
 By default, if you call ‘embark-act’ from the minibuffer it quits the
@@ -424,9 +408,9 @@ behavior of ‘embark-act’ and define a non-quitting version as follows:
          (embark-act)))
 
 
-File: embark.info,  Node: Allowing the target to be edited before acting on it,  Next: Running some setup after injecting the target,  Prev: Quitting the minibuffer after an action,  Up: Configuration
+File: embark.info,  Node: Allowing the target to be edited before acting on it,  Next: Running some setup after injecting the target,  Prev: Quitting the minibuffer after an action,  Up: Advanced configuration
 
-3.4 Allowing the target to be edited before acting on it
+4.3 Allowing the target to be edited before acting on it
 ========================================================
 
 By default, for most commands ‘embark’ inserts the target of the action
@@ -438,41 +422,36 @@ the target as is.
 ‘kill-buffer’), or because further input is required next to the target
 (like when using ‘shell-command’: the target is the file and you still
 need to enter a shell command to run on it, at the same prompt).  You
-can add such commands to the ‘embark-allow-edit-commands’ variable
-(which by default already contains the examples mentioned, and a few
-others as well).
-
-   Now, automatically pressing ‘RET’ for most commands is only the
-default.  If you set the variable ‘embark-allow-edit-default’ to ‘t’,
-then ‘embark’ will instead give you a chance to edit the target before
-acting upon it, for all commands except those listed in
-‘embark-skip-edit-commands’.
+can add such commands to the ‘embark-allow-edit-actions’ variable (which
+by default already contains the examples mentioned, and a few others as
+well).
 
 
-File: embark.info,  Node: Running some setup after injecting the target,  Next: Creating your own keymaps,  Prev: Allowing the target to be edited before acting on it,  Up: Configuration
+File: embark.info,  Node: Running some setup after injecting the target,  Next: Creating your own keymaps,  Prev: Allowing the target to be edited before acting on it,  Up: Advanced configuration
 
-3.5 Running some setup after injecting the target
+4.4 Running some setup after injecting the target
 =================================================
 
 You can customize what happens after the target is inserted at the
-minibuffer prompt of an action.  There is a hook, ‘embark-setup-hook’,
-that is run by default after injecting the target into the minibuffer.
-This hook can be overridden for specific action commands by associating
-the command to the desired overriding hook in ‘embark-setup-overrides’.
+minibuffer prompt of an action.  There are ‘embark-setup-action-hooks’,
+that are run by default after injecting the target into the minibuffer.
+The hook can be specified for specific action commands by associating
+the command to the desired hook.  By default the hooks with the key t
+are executed.
 
    For example, consider using ‘shell-command’ as an action during file
 completion.  It would be useful to insert a space before the target file
 name and to leave the point at the beginning, so you can immediately
 type the shell command.  That’s why in ‘embark’’s default configuration
-there is an entry in ‘embark-setup-overrides’ associating
+there is an entry in ‘embark-setup-action-hooks’ associating
 ‘shell-command’ to ‘embark--shell-prep’, a simple helper command that
 quotes all the spaces in the file name, inserts an extra space at the
 beginning of the line and leaves point to the left of it.
 
 
-File: embark.info,  Node: Creating your own keymaps,  Next: Defining actions for new categories of targets,  Prev: Running some setup after injecting the target,  Up: Configuration
+File: embark.info,  Node: Creating your own keymaps,  Next: Defining actions for new categories of targets,  Prev: Running some setup after injecting the target,  Up: Advanced configuration
 
-3.6 Creating your own keymaps
+4.5 Creating your own keymaps
 =============================
 
 All internal keymaps are defined with a helper macro
@@ -493,9 +472,9 @@ use the built-in ‘define-key’, or your favorite external package such as
 ‘bind-key’ or ‘general.el’ to manage them.
 
 
-File: embark.info,  Node: Defining actions for new categories of targets,  Prev: Creating your own keymaps,  Up: Configuration
+File: embark.info,  Node: Defining actions for new categories of targets,  Prev: Creating your own keymaps,  Up: Advanced configuration
 
-3.7 Defining actions for new categories of targets
+4.6 Defining actions for new categories of targets
 ==================================================
 
 It is easy to configure Embark to provide actions for new types of
@@ -513,7 +492,7 @@ situations where the easiest option is not available.
 
 File: embark.info,  Node: New minibuffer target example - tab-bar tabs,  Next: New target example in regular buffers - short Wikipedia links,  Up: Defining actions for new categories of targets
 
-3.7.1 New minibuffer target example - tab-bar tabs
+4.6.1 New minibuffer target example - tab-bar tabs
 --------------------------------------------------
 
 Say you use the new tab bars
@@ -571,7 +550,8 @@ keymap you want.
               (let ((tab-list (or (mapcar #'(lambda (tab) (cdr (assq 'name tab)))
                                           (tab-bar-tabs))
                                   (user-error "No tabs found"))))
-                (consult--read "Tabs: " tab-list
+                (consult--read tab-list
+                               :prompt "Tabs: "
                                :category 'tab))))
             (tab-bar-select-tab-by-name tab))
 
@@ -600,7 +580,7 @@ keymap you want.
 
        1. You can keep using the ‘tab-bar-close-tab-by-name’ command,
           but no longer let Embark press ‘RET’ for you:
-               (add-to-list 'embark-allow-edit-commands 'tab-bar-close-tab-by-name)
+               (add-to-list 'embark-allow-edit-actions 'tab-bar-close-tab-by-name)
 
        2. You can write your own command that prompts for confirmation
           and use that instead of ‘tab-bar-close-tab-by-name’ in the
@@ -619,7 +599,7 @@ keymap you want.
 
 File: embark.info,  Node: New target example in regular buffers - short Wikipedia links,  Prev: New minibuffer target example - tab-bar tabs,  Up: Defining actions for new categories of targets
 
-3.7.2 New target example in regular buffers - short Wikipedia links
+4.6.2 New target example in regular buffers - short Wikipedia links
 -------------------------------------------------------------------
 
 Say you want to teach embark to treat text of the form
@@ -650,17 +630,132 @@ actual-url-of-the-page)’.
      (add-to-list 'embark-target-finders 'my-short-wikipedia-link)
 
 
-File: embark.info,  Node: Embark Marginalia and Consult,  Prev: Configuration,  Up: Top
+File: embark.info,  Node: How does Embark call the actions?,  Next: Embark Marginalia and Consult,  Prev: Advanced configuration,  Up: Top
 
-4 Embark, Marginalia and Consult
+5 How does Embark call the actions?
+***********************************
+
+Embark actions are normal Emacs commands, that is, functions with an
+interactive specification.  In order to execute an action, Embark calls
+the command with ‘call-interactively’, so the command reads user input
+exactly as if run directly by the user.  For example the command may
+open a minibuffer and read a string (‘read-from-minibuffer’) or open a
+completion interface (‘completing-read’).  If this happens, Embark takes
+the target string and inserts it automatically into the minibuffer,
+simulating user input this way.  After inserting the string, Embark
+exits the minibuffer, submitting the input.  (The immediate minibuffer
+exit can be disabled for specific actions in order to allow editing the
+input: see the ‘embark-allow-edit-actions’ configuration variable).
+Embark inserts the target string at the first minibuffer opened by the
+action command, and if the command happens to prompt the user for input
+more than once, the user still interacts with the second and further
+prompts in the normal fashion.  Note that if a command does not prompt
+the user for input in the minibuffer, Embark still allows you to use it
+as an action, but of course, never inserts the target anywhere.  (There
+are plenty of examples in the default configuration of commands that do
+not prompt the user bound to keys in the action maps, most of the region
+actions, for instance.)
+
+   This is how Embark manages to reuse normal commands as actions.  The
+mechanism allows you to use as Embark actions commands that were not
+written with Embark in mind (and indeed almost all actions that are
+bound by default in Embark’s action keymaps are standard Emacs
+commands).  It also allows you to write new custom actions in such a way
+that they are useful even without Embark.
+
+   Staring from version 28.1, Emacs has a variable
+‘y-or-n-p-use-read-key’, which when set to ‘t’ causes ‘y-or-n-p’ to use
+‘read-key’ instead of ‘read-from-minibuffer’.  Setting
+‘y-or-n-p-use-read-key’ to ‘t’ is recommended for Embark users because
+it keeps Embark from attempting to insert the target at a ‘y-or-n-p’
+prompt, which would almost never be sensible.  Also consider this as a
+warning to structure your own action commands so that if they use
+‘y-or-n-p’, they do so only after the prompting for the target.
+
+   Here is a simple example illustrating the various ways of reading
+input from the user mentioned above.  Bind the following commands to the
+‘embark-symbol-map’ to be used as actions, then put the point on some
+symbol and run them with ‘embark-act’:
+
+     (defun example-action-command1 ()
+       (interactive)
+       (message "The input was `%s'." (read-from-minibuffer "Input: ")))
+
+     (defun example-action-command2 (arg input1 input2)
+       (interactive "P\nsInput 1: \nsInput 2: ")
+       (message "The first input %swas `%s', and the second was `%s'."
+                (if arg "truly " "")
+                input1
+                input2))
+
+     (defun example-action-command3 ()
+       (interactive)
+       (message "Your selection was `%s'."
+                (completing-read "Select: " '("E" "M" "B" "A" "R" "K"))))
+
+     (defun example-action-command4 ()
+       (interactive)
+       (message "I don't prompt you for input and thus ignore the target!"))
+
+     (define-key embark-symbol-map "X1" #'example-action-command1)
+     (define-key embark-symbol-map "X2" #'example-action-command2)
+     (define-key embark-symbol-map "X3" #'example-action-command3)
+     (define-key embark-symbol-map "X4" #'example-action-command4)
+
+   Also note that if you are using the key bindings to call actions, you
+can pass prefix arguments to actions in the normal way.  For example,
+you can use ‘C-u X2’ with the above demonstration actions to make the
+message printed by ‘example-action-command2’ more emphatic.  This
+ability to pass prefix arguments to actions is useful for some actions
+in the default configuration, such as ‘embark-shell-command-on-buffer’.
+
+* Menu:
+
+* Non-interactive functions as actions::
+
+
+File: embark.info,  Node: Non-interactive functions as actions,  Up: How does Embark call the actions?
+
+5.1 Non-interactive functions as actions
+========================================
+
+Alternatively, Embark does support one other type of action: a
+non-interactive function of a single argument.  The target is passed as
+argument to the function.  For example:
+
+     (defun example-action-function (target)
+       (message "The target was `%s'." target))
+
+     (define-key embark-symbol-map "X4" #'example-action-function)
+
+   Note that normally binding non-interactive functions in a keymap is
+useless, since when attempting to run them using the key binding you get
+an error message similar to “Wrong type argument: commandp,
+example-action-function”.  In general it is more flexible to write any
+new Embark actions as commands, that is, as interactive functions,
+because that way you can also run them directly, without Embark.  But
+there are a couple of reasons to use non-interactive functions as
+actions:
+
+  1. You may already have the function lying around, and it is
+     convenient to simply reuse it.
+
+  2. For command actions the targets can only be simple string, with no
+     text properties.  For certain advanced uses you may want the action
+     to receive a string _with_ some text properties, or even a
+     non-string target.
+
+
+File: embark.info,  Node: Embark Marginalia and Consult,  Prev: How does Embark call the actions?,  Up: Top
+
+6 Embark, Marginalia and Consult
 ********************************
 
-Some changes were made to Embark, to better cooperate with the
-Marginalia (https://github.com/minad/marginalia) and Consult
-(https://github.com/minad/consult) packages, and prior to being
-submitted to MELPA.  Neither of those packages is a dependency of
-Embark, but Marginalia is highly recommended, for reasons explained in
-the rest of this section
+Embark cooperates well with the Marginalia
+(https://github.com/minad/marginalia) and Consult
+(https://github.com/minad/consult) packages.  Neither of those packages
+is a dependency of Embark, but Marginalia is highly recommended, for
+reasons explained in the rest of this section.
 
    Embark comes with actions for symbols (commands, functions, variables
 with actions such as finding the definition, looking up the
@@ -668,21 +763,18 @@ documentation, evaluating, etc.)  in the ‘embark-symbol-map’ keymap, and
 for packages (actions like install, delete, browse url, etc.)  in the
 ‘embark-package-keymap’.
 
-   Unfortunately Embark no longer automatically offers you these keymaps
+   Unfortunately Embark does not automatically offers you these keymaps
 when relevant, because many built-in Emacs commands don’t report
 accurate category metadata.  For example, a command like
 ‘describe-package’, which reads a package name from the minibuffer, does
 not have metadata indicating so.
 
-   Previously Embark had functions to supply this missing metadata, but
-they have been moved to Marginalia, which augments many Emacs command to
-report accurate category metadata.  Simply activating ‘marginalia-mode’
-allows Embark to offer you the package and symbol actions when
-appropriate again.
-
-   All annotation functions have been removed from Embark and moved to
-Marginalia (where they have been improved!).  Embark used these old
-annotation functions for the list view in Embark Collect buffers.
+   In an earlier Embark version, there were functions to supply this
+missing metadata, but they have been moved to Marginalia, which augments
+many Emacs command to report accurate category metadata.  Simply
+activating ‘marginalia-mode’ allows Embark to offer you the package and
+symbol actions when appropriate again.  Candidate annotations in the
+Embark collect buffer are also provided by the Marginalia package.
 
    • If you install Marginalia and activate ‘marginalia-mode’, the list
      view in Embark Collect buffers will use the Marginalia annotations
@@ -692,14 +784,13 @@ annotation functions for the list view in Embark Collect buffers.
      that come with Emacs (such as key bindings in ‘M-x’, or the unicode
      characters in ‘C-x 8 RET’).
 
-   Other small changes:
-
    • If you have Consult installed and call ‘embark-collect-snapshot’
      from ‘consult-line’, ‘consult-mark’ or ‘consult-outline’, you will
      notice the Embark Collect buffer starts in list view by default.
      Similarly, you’ll notice that the ‘consult-yank’ family of commands
      start out in list view with zebra stripes, so you can easily tell
      where multi-line kill-ring entries start and end.
+
    • The function ‘embark-open-externally’ has been removed following
      the policy of avoiding overlap with Consult.  If you used that
      action, add the small function
@@ -711,22 +802,26 @@ annotation functions for the list view in Embark Collect buffers.
 
 Tag Table:
 Node: Top206
-Node: Breaking news1155
-Node: Overview4114
-Node: Acting on targets4373
-Node: Working with sets of possible targets8891
-Node: Switching to a different command without losing what you've typed11873
-Node: Configuration14452
-Node: Quick start14895
-Node: Showing a reminder of available actions17251
-Node: Quitting the minibuffer after an action18672
-Node: Allowing the target to be edited before acting on it20421
-Node: Running some setup after injecting the target21741
-Node: Creating your own keymaps22961
-Node: Defining actions for new categories of targets23945
-Node: New minibuffer target example - tab-bar tabs24705
-Node: New target example in regular buffers - short Wikipedia links29916
-Node: Embark Marginalia and Consult31661
+Node: Breaking News1288
+Node: Overview2152
+Node: Acting on targets2409
+Node: Working with sets of possible targets7079
+Node: Switching to a different command without losing what you've typed9660
+Node: Quick start12234
+Node: Advanced configuration15578
+Node: Showing a reminder of available actions16039
+Node: Quitting the minibuffer after an action17449
+Node: Allowing the target to be edited before acting on it19207
+Node: Running some setup after injecting the target20221
+Node: Creating your own keymaps21461
+Node: Defining actions for new categories of targets22454
+Node: New minibuffer target example - tab-bar tabs23223
+Ref: Telling Embark about commands that prompt for tabs by name23939
+Ref: Defining and configuring a keymap for tab actions26783
+Node: New target example in regular buffers - short Wikipedia links28472
+Node: How does Embark call the actions?30217
+Node: Non-interactive functions as actions34490
+Node: Embark Marginalia and Consult35843
 
 End Tag Table
 

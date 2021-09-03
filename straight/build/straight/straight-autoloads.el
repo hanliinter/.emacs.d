@@ -1,10 +1,18 @@
-;;; straight-autoloads.el --- automatically extracted autoloads
+;;; straight-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
 
 ;;;### (autoloads nil "straight" "straight.el" (0 0 0 0))
 ;;; Generated autoloads from straight.el
+
+(autoload 'straight-remove-unused-repos "straight" "\
+Remove unused repositories from the repos directory.
+A repo is considered \"unused\" if it was not explicitly requested via
+`straight-use-package' during the current Emacs session.
+If FORCE is non-nil do not prompt before deleting repos.
+
+\(fn &optional FORCE)" t nil)
 
 (autoload 'straight-get-recipe "straight" "\
 Interactively select a recipe from one of the recipe repositories.
@@ -381,7 +389,17 @@ locally bound plist, straight-bug-report-args.
 
 (function-put 'straight-bug-report 'lisp-indent-function '0)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "straight" '("straight-")))
+(autoload 'straight-dependencies "straight" "\
+Return a list of PACKAGE's dependencies.
+
+\(fn &optional PACKAGE)" t nil)
+
+(autoload 'straight-dependents "straight" "\
+Return a list PACKAGE's dependents.
+
+\(fn &optional PACKAGE)" t nil)
+
+(register-definition-prefixes "straight" '("straight-"))
 
 ;;;***
 
@@ -391,7 +409,7 @@ locally bound plist, straight-bug-report-args.
 (defvar straight-x-pinned-packages nil "\
 List of pinned packages.")
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "straight-x" '("straight-x-")))
+(register-definition-prefixes "straight-x" '("straight-x-"))
 
 ;;;***
 

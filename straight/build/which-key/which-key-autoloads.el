@@ -1,4 +1,4 @@
-;;; which-key-autoloads.el --- automatically extracted autoloads
+;;; which-key-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -19,10 +19,19 @@ or call the function `which-key-mode'.")
 (autoload 'which-key-mode "which-key" "\
 Toggle which-key-mode.
 
-If called interactively, enable Which-Key mode if ARG is
-positive, and disable it if ARG is zero or negative.  If called
-from Lisp, also enable the mode if ARG is omitted or nil, and
-toggle it if ARG is `toggle'; disable the mode otherwise.
+This is a minor mode.  If called interactively, toggle the
+`Which-Key mode' mode.  If the prefix argument is positive,
+enable the mode, and if it is zero or negative, disable the mode.
+
+If called from Lisp, toggle the mode if ARG is `toggle'.  Enable
+the mode if ARG is nil, omitted, or is a positive number.
+Disable the mode if ARG is a negative number.
+
+To check whether the minor mode is enabled in the current buffer,
+evaluate `(default-value 'which-key-mode)'.
+
+The mode's hook is called both when the mode is enabled and when
+it is disabled.
 
 \(fn &optional ARG)" t nil)
 
@@ -34,8 +43,7 @@ Apply suggested settings for side-window that opens on right
 if there is space and the bottom otherwise." t nil)
 
 (autoload 'which-key-setup-side-window-bottom "which-key" "\
-Apply suggested settings for side-window that opens on
-bottom." t nil)
+Apply suggested settings for side-window that opens on bottom." t nil)
 
 (autoload 'which-key-setup-minibuffer "which-key" "\
 Apply suggested settings for minibuffer.
@@ -45,27 +53,19 @@ but more functional." t nil)
 
 (autoload 'which-key-add-keymap-based-replacements "which-key" "\
 Replace the description of KEY using REPLACEMENT in KEYMAP.
-KEY should take a format suitable for use in
-`kbd'. REPLACEMENT is the string to use to describe the
-command associated with KEY in the KEYMAP. You may also use a
-cons cell of the form (STRING . COMMAND) for each REPLACEMENT,
-where STRING is the replacement string and COMMAND is a symbol
-corresponding to the intended command to be replaced. In the
-latter case, which-key will verify the intended command before
-performing the replacement. COMMAND should be nil if the binding
-corresponds to a key prefix. For example,
+KEY should take a format suitable for use in `kbd'. REPLACEMENT
+should be a cons cell of the form (STRING . COMMAND) for each
+REPLACEMENT, where STRING is the replacement string and COMMAND
+is a symbol corresponding to the intended command to be
+replaced. COMMAND can be nil if the binding corresponds to a key
+prefix. An example is
 
 \(which-key-add-keymap-based-replacements global-map
-  \"C-x w\" \"Save as\")
+  \"C-x w\" '(\"Save as\" . write-file)).
 
-and
-
-\(which-key-add-keymap-based-replacements global-map
-  \"C-x w\" '(\"Save as\" . write-file))
-
-both have the same effect for the \"C-x C-w\" key binding, but
-the latter causes which-key to verify that the key sequence is
-actually bound to write-file before performing the replacement.
+For backwards compatibility, REPLACEMENT can also be a string,
+but the above format is preferred, and the option to use a string
+for REPLACEMENT will eventually be removed.
 
 \(fn KEYMAP KEY REPLACEMENT &rest MORE)" nil nil)
 
@@ -174,8 +174,8 @@ Dispatch C-h commands by looking up key in
 prefix) if `which-key-use-C-h-commands' is non nil." t nil)
 
 (autoload 'which-key-show-keymap "which-key" "\
-Show the top-level bindings in KEYMAP using which-key. KEYMAP
-is selected interactively from all available keymaps.
+Show the top-level bindings in KEYMAP using which-key.
+KEYMAP is selected interactively from all available keymaps.
 
 If NO-PAGING is non-nil, which-key will not intercept subsequent
 keypresses for the paging functionality.
@@ -183,22 +183,24 @@ keypresses for the paging functionality.
 \(fn KEYMAP &optional NO-PAGING)" t nil)
 
 (autoload 'which-key-show-full-keymap "which-key" "\
-Show all bindings in KEYMAP using which-key. KEYMAP is
-selected interactively from all available keymaps.
+Show all bindings in KEYMAP using which-key.
+KEYMAP is selected interactively from all available keymaps.
 
 \(fn KEYMAP)" t nil)
 
 (autoload 'which-key-show-minor-mode-keymap "which-key" "\
-Show the top-level bindings in KEYMAP using which-key. KEYMAP
-is selected interactively by mode in `minor-mode-map-alist'.
+Show the top-level bindings in KEYMAP using which-key.
+KEYMAP is selected interactively by mode in
+`minor-mode-map-alist'.
 
 \(fn &optional ALL)" t nil)
 
 (autoload 'which-key-show-full-minor-mode-keymap "which-key" "\
-Show all bindings in KEYMAP using which-key. KEYMAP
-is selected interactively by mode in `minor-mode-map-alist'." t nil)
+Show all bindings in KEYMAP using which-key.
+KEYMAP is selected interactively by mode in
+`minor-mode-map-alist'." t nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "which-key" '("which-key-")))
+(register-definition-prefixes "which-key" '("evil-state" "which-key-"))
 
 ;;;***
 

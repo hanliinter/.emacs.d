@@ -1,4 +1,4 @@
-This is magit.info, produced by makeinfo version 6.7 from magit.texi.
+This is magit.info, produced by makeinfo version 6.8 from magit.texi.
 
      Copyright (C) 2015-2021 Jonas Bernoulli <jonas@bernoul.li>
 
@@ -31,7 +31,7 @@ to perform almost all of their daily version control tasks directly from
 within Emacs.  While many fine Git clients exist, only Magit and Git
 itself deserve to be called porcelains.
 
-This manual is for Magit version 2.90.1 (v2.90.1-1221-g99291801+1).
+This manual is for Magit version 3.2.1 (v3.2.1-13-g0348f1f87+1).
 
      Copyright (C) 2015-2021 Jonas Bernoulli <jonas@bernoul.li>
 
@@ -319,6 +319,8 @@ FAQ - Issues and Errors
 * My Git hooks work on the command-line but not inside Magit::
 * git-commit-mode isn't used when committing from the command-line::
 * Point ends up inside invisible text when jumping to a file-visiting buffer::
+* I am unable to stage when using Tramp from MS Windows::
+* I am no longer able to save popup defaults::
 
 
 
@@ -1746,7 +1748,7 @@ Valid values for both of the above options are:
 
 I am afraid it gets more complicated still:
 
-   • The global diff and log arguments are set for each support mode
+   • The global diff and log arguments are set for each supported mode
      individually.  The diff arguments for example have different values
      in ‘magit-diff-mode’, ‘magit-revision-mode’,
      ‘magit-merge-preview-mode’ and ‘magit-status-mode’ buffers.
@@ -1755,7 +1757,7 @@ I am afraid it gets more complicated still:
 
    • When ‘magit-show-commit’ is invoked directly from a log buffer,
      then the file filter is picked up from that buffer, not from the
-     revision buffer and or the mode’s global diff arguments.
+     revision buffer or the mode’s global diff arguments.
 
    • Even though they are suffixes of the diff prefix
      ‘magit-show-commit’ and ‘magit-stash-show’ do not use the diff
@@ -2376,48 +2378,65 @@ File: magit.info,  Node: Git Executable,  Next: Global Git Arguments,  Prev: Run
 4.6.4 Git Executable
 --------------------
 
-Except on MS Windows, Magit defaults to running Git without specifying
-the path to the git executable.  Instead the first executable found by
-Emacs on ‘exec-path’ is used (whose value in turn is set based on the
-value of the environment variable ‘$PATH’ when Emacs was started).
+When Magit calls Git, then it may do so using the absolute path to the
+‘git’ executable, or using just its name.
 
-   This has the advantage that it continues to work even when using
-Tramp to connect to a remote machine on which the executable is found in
-a different place.  The downside is that if you have multiple versions
-of Git installed, then you might end up using another version than the
-one you think you are using.
+   When running ‘git’ locally and the ‘system-type’ is ‘windows-nt’ (any
+Windows version) or ‘darwin’ (macOS) then ‘magit-git-executable’ is set
+to an absolute path when Magit is loaded.
+
+   On Windows it is necessary to use an absolute path because Git comes
+with several wrapper scripts for the actual ‘git’ binary, which are also
+placed on ‘$PATH’, and using one of these wrappers instead of the binary
+would degrade performance horribly.  For some macOS users using just the
+name of the executable also performs horribly, so we avoid doing that on
+that platform as well.  On other platforms, using just the name seems to
+work just fine.
+
+   Using an absolute path when running ‘git’ on a remote machine over
+Tramp, would be problematic to use an absolute path that is suitable on
+the local machine, so a separate option is used to control the name or
+path that is used on remote machines.
+
+ -- User Option: magit-git-executable
+
+     The ‘git’ executable used by Magit on the local host.  This should
+     be either the absolute path to the executable, or the string "git"
+     to let Emacs find the executable itself, using the standard
+     mechanism for doing such things.
+
+ -- User Option: magit-remote-git-executable
+
+     The ‘git’ executable used by Magit on remote machines over Tramp.
+     Normally this should be just the string "git".
+
+   If Emacs is unable to find the correct executable, then you can work
+around that by explicitly setting the value of one of these two options.
+Doing that should be considered a kludge; it is better to make sure that
+the order in ‘exec-path’ or ‘tramp-remote-path’ is correct.
+
+   Note that ‘exec-path’ is set based on the value of the ‘PATH’
+environment variable that is in effect when Emacs is started.  If you
+set ‘PATH’ in your shell’s init files, then that only has an effect on
+Emacs if you start it from that shell (because the environment of a
+process is only passed to its child processes, not to arbitrary other
+processes).  If that is not how you start Emacs, then the
+‘exec-path-from-shell’ package can help; though honestly I consider that
+a kludge too.
+
+   The command ‘magit-debug-git-executable’ can be useful to find out
+where Emacs is searching for ‘git’.
+
+‘M-x magit-debug-git-executable’     (‘magit-debug-git-executable’)
+
+     This command displays a buffer with information about
+     ‘magit-git-executable’ and ‘magit-remote-git-executable’.
 
 ‘M-x magit-version’     (‘magit-version’)
 
      This command shows the currently used versions of Magit, Git, and
      Emacs in the echo area.  Non-interactively this just returns the
      Magit version.
-
-   When the ‘system-type’ is ‘windows-nt’, then ‘magit-git-executable’
-is set to an absolute path when Magit is first loaded.  This is
-necessary because Git on that platform comes with several wrapper
-scripts for the actual git binary, which are also placed on ‘$PATH’, and
-using one of these wrappers instead of the binary would degrade
-performance horribly.
-
-   If Magit doesn’t find the correct executable then you *can* work
-around that by setting ‘magit-git-executable’ to an absolute path.  But
-note that doing so is a kludge.  It is better to make sure the order in
-the environment variable ‘$PATH’ is correct, and that Emacs is started
-with that environment in effect.  The command
-‘magit-debug-git-executable’ can be useful to find out where Emacs is
-searching for git.  If you have to connect from Windows to a non-Windows
-machine, then you must change the value to "git".
-
- -- User Option: magit-git-executable
-
-     The git executable used by Magit, either the full path to the
-     executable or the string "git" to let Emacs find the executable
-     itself, using the standard mechanism for doing such things.
-
-‘M-x magit-debug-git-executable’     (‘magit-debug-git-executable’)
-
-     Display a buffer with information about ‘magit-git-executable’.
 
 
 File: magit.info,  Node: Global Git Arguments,  Prev: Git Executable,  Up: Running Git
@@ -2543,6 +2562,33 @@ that it should be bound globally.  We recommend using ‘C-x g’:
      This option controls which repositories are being listed by
      ‘magit-list-repositories’.  It also affects ‘magit-status’ (which
      see) in potentially surprising ways (see above).
+
+ -- Command: magit-status-quick
+
+     This command is an alternative to ‘magit-status’ that usually
+     avoids refreshing the status buffer.
+
+     If the status buffer of the current Git repository exists but isn’t
+     being displayed in the selected frame, then it is displayed without
+     being refreshed.
+
+     If the status buffer is being displayed in the selected frame, then
+     this command refreshes it.
+
+     Prefix arguments have the same meaning as for ‘magit-status’, and
+     additionally cause the buffer to be refresh.
+
+     To use this command add this to your init file:
+
+          (global-set-key (kbd "C-x g") 'magit-status-quick).
+
+     If you do that and then for once want to redisplay the buffer and
+     also immediately refresh it, then type ‘C-x g’ followed by ‘g’.
+
+     A possible alternative command is
+     ‘magit-display-repository-buffer’.  It supports displaying any
+     existing Magit buffer that belongs to the current repository; not
+     just the status buffer.
 
  -- Command: ido-enter-magit-status
 
@@ -2947,6 +2993,12 @@ File: magit.info,  Node: Repository List,  Next: Logging,  Prev: Status Buffer, 
      It has to return a string to be inserted or nil.  PROPS is an alist
      that supports the keys ‘:right-align’ and ‘:pad-right’.
 
+     You may wish to display a range of numeric columns using just one
+     character per column and without any padding between columns, in
+     which case you should use an appropriate HEADER, set WIDTH to 1,
+     and set ‘:pad-right’ to 0.  ‘+’ is substituted for numbers higher
+     than 9.
+
    The following functions can be added to the above option:
 
  -- Function: magit-repolist-column-ident
@@ -3168,6 +3220,17 @@ File: magit.info,  Node: Log Buffer,  Next: Log Margin,  Prev: Refreshing Logs, 
      Move to a parent of the current commit.  By default, this is the
      first parent, but a numeric prefix can be used to specify another
      parent.
+
+‘j’     (‘magit-log-move-to-revision’)
+
+     Read a revision and move to it in current log buffer.
+
+     If the chosen reference or revision isn’t being displayed in the
+     current log buffer, then inform the user about that and do nothing
+     else.
+
+     If invoked outside any log buffer, then display the log buffer of
+     the current repository first; creating it if necessary.
 
 ‘SPC’     (‘magit-diff-show-or-scroll-up’)
 
@@ -5169,7 +5232,7 @@ Also see *note (gitman)git-commit::.
      "instant" variants always require confirmation because making an
      error while using those is harder to recover from.
 
-   • User Option magit-post-commit-hook
+ -- User Option: magit-post-commit-hook
 
      Hook run after creating a commit without the user editing a
      message.
@@ -5799,7 +5862,7 @@ them.  Those features are available from separate transient command.
      If you use a finite set of non-ephemeral branches across all your
      repositories, then you might use something like:
 
-          (("origin/master" "master" "next" "maint"))
+          (("origin/master" . ("master" "next" "maint")))
 
      Or if the names of all your ephemeral branches contain a slash, at
      least in some repositories, then a good value could be:
@@ -5810,6 +5873,16 @@ them.  Those features are available from separate transient command.
 
           (("origin/maint" . "\\`hotfix/")
            ("origin/master" . "\\`feature/"))
+
+     UPSTREAM can be a local branch:
+
+          (("master" . ("master" "next" "maint")))
+
+   Because the main branch is no longer almost always named "master" you
+should also account for other common names:
+
+     (("main"  . ("main" "master" "next" "maint"))
+      ("master" . ("main" "master" "next" "maint")))
 
  -- Command: magit-branch-orphan
 
@@ -7731,67 +7804,4 @@ modules.
      being fetched in parallel.  Also fetch the super-repository,
      because ‘git fetch’ does not support not doing that.  With a prefix
      argument fetch all remotes.
-
-
-File: magit.info,  Node: Subtree,  Next: Worktree,  Prev: Submodules,  Up: Miscellaneous
-
-8.4 Subtree
-===========
-
-Also see *note (gitman)git-subtree::.
-
-‘O’     (‘magit-subtree’)
-
-     This transient prefix command binds the two sub-transients; one for
-     importing a subtree and one for exporting a subtree.
-
-‘O i’     (‘magit-subtree-import’)
-
-     This transient prefix command binds the following suffix commands
-     along with the appropriate infix arguments and displays them in a
-     temporary buffer until a suffix is invoked.
-
-     The suffixes of this command import subtrees.
-
-     If the ‘--prefix’ argument is set, then the suffix commands use
-     that prefix without prompting the user.  If it is unset, then they
-     read the prefix in the minibuffer.
-
-‘O i a’     (‘magit-subtree-add’)
-
-     This command adds COMMIT from REPOSITORY as a new subtree at
-     PREFIX.
-
-‘O i c’     (‘magit-subtree-add-commit’)
-
-     This command add COMMIT as a new subtree at PREFIX.
-
-‘O i m’     (‘magit-subtree-merge’)
-
-     This command merges COMMIT into the PREFIX subtree.
-
-‘O i f’     (‘magit-subtree-pull’)
-
-     This command pulls COMMIT from REPOSITORY into the PREFIX subtree.
-
-‘O e’     (‘magit-subtree-export’)
-
-     This transient prefix command binds the following suffix commands
-     along with the appropriate infix arguments and displays them in a
-     temporary buffer until a suffix is invoked.
-
-     The suffixes of this command export subtrees.
-
-     If the ‘--prefix’ argument is set, then the suffix commands use
-     that prefix without prompting the user.  If it is unset, then they
-     read the prefix in the minibuffer.
-
-‘O e p’     (‘magit-subtree-push’)
-
-     This command extract the history of the subtree PREFIX and pushes
-     it to REF on REPOSITORY.
-
-‘O e s’     (‘magit-subtree-split’)
-
-     This command extracts the history of the subtree PREFIX.
 

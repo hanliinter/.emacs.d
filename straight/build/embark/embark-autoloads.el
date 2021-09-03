@@ -1,4 +1,4 @@
-;;; embark-autoloads.el --- automatically extracted autoloads
+;;; embark-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -31,10 +31,12 @@ be restricted by passing a PREFIX key.
 
 (autoload 'embark-act "embark" "\
 Prompt the user for an action and perform it.
-The target of the action is chosen by `embark-target-finders'.
+The targets of the action are chosen by `embark-target-finders'.
 By default, if called from a minibuffer the target is the top
-completion candidate, if called from an Embark Collect or a
-Completions buffer it is the candidate at point.
+completion candidate.  When called from a non-minibuffer buffer
+there can multiple targets and you can cycle among them by using
+`embark-cycle' (which is bound by default to the same key
+binding `embark-act' is, but see `embark-cycle-key').
 
 This command uses `embark-prompter' to ask the user to specify an
 action, and calls it injecting the target at the first minibuffer
@@ -46,9 +48,14 @@ whether calling `embark-act' with nil ARG quits the minibuffer,
 and if ARG is non-nil it will do the opposite.  Interactively,
 ARG is the prefix argument.
 
+If instead you call this from outside the minibuffer, the first
+ARG targets are skipped over (if ARG is negative the skipping is
+done by cycling backwards) and cycling starts from the following
+target.
+
 \(fn &optional ARG)" t nil)
 
-(autoload 'embark-default-action "embark" "\
+(autoload 'embark-dwim "embark" "\
 Run the default action on the current target.
 The target of the action is chosen by `embark-target-finders'.
 
@@ -60,7 +67,11 @@ For targets that do not come from minibuffer completion
 \(typically some thing at point in a regular buffer) and whose
 type is not listed in `embark-default-action-overrides', the
 default action is given by whatever binding RET has in the action
-keymap for the target's type." t nil)
+keymap for the target's type.
+
+See `embark-act' for the meaning of the prefix ARG.
+
+\(fn &optional ARG)" t nil)
 
 (autoload 'embark-become "embark" "\
 Make current command become a different command.
@@ -130,7 +141,7 @@ Create a type-specific buffer to manage current candidates.
 The variable `embark-exporters-alist' controls how to make the
 buffer for each type of completion." t nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "embark" '("embark-")))
+(register-definition-prefixes "embark" '("embark-"))
 
 ;;;***
 

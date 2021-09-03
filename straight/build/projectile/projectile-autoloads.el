@@ -1,4 +1,4 @@
-;;; projectile-autoloads.el --- automatically extracted autoloads
+;;; projectile-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -44,10 +44,11 @@ Add the currently visited file to the cache." t nil)
 
 (autoload 'projectile-discover-projects-in-directory "projectile" "\
 Discover any projects in DIRECTORY and add them to the projectile cache.
-This function is not recursive and only adds projects with roots
-at the top level of DIRECTORY.
 
-\(fn DIRECTORY)" t nil)
+If DEPTH is non-nil recursively descend exactly DEPTH levels below DIRECTORY and
+discover projects there.
+
+\(fn DIRECTORY &optional DEPTH)" nil nil)
 
 (autoload 'projectile-discover-projects-in-search-path "projectile" "\
 Discover projects in `projectile-project-search-path'.
@@ -305,10 +306,14 @@ Find tag in project." t nil)
 Invoke `execute-extended-command' in the project's root." t nil)
 
 (autoload 'projectile-run-shell-command-in-root "projectile" "\
-Invoke `shell-command' in the project's root." t nil)
+Invoke `shell-command' in the project's root.
+
+\(fn COMMAND &optional OUTPUT-BUFFER ERROR-BUFFER)" t nil)
 
 (autoload 'projectile-run-async-shell-command-in-root "projectile" "\
-Invoke `async-shell-command' in the project's root." t nil)
+Invoke `async-shell-command' in the project's root.
+
+\(fn COMMAND &optional OUTPUT-BUFFER ERROR-BUFFER)" t nil)
 
 (autoload 'projectile-run-gdb "projectile" "\
 Invoke `gdb' in the project's root." t nil)
@@ -506,6 +511,9 @@ Remove known projects that don't exist anymore." t nil)
 (autoload 'projectile-clear-known-projects "projectile" "\
 Clear both `projectile-known-projects' and `projectile-known-projects-file'." t nil)
 
+(autoload 'projectile-reset-known-projects "projectile" "\
+Clear known projects and rediscover." t nil)
+
 (autoload 'projectile-remove-known-project "projectile" "\
 Remove PROJECT from the list of known projects.
 
@@ -572,7 +580,7 @@ Otherwise behave as if called interactively.
 
 (define-obsolete-function-alias 'projectile-global-mode 'projectile-mode "1.0")
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "projectile" '("??" "compilation-find-file-projectile-find-compilation-buffer" "def-projectile-commander-method" "delete-file-projectile-remove-from-cache" "projectile-")))
+(register-definition-prefixes "projectile" '("??" "compilation-find-file-projectile-find-compilation-buffer" "def-projectile-commander-method" "delete-file-projectile-remove-from-cache" "projectile-"))
 
 ;;;***
 

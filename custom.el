@@ -57,3 +57,21 @@
  ;; If there is more than one, they won't work right.
  '(org-ellipsis ((t (:foreground nil))))
  '(symbol-overlay-default-face ((t (:inherit (region bold))))))
+
+
+;; Chinese input
+;; try emacs-rime first
+
+
+(use-package rime
+  :straight (rime :type git
+                  :host github
+                  :repo "DogLooksGood/emacs-rime"
+                  :files ("*.el" "Makefile" "lib.c"))
+  :custom
+  (default-input-method "rime"))
+
+(global-set-key (kbd "C-`") 'rime-send-keybinding)
+;; default 
+(setq rime-translate-keybindings
+  '("C-f" "C-b" "C-n" "C-p" "C-g" "<left>" "<right>" "<up>" "<down>" "<prior>" "<next>" "<delete>"))

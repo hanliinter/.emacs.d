@@ -7,6 +7,7 @@
 
 (setq mc/cmds-to-run-once
       '(
+	c-electric-brace
 	iedit-switch-to-mc-mode
 	symbol-overlay-put
 	))

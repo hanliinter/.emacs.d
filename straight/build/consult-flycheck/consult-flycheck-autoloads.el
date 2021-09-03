@@ -1,4 +1,4 @@
-;;; consult-flycheck-autoloads.el --- automatically extracted autoloads
+;;; consult-flycheck-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -10,7 +10,7 @@
 (autoload 'consult-flycheck "consult-flycheck" "\
 Jump to flycheck error." t nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "consult-flycheck" '("consult-flycheck--")))
+(register-definition-prefixes "consult-flycheck" '("consult-flycheck--"))
 
 ;;;***
 
