@@ -270,8 +270,8 @@ FACE defaults to inheriting from default and highlight."
   ;; locally in a let-binding.
   (defun find-fd (&optional dir initial)
     (interactive "P")
-    (let ((consult-find-command "fd --color=never --full-path ARG OPTS"))
-      (consult-find dir initial)))
+    (consult-find dir initial))
+  ;; TODO combine it with fzf / affel
 
   ;; Optionally configure the register formatting. This improves the register
   ;; preview for `consult-register', `consult-register-load',
@@ -381,7 +381,7 @@ FACE defaults to inheriting from default and highlight."
   ;; if you want to have consult previews as you move around an
   ;; auto-updating embark collect buffer
   :hook
-  (embark-collect-mode . embark-consult-preview-minor-mode))
+  (embark-collect-mode . consult-preview-at-point-mode))
 
 (use-package orderless
   :straight t

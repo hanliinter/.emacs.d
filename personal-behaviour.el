@@ -72,7 +72,7 @@
 	      (looking-back "[0-9]" (line-beginning-position)
 	      ))
 	   (self-insert-command 1)
-	 (company-complete-number (if (equal k "0")
+	 (company-complete-tooltip-row (if (equal k "0")
 				      10
 				    (string-to-number k)) )
 	   )

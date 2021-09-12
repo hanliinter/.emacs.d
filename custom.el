@@ -11,6 +11,7 @@
   :straight t)
 
 (column-number-mode t)
+(display-time-mode 1)
 
 
 
