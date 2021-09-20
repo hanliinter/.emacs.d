@@ -3,13 +3,29 @@
 (use-package multiple-cursors
   :straight t
   :bind (("C-c e e" . #'mc/edit-lines )
-         ("C-c e d" . #'mc/mark-all-dwim )))
+         ("C-c e d" . #'mc/mark-all-dwim )
+	 ("C->".      #'mc/mark-next-like-this)
+	 ("C-<".      #'mc/mark-previous-like-this)
+	 ("C-M-<".    #'mc/unmark-next-like-this)
+	 ("C-M->".    #'mc/unmark-previous-like-this)
+	 ("C-c C-<".  #'mc/mark-all-like-this)
+	 ))
+
+
+;; (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+;; (global-set-key (kbd "C->")         'mc/mark-next-like-this)
+;; (global-set-key (kbd "C-<")         'mc/mark-previous-like-this)
+;; (global-set-key (kbd "C-c C-<")     'mc/mark-all-like-this)
+;; (global-set-key (kbd "C-\"")        'mc/skip-to-next-like-this)
+;; (global-set-key (kbd "C-:")         'mc/skip-to-previous-like-this)
+
+
 
 (use-package expand-region
   :straight t
   :bind (("C-c n" . er/expand-region)))
 
-(bind-key "C-c /" #'comment-dwim)
+(bind-key "C-c /" #'comment-dwim)	
 
 
 (use-package duplicate-thing
@@ -21,6 +37,25 @@
     (save-mark-and-excursion (duplicate-thing 1)))
   :bind (("C-c d" . duplicate-current-line)))
 
+;; Line Move Up & Down
+;; TOOD maybe should introduce an minor mode for line movements 
+(defun move-line-up ()
+  "Move up the current line."
+  (interactive)
+  (transpose-lines 1)
+  (forward-line -2)
+  (indent-according-to-mode))
+
+(defun move-line-down ()
+  "Move down the current line."
+  (interactive)
+  (forward-line 1)
+  (transpose-lines 1)
+  (forward-line -1)
+  (indent-according-to-mode))
+
+(global-set-key (kbd "C-s-n") 'move-line-down)
+(global-set-key (kbd "C-s-p") 'move-line-up)
 
 ;; Jumping
 
