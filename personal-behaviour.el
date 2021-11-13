@@ -95,7 +95,7 @@
   :commands backup-walker-start)
 
 
-(defun ora-company-number ()
+(defun ora-compan-number ()
   "filter the num key if it is part of candidates."
   (interactive)
   (let* ((k (substring (this-command-keys) 0 ))
@@ -122,7 +122,7 @@
    (lambda (x)
      (define-key keymap (format "%d" x) 'ora-company-number))
    (number-sequence 0 9))
-  (define-key keymap (kbd "SPC") (lambda () (interactive) (company-abort)))
+  (define-key keymap (kbd "<return>") (lambda () (interactive) (company-abort)))
   ;(define-key map (kbd "<return>") nil)
   
   )
