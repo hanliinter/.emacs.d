@@ -1,4 +1,4 @@
-;;; let-alist-autoloads.el --- automatically extracted autoloads
+;;; let-alist-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 

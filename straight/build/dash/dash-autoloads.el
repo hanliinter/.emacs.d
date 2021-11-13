@@ -1,4 +1,4 @@
-;;; dash-autoloads.el --- automatically extracted autoloads
+;;; dash-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -16,6 +16,9 @@ or negative, disable the mode.
 If called from Lisp, toggle the mode if ARG is `toggle'.  Enable
 the mode if ARG is nil, omitted, or is a positive number.
 Disable the mode if ARG is a negative number.
+
+To check whether the minor mode is enabled in the current buffer,
+evaluate `dash-fontify-mode'.
 
 The mode's hook is called both when the mode is enabled and when
 it is disabled.
@@ -47,14 +50,13 @@ or call the function `global-dash-fontify-mode'.")
 (autoload 'global-dash-fontify-mode "dash" "\
 Toggle Dash-Fontify mode in all buffers.
 With prefix ARG, enable Global Dash-Fontify mode if ARG is positive;
-otherwise, disable it.  If called from Lisp, enable the mode if
-ARG is omitted or nil.
+otherwise, disable it.  If called from Lisp, enable the mode if ARG
+is omitted or nil.
 
 Dash-Fontify mode is enabled in all buffers where
 `dash--turn-on-fontify-mode' would do it.
 
-See `dash-fontify-mode' for more information on
-Dash-Fontify mode.
+See `dash-fontify-mode' for more information on Dash-Fontify mode.
 
 \(fn &optional ARG)" t nil)
 
@@ -62,7 +64,7 @@ Dash-Fontify mode.
 Register the Dash Info manual with `info-lookup-symbol'.
 This allows Dash symbols to be looked up with \\[info-lookup-symbol]." t nil)
 
-(register-definition-prefixes "dash" '("!cdr" "!cons" "--" "->" "-a" "-butlast" "-c" "-d" "-e" "-f" "-gr" "-i" "-keep" "-l" "-m" "-non" "-only-some" "-p" "-r" "-s" "-t" "-u" "-value-to-list" "-when-let" "-zip" "dash-"))
+(register-definition-prefixes "dash" '("!cdr" "!cons" "--" "->" "-a" "-butlast" "-c" "-d" "-e" "-f" "-gr" "-i" "-juxt" "-keep" "-l" "-m" "-no" "-o" "-p" "-r" "-s" "-t" "-u" "-value-to-list" "-when-let" "-zip" "dash-"))
 
 ;;;***
 

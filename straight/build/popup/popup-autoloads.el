@@ -1,4 +1,4 @@
-;;; popup-autoloads.el --- automatically extracted autoloads
+;;; popup-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 

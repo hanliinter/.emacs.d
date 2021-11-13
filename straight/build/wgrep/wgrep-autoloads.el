@@ -1,4 +1,4 @@
-;;; wgrep-autoloads.el --- automatically extracted autoloads
+;;; wgrep-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 

@@ -1,4 +1,4 @@
-;;; transient-autoloads.el --- automatically extracted autoloads
+;;; transient-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 

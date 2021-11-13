@@ -7,9 +7,9 @@
 
 (use-package expand-region
   :straight t
-  :bind (("C-c n" . er/expand-region)))
+  :bind (("M-[" . er/expand-region)))
 
-(bind-key "C-c /" #'comment-dwim)
+ (bind-key "C-c /" #'comment-region)
 
 
 (use-package duplicate-thing
@@ -32,7 +32,9 @@
   :custom
   (aw-keys '(?a ?s ?d ?f ?q ?w ?e ?r))
   :bind (("C-x o" . ace-window))) 
+;; Avy
 
+(global-set-key (kbd "C-'") 'avy-goto-char-2)
 ;; Switch to some default buffer
 (use-package iedit
   :straight t)
@@ -92,4 +94,4 @@
   ;(define-key map (kbd "<return>") nil)
   
   )
-
+;; themes

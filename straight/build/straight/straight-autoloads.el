@@ -1,4 +1,4 @@
-;;; straight-autoloads.el --- automatically extracted autoloads
+;;; straight-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 

@@ -1,4 +1,4 @@
-;;; org-loaddefs.el --- automatically extracted autoloads
+;;; org-loaddefs.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -252,7 +252,7 @@ see.
 
 ;;;***
 
-;;;### (autoloads nil "ob-tangle" "ob-tangle.el" "3b74074fc9f3020f67af448f2e101fec")
+;;;### (autoloads nil "ob-tangle" "ob-tangle.el" "6f490543a8ad9edf0c41d28a25ab0232")
 ;;; Generated autoloads from ob-tangle.el
 
 (autoload 'org-babel-tangle-file "ob-tangle" "\
@@ -290,7 +290,7 @@ matching a regular expression.
 
 ;;;***
 
-;;;### (autoloads nil "ol" "ol.el" "47a1963d41c3d6298d971a4f5b359c90")
+;;;### (autoloads nil "ol" "ol.el" "358ccef176dff348badf58a58cece65a")
 ;;; Generated autoloads from ol.el
 
 (autoload 'org-next-link "ol" "\
@@ -521,7 +521,7 @@ Idea taken from `gnus-dired-attach'.
 
 ;;;***
 
-;;;### (autoloads nil "org-clock" "org-clock.el" "6e74a48a76839cc759aff0bbe9078b2d")
+;;;### (autoloads nil "org-clock" "org-clock.el" "99d6123edfa81d4a1df5abfc17766021")
 ;;; Generated autoloads from org-clock.el
 
 (autoload 'org-resolve-clocks "org-clock" "\
@@ -682,7 +682,7 @@ Otherwise, return nil." t nil)
 
 ;;;***
 
-;;;### (autoloads nil "org-colview" "org-colview.el" "c7b1a30339a014f1d58de0ac305e3c57")
+;;;### (autoloads nil "org-colview" "org-colview.el" "f4a8f82538d99f3b4331d3121abfdf9c")
 ;;; Generated autoloads from org-colview.el
 
 (autoload 'org-columns-remove-overlays "org-colview" "\
@@ -781,7 +781,7 @@ Turn on or update column view in the agenda." t nil)
 
 ;;;***
 
-;;;### (autoloads nil "org-compat" "org-compat.el" "ac9201a4dbfd845cd8e2f27b767eb990")
+;;;### (autoloads nil "org-compat" "org-compat.el" "268818158dd0b8c0c86ae6d80bafbcbb")
 ;;; Generated autoloads from org-compat.el
 
 (autoload 'org-check-version "org-compat" "\
@@ -900,7 +900,7 @@ with \"H:MM:SS\" format, return `h:mm:ss'.  Otherwise, return
 
 ;;;***
 
-;;;### (autoloads nil "org-element" "org-element.el" "1dc31cd93385abb13dbda218172012f6")
+;;;### (autoloads nil "org-element" "org-element.el" "0d59f91fbf909d9c0757a12e6f33c008")
 ;;; Generated autoloads from org-element.el
 
 (autoload 'org-element-update-syntax "org-element" "\
@@ -1080,7 +1080,7 @@ With a prefix argument, use the alternative interface: e.g., if
 
 ;;;***
 
-;;;### (autoloads nil "org-id" "org-id.el" "43c2e2ffb2e2db80606e4d1940a4345d")
+;;;### (autoloads nil "org-id" "org-id.el" "89f6236337cc631942925e3d982e9e3f")
 ;;; Generated autoloads from org-id.el
 
 (autoload 'org-id-get-create "org-id" "\
@@ -1177,7 +1177,7 @@ or filename if no title." t nil)
 
 ;;;***
 
-;;;### (autoloads nil "org-indent" "org-indent.el" "9e3716e9018540c54d3635aeedcc9b04")
+;;;### (autoloads nil "org-indent" "org-indent.el" "43465c7ea93919d95fb4df858c92b798")
 ;;; Generated autoloads from org-indent.el
 
 (autoload 'org-indent-mode "org-indent" "\
@@ -1190,6 +1190,9 @@ negative, disable the mode.
 If called from Lisp, toggle the mode if ARG is `toggle'.  Enable
 the mode if ARG is nil, omitted, or is a positive number.
 Disable the mode if ARG is a negative number.
+
+To check whether the minor mode is enabled in the current buffer,
+evaluate `org-indent-mode'.
 
 The mode's hook is called both when the mode is enabled and when
 it is disabled.
@@ -1213,7 +1216,7 @@ during idle time.
 
 ;;;***
 
-;;;### (autoloads nil "org-keys" "org-keys.el" "3b3012822b8dc565cf35bd9b0145c31d")
+;;;### (autoloads nil "org-keys" "org-keys.el" "b0b743f23200bcd8a4e9aa50a7b9e984")
 ;;; Generated autoloads from org-keys.el
 
 (autoload 'org-babel-describe-bindings "org-keys" "\
@@ -1229,7 +1232,7 @@ Describe all keybindings behind `org-babel-key-prefix'." t nil)
 
 ;;;***
 
-;;;### (autoloads nil "org-lint" "org-lint.el" "77b4cb8868c74ea909397636947cd5d9")
+;;;### (autoloads nil "org-lint" "org-lint.el" "680d5c93fa0cf1fd6888ae1d4d533955")
 ;;; Generated autoloads from org-lint.el
 
 (autoload 'org-lint "org-lint" "\
@@ -1253,7 +1256,7 @@ ARG can also be a list of checker names, as symbols, to run.
 
 ;;;***
 
-;;;### (autoloads nil "org-list" "org-list.el" "f4779d9d8d7d4e209eda2805fc662b13")
+;;;### (autoloads nil "org-list" "org-list.el" "75a98bbe543f33255c4086a640241170")
 ;;; Generated autoloads from org-list.el
 
 (autoload 'org-list-checkbox-radio-mode "org-list" "\
@@ -1266,6 +1269,9 @@ zero or negative, disable the mode.
 If called from Lisp, toggle the mode if ARG is `toggle'.  Enable
 the mode if ARG is nil, omitted, or is a positive number.
 Disable the mode if ARG is a negative number.
+
+To check whether the minor mode is enabled in the current buffer,
+evaluate `org-list-checkbox-radio-mode'.
 
 The mode's hook is called both when the mode is enabled and when
 it is disabled.
@@ -1282,7 +1288,7 @@ it is disabled.
 
 ;;;***
 
-;;;### (autoloads nil "org-macs" "org-macs.el" "b3bdd8cd35ef6e2c6cb68ae1b1fdfa58")
+;;;### (autoloads nil "org-macs" "org-macs.el" "4ead05a66597b48fbbc85178919ef3fc")
 ;;; Generated autoloads from org-macs.el
 
 (autoload 'org-load-noerror-mustsuffix "org-macs" "\
@@ -1323,7 +1329,7 @@ agenda view showing the flagged items." t nil)
 
 ;;;***
 
-;;;### (autoloads nil "org-num" "org-num.el" "a685f7d11f639138ebe19dc0f815fb41")
+;;;### (autoloads nil "org-num" "org-num.el" "9ac3877ff266875423e15e97563b19cc")
 ;;; Generated autoloads from org-num.el
 
 (autoload 'org-num-default-format "org-num" "\
@@ -1343,6 +1349,9 @@ If called from Lisp, toggle the mode if ARG is `toggle'.  Enable
 the mode if ARG is nil, omitted, or is a positive number.
 Disable the mode if ARG is a negative number.
 
+To check whether the minor mode is enabled in the current buffer,
+evaluate `org-num-mode'.
+
 The mode's hook is called both when the mode is enabled and when
 it is disabled.
 
@@ -1358,7 +1367,7 @@ it is disabled.
 
 ;;;***
 
-;;;### (autoloads nil "org-plot" "org-plot.el" "6effa71a7c62987a96096cb5b93219a4")
+;;;### (autoloads nil "org-plot" "org-plot.el" "a58a87cfd290e48937e9058ddc127c9c")
 ;;; Generated autoloads from org-plot.el
 
 (autoload 'org-plot/gnuplot "org-plot" "\
@@ -1444,7 +1453,7 @@ prefix argument (`C-u C-u C-u C-c C-w').
 
 ;;;***
 
-;;;### (autoloads nil "org-table" "org-table.el" "1f1779782267d9f71d549ba7ff1f7622")
+;;;### (autoloads nil "org-table" "org-table.el" "da3bf2fae6b8c5b2b3fd9ef431397eed")
 ;;; Generated autoloads from org-table.el
 
 (autoload 'org-table-header-line-mode "org-table" "\
@@ -1457,6 +1466,9 @@ zero or negative, disable the mode.
 If called from Lisp, toggle the mode if ARG is `toggle'.  Enable
 the mode if ARG is nil, omitted, or is a positive number.
 Disable the mode if ARG is a negative number.
+
+To check whether the minor mode is enabled in the current buffer,
+evaluate `org-table-header-line-mode'.
 
 The mode's hook is called both when the mode is enabled and when
 it is disabled.
@@ -1971,13 +1983,16 @@ Unconditionally turn on `orgtbl-mode'." nil nil)
 (autoload 'orgtbl-mode "org-table" "\
 The Org mode table editor as a minor mode for use in other modes.
 
-If called interactively, toggle `Orgtbl mode'.  If the prefix
+If called interactively, toggle `OrgTbl mode'.  If the prefix
 argument is positive, enable the mode, and if it is zero or
 negative, disable the mode.
 
 If called from Lisp, toggle the mode if ARG is `toggle'.  Enable
 the mode if ARG is nil, omitted, or is a positive number.
 Disable the mode if ARG is a negative number.
+
+To check whether the minor mode is enabled in the current buffer,
+evaluate `orgtbl-mode'.
 
 The mode's hook is called both when the mode is enabled and when
 it is disabled.
@@ -2282,7 +2297,7 @@ using three `C-u' prefix arguments.
 
 ;;;***
 
-;;;### (autoloads nil "ox" "ox.el" "25665a36e5de9afee45ed4e931ae825d")
+;;;### (autoloads nil "ox" "ox.el" "1e6511d8042e66bac6a99748ad36562a")
 ;;; Generated autoloads from ox.el
 
 (autoload 'org-export-get-backend "ox" "\
@@ -2593,7 +2608,7 @@ Return output file name.
 
 ;;;***
 
-;;;### (autoloads nil "ox-beamer" "ox-beamer.el" "4e92b47df5a1c2d8f2848023ec101a77")
+;;;### (autoloads nil "ox-beamer" "ox-beamer.el" "a5820d47d71911b768adb50900d923ea")
 ;;; Generated autoloads from ox-beamer.el
 
 (autoload 'org-beamer-mode "ox-beamer" "\
@@ -2606,6 +2621,9 @@ negative, disable the mode.
 If called from Lisp, toggle the mode if ARG is `toggle'.  Enable
 the mode if ARG is nil, omitted, or is a positive number.
 Disable the mode if ARG is a negative number.
+
+To check whether the minor mode is enabled in the current buffer,
+evaluate `org-beamer-mode'.
 
 The mode's hook is called both when the mode is enabled and when
 it is disabled.
@@ -2745,7 +2763,7 @@ Return output file name.
 
 ;;;***
 
-;;;### (autoloads nil "ox-html" "ox-html.el" "40ac5fc20e06f98224a4933a375a71b8")
+;;;### (autoloads nil "ox-html" "ox-html.el" "f21b4e51d74eab5e756e3d132236497b")
 ;;; Generated autoloads from ox-html.el
 
 (put 'org-html-head-include-default-style 'safe-local-variable 'booleanp)
@@ -2913,7 +2931,7 @@ The file is stored under the name chosen in
 
 ;;;***
 
-;;;### (autoloads nil "ox-latex" "ox-latex.el" "b5fad1ef30c25a4ebe814fb60c42e133")
+;;;### (autoloads nil "ox-latex" "ox-latex.el" "069281b0c4eb6dc3ca77b79f9fcc637d")
 ;;; Generated autoloads from ox-latex.el
 
 (autoload 'org-latex-make-preamble "ox-latex" "\
@@ -3133,7 +3151,7 @@ Return output file name.
 
 ;;;***
 
-;;;### (autoloads nil "ox-odt" "ox-odt.el" "808bf78d7b3e7aaa8d4194c551c3867a")
+;;;### (autoloads nil "ox-odt" "ox-odt.el" "c6cb70ac3daad5090be3ae1032af65d6")
 ;;; Generated autoloads from ox-odt.el
 
 (put 'org-odt-preferred-output-format 'safe-local-variable 'stringp)
@@ -3338,7 +3356,7 @@ the project.
 
 ;;;***
 
-;;;### (autoloads nil "ox-texinfo" "ox-texinfo.el" "a0ab008018d3e053b81f06074812e264")
+;;;### (autoloads nil "ox-texinfo" "ox-texinfo.el" "4bc8dc8a41a303ebb4b39f47038e3fbe")
 ;;; Generated autoloads from ox-texinfo.el
 
 (autoload 'org-texinfo-export-to-texinfo "ox-texinfo" "\

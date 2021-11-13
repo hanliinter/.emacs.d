@@ -1,4 +1,4 @@
-;;; embark-consult-autoloads.el --- automatically extracted autoloads
+;;; embark-consult-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 

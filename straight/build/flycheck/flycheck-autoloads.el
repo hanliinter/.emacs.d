@@ -1,4 +1,4 @@
-;;; flycheck-autoloads.el --- automatically extracted autoloads
+;;; flycheck-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -68,14 +68,13 @@ or call the function `global-flycheck-mode'.")
 (autoload 'global-flycheck-mode "flycheck" "\
 Toggle Flycheck mode in all buffers.
 With prefix ARG, enable Global Flycheck mode if ARG is positive;
-otherwise, disable it.  If called from Lisp, enable the mode if
-ARG is omitted or nil.
+otherwise, disable it.  If called from Lisp, enable the mode if ARG is
+omitted or nil.
 
 Flycheck mode is enabled in all buffers where
 `flycheck-mode-on-safe' would do it.
 
-See `flycheck-mode' for more information on
-Flycheck mode.
+See `flycheck-mode' for more information on Flycheck mode.
 
 \(fn &optional ARG)" t nil)
 

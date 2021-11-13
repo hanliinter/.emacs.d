@@ -1,4 +1,4 @@
-;;; shrink-path-autoloads.el --- automatically extracted autoloads
+;;; shrink-path-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 

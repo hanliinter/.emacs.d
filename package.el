@@ -4,6 +4,13 @@
 (use-package projectile
   :straight t)
 
+(use-package exec-path-from-shell
+  :straight t
+  :config
+
+  (when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize))
+  )
 
 (use-package yasnippet
   :straight t
@@ -246,7 +253,7 @@ FACE defaults to inheriting from default and highlight."
          ("M-g i" . consult-imenu)
          ("M-g I" . consult-project-imenu)
          ("M-g e" . consult-error)
-         ;; M-s bindings (search-map)
+         ;; -s bindings (search-map)
          ("M-s f" . consult-find)                  ;; alt. consult-locate, find-fd
          ("M-s g" . consult-git-grep)              ;; alt. consult-grep
          ("M-s r" . consult-ripgrep)
@@ -393,9 +400,6 @@ FACE defaults to inheriting from default and highlight."
 (straight-use-package 'company-prescient)
 (straight-use-package 'selectrum-prescient)
 
-(use-package rg
-  :straight t
-  )
 
 (company-prescient-mode)
 (selectrum-prescient-mode)
@@ -412,3 +416,5 @@ FACE defaults to inheriting from default and highlight."
 (use-package imenu-list
   :straight t)
 
+(use-package citre
+  :straight t)

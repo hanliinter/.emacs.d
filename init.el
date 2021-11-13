@@ -18,7 +18,7 @@
   (load bootstrap-file nil 'nomessage))
 
 (straight-use-package 'use-package)
-
+(straight-use-package 'org)
 
 (setq theme-file "~/.emacs.d/theme.el")
 (load-file theme-file)

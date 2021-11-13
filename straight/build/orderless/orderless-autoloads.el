@@ -1,4 +1,4 @@
-;;; orderless-autoloads.el --- automatically extracted autoloads
+;;; orderless-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -29,7 +29,7 @@ returns nil.  In any other case it \"completes\" STRING to
 itself, without moving POINT.
 This function is part of the `orderless' completion style.
 
-\(fn STRING TABLE PRED POINT &optional METADATA)" nil nil)
+\(fn STRING TABLE PRED POINT)" nil nil)
 
 (add-to-list 'completion-styles-alist '(orderless orderless-try-completion orderless-all-completions "Completion of multiple components, in any order."))
 

@@ -1,4 +1,4 @@
-;;; bind-key-autoloads.el --- automatically extracted autoloads
+;;; bind-key-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 

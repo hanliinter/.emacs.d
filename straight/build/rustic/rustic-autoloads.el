@@ -1,4 +1,4 @@
-;;; rustic-autoloads.el --- automatically extracted autoloads
+;;; rustic-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -15,7 +15,7 @@ Major mode for Rust code.
 
 (add-to-list 'auto-mode-alist '("\\.rs\\'" . rustic-mode))
 
-(register-definition-prefixes "rustic" '("rust"))
+(register-definition-prefixes "rustic" '("rustic-"))
 
 ;;;***
 
@@ -79,6 +79,12 @@ If BIN is not nil, create a binary application, otherwise a library.
 
 \(fn PROJECT-PATH &optional BIN)" t nil)
 
+(autoload 'rustic-cargo-init "rustic-cargo" "\
+Run 'cargo init' to initialize a directory in the path specified by PROJECT-PATH.
+If BIN is not nil, create a binary application, otherwise a library.
+
+\(fn PROJECT-PATH &optional BIN)" t nil)
+
 (autoload 'rustic-cargo-build "rustic-cargo" "\
 Run 'cargo build' for the current project." t nil)
 
@@ -126,23 +132,18 @@ If running with prefix command `C-u', read whole command from minibuffer.
 
 ;;;***
 
-;;;### (autoloads nil "rustic-common" "rustic-common.el" (0 0 0 0))
-;;; Generated autoloads from rustic-common.el
-
-(register-definition-prefixes "rustic-common" '("rustic-"))
-
-;;;***
-
 ;;;### (autoloads nil "rustic-compile" "rustic-compile.el" (0 0 0
 ;;;;;;  0))
 ;;; Generated autoloads from rustic-compile.el
 
 (autoload 'rustic-compile "rustic-compile" "\
 Compile rust project.
-If called without arguments use `rustic-compile-command'.
 
-Otherwise use provided argument ARG and store it in
-`compilation-arguments'.
+If `compilation-read-command' is non-nil or if called with prefix
+argument ARG then read the command in the minibuffer.  Otherwise
+use `rustic-compile-command'.
+
+In either store the used command in `compilation-arguments'.
 
 \(fn &optional ARG)" t nil)
 
@@ -194,6 +195,9 @@ If called from Lisp, toggle the mode if ARG is `toggle'.  Enable
 the mode if ARG is nil, omitted, or is a positive number.
 Disable the mode if ARG is a negative number.
 
+To check whether the minor mode is enabled in the current buffer,
+evaluate `rustic-doc-mode'.
+
 The mode's hook is called both when the mode is enabled and when
 it is disabled.
 
@@ -231,6 +235,10 @@ then this function creates the directory `foo' and renames the
 file to `foo/mod.rs'.  The current buffer will be updated to
 visit the new file." t nil)
 
+(autoload 'rustic-open-dependency-file "rustic-interaction" "\
+Open the 'Cargo.toml' file at the project root if the current buffer is
+visiting a project." t nil)
+
 (autoload 'rustic-beginning-of-defun "rustic-interaction" "\
 Move backward to the beginning of the current defun.
 
@@ -255,6 +263,32 @@ at the beginning of the defun body.
 This is written mainly to be used as `end-of-defun-function' for Rust." t nil)
 
 (register-definition-prefixes "rustic-interaction" '("rustic-"))
+
+;;;***
+
+;;;### (autoloads nil "rustic-lsp" "rustic-lsp.el" (0 0 0 0))
+;;; Generated autoloads from rustic-lsp.el
+
+(autoload 'rustic-analyzer-macro-expand "rustic-lsp" "\
+Default method for displaying macro expansion results.
+
+\(fn RESULT)" t nil)
+
+(register-definition-prefixes "rustic-lsp" '("rustic-"))
+
+;;;***
+
+;;;### (autoloads nil "rustic-playpen" "rustic-playpen.el" (0 0 0
+;;;;;;  0))
+;;; Generated autoloads from rustic-playpen.el
+
+(autoload 'rustic-playpen "rustic-playpen" "\
+Create a shareable URL for the contents of the current region,
+src-block or buffer on the Rust playpen.
+
+\(fn BEGIN END)" t nil)
+
+(register-definition-prefixes "rustic-playpen" '("rustic-"))
 
 ;;;***
 
@@ -294,42 +328,36 @@ Show a *Racer Help* buffer for the function or type at point." t nil)
 
 ;;;***
 
-;;;### (autoloads nil "rustic-util" "rustic-util.el" (0 0 0 0))
-;;; Generated autoloads from rustic-util.el
+;;;### (autoloads nil "rustic-rustfix" "rustic-rustfix.el" (0 0 0
+;;;;;;  0))
+;;; Generated autoloads from rustic-rustfix.el
 
-(autoload 'rustic-cargo-fmt "rustic-util" "\
+(autoload 'rustic-rustfix "rustic-rustfix" "\
+Run 'cargo fix'." t nil)
+
+(register-definition-prefixes "rustic-rustfix" '("rustic-rustfix-"))
+
+;;;***
+
+;;;### (autoloads nil "rustic-rustfmt" "rustic-rustfmt.el" (0 0 0
+;;;;;;  0))
+;;; Generated autoloads from rustic-rustfmt.el
+
+(autoload 'rustic-cargo-fmt "rustic-rustfmt" "\
 Use rustfmt via cargo." t nil)
 
-(autoload 'rustic-format-buffer "rustic-util" "\
+(autoload 'rustic-format-buffer "rustic-rustfmt" "\
 Format the current buffer using rustfmt.
 
 Provide optional argument NO-STDIN for `rustic-before-save-hook' since there
 were issues when using stdin for formatting." t nil)
 
-(autoload 'rustic-format-file "rustic-util" "\
+(autoload 'rustic-format-file "rustic-rustfmt" "\
 Unlike `rustic-format-buffer' format file directly and revert the buffer.
 
 \(fn &optional FILE)" t nil)
 
-(autoload 'rustic-analyzer-macro-expand "rustic-util" "\
-Default method for displaying macro expansion results.
-
-\(fn RESULT)" t nil)
-
-(autoload 'rustic-rustfix "rustic-util" "\
-Run 'cargo fix'." t nil)
-
-(autoload 'rustic-playpen "rustic-util" "\
-Create a shareable URL for the contents of the current region,
-src-block or buffer on the Rust playpen.
-
-\(fn BEGIN END)" t nil)
-
-(autoload 'rustic-open-dependency-file "rustic-util" "\
-Open the 'Cargo.toml' file at the project root if the current buffer is
-visiting a project." t nil)
-
-(register-definition-prefixes "rustic-util" '("rustic-"))
+(register-definition-prefixes "rustic-rustfmt" '("rustic-"))
 
 ;;;***
 

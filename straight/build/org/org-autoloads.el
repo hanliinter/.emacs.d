@@ -1,4 +1,4 @@
-;;; org-autoloads.el --- automatically extracted autoloads
+;;; org-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -209,7 +209,7 @@
 ;;;### (autoloads nil "ob-lilypond" "ob-lilypond.el" (0 0 0 0))
 ;;; Generated autoloads from ob-lilypond.el
 
-(register-definition-prefixes "ob-lilypond" '("lilypond-mode" "org-babel-"))
+(register-definition-prefixes "ob-lilypond" '("lilypond-mode" "ob-lilypond-header-args" "org-babel-"))
 
 ;;;***
 
@@ -406,6 +406,13 @@
 ;;; Generated autoloads from ol-docview.el
 
 (register-definition-prefixes "ol-docview" '("org-docview-"))
+
+;;;***
+
+;;;### (autoloads nil "ol-doi" "ol-doi.el" (0 0 0 0))
+;;; Generated autoloads from ol-doi.el
+
+(register-definition-prefixes "ol-doi" '("org-link-doi-"))
 
 ;;;***
 
@@ -699,7 +706,7 @@ first press `<' once to indicate that the agenda should be temporarily
 Pressing `<' twice means to restrict to the current subtree or region
 \(if active).
 
-\(fn &optional ARG ORG-KEYS RESTRICTION)" t nil)
+\(fn &optional ARG KEYS RESTRICTION)" t nil)
 
 (autoload 'org-batch-agenda "org-agenda" "\
 Run an agenda command in batch mode and send the result to STDOUT.

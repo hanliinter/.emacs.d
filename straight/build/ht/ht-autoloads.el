@@ -1,4 +1,4 @@
-;;; ht-autoloads.el --- automatically extracted autoloads
+;;; ht-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 

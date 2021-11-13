@@ -1,4 +1,4 @@
-;;; prescient-autoloads.el --- automatically extracted autoloads
+;;; prescient-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 

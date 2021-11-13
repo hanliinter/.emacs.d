@@ -1,4 +1,4 @@
-;;; jsonrpc-autoloads.el --- automatically extracted autoloads
+;;; jsonrpc-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 

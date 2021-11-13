@@ -1,4 +1,4 @@
-;;; magit-autoloads.el --- automatically extracted autoloads
+;;; magit-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -68,19 +68,11 @@ We recommend that you bind \"C-c g\" instead of \"C-c M-g\" to
 but the \"C-c <letter>\" namespace is strictly reserved for
 users; preventing Magit from using it by default.
 
-The Magit documentation recommended binding \"C-x g\" to
-`magit-status' for more than a decade before Emacs developers
-decided it was okay to knowingly ignore that precedent and bind
-it to `revert-buffer' instead.  As described above Magit tries
-hard not to override a binding that was added by the user; but
-because this binding is not actually added by the user, Magit
-exempt it from this protection.  See #4311.
-
 Also see info node `(magit)Commands for Buffers Visiting Files'.")
 
 (custom-autoload 'magit-define-global-key-bindings "magit" t)
 
-(defun magit-maybe-define-global-key-bindings nil (when magit-define-global-key-bindings (let ((map (current-global-map))) (dolist (elt '(("C-x g" . magit-status) ("C-x M-g" . magit-dispatch) ("C-c M-g" . magit-file-dispatch))) (let* ((key (kbd (car elt))) (ours (cdr elt)) (theirs (lookup-key map key))) (unless (or (and theirs (not (eq theirs 'revert-buffer))) (where-is-internal ours (make-sparse-keymap) t)) (define-key map key ours)))))))
+(defun magit-maybe-define-global-key-bindings nil (when magit-define-global-key-bindings (let ((map (current-global-map))) (dolist (elt '(("C-x g" . magit-status) ("C-x M-g" . magit-dispatch) ("C-c M-g" . magit-file-dispatch))) (let ((key (kbd (car elt))) (def (cdr elt))) (unless (or (lookup-key map key) (where-is-internal def (make-sparse-keymap) t)) (define-key map key def)))))))
 
 (if after-init-time (magit-maybe-define-global-key-bindings) (add-hook 'after-init-hook 'magit-maybe-define-global-key-bindings t))
  (autoload 'magit-dispatch "magit" nil t)
@@ -192,14 +184,13 @@ or call the function `magit-auto-revert-mode'.")
 (autoload 'magit-auto-revert-mode "magit-autorevert" "\
 Toggle Auto-Revert mode in all buffers.
 With prefix ARG, enable Magit-Auto-Revert mode if ARG is positive;
-otherwise, disable it.  If called from Lisp, enable the mode if
-ARG is omitted or nil.
+otherwise, disable it.  If called from Lisp, enable the mode if ARG is
+omitted or nil.
 
 Auto-Revert mode is enabled in all buffers where
 `magit-turn-on-auto-revert-mode-if-desired' would do it.
 
-See `auto-revert-mode' for more information on
-Auto-Revert mode.
+See `auto-revert-mode' for more information on Auto-Revert mode.
 
 \(fn &optional ARG)" t nil)
 
@@ -302,7 +293,7 @@ changes.
 
 \(git checkout REVISION).
 
-\(fn REVISION)" t nil)
+\(fn REVISION &optional ARGS)" t nil)
 
 (autoload 'magit-branch-create "magit-branch" "\
 Create BRANCH at branch or revision START-POINT.
@@ -312,7 +303,7 @@ Create BRANCH at branch or revision START-POINT.
 (autoload 'magit-branch-and-checkout "magit-branch" "\
 Create and checkout BRANCH at branch or revision START-POINT.
 
-\(fn BRANCH START-POINT)" t nil)
+\(fn BRANCH START-POINT &optional ARGS)" t nil)
 
 (autoload 'magit-branch-or-checkout "magit-branch" "\
 Hybrid between `magit-checkout' and `magit-branch-and-checkout'.
@@ -589,13 +580,18 @@ Create a squash commit targeting COMMIT and instantly rebase.
 (autoload 'magit-commit-reshelve "magit-commit" "\
 Change the committer date and possibly the author date of `HEAD'.
 
-If you are the author of `HEAD', then both dates are changed,
-otherwise only the committer date.  The current time is used
-as the initial minibuffer input and the original author (if
-that is you) or committer date is available as the previous
+The current time is used as the initial minibuffer input and the
+original author or committer date is available as the previous
 history element.
 
-\(fn DATE)" t nil)
+Both the author and the committer dates are changes, unless one
+of the following is true, in which case only the committer date
+is updated:
+- You are not the author of the commit that is being reshelved.
+- The command was invoked with a prefix argument.
+- Non-interactively if UPDATE-AUTHOR is nil.
+
+\(fn DATE UPDATE-AUTHOR &optional ARGS)" t nil)
 
 (autoload 'magit-commit-absorb-modules "magit-commit" "\
 Spread modified modules across recent commits.
@@ -942,7 +938,11 @@ on.
 This command is only intended for interactive use and should only
 be used on highly rearranged and unpublished history.
 
-\(fn REV)" t nil)
+If KEYID is non-nil, then use that to sign all reshelved commits.
+Interactively use the value of the \"--gpg-sign\" option in the
+list returned by `magit-rebase-arguments'.
+
+\(fn REV KEYID)" t nil)
 
 (autoload 'magit-pop-revision-stack "magit-extras" "\
 Insert a representation of a revision into the current buffer.
@@ -1143,8 +1143,8 @@ repository.  Also stage the file.
 \(fn RULE)" t nil)
 
 (autoload 'magit-gitignore-in-subdir "magit-gitignore" "\
-Add the Git ignore RULE to a \".gitignore\" file.
-Prompted the user for a directory and add the rule to the
+Add the Git ignore RULE to a \".gitignore\" file in DIRECTORY.
+Prompt the user for a directory and add the rule to the
 \".gitignore\" file in that directory.  Since such files are
 tracked, they are shared with other clones of the repository.
 Also stage the file.
@@ -1467,7 +1467,7 @@ Abort the current merge operation.
 ;;;### (autoloads nil "magit-mode" "magit-mode.el" (0 0 0 0))
 ;;; Generated autoloads from magit-mode.el
 
-(register-definition-prefixes "magit-mode" '("disable-magit-save-buffers" "inhibit-magit-refresh" "magit-"))
+(register-definition-prefixes "magit-mode" '("disable-magit-save-buffers" "magit-"))
 
 ;;;***
 
@@ -1797,13 +1797,6 @@ With a prefix argument reset the working tree otherwise don't.
 \(fn COMMIT &optional HARD)" t nil)
 
 (register-definition-prefixes "magit-reset" '("magit-reset-"))
-
-;;;***
-
-;;;### (autoloads nil "magit-section" "magit-section.el" (0 0 0 0))
-;;; Generated autoloads from magit-section.el
-
-(register-definition-prefixes "magit-section" '("isearch-clean-overlays@magit-mode" "magit-"))
 
 ;;;***
 
@@ -2357,6 +2350,9 @@ If called from Lisp, toggle the mode if ARG is `toggle'.  Enable
 the mode if ARG is nil, omitted, or is a positive number.
 Disable the mode if ARG is a negative number.
 
+To check whether the minor mode is enabled in the current buffer,
+evaluate `(default-value 'magit-wip-mode)'.
+
 The mode's hook is called both when the mode is enabled and when
 it is disabled.
 
@@ -2385,9 +2381,9 @@ or call the function `magit-wip-after-save-mode'.")
 
 (autoload 'magit-wip-after-save-mode "magit-wip" "\
 Toggle Magit-Wip-After-Save-Local mode in all buffers.
-With prefix ARG, enable Magit-Wip-After-Save mode if ARG is positive;
-otherwise, disable it.  If called from Lisp, enable the mode if
-ARG is omitted or nil.
+With prefix ARG, enable Magit-Wip-After-Save mode if ARG is
+positive; otherwise, disable it.  If called from Lisp, enable the mode if ARG
+is omitted or nil.
 
 Magit-Wip-After-Save-Local mode is enabled in all buffers where
 `magit-wip-after-save-local-mode-turn-on' would do it.
@@ -2414,6 +2410,9 @@ zero or negative, disable the mode.
 If called from Lisp, toggle the mode if ARG is `toggle'.  Enable
 the mode if ARG is nil, omitted, or is a positive number.
 Disable the mode if ARG is a negative number.
+
+To check whether the minor mode is enabled in the current buffer,
+evaluate `(default-value 'magit-wip-after-apply-mode)'.
 
 The mode's hook is called both when the mode is enabled and when
 it is disabled.
@@ -2444,6 +2443,9 @@ zero or negative, disable the mode.
 If called from Lisp, toggle the mode if ARG is `toggle'.  Enable
 the mode if ARG is nil, omitted, or is a positive number.
 Disable the mode if ARG is a negative number.
+
+To check whether the minor mode is enabled in the current buffer,
+evaluate `(default-value 'magit-wip-before-change-mode)'.
 
 The mode's hook is called both when the mode is enabled and when
 it is disabled.

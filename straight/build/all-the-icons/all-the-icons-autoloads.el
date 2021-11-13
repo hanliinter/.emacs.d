@@ -1,4 +1,4 @@
-;;; all-the-icons-autoloads.el --- automatically extracted autoloads
+;;; all-the-icons-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 

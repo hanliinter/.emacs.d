@@ -1,4 +1,4 @@
-;;; eglot-autoloads.el --- automatically extracted autoloads
+;;; eglot-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -33,12 +33,17 @@ CONTACT specifies how to contact the server.  It is a
 keyword-value plist used to initialize CLASS or a plain list as
 described in `eglot-server-programs', which see.
 
+LANGUAGE-ID is the language ID string to send to the server for
+MANAGED-MAJOR-MODE, which matters to a minority of servers.
+
 INTERACTIVE is t if called interactively.
 
-\(fn MANAGED-MAJOR-MODE PROJECT CLASS CONTACT &optional INTERACTIVE)" t nil)
+\(fn MANAGED-MAJOR-MODE PROJECT CLASS CONTACT LANGUAGE-ID &optional INTERACTIVE)" t nil)
 
 (autoload 'eglot-ensure "eglot" "\
 Start Eglot session for current buffer if there isn't one." nil nil)
+
+(put 'eglot-workspace-configuration 'safe-local-variable 'listp)
 
 (register-definition-prefixes "eglot" '("eglot-"))
 

@@ -1,4 +1,4 @@
-;;; xref-autoloads.el --- automatically extracted autoloads
+;;; xref-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 

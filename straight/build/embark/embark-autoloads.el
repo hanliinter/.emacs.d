@@ -1,4 +1,4 @@
-;;; embark-autoloads.el --- automatically extracted autoloads
+;;; embark-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -12,6 +12,22 @@ We record this because it will be the default action.
 This function is meant to be added to `minibuffer-setup-hook'." (setq-local embark--command this-command))
 
 (add-hook 'minibuffer-setup-hook #'embark--record-this-command)
+
+(autoload 'embark-prefix-help-command "embark" "\
+Prompt for and run a command bound in the prefix used to reach this command.
+The prefix described consists of all but the last event of the
+key sequence that ran this command.  This function is intended to
+be used as a value for `prefix-help-command'.
+
+In addition to using completion to select a command, you can also
+type @ and the key binding (without the prefix)." t nil)
+
+(autoload 'embark-bindings "embark" "\
+Explore all current command key bindings with `completing-read'.
+The selected command will be executed.  The set of key bindings can
+be restricted by passing a PREFIX key.
+
+\(fn &optional PREFIX)" t nil)
 
 (autoload 'embark-act "embark" "\
 Prompt the user for an action and perform it.
@@ -32,10 +48,24 @@ ARG is the prefix argument.
 
 \(fn &optional ARG)" t nil)
 
+(autoload 'embark-default-action "embark" "\
+Run the default action on the current target.
+The target of the action is chosen by `embark-target-finders'.
+
+If the target comes from minibuffer completion, then the default
+action is the command that opened the minibuffer in the first
+place, unless overidden by `embark-default-action-overrides'.
+
+For targets that do not come from minibuffer completion
+\(typically some thing at point in a regular buffer) and whose
+type is not listed in `embark-default-action-overrides', the
+default action is given by whatever binding RET has in the action
+keymap for the target's type." t nil)
+
 (autoload 'embark-become "embark" "\
 Make current command become a different command.
 Take the current minibuffer input as initial input for new
-command.  The new command can be run normally using keybindings or
+command.  The new command can be run normally using key bindings or
 \\[execute-extended-command], but if the current command is found in a keymap in
 `embark-become-keymaps', that keymap is activated to provide
 convenient access to the other commands in it.

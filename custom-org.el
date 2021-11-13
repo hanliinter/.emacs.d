@@ -73,6 +73,16 @@
 (use-package org-download
   :straight t)
 
+;; Drag-and-drop to `dired`
+(add-hook 'dired-mode-hook 'org-download-enable)
+
+(use-package org-roam
+  :straight t)
+
+
+(setq org-roam-directory "~/Org/RoamNotes")
+(setq org-roam-v2-ack t)
+
 (use-package org-journal
   :straight t)
 
@@ -90,7 +100,13 @@
   :config
   (setq org-fancy-priorities-list '("⚡" "⬆" "⬇" "☕")))
 
-(setq org-fancy-priorities-list '((?A . "❗")
+
+
+(with-eval-after-load 'org
+  ;; here goes your Org config :)
+  ;; ....
+
+  (setq org-fancy-priorities-list '((?A . "❗")
                                   (?B . "⬆")
                                   (?C . "⬇")
                                   (?D . "☕")
@@ -100,14 +116,14 @@
                                   (?4 . "☕")
                                   (?I . "Important")))
 
-(setq org-agenda-files (quote ("~/Org/Inbox.org" "~/Org/Projects")))
+(setq org-agenda-files (quote ("~/Org/Inbox.org" "~/Org/Projects.org" )))
 
 (setq org-use-fast-todo-selection t)
 ;; TODO List
 
 (setq org-todo-keywords
       (quote ((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d)")
-              (sequence "WAITING(w@/!)" "HOLD(h@/!)" "|" "CANCELLED(c@/!)" "PHONE" "MEETING"))))
+              (sequence "BACKLOG(b)" "PLAN(p)" "READY(r)" "ACTIVE(a)" "REVIEW(v)" "WAITING(w@/!)" "HOLD(h@/!)" "|" "CANCELLED(c@/!)" "COMPLETED(c)" "PHONE" "MEETING"))))
 
 
 ;; TODO state changes with tags
@@ -120,6 +136,25 @@
               ("TODO" ("WAITING") ("CANCELLED") ("HOLD"))
               ("NEXT" ("WAITING") ("CANCELLED") ("HOLD"))
               ("DONE" ("WAITING") ("CANCELLED") ("HOLD")))))
+
+
+;; Tag list
+(setq org-tag-alist
+    '((:startgroup)
+       ; Put mutually exclusive tags here
+       (:endgroup)
+       ("@errand" . ?E)
+       ("@home" . ?H)
+       ("@Mac" . ?M)
+       ("@Nirvana" . ?Z)
+       ("@work" . ?W)
+       ("agenda" . ?a)
+       ("planning" . ?p)
+       ("publish" . ?P)
+       ("batch" . ?b)
+       ("note" . ?n)
+       ("concept" . ?c)
+       ("idea" . ?i)))
 
 ;; refile
 
@@ -155,6 +190,51 @@
 
       )
 
+(advice-add 'org-refile :after 'org-save-all-org-buffers)
+
 (setq org-refile-use-outline-path 'file)
 (setq org-outline-path-complete-in-steps nil)
+
+;; Show all future entries for repeating tasks
+(setq org-agenda-repeating-timestamp-show-all t)
+
+;; Show all agenda dates - even if they are empty
+(setq org-agenda-show-all-dates t)
+
+
+(setq org-log-done 'time)
+(setq org-log-into-drawer t)
+
+;; Start the weekly agenda on Sonday
+(setq org-agenda-start-on-weekday 7)
+(setq org-agenda-start-with-log-mode t)
+
+;; Keep tasks with dates on the global todo lists
+(setq org-agenda-todo-ignore-with-date nil)
+
+;; Keep tasks with deadlines on the global todo lists
+(setq org-agenda-todo-ignore-deadlines nil)
+
+;; Keep tasks with scheduled dates on the global todo lists
+(setq org-agenda-todo-ignore-scheduled nil)
+
+;; Keep tasks with timestamps on the global todo lists
+(setq org-agenda-todo-ignore-timestamp nil)
+
+;; Remove completed deadline tasks from the agenda view
+(setq org-agenda-skip-deadline-if-done t)
+
+
+;; Remove completed scheduled tasks from the agenda view
+(setq org-agenda-skip-scheduled-if-done t)
+
+;; Remove completed items from search results
+(setq org-agenda-skip-timestamp-if-done t)
+
+  
+  )
+
+
+
+
 

@@ -1,4 +1,4 @@
-;;; doom-themes-autoloads.el --- automatically extracted autoloads
+;;; doom-themes-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -465,9 +465,9 @@ Includes an Atom-esque icon theme and highlighting based on filetype." nil nil)
 ;;; Generated autoloads from doom-themes-ext-org.el
 
 (autoload 'doom-themes-org-config "doom-themes-ext-org" "\
-Enable custom fontification & improves theme integration with org-mode." nil nil)
+Load `doom-themes-ext-org'." nil nil)
 
-(register-definition-prefixes "doom-themes-ext-org" '("doom-"))
+(register-definition-prefixes "doom-themes-ext-org" '("doom-themes-"))
 
 ;;;***
 

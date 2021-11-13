@@ -1,4 +1,4 @@
-;;; markdown-mode-autoloads.el --- automatically extracted autoloads
+;;; markdown-mode-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -38,6 +38,9 @@ zero or negative, disable the mode.
 If called from Lisp, toggle the mode if ARG is `toggle'.  Enable
 the mode if ARG is nil, omitted, or is a positive number.
 Disable the mode if ARG is a negative number.
+
+To check whether the minor mode is enabled in the current buffer,
+evaluate `markdown-live-preview-mode'.
 
 The mode's hook is called both when the mode is enabled and when
 it is disabled.

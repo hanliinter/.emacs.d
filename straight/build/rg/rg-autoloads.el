@@ -1,4 +1,4 @@
-;;; rg-autoloads.el --- automatically extracted autoloads
+;;; rg-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
@@ -150,7 +150,7 @@ List all `rg-mode' buffers in `ibuffer'." t nil)
  (autoload 'rg-isearch-current-dir "rg-isearch.el" "" t)
  (autoload 'rg-isearch-project "rg-isearch.el" "" t)
 
-(register-definition-prefixes "rg-isearch" '("rg-"))
+(register-definition-prefixes "rg-isearch" '("rg-get-isearch-string"))
 
 ;;;***
 
@@ -164,7 +164,7 @@ If prefix is not supplied `rg-keymap-prefix' is used.
 
 \(fn &optional PREFIX)" t nil)
 
-(register-definition-prefixes "rg-menu" '("rg-menu"))
+(register-definition-prefixes "rg-menu" '("rg-menu-"))
 
 ;;;***
 

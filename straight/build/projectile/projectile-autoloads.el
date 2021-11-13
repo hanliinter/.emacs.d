@@ -1,4 +1,4 @@
-;;; projectile-autoloads.el --- automatically extracted autoloads
+;;; projectile-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
