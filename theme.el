@@ -18,6 +18,13 @@
 
 (load-theme 'modus-vivendi t)
 
+(use-package modus-themes
+  :config
+  (modus-themes-load-vivendi)
+  :init
+  (modus-themes-load-themes)
+  :straight t)
+
 (use-package all-the-icons
   :straight t)
 
@@ -50,3 +57,7 @@
   ((string-equal system-type "gnu/linux")
    (cond
     ((member "WenQuanYi Micro Hei" (font-family-list)) "WenQuanYi Micro Hei")))))
+
+
+(modus-themes-load-themes)
+(modus-themes-load-vivendi)

@@ -6,7 +6,16 @@
   :custom-face (org-ellipsis ((t (:foreground nil))))
   :bind (("C-c a" . org-agenda)
          ("C-c b" . org-switchb)
-         ("C-c x" . org-capture))
+         ("C-c x" . org-capture)
+         ;; :map org-mode-map
+         ;; ("<" . (lambda ()
+         ;;          "Insert org template."
+         ;;          (interactive)
+         ;;          (if (or (region-active-p) (looking-back "^\s*" 1))
+         ;;              (org-hydra/body)
+         ;;            (self-insert-command 1))))
+
+	 )
   :hook (((org-babel-after-execute org-mode) . org-redisplay-inline-images) ; display image
          (org-mode . (lambda ()
                        "Beautify org symbols."
@@ -19,16 +28,30 @@
   )
 
 
-  (setq org-structure-template-alist
-	'(("s" . "src")
-          ("E" . "src emacs-lisp")
-          ("e" . "example")
-          ("q" . "quote")
-          ("v" . "verse")
-          ("V" . "verbatim")
-          ("c" . "center")
-          ("C" . "comment"))
-	)
+;; (defun try-expand
+
+;;   ("s" (hot-expand "<s"))
+;;   ("e" (hot-expand "<e"))
+;;   ("q" (hot-expand "<q"))
+;;   ("v" (hot-expand "<v"))
+;;   ("c" (hot-expand "<c"))
+;;   ("l" (hot-expand "<l"))
+;;   ("h" (hot-expand "<h"))
+;;   ("a" (hot-expand "<a"))
+;;   ("L" (hot-expand "<L"))
+;;   ("i" (hot-expand "<i"))
+;;   ("I" (hot-expand "<I"))
+;;   ("H" (hot-expand "<H"))
+;;   ("A" (hot-expand "<A"))
+;;   ("<" self-insert-command "ins")
+;;   ("o" nil "quit"))
+
+;; (defun hot-expand (str)
+;;   "Expand org template."
+;;   (insert str)
+;;   (org-try-structure-completion))
+
+
 (use-package babel
   :straight t)
 
@@ -50,6 +73,16 @@
 (use-package org-download
   :straight t)
 
+;; Drag-and-drop to `dired`
+(add-hook 'dired-mode-hook 'org-download-enable)
+
+(use-package org-roam
+  :straight t)
+
+
+(setq org-roam-directory "~/Org/RoamNotes")
+(setq org-roam-v2-ack t)
+
 (use-package org-journal
   :straight t)
 
@@ -67,7 +100,13 @@
   :config
   (setq org-fancy-priorities-list '("⚡" "⬆" "⬇" "☕")))
 
-(setq org-fancy-priorities-list '((?A . "❗")
+
+
+(with-eval-after-load 'org
+  ;; here goes your Org config :)
+  ;; ....
+
+  (setq org-fancy-priorities-list '((?A . "❗")
                                   (?B . "⬆")
                                   (?C . "⬇")
                                   (?D . "☕")
@@ -77,14 +116,14 @@
                                   (?4 . "☕")
                                   (?I . "Important")))
 
-(setq org-agenda-files (quote ("~/Org/Inbox.org" "~/Org/Projects")))
+(setq org-agenda-files (quote ("~/Org/Inbox.org" "~/Org/Projects.org" )))
 
 (setq org-use-fast-todo-selection t)
 ;; TODO List
 
 (setq org-todo-keywords
       (quote ((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d)")
-              (sequence "WAITING(w@/!)" "HOLD(h@/!)" "|" "CANCELLED(c@/!)" "PHONE" "MEETING"))))
+              (sequence "BACKLOG(b)" "PLAN(p)" "READY(r)" "ACTIVE(a)" "REVIEW(v)" "WAITING(w@/!)" "HOLD(h@/!)" "|" "CANCELLED(c@/!)" "COMPLETED(c)" "PHONE" "MEETING"))))
 
 
 ;; TODO state changes with tags
@@ -97,6 +136,25 @@
               ("TODO" ("WAITING") ("CANCELLED") ("HOLD"))
               ("NEXT" ("WAITING") ("CANCELLED") ("HOLD"))
               ("DONE" ("WAITING") ("CANCELLED") ("HOLD")))))
+
+
+;; Tag list
+(setq org-tag-alist
+    '((:startgroup)
+       ; Put mutually exclusive tags here
+       (:endgroup)
+       ("@errand" . ?E)
+       ("@home" . ?H)
+       ("@Mac" . ?M)
+       ("@Nirvana" . ?Z)
+       ("@work" . ?W)
+       ("agenda" . ?a)
+       ("planning" . ?p)
+       ("publish" . ?P)
+       ("batch" . ?b)
+       ("note" . ?n)
+       ("concept" . ?c)
+       ("idea" . ?i)))
 
 ;; refile
 
@@ -132,23 +190,51 @@
 
       )
 
+(advice-add 'org-refile :after 'org-save-all-org-buffers)
+
 (setq org-refile-use-outline-path 'file)
 (setq org-outline-path-complete-in-steps nil)
-;; Org-roam
 
-(use-package org-roam
-  :ensure t
-  :straight t
-      :custom
-      (org-roam-directory (file-truename "~/Org/roam"))
-      :bind (("C-c n l" . org-roam-buffer-toggle)
-             ("C-c n f" . org-roam-node-find)
-             ("C-c n g" . org-roam-graph)
-             ("C-c n i" . org-roam-node-insert)
-             ("C-c n c" . org-roam-capture)
-             ;; Dailies
-             ("C-c n j" . org-roam-dailies-capture-today))
-      :config
-      (org-roam-db-autosync-mode)
-      ;; If using org-roam-protocol
-      (require 'org-roam-protocol))
+;; Show all future entries for repeating tasks
+(setq org-agenda-repeating-timestamp-show-all t)
+
+;; Show all agenda dates - even if they are empty
+(setq org-agenda-show-all-dates t)
+
+
+(setq org-log-done 'time)
+(setq org-log-into-drawer t)
+
+;; Start the weekly agenda on Sonday
+(setq org-agenda-start-on-weekday 7)
+(setq org-agenda-start-with-log-mode t)
+
+;; Keep tasks with dates on the global todo lists
+(setq org-agenda-todo-ignore-with-date nil)
+
+;; Keep tasks with deadlines on the global todo lists
+(setq org-agenda-todo-ignore-deadlines nil)
+
+;; Keep tasks with scheduled dates on the global todo lists
+(setq org-agenda-todo-ignore-scheduled nil)
+
+;; Keep tasks with timestamps on the global todo lists
+(setq org-agenda-todo-ignore-timestamp nil)
+
+;; Remove completed deadline tasks from the agenda view
+(setq org-agenda-skip-deadline-if-done t)
+
+
+;; Remove completed scheduled tasks from the agenda view
+(setq org-agenda-skip-scheduled-if-done t)
+
+;; Remove completed items from search results
+(setq org-agenda-skip-timestamp-if-done t)
+
+  
+  )
+
+
+
+
+

@@ -8,8 +8,7 @@ straight/
 /server/
 .projectile
 .dir-locals.el
-
-*.desktop
-*.lock
-eln-cache/
 rime/
+elpa/
+var/
+transient/
