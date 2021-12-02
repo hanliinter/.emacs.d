@@ -8,6 +8,6 @@ straight/
 /server/
 .projectile
 .dir-locals.el
-
+elpa/
 *.desktop
 *.lock
