@@ -45,3 +45,10 @@
   (setq terminal-configuration-file "~/.emacs.d/terminal.el")
   (load-file terminal-configuration-file)
   )
+
+(setenv "PATH" (concat (getenv "HOME") "/.local/bin:" "/usr/local/bin:" (getenv "PATH")))
+(setq exec-path
+      (reverse
+       (append
+        (reverse exec-path)
+        (list (concat (getenv "HOME") "/.local/bin")  "/usr/local/bin" ))))

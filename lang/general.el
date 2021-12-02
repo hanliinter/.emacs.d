@@ -8,7 +8,10 @@
 
 
 (use-package rustic
-  :straight t)
+  :straight t
+  :config
+  (setq rustic-lsp-client 'eglot)
+  )
 
 
 ;; M-s s 
@@ -64,3 +67,7 @@
        (add-hook 'caml-mode-hook 'merlin-mode t)
        ;; Use opam switch to lookup ocamlmerlin binary
        (setq merlin-command 'opam)))
+
+
+ (add-to-list 'load-path "/home/hanli/.opam/4.13.1/share/emacs/site-lisp")
+     (require 'ocp-indent)

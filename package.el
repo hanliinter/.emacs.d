@@ -11,8 +11,7 @@
   :straight t
   :config
 
-  (when (memq window-system '(mac ns x))
-  (exec-path-from-shell-initialize))
+  (exec-path-from-shell-initialize)
   )
 
 (use-package yasnippet
@@ -35,7 +34,7 @@
   :commands company-cancel
   :bind (("M-/" . company-complete)
          ("C-M-i" . company-complete)
-         :map company-mode-map
+       :map company-mode-map
          ("<backtab>" . company-yasnippet)
          :map company-active-map
          ("C-p" . company-select-previous)
@@ -63,6 +62,9 @@
   )
 :config (setq company-show-numbers t)
 
+(use-package company-box
+  :straight t
+  :hook (company-mode . company-box-mode))
 
   ;; (defun my-company-yasnippet ()
   ;;   "Hide the current completeions and show snippets."
@@ -421,3 +423,30 @@ FACE defaults to inheriting from default and highlight."
 
 (use-package citre
   :straight t)
+
+
+(use-package winner
+  :straight t
+  :bind (("M-<left>" . winner-undo)
+         ("M-<right>" . winner-redo))
+  :config
+  (winner-mode t))
+
+(use-package popper
+  :straight t
+  :bind (("C-x C-`" . popper-toggle-latest)
+         ("M-`" . popper-cycle)
+         ("C-M-`" . popper-toggle-type))
+  :init
+  (setq popper-reference-buffers
+        '("\\*Messages\\*"
+          "Output\\*$"
+          "\\*Apropos\\*"
+	  "\\*Backtrace\\*"
+          ("\\*Async Shell Command\\*" . hide)
+          help-mode
+          compilation-mode
+          "\\*org-roam\\*"
+          ))
+  (popper-mode +1)
+  (popper-echo-mode +1))

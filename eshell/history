@@ -1,0 +1,13 @@
+eix ccls
+emerge dev-util/ccls
+sudo emerge dev-util/ccls
+ccls
+echo $PATH
+echo $PATH
+echo $PATH
+echo $PATH
+echo $PATH
+echo $PATH
+echo $PATH
+echo $PATH
+echo $PATH

@@ -1,0 +1,67 @@
+;; -*- mode: emacs-lisp; lexical-binding:t; coding: utf-8-emacs; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Thu Dec  2 20:25:19 2021
+;; Desktop file format version 208
+;; Emacs version 28.0.50
+
+;; Global section:
+(setq desktop-saved-frameset [frameset 1 (25001 7583 775991 981000) (desktop . "208") "hanli@NirvanaZ" nil nil ((((minibuffer . t) (undecorated) (override-redirect) (font . "-????-Sarasa Mono SC-normal-normal-normal-*-21-*-*-*-*-0-iso10646-1") (font-parameter . "Sarasa Mono SC-16") (border-width . 0) (internal-border-width . 0) (child-frame-border-width) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars) (horizontal-scroll-bars) (foreground-color . "#ffffff") (background-color . "#000000") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 8) (right-fringe . 8) (no-special-glyphs) (scroll-bar-foreground . "white") (scroll-bar-background) (menu-bar-lines . 0) (tab-bar-lines . 0) (tool-bar-lines . 0) (title) (wait-for-wm . t) (tool-bar-position . top) (inhibit-double-buffering) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 16) (scroll-bar-height . 16) (alpha) (no-focus-on-map) (no-accept-focus) (fullscreen . maximized) (visibility . t) (skip-taskbar) (z-group) (display-type . color) (background-mode . dark) (cursor-color . "#ffffff") (environment) (last-focus-update . t) (frameset--id . "465E-3CEF-3A49-4BC9") (frameset--mini t . t) (modeline . t) (unsplittable) (icon-name) (display . ":0") (explicit-name) (height . 39) (width . 172) (left . 0) (top . 24)) ((min-height . 8) (min-width . 20) (min-height-ignore . 6) (min-width-ignore . 8) (min-height-safe . 2) (min-width-safe . 4) (min-pixel-height . 216) (min-pixel-width . 220) (min-pixel-height-ignore . 162) (min-pixel-width-ignore . 88) (min-pixel-height-safe . 54) (min-pixel-width-safe . 44)) vc (pixel-width . 1916) (pixel-height . 1037) (total-width . 174) (total-height . 38) (normal-height . 1.0) (normal-width . 1.0) (combination-limit) (hc (pixel-width . 1916) (pixel-height . 686) (total-width . 174) (total-height . 25) (normal-height . 0.6562198649951784) (normal-width . 1.0) (combination-limit) (leaf (pixel-width . 959) (pixel-height . 686) (total-width . 87) (total-height . 25) (normal-height . 1.0) (normal-width . 0.5) (buffer "package.el" (selected . t) (hscroll . 0) (fringes 8 8 nil nil) (margins nil) (scroll-bars nil 0 t nil 0 t nil) (vscroll . 0) (dedicated) (point . 16094) (start . 15626)) (prev-buffers ("Markdown.hs" 1933 2159) ("init.el" 1 1496) ("*scratch*" 1 1))) (leaf (last . t) (pixel-width . 957) (pixel-height . 686) (total-width . 87) (total-height . 25) (normal-height . 1.0) (normal-width . 0.5) (buffer "COMMIT_EDITMSG" (selected) (hscroll . 0) (fringes 8 8 nil nil) (margins nil) (scroll-bars nil 0 t nil 0 t nil) (vscroll . 0) (dedicated) (point . 256) (start . 1)) (prev-buffers ("magit: src" 1 1) ("*Warnings*" 1 138)))) (leaf (last . t) (pixel-width . 1916) (pixel-height . 351) (total-width . 174) (total-height . 13) (normal-height . 0.34378013500482163) (normal-width . 1.0) (parameters (window-side . bottom) (window-slot . 1)) (buffer "*Messages*" (selected) (hscroll . 0) (fringes 8 8 nil nil) (margins nil) (scroll-bars nil 0 t nil 0 t nil) (vscroll . 0) (dedicated . side) (point . 3283) (start . 2763)))))])
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring nil)
+(setq regexp-search-ring nil)
+(setq register-alist nil)
+(setq file-name-history '("~/.emacs.d/package.el" "~/Codes/Projects/lhbg/src/" "~/.emacs.d/" "~/.emacs.d/init.el" "~/Codes/Projects/lhbg/src/Markdown.hs" "~/.emacs.d/init.el"))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 208
+  "/home/hanli/.emacs.d/package.el"
+  "package.el"
+  'emacs-lisp-mode
+  '(eldoc-mode override-global-mode company-mode popper-mode popper-echo-mode symbol-overlay-mode company-box-mode yas-minor-mode auto-revert-mode)
+  16094
+  '(1 nil)
+  nil
+  nil
+  '((buffer-display-time 25001 7581 226638 659000) (buffer-file-coding-system . prefer-utf-8-unix))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/hanli/Codes/Projects/lhbg/src/Markdown.hs"
+  "Markdown.hs"
+  'haskell-mode
+  '(eldoc-mode override-global-mode company-mode popper-mode popper-echo-mode flymake-mode symbol-overlay-mode company-box-mode yas-minor-mode auto-revert-mode interactive-haskell-mode)
+  2159
+  '(1714 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 25001 7543 951385 212000) (buffer-file-coding-system . undecided-unix))
+  '((mark-ring (1168 903 586 586 586 586 339 562 902 588 586 156 316 706 902 2159))))
+
+(desktop-create-buffer 208
+  "/home/hanli/Codes/Projects/lhbg/src/.git/COMMIT_EDITMSG"
+  "COMMIT_EDITMSG"
+  'text-mode
+  '(auto-fill-mode override-global-mode company-mode popper-mode popper-echo-mode company-box-mode yas-minor-mode with-editor-mode git-commit-mode)
+  256
+  '(256 nil)
+  nil
+  nil
+  '((buffer-display-time 25001 7581 226638 855000) (buffer-file-coding-system . undecided-unix))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/hanli/.emacs.d/init.el"
+  "init.el"
+  'emacs-lisp-mode
+  '(eldoc-mode override-global-mode company-mode popper-mode popper-echo-mode symbol-overlay-mode company-box-mode yas-minor-mode auto-revert-mode)
+  1496
+  '(1497 nil)
+  nil
+  nil
+  '((buffer-display-time 25001 7399 982103 738000) (buffer-file-coding-system . prefer-utf-8-unix))
+  '((mark-ring (1407 1497))))
+
