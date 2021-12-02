@@ -3,7 +3,23 @@
 (use-package multiple-cursors
   :straight t
   :bind (("C-c e e" . #'mc/edit-lines )
-         ("C-c e d" . #'mc/mark-all-dwim )))
+         ("C-c e d" . #'mc/mark-all-dwim )
+	 ("C->".      #'mc/mark-next-like-this)
+	 ("C-<".      #'mc/mark-previous-like-this)
+	 ("C-M-<".    #'mc/unmark-next-like-this)
+	 ("C-M->".    #'mc/unmark-previous-like-this)
+	 ("C-c C-<".  #'mc/mark-all-like-this)
+	 ))
+
+
+;; (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+;; (global-set-key (kbd "C->")         'mc/mark-next-like-this)
+;; (global-set-key (kbd "C-<")         'mc/mark-previous-like-this)
+;; (global-set-key (kbd "C-c C-<")     'mc/mark-all-like-this)
+;; (global-set-key (kbd "C-\"")        'mc/skip-to-next-like-this)
+;; (global-set-key (kbd "C-:")         'mc/skip-to-previous-like-this)
+
+
 
 (use-package expand-region
   :straight t
@@ -21,6 +37,25 @@
     (save-mark-and-excursion (duplicate-thing 1)))
   :bind (("C-c d" . duplicate-current-line)))
 
+;; Line Move Up & Down
+;; TOOD maybe should introduce an minor mode for line movements 
+(defun move-line-up ()
+  "Move up the current line."
+  (interactive)
+  (transpose-lines 1)
+  (forward-line -2)
+  (indent-according-to-mode))
+
+(defun move-line-down ()
+  "Move down the current line."
+  (interactive)
+  (forward-line 1)
+  (transpose-lines 1)
+  (forward-line -1)
+  (indent-according-to-mode))
+
+(global-set-key (kbd "C-s-n") 'move-line-down)
+(global-set-key (kbd "C-s-p") 'move-line-up)
 
 ;; Jumping
 
@@ -45,7 +80,6 @@
 ;;Emacs Close and backup
 (use-package restart-emacs
   :straight t
-  :bind ("C-x C-c" . restart-emacs)
   )
 
 (desktop-save-mode 1)
@@ -63,7 +97,7 @@
   :commands backup-walker-start)
 
 
-(defun ora-company-number ()
+(defun ora-compan-number ()
   "filter the num key if it is part of candidates."
   (interactive)
   (let* ((k (substring (this-command-keys) 0 ))
@@ -75,7 +109,7 @@
 	      (looking-back "[0-9]" (line-beginning-position)
 	      ))
 	   (self-insert-command 1)
-	 (company-complete-number (if (equal k "0")
+	 (company-complete-tooltip-row (if (equal k "0")
 				      10
 				    (string-to-number k)) )
 	   )
@@ -90,8 +124,19 @@
    (lambda (x)
      (define-key keymap (format "%d" x) 'ora-company-number))
    (number-sequence 0 9))
-  (define-key keymap (kbd "SPC") (lambda () (interactive) (company-abort)))
+  (define-key keymap (kbd "<return>") (lambda () (interactive) (company-abort)))
   ;(define-key map (kbd "<return>") nil)
   
+  )
+
+
+
+(menu-bar-mode -1)
+
+(use-package easy-kill
+  :straight t
+  :config 
+  (global-set-key [remap kill-ring-save] #'easy-kill)
+  (global-set-key [remap mark-sexp] #'easy-mark)
   )
 ;; themes

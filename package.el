@@ -4,12 +4,14 @@
 (use-package projectile
   :straight t)
 
+(add-to-list 'load-path "~/beancount-mode/")
+(require 'beancount)
+(add-to-list 'auto-mode-alist '("\\.beancount\\'" . beancount-mode))
 (use-package exec-path-from-shell
   :straight t
   :config
 
-  (when (memq window-system '(mac ns x))
-  (exec-path-from-shell-initialize))
+  (exec-path-from-shell-initialize)
   )
 
 (use-package yasnippet
@@ -32,7 +34,7 @@
   :commands company-cancel
   :bind (("M-/" . company-complete)
          ("C-M-i" . company-complete)
-         :map company-mode-map
+       :map company-mode-map
          ("<backtab>" . company-yasnippet)
          :map company-active-map
          ("C-p" . company-select-previous)
@@ -48,7 +50,7 @@
         company-tooltip-limit 12
         company-idle-delay 0
         company-echo-delay (if (display-graphic-p) nil 0)
-        company-minimum-prefix-length 1
+        company-minimum-prefix-length 3
         company-require-match nil
         company-dabbrev-ignore-case nil
         company-dabbrev-downcase nil
@@ -60,6 +62,9 @@
   )
 :config (setq company-show-numbers t)
 
+(use-package company-box
+  :straight t
+  :hook (company-mode . company-box-mode))
 
   ;; (defun my-company-yasnippet ()
   ;;   "Hide the current completeions and show snippets."
@@ -277,8 +282,8 @@ FACE defaults to inheriting from default and highlight."
   ;; locally in a let-binding.
   (defun find-fd (&optional dir initial)
     (interactive "P")
-    (let ((consult-find-command "fd --color=never --full-path ARG OPTS"))
-      (consult-find dir initial)))
+    (consult-find dir initial))
+  ;; TODO combine it with fzf / affel
 
   ;; Optionally configure the register formatting. This improves the register
   ;; preview for `consult-register', `consult-register-load',
@@ -388,7 +393,7 @@ FACE defaults to inheriting from default and highlight."
   ;; if you want to have consult previews as you move around an
   ;; auto-updating embark collect buffer
   :hook
-  (embark-collect-mode . embark-consult-preview-minor-mode))
+  (embark-collect-mode . consult-preview-at-point-mode))
 
 (use-package orderless
   :straight t
@@ -418,3 +423,30 @@ FACE defaults to inheriting from default and highlight."
 
 (use-package citre
   :straight t)
+
+
+(use-package winner
+  :straight t
+  :bind (("M-<left>" . winner-undo)
+         ("M-<right>" . winner-redo))
+  :config
+  (winner-mode t))
+
+(use-package popper
+  :straight t
+  :bind (("C-x C-`" . popper-toggle-latest)
+         ("M-`" . popper-cycle)
+         ("C-M-`" . popper-toggle-type))
+  :init
+  (setq popper-reference-buffers
+        '("\\*Messages\\*"
+          "Output\\*$"
+          "\\*Apropos\\*"
+	  "\\*Backtrace\\*"
+          ("\\*Async Shell Command\\*" . hide)
+          help-mode
+          compilation-mode
+          "\\*org-roam\\*"
+          ))
+  (popper-mode +1)
+  (popper-echo-mode +1))

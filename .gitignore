@@ -11,3 +11,7 @@ straight/
 elpa/
 *.desktop
 *.lock
+rime/
+elpa/
+var/
+transient/

@@ -75,14 +75,13 @@
 
 ;; Drag-and-drop to `dired`
 (add-hook 'dired-mode-hook 'org-download-enable)
-
+;;(setq org-default-directory "~/Org/")
 (use-package org-roam
   :straight t)
 
 
 (setq org-roam-directory "~/Org/RoamNotes")
 (setq org-roam-v2-ack t)
-
 (use-package org-journal
   :straight t)
 
@@ -116,8 +115,32 @@
                                   (?4 . "☕")
                                   (?I . "Important")))
 
-(setq org-agenda-files (quote ("~/Org/Inbox.org" "~/Org/Projects.org" )))
 
+;; refile
+
+(setq org-directory "~/Org/")
+(setq org-default-notes-file "~/Org/Refile.org")
+
+
+
+
+(setq org-agenda-files
+	(append (file-expand-wildcards (concat org-directory "*.org"))
+		(directory-files-recursively (concat org-directory "Daylog") org-agenda-file-regexp)
+    		(directory-files-recursively (concat org-directory "RoamNotes")org-agenda-file-regexp)
+		)
+		)
+
+
+
+;; (setq org-agenda-files
+;;       (append (file-expand-wildcards (concat org-default-directory "*.org"))
+;;               (file-expand-wildcards (concat org-shared-directory "*.org"))
+;;               (directory-files-recursively (concat org-default-directory "Projects") org-agenda-file-regexp)
+;;               (directory-files-recursively (concat org-default-directory "Teaching") org-agenda-file-regexp)
+;;               `(,(concat org-roam-directory "meetings.org")
+;;                 ,(concat org-roam-directory "calculations.org"))
+;;               ))
 (setq org-use-fast-todo-selection t)
 ;; TODO List
 
@@ -156,10 +179,6 @@
        ("concept" . ?c)
        ("idea" . ?i)))
 
-;; refile
-
-(setq org-directory "~/Org")
-(setq org-default-notes-file "~/Org/Refile.org")
 
 
 (setq org-capture-templates

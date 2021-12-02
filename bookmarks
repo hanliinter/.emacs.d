@@ -8,8 +8,8 @@
  (rear-context-string . "riable-file~).\n\n")
  (position . 6073))
 ("org-capture-last-stored"
- (filename . "~/Org/Notes.org")
- (front-context-string . "* Check with the")
- (rear-context-string)
- (position . 1))
+ (filename . "~/Org/Diary.org")
+ (front-context-string . "**** Haskell Sch")
+ (rear-context-string . "1-11-23 Tuesday\n")
+ (position . 55))
 )
