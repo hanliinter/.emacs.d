@@ -1,5 +1,9 @@
 var:
+<<<<<<< HEAD
   last_build_time: 1638918276
+=======
+  last_build_time: 1638462130
+>>>>>>> 4dfa133 (Use Popper,fixed org directory)
   previously_selected_schema: luna_pinyin_simp
   schema_access_time:
     luna_pinyin_simp: 1628965611

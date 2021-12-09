@@ -9,7 +9,13 @@
  (position . 6073))
 ("org-capture-last-stored"
  (filename . "~/Org/Diary.org")
+<<<<<<< HEAD
  (front-context-string . "**** 今天搜openBSD的")
  (rear-context-string . "12-08 Wednesday\n")
  (position . 263))
+=======
+ (front-context-string . "**** Haskell Sch")
+ (rear-context-string . "1-11-23 Tuesday\n")
+ (position . 55))
+>>>>>>> 4dfa133 (Use Popper,fixed org directory)
 )
