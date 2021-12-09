@@ -9,7 +9,7 @@
  (position . 6073))
 ("org-capture-last-stored"
  (filename . "~/Org/Diary.org")
- (front-context-string . "**** Haskell Sch")
- (rear-context-string . "1-11-23 Tuesday\n")
- (position . 55))
+ (front-context-string . "**** 今天搜openBSD的")
+ (rear-context-string . "12-08 Wednesday\n")
+ (position . 263))
 )

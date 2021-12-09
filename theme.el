@@ -37,7 +37,11 @@
     (set-frame-font "Menlo-14" t t)))
  ((string-equal system-type "gnu/linux") ; linux
   (when (member "Sarasa Mono SC" (font-family-list))
-    (set-frame-font "Sarasa Mono SC-16" t t))))
+    (set-frame-font "Sarasa Mono SC-16" t t)
+    (set-face-attribute 'default nil :font "Sarasa Mono SC-16")
+    (set-face-attribute 'fixed-pitch nil :font "Sarasa Mono SC-18")
+    (set-face-attribute 'variable-pitch nil :font "JetBrains Mono-18")
+    )))
 
 
 (set-fontset-font

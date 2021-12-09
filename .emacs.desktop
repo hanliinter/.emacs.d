@@ -2,66 +2,954 @@
 ;; --------------------------------------------------------------------------
 ;; Desktop File for Emacs
 ;; --------------------------------------------------------------------------
-;; Created Thu Dec  2 20:25:19 2021
+;; Created Thu Dec  9 00:20:51 2021
 ;; Desktop file format version 208
 ;; Emacs version 28.0.50
 
 ;; Global section:
-(setq desktop-saved-frameset [frameset 1 (25001 7583 775991 981000) (desktop . "208") "hanli@NirvanaZ" nil nil ((((minibuffer . t) (undecorated) (override-redirect) (font . "-????-Sarasa Mono SC-normal-normal-normal-*-21-*-*-*-*-0-iso10646-1") (font-parameter . "Sarasa Mono SC-16") (border-width . 0) (internal-border-width . 0) (child-frame-border-width) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars) (horizontal-scroll-bars) (foreground-color . "#ffffff") (background-color . "#000000") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 8) (right-fringe . 8) (no-special-glyphs) (scroll-bar-foreground . "white") (scroll-bar-background) (menu-bar-lines . 0) (tab-bar-lines . 0) (tool-bar-lines . 0) (title) (wait-for-wm . t) (tool-bar-position . top) (inhibit-double-buffering) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 16) (scroll-bar-height . 16) (alpha) (no-focus-on-map) (no-accept-focus) (fullscreen . maximized) (visibility . t) (skip-taskbar) (z-group) (display-type . color) (background-mode . dark) (cursor-color . "#ffffff") (environment) (last-focus-update . t) (frameset--id . "465E-3CEF-3A49-4BC9") (frameset--mini t . t) (modeline . t) (unsplittable) (icon-name) (display . ":0") (explicit-name) (height . 39) (width . 172) (left . 0) (top . 24)) ((min-height . 8) (min-width . 20) (min-height-ignore . 6) (min-width-ignore . 8) (min-height-safe . 2) (min-width-safe . 4) (min-pixel-height . 216) (min-pixel-width . 220) (min-pixel-height-ignore . 162) (min-pixel-width-ignore . 88) (min-pixel-height-safe . 54) (min-pixel-width-safe . 44)) vc (pixel-width . 1916) (pixel-height . 1037) (total-width . 174) (total-height . 38) (normal-height . 1.0) (normal-width . 1.0) (combination-limit) (hc (pixel-width . 1916) (pixel-height . 686) (total-width . 174) (total-height . 25) (normal-height . 0.6562198649951784) (normal-width . 1.0) (combination-limit) (leaf (pixel-width . 959) (pixel-height . 686) (total-width . 87) (total-height . 25) (normal-height . 1.0) (normal-width . 0.5) (buffer "package.el" (selected . t) (hscroll . 0) (fringes 8 8 nil nil) (margins nil) (scroll-bars nil 0 t nil 0 t nil) (vscroll . 0) (dedicated) (point . 16094) (start . 15626)) (prev-buffers ("Markdown.hs" 1933 2159) ("init.el" 1 1496) ("*scratch*" 1 1))) (leaf (last . t) (pixel-width . 957) (pixel-height . 686) (total-width . 87) (total-height . 25) (normal-height . 1.0) (normal-width . 0.5) (buffer "COMMIT_EDITMSG" (selected) (hscroll . 0) (fringes 8 8 nil nil) (margins nil) (scroll-bars nil 0 t nil 0 t nil) (vscroll . 0) (dedicated) (point . 256) (start . 1)) (prev-buffers ("magit: src" 1 1) ("*Warnings*" 1 138)))) (leaf (last . t) (pixel-width . 1916) (pixel-height . 351) (total-width . 174) (total-height . 13) (normal-height . 0.34378013500482163) (normal-width . 1.0) (parameters (window-side . bottom) (window-slot . 1)) (buffer "*Messages*" (selected) (hscroll . 0) (fringes 8 8 nil nil) (margins nil) (scroll-bars nil 0 t nil 0 t nil) (vscroll . 0) (dedicated . side) (point . 3283) (start . 2763)))))])
+(setq desktop-saved-frameset [frameset 1 (25009 15827 603254 77000) (desktop . "208") "hanli@NirvanaZ" nil nil ((((minibuffer . t) (undecorated) (override-redirect) (font . "-????-Sarasa Mono SC-normal-normal-normal-*-21-*-*-*-*-0-iso10646-1") (font-parameter . "-????-Sarasa Mono SC-normal-normal-normal-*-21-*-*-*-*-0-iso10646-1") (border-width . 0) (internal-border-width . 0) (child-frame-border-width) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars) (horizontal-scroll-bars) (foreground-color . "#ffffff") (background-color . "#000000") (mouse-color . "black") (border-color . "black") (screen-gamma) (line-spacing) (left-fringe . 8) (right-fringe . 8) (no-special-glyphs) (scroll-bar-foreground . "white") (scroll-bar-background) (menu-bar-lines . 0) (tab-bar-lines . 0) (tool-bar-lines . 0) (title) (wait-for-wm . t) (tool-bar-position . top) (inhibit-double-buffering) (icon-type . t) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 16) (scroll-bar-height . 16) (alpha) (no-focus-on-map) (no-accept-focus) (fullscreen . maximized) (visibility . icon) (skip-taskbar) (z-group) (display-type . color) (background-mode . dark) (cursor-color . "#ffffff") (environment) (last-focus-update) (frameset--id . "5DE8-42A5-18CD-019A") (frameset--mini t . t) (modeline . t) (unsplittable) (icon-name) (display . ":0") (explicit-name) (height . 78) (width . 345)) ((min-height . 4) (min-width . 20) (min-height-ignore . 3) (min-width-ignore . 8) (min-height-safe . 1) (min-width-safe . 4) (min-pixel-height . 108) (min-pixel-width . 220) (min-pixel-height-ignore . 81) (min-pixel-width-ignore . 88) (min-pixel-height-safe . 27) (min-pixel-width-safe . 44)) hc (pixel-width . 3816) (pixel-height . 2085) (total-width . 347) (total-height . 77) (normal-height . 1.0) (normal-width . 1.0) (combination-limit) (leaf (pixel-width . 1913) (pixel-height . 2085) (total-width . 174) (total-height . 77) (normal-height . 1.0) (normal-width . 0.5) (buffer ".Xdefaults" (selected . t) (hscroll . 0) (fringes 8 8 nil nil) (margins nil) (scroll-bars nil 0 t nil 0 t nil) (vscroll . 0) (dedicated) (point . 1722) (start . 1482)) (prev-buffers ("20211207163122-org_roam_capture.org" 1 1) (".Xdefaults" 1482 1722) ("20211120031848-mergesort.org" 1 1) ("20211119223139-gcd.org" 1 1) ("20211119121816-gcd.org" 1 1) ("20211113180807-shellsort.org" 1 1) ("20211113180738-shellsort.org" 1 1) ("2021-12-06.org" 1 1) ("2021-11-27.org" 1 1) ("2021-11-22.org" 1 1) ("2021-11-01.org" 1 1) ("2021-09-11.org" 1 1) ("2021-09-05.org" 1 1) ("2021-09-04.org" 1 1) ("2021-08-29.org" 1 1) ("2021-08-27.org" 1 1) ("2020-12-28.org" 1 1) ("2020-08-16.org" 1 1) ("2020-08-11.org" 1 1) ("zfs.org" 1 1) ("work-after-office-hour.org" 1 1) ("todo.org" 1 1) ("reset-emacs-to-doom.org" 1 1) ("refile.org" 1 1) ("org.org" 1 1) ("orders.org" 1 1) ("learn-X-languange.org" 1 1) ("kubernets.org" 1 1) ("journal.org" 1 1) ("future_promise.org" 1 1) ("first-month-in-NL.org" 1 1) ("enhanceEmacsExp.org" 1 1) ("dotspacemacs.org" 1 1) ("c++_core_rules.org" 1 1) ("build-your-own.org" 1 1) ("braveClojure.org" 1 1) ("WASM.org" 1 1) ("Ultralearning.org" 1 1) ("Tmux.org" 1 1) ("SICP.org" 1 1) ("Refile.org" 1 1) ("Projects.org" 1 1) ("Programming_Algorithm_Lisp.org" 1 1) ("ProGit.org" 1 1) ("PracticalOCaml.org" 1 1) ("Personal.org" 1 1) ("Parallel_and_Concurrent_Programming_in_Haskell.org" 1 1) ("Orgnazie_Your_Life_In_Plain_Text.org" 1 1) ("OmniFocus_Org.org" 1 1) ("Nvidia-docker.org" 1 1) ("Notes.org" 1 1) ("Note-scratch.org" 1 1) ("Next.org" 1 1) ("MordenCppChallenge.org" 1 1) ("Magit.org" 1 1) ("LearningHaskell.org" 1 1) ("Learn-Compiler.org" 1 1) ("Journal.org" 1 1) ("Inbox.org" 1 1) ("HaskellPhasebook.org" 1 1) ("HashFunctions.org" 1 1) ("Gentoo.org" 1 1) ("Editing.org" 1 1) ("DeepLearning.org" 1 1) ("Day-one.org" 1 1) ("CraftingInterpreters.org" 1 1) ("CppFinancialProgramming.org" 1 1) ("Comman_concurrency_patterns_in_Elixir_and_Erlang.org" 1 1) ("Ceph.org" 1 1) (".zshrc" 1 1038) ("*scratch*" 1 1))) (leaf (last . t) (pixel-width . 1903) (pixel-height . 2085) (total-width . 173) (total-height . 77) (normal-height . 1.0) (normal-width . 0.5) (buffer "*Warnings*" (selected) (hscroll . 0) (fringes 8 8 nil nil) (margins nil) (scroll-bars nil 0 t nil 0 t nil) (vscroll . 0) (dedicated) (point . 1051) (start . 1)))))])
 (setq desktop-missing-file-warning nil)
 (setq tags-file-name nil)
 (setq tags-table-list nil)
 (setq search-ring nil)
 (setq regexp-search-ring nil)
 (setq register-alist nil)
-(setq file-name-history '("~/.emacs.d/package.el" "~/Codes/Projects/lhbg/src/" "~/.emacs.d/" "~/.emacs.d/init.el" "~/Codes/Projects/lhbg/src/Markdown.hs" "~/.emacs.d/init.el"))
+(setq file-name-history '("~/.zshrc" "~/.Xdefaults"))
 
 ;; Buffer section -- buffers listed in same order as in buffer list:
 (desktop-create-buffer 208
-  "/home/hanli/.emacs.d/package.el"
-  "package.el"
-  'emacs-lisp-mode
-  '(eldoc-mode override-global-mode company-mode popper-mode popper-echo-mode symbol-overlay-mode company-box-mode yas-minor-mode auto-revert-mode)
-  16094
-  '(1 nil)
+  "/home/hanli/.Xdefaults"
+  ".Xdefaults"
+  'conf-xdefaults-mode
+  '(override-global-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode company-box-mode)
+  1722
+  '(1721 nil)
   nil
   nil
-  '((buffer-display-time 25001 7581 226638 659000) (buffer-file-coding-system . prefer-utf-8-unix))
+  '((buffer-display-time 25009 15788 568833 761000) (buffer-file-coding-system . undecided-unix))
+  '((mark-ring (2214 1584 2021 1998 1584 2214 2021 1584 2020 2206 2206 2190 1729 1750 2022 2020))))
+
+(desktop-create-buffer 208
+  "/home/hanli/.zshrc"
+  ".zshrc"
+  'sh-mode
+  '(override-global-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode symbol-overlay-mode company-box-mode)
+  1038
+  '(195 nil)
+  nil
+  nil
+  '((buffer-display-time 25009 14383 316470 292000) (buffer-file-coding-system . undecided-unix))
   '((mark-ring nil)))
 
 (desktop-create-buffer 208
-  "/home/hanli/Codes/Projects/lhbg/src/Markdown.hs"
-  "Markdown.hs"
-  'haskell-mode
-  '(eldoc-mode override-global-mode company-mode popper-mode popper-echo-mode flymake-mode symbol-overlay-mode company-box-mode yas-minor-mode auto-revert-mode interactive-haskell-mode)
-  2159
-  '(1714 nil)
+  "/home/hanli/Org/Diary.org"
+  "Diary.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  422
+  '(nil nil)
   nil
   nil
-  '((tab-width . 8) (indent-tabs-mode) (buffer-display-time 25001 7543 951385 212000) (buffer-file-coding-system . undecided-unix))
-  '((mark-ring (1168 903 586 586 586 586 339 562 902 588 586 156 316 706 902 2159))))
-
-(desktop-create-buffer 208
-  "/home/hanli/Codes/Projects/lhbg/src/.git/COMMIT_EDITMSG"
-  "COMMIT_EDITMSG"
-  'text-mode
-  '(auto-fill-mode override-global-mode company-mode popper-mode popper-echo-mode company-box-mode yas-minor-mode with-editor-mode git-commit-mode)
-  256
-  '(256 nil)
-  nil
-  nil
-  '((buffer-display-time 25001 7581 226638 855000) (buffer-file-coding-system . undecided-unix))
+  '((buffer-display-time 25009 15788 62211 880000) (buffer-file-coding-system . utf-8-unix) (truncate-lines . t))
   '((mark-ring nil)))
 
 (desktop-create-buffer 208
-  "/home/hanli/.emacs.d/init.el"
-  "init.el"
-  'emacs-lisp-mode
-  '(eldoc-mode override-global-mode company-mode popper-mode popper-echo-mode symbol-overlay-mode company-box-mode yas-minor-mode auto-revert-mode)
-  1496
-  '(1497 nil)
+  "/home/hanli/Org/2020-02-05.org"
+  "2020-02-05.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
   nil
   nil
-  '((buffer-display-time 25001 7399 982103 738000) (buffer-file-coding-system . prefer-utf-8-unix))
-  '((mark-ring (1407 1497))))
+  '((buffer-display-time 25009 15788 69138 723000) (buffer-file-coding-system . utf-8-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/hanli/Org/2020-02-06.org"
+  "2020-02-06.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15788 75249 947000) (buffer-file-coding-system . utf-8-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/hanli/Org/2020-12-25.org"
+  "2020-12-25.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15788 81254 669000) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/hanli/Org/Algorithms4.org"
+  "Algorithms4.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15788 89150 442000) (buffer-file-coding-system . utf-8-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/hanli/Org/Algorithms4Book.org"
+  "Algorithms4Book.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15788 117549 942000) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/hanli/Org/Archive.org"
+  "Archive.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15788 124233 174000) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/hanli/Org/Bye-Bye.org"
+  "Bye-Bye.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15788 160761 957000) (buffer-file-coding-system . utf-8-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/Ceph.org"
+  "Ceph.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15796 54470 92000) (buffer-file-coding-system . utf-8-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/Comman_concurrency_patterns_in_Elixir_and_Erlang.org"
+  "Comman_concurrency_patterns_in_Elixir_and_Erlang.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15796 310043 71000) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/CppFinancialProgramming.org"
+  "CppFinancialProgramming.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15796 551633 409000) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/CraftingInterpreters.org"
+  "CraftingInterpreters.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15796 805915 923000) (buffer-file-coding-system . utf-8-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/Day-one.org"
+  "Day-one.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15797 62330 644000) (buffer-file-coding-system . utf-8-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/DeepLearning.org"
+  "DeepLearning.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15797 333455 878000) (buffer-file-coding-system . utf-8-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/Editing.org"
+  "Editing.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15797 598957 929000) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/Gentoo.org"
+  "Gentoo.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15802 622027 432000) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/HashFunctions.org"
+  "HashFunctions.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15802 877558 469000) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/HaskellPhasebook.org"
+  "HaskellPhasebook.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15803 118066 915000) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/Inbox.org"
+  "Inbox.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15803 365107 378000) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/Journal.org"
+  "Journal.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15803 582899 227000) (buffer-file-coding-system . utf-8-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/Learn-Compiler.org"
+  "Learn-Compiler.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15803 836500 614000) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/LearningHaskell.org"
+  "LearningHaskell.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15804 103846 716000) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/Magit.org"
+  "Magit.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15804 360611 801000) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/MordenCppChallenge.org"
+  "MordenCppChallenge.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15804 595986 334000) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/Next.org"
+  "Next.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15804 816241 138000) (buffer-file-coding-system . utf-8-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/Note-scratch.org"
+  "Note-scratch.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15805 36781 7000) (buffer-file-coding-system . utf-8-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/Notes.org"
+  "Notes.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15805 257379 226000) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/Nvidia-docker.org"
+  "Nvidia-docker.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15805 494606 140000) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/OmniFocus_Org.org"
+  "OmniFocus_Org.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15805 715273 208000) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/Orgnazie_Your_Life_In_Plain_Text.org"
+  "Orgnazie_Your_Life_In_Plain_Text.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15805 934039 711000) (buffer-file-coding-system . utf-8-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/Parallel_and_Concurrent_Programming_in_Haskell.org"
+  "Parallel_and_Concurrent_Programming_in_Haskell.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15806 154705 875000) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/Personal.org"
+  "Personal.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15806 373439 66000) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/PracticalOCaml.org"
+  "PracticalOCaml.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15806 592866 84000) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/ProGit.org"
+  "ProGit.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15806 824523 234000) (buffer-file-coding-system . utf-8-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/Programming_Algorithm_Lisp.org"
+  "Programming_Algorithm_Lisp.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15807 52760 907000) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/Projects.org"
+  "Projects.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15807 276787 133000) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/Refile.org"
+  "Refile.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15807 499550 784000) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/SICP.org"
+  "SICP.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15807 724712 297000) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/Tmux.org"
+  "Tmux.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15807 944051 106000) (buffer-file-coding-system . utf-8-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/Ultralearning.org"
+  "Ultralearning.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15808 185107 895000) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/WASM.org"
+  "WASM.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15808 417797 650000) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/braveClojure.org"
+  "braveClojure.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15808 644274 114000) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/build-your-own.org"
+  "build-your-own.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15808 865490 704000) (buffer-file-coding-system . utf-8-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/c++_core_rules.org"
+  "c++_core_rules.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15809 91109 410000) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/dotspacemacs.org"
+  "dotspacemacs.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15809 318936 213000) (buffer-file-coding-system . utf-8-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/enhanceEmacsExp.org"
+  "enhanceEmacsExp.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15809 541980 266000) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/first-month-in-NL.org"
+  "first-month-in-NL.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15809 762294 529000) (buffer-file-coding-system . utf-8-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/future_promise.org"
+  "future_promise.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15809 982546 671000) (buffer-file-coding-system . utf-8-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/journal.org"
+  "journal.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15810 203029 324000) (buffer-file-coding-system . utf-8-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/kubernets.org"
+  "kubernets.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15810 429089 443000) (buffer-file-coding-system . utf-8-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/learn-X-languange.org"
+  "learn-X-languange.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15810 660178 485000) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/orders.org"
+  "orders.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15810 891870 691000) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/org.org"
+  "org.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15811 125386 825000) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/refile.org"
+  "refile.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15811 345119 265000) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/reset-emacs-to-doom.org"
+  "reset-emacs-to-doom.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15811 569462 254000) (buffer-file-coding-system . utf-8-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/todo.org"
+  "todo.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15811 791131 781000) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/work-after-office-hour.org"
+  "work-after-office-hour.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15812 18192 290000) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/zfs.org"
+  "zfs.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15812 255543 680000) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/Daylog/2020-08-11.org"
+  "2020-08-11.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15812 479330 767000) (buffer-file-coding-system . utf-8-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/Daylog/2020-08-16.org"
+  "2020-08-16.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15812 707291 274000) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/Daylog/2020-12-28.org"
+  "2020-12-28.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15812 930159 230000) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/Daylog/2021-08-27.org"
+  "2021-08-27.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15813 152832 225000) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/Daylog/2021-08-29.org"
+  "2021-08-29.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15813 377564 725000) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/Daylog/2021-09-04.org"
+  "2021-09-04.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15813 608508 644000) (buffer-file-coding-system . utf-8-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/Daylog/2021-09-05.org"
+  "2021-09-05.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15813 834597 904000) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/Daylog/2021-09-11.org"
+  "2021-09-11.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15814 63615 174000) (buffer-file-coding-system . utf-8-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/Daylog/2021-11-01.org"
+  "2021-11-01.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15814 285290 875000) (buffer-file-coding-system . utf-8-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/Daylog/2021-11-22.org"
+  "2021-11-22.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15814 524349 117000) (buffer-file-coding-system . utf-8-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/Daylog/2021-11-27.org"
+  "2021-11-27.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15814 752430 296000) (buffer-file-coding-system . utf-8-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/Daylog/2021-12-06.org"
+  "2021-12-06.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15814 984205 180000) (buffer-file-coding-system . utf-8-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/RoamNotes/20211113180738-shellsort.org"
+  "20211113180738-shellsort.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15815 221157 633000) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/RoamNotes/20211113180807-shellsort.org"
+  "20211113180807-shellsort.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15815 444785 41000) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/RoamNotes/20211119121816-gcd.org"
+  "20211119121816-gcd.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15815 804447 917000) (buffer-file-coding-system . utf-8-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/RoamNotes/20211119223139-gcd.org"
+  "20211119223139-gcd.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15816 29955 438000) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/RoamNotes/20211120031848-mergesort.org"
+  "20211120031848-mergesort.org"
+  'org-mode
+  '(override-global-mode auto-revert-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15816 253903 253000) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring nil)))
+
+(desktop-append-buffer-args 208
+  "/home/hanli/Org/RoamNotes/20211207163122-org_roam_capture.org"
+  "20211207163122-org_roam_capture.org"
+  'org-mode
+  '(override-global-mode company-mode popper-mode popper-echo-mode TeX-PDF-mode yas-minor-mode org-fancy-priorities-mode company-box-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 25009 15816 480097 982000) (buffer-file-coding-system . undecided-unix) (truncate-lines . t))
+  '((mark-ring nil)))
 
