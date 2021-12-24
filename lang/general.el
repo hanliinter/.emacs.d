@@ -4,6 +4,21 @@
   :straight t
   )
 (add-hook 'haskell-mode-hook 'interactive-haskell-mode)
+
+(use-package dante
+  :ensure t
+  :straight t
+  :after haskell-mode
+  :commands 'dante-mode
+  :init
+  (add-hook 'haskell-mode-hook 'flycheck-mode)
+  ;; OR for flymake support:
+;  (add-hook 'haskell-mode-hook 'flymake-mode)
+;  (remove-hook 'flymake-diagnostic-functions 'flymake-proc-legacy-flymake)
+
+  (add-hook 'haskell-mode-hook 'dante-mode)
+  )
+
 ;;Rust
 
 
@@ -26,6 +41,8 @@
 (use-package dumb-jump
   :straight t)
 (add-hook 'xref-backend-functions #'dumb-jump-xref-activate)
+;(add-to-list 'xref-backend-functions 'dumb-jump-xref-activate t)
+(setq xref-show-definitions-function #'xref-show-definitions-completing-read)
 
 
 ;; Protobuf

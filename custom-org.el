@@ -250,8 +250,128 @@
 ;; Remove completed items from search results
 (setq org-agenda-skip-timestamp-if-done t)
 
-  
-  )
+;; Set default column view headings: Task Total-Time Time-Stamp
+(setq org-columns-default-format "%50ITEM(Task) %10CLOCKSUM %16TIMESTAMP_IA")
+
+
+(setq org-agenda-time-grid
+      (quote
+       ((daily today remove-match)
+        (800 1200 1600 2000)
+        "......" "----------------")))
+
+
+)
+
+
+;; learn a lot from http://cachestocaches.com/2016/9/my-workflow-org-agenda/
+;; project-is-waiting
+;; project-warning
+;; project-is-stuck
+
+
+;; (defvar gs-org-agenda-block--today-schedule
+;;   '(agenda "" ((org-agenda-overriding-header "Today's Schedule:")
+;; 	       (org-agenda-span 'day)
+;; 	       (org-agenda-ndays 1)
+;; 	       (org-agenda-start-on-weekday nil)
+;; 	       (org-agenda-start-day "+0d")))
+;;   "A block showing a 1 day schedule.")
+
+;; (defvar gs-org-agenda-block--weekly-log
+;;   '(agenda "" ((org-agenda-overriding-header "Weekly Log")))
+;;   "A block showing my schedule and logged tasks for this week.")
+
+;; (defvar gs-org-agenda-block--previous-calendar-data
+;;   '(agenda "" ((org-agenda-overriding-header "Previous Calendar Data (last 3 weeks)")
+;; 	       (org-agenda-start-day "-21d")
+;; 	       (org-agenda-span 21)
+;; 	       (org-agenda-start-on-weekday nil)))
+;;   "A block showing my schedule and logged tasks for the last few weeks.")
+
+;; (defvar gs-org-agenda-block--upcoming-calendar-data
+;;   '(agenda "" ((org-agenda-overriding-header "Upcoming Calendar Data (next 2 weeks)")
+;; 	       (org-agenda-start-day "0d")
+;; 	       (org-agenda-span 14)
+;; 	       (org-agenda-start-on-weekday nil)))
+;;   "A block showing my schedule for the next couple weeks.")
+
+;; (defvar gs-org-agenda-block--refile
+;;   '(tags "REFILE-ARCHIVE-REFILE=\"nil\"|INFO"
+;; 	 ((org-agenda-overriding-header "Headings needing refiling or other info:")
+;; 	  (org-tags-match-list-sublevels nil)))
+;;   "Headings needing refiling or other info.")
+
+;; (defvar gs-org-agenda-block--next-tasks
+;;   '(tags-todo "-INACTIVE-SOMEDAY-CANCELLED-ARCHIVE/!NEXT"
+;; 	      ((org-agenda-overriding-header "Next Tasks:")
+;; 	       ))
+;;   "Next tasks.")
+
+;; (defvar gs-org-agenda-block--active-projects
+;;   '(tags-todo "-INACTIVE-SOMEDAY-CANCELLED-REFILEr/!"
+;; 	      ((org-agenda-overriding-header "Active Projects:")
+;; 	       (org-agenda-skip-function 'gs/select-projects)))
+;;   "All active projects: no inactive/someday/cancelled/refile.")
+
+;; (defvar gs-org-agenda-block--standalone-tasks
+;;   '(tags-todo "-INACTIVE-SOMEDAY-CANCELLED-REFILE-ARCHIVE-STYLE=\"habit\"/!-NEXT"
+;; 	      ((org-agenda-overriding-header "Standalone Tasks:")
+;; 	       (org-agenda-skip-function 'gs/select-standalone-tasks)))
+;;   "Tasks (TODO) that do not belong to any projects.")
+
+;; (defvar gs-org-agenda-block--waiting-tasks
+;;   '(tags-todo "-INACTIVE-SOMEDAY-CANCELLED-ARCHIVE/!WAITING"
+;; 	     ((org-agenda-overriding-header "Waiting Tasks:")
+;; 	      ))
+;;   "Tasks marked as waiting.")
+
+;; (defvar gs-org-agenda-block--remaining-project-tasks
+;;   '(tags-todo "-INACTIVE-SOMEDAY-CANCELLED-WAITING-REFILE-ARCHIVE/!-NEXT"
+;; 	      ((org-agenda-overriding-header "Remaining Project Tasks:")
+;; 	       (org-agenda-skip-function 'gs/select-project-tasks)))
+;;   "Non-NEXT TODO items belonging to a project.")
+
+;; (defvar gs-org-agenda-block--inactive-tags
+;;   '(tags-todo "-SOMEDAY-ARCHIVE-CANCELLED/!INACTIVE"
+;; 	 ((org-agenda-overriding-header "Inactive Projects and Tasks")
+;; 	  (org-tags-match-list-sublevels nil)))
+;;   "Inactive projects and tasks.")
+
+;; (defvar gs-org-agenda-block--someday-tags
+;;   '(tags-todo "-INACTIVE-ARCHIVE-CANCELLED/!SOMEDAY"
+;; 	 ((org-agenda-overriding-header "Someday Projects and Tasks")
+;; 	  (org-tags-match-list-sublevels nil)))
+;;   "Someday projects and tasks.")
+
+;; (defvar gs-org-agenda-block--motivators
+;;   '(todo "AMOTIVATOR|TMOTIVATOR|CMOTIVATOR"
+;; 	 ((org-agenda-overriding-header "Motivators (Active/Tangible/Conceptual)")))
+;;   "All my 'motivators' across my projects.")
+
+;; (defvar gs-org-agenda-block--end-of-agenda
+;;   '(tags "ENDOFAGENDA"
+;; 	 ((org-agenda-overriding-header "End of Agenda")
+;; 	  (org-tags-match-list-sublevels nil)))
+;;   "End of the agenda.")
+
+;; (defvar gs-org-agenda-display-settings
+;;   '((org-agenda-start-with-log-mode t)
+;;     (org-agenda-log-mode-items '(clock))
+;;     (org-agenda-prefix-format '((agenda . "  %-12:c%?-12t %(gs/org-agenda-add-location-string)% s")
+;; 				(timeline . "  % s")
+;; 				(todo . "  %-12:c %(gs/org-agenda-prefix-string) ")
+;; 				(tags . "  %-12:c %(gs/org-agenda-prefix-string) ")
+;; 				(search . "  %i %-12:c")))
+;;     (org-agenda-todo-ignore-deadlines 'near)
+;;     (org-agenda-todo-ignore-scheduled t))
+;;   "Display settings for my agenda views.")
+
+;; (defvar gs-org-agenda-entry-display-settings
+;;   '(,gs-org-agenda-display-settings
+;;     (org-agenda-entry-text-mode t))
+;;   "Display settings for my agenda views with entry text.")
+
 
 
 

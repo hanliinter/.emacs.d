@@ -8,6 +8,8 @@
 (setq mc/cmds-to-run-once
       '(
 	c-electric-brace
+	end-of-buffer
 	iedit-switch-to-mc-mode
+	popper-toggle-latest
 	symbol-overlay-put
 	))

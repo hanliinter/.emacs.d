@@ -12,3 +12,7 @@ rime/
 elpa/
 var/
 transient/
+bookmarks
+org-roam.db
+recentf
+.tags/
