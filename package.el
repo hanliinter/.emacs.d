@@ -33,14 +33,14 @@
   :defines (company-dabbrev-ignore-case company-dabbrev-downcase)
   :commands company-cancel
   :bind (("M-/" . company-complete)
-         ("C-M-i" . company-complete)
+         ("C-M-i" . company-other-backend)
        :map company-mode-map
          ("<backtab>" . company-yasnippet)
          :map company-active-map
          ("C-p" . company-select-previous)
          ("C-n" . company-select-next)
-         ("<tab>" . smater-yas-company-complete )
-         ("<backtab>" . smater-yas-company-complete)
+       ;  ("<tab>" . smater-yas-company-complete )
+       ;  ("<backtab>" . smater-yas-company-complete)
          :map company-search-map
          ("C-p" . company-select-previous)
          ("C-n" . company-select-next))
@@ -56,9 +56,9 @@
         company-dabbrev-downcase nil
         company-global-modes '(not erc-mode message-mode help-mode
                                    gud-mode eshell-mode shell-mode)
-        company-backends '((company-capf :with company-yasnippet)
-                           (company-dabbrev-code company-keywords company-files)
-                           company-dabbrev))
+        ;;company-backends '((company-files))
+        company-backends '((company-capf company-dabbrev company-yasnippet company-dabbrev-code company-keywords company-files))
+	)
   )
 :config (setq company-show-numbers t)
 
@@ -448,6 +448,8 @@ FACE defaults to inheriting from default and highlight."
           help-mode
           compilation-mode
           "\\*org-roam\\*"
+          "\\*rg\\*"
+	  
           ))
   (popper-mode +1)
   (popper-echo-mode +1))

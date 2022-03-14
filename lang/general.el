@@ -11,13 +11,21 @@
   :after haskell-mode
   :commands 'dante-mode
   :init
-  (add-hook 'haskell-mode-hook 'flycheck-mode)
+ ;; (add-hook 'haskell-mode-hook 'flycheck-mode)
   ;; OR for flymake support:
 ;  (add-hook 'haskell-mode-hook 'flymake-mode)
 ;  (remove-hook 'flymake-diagnostic-functions 'flymake-proc-legacy-flymake)
 
   (add-hook 'haskell-mode-hook 'dante-mode)
+
+  :config
+  (setq company-backends '((dante-company company-capf company-dabbrev company-yasnippet company-dabbrev-code company-keywords company-files)))
   )
+
+(use-package attrap
+  :ensure t
+  :straight t
+  ) ;; use any binding of your choice
 
 ;;Rust
 
