@@ -96,3 +96,21 @@
 
  (add-to-list 'load-path "/home/hanli/.opam/4.13.1/share/emacs/site-lisp")
      (require 'ocp-indent)
+
+
+;; Elixir
+(use-package elixir-mode
+  :ensure t
+  :straight t
+  :init  
+  (add-hook 'elixir-mode-hook
+            (lambda ()
+              (push '(">=" . ?\u2265) prettify-symbols-alist)
+              (push '("<=" . ?\u2264) prettify-symbols-alist)
+              (push '("!=" . ?\u2260) prettify-symbols-alist)
+              (push '("==" . ?\u2A75) prettify-symbols-alist)
+              (push '("=~" . ?\u2245) prettify-symbols-alist)
+              (push '("<-" . ?\u2190) prettify-symbols-alist)
+              (push '("->" . ?\u2192) prettify-symbols-alist)
+              (push '("<-" . ?\u2190) prettify-symbols-alist)
+              (push '("|>" . ?\u25B7) prettify-symbols-alist))))

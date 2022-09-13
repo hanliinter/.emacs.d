@@ -449,6 +449,7 @@ FACE defaults to inheriting from default and highlight."
           compilation-mode
           "\\*org-roam\\*"
           "\\*rg\\*"
+	  "\\*eldoc\\*"
 	  
           ))
   (popper-mode +1)
