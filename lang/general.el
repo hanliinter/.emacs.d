@@ -34,6 +34,9 @@
   :straight t
   :config
   (setq rustic-lsp-client 'eglot)
+  :init
+  (require 'flymake-rust)
+(add-hook 'rust-mode-hook 'flymake-rust-load)
   )
 
 
@@ -42,7 +45,13 @@
 ;; LSP
 
 (use-package eglot
-  :straight t)
+  :straight t
+  :init
+  (add-hook 'eglot-managed-mode-hook (lambda ()
+                   (remove-hook 'flymake-diagnostic-functions 'eglot-flymake-backend)
+                   ))
+
+  )
 
 ;; dumb-jump
 

@@ -52,3 +52,4 @@
        (append
         (reverse exec-path)
         (list (concat (getenv "HOME") "/.local/bin")  "/usr/local/bin" ))))
+(put 'downcase-region 'disabled nil)
