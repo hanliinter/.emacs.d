@@ -263,7 +263,7 @@ FACE defaults to inheriting from default and highlight."
          ("M-s g" . consult-git-grep)              ;; alt. consult-grep
          ("M-s r" . consult-ripgrep)
          ("M-s l" . consult-line)
-         ("M-s m" . consult-multi-occur)
+ `        ("M-s m" . consult-multi-occur)
          ("M-s k" . consult-keep-lines)
          ("M-s u" . consult-focus-lines)
          ;; Isearch integration
