@@ -1,29 +1,35 @@
-(use-package doom-themes
-  :straight t
-  :config
-  (setq doom-themes-enable-bold t
-	doom-themes-enable-italic t)
+;; (use-package doom-themes
+;;   :straight t
+;;   :config
+;;   (setq doom-themes-enable-bold t
+;; 	doom-themes-enable-italic t)
 
-  ;;(load-theme 'doom-nord-light t)
-  ;;(load-theme 'modus-vivendi t)
+
+  
+;;(load-theme 'modus-vivendi t)
 
   ;;modus-vivendi
   ;;modus-operandi
 
-  )
-
-(use-package modus-themes
-  :straight t
-  )
-
-(load-theme 'modus-vivendi t)
-
-(use-package modus-themes
-  :config
-  (modus-themes-load-vivendi)
-  :init
-  (modus-themes-load-themes)
+;  )
+;;(use-package plan9-theme
+;;  :straight t)
+(use-package solo-jazz-theme
   :straight t)
+;;(use-package color-theme-sanityinc-t
+ ;; :straight t)
+;;(color-theme-sanityinc-tomorrow-day)
+;;(use-package minimal-theme
+;;  :straight t)
+(load-theme 'solo-jazz t)
+
+;;  (use-package modus-themes
+;;    :config
+;; ;   (modus-themes-load-vivendi)
+;;    :init
+;;    (modus-themes-load-themes)
+;;    :straight t)
+;; (load-theme 'modus-operandi t)
 
 (use-package all-the-icons
   :straight t)
@@ -37,13 +43,14 @@
     (set-frame-font "Menlo-14" t t)))
  ((string-equal system-type "gnu/linux") ; linux
   (when (member "Sarasa Mono SC" (font-family-list))
-    (set-frame-font "Sarasa Mono SC-18" t t)
-    (set-face-attribute 'default nil :font "Sarasa Mono SC-18")
-    (set-face-attribute 'fixed-pitch nil :font "Sarasa Mono SC-20")
-    (set-face-attribute 'variable-pitch nil :font "JetBrains Mono-20")
+    (set-frame-font "Sarasa Mono SC" t t)
+    (set-face-attribute 'default nil :font "Sarasa Mono SC-24")
+    (set-face-attribute 'fixed-pitch nil :font "Sarasa Mono SC-22")
+    (set-face-attribute 'variable-pitch nil :font "Inconsolata-24")
     )))
 
-
+;; Sarasa Mono SC
+;;
 (set-fontset-font
  t
  '(#x4e00 . #x9fff)
@@ -63,5 +70,3 @@
     ((member "WenQuanYi Micro Hei" (font-family-list)) "WenQuanYi Micro Hei")))))
 
 
-(modus-themes-load-themes)
-(modus-themes-load-vivendi)

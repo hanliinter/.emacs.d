@@ -29,29 +29,55 @@
 
 ;;Rust
 
+(use-package flymake-rust
+  :ensure t
+  :straight t)
 
 (use-package rustic
   :straight t
   :config
-  (setq rustic-lsp-client 'eglot)
+  (setq rustic-lsp-client 'lsp)
   :init
   (require 'flymake-rust)
 (add-hook 'rust-mode-hook 'flymake-rust-load)
   )
 
-
+;; Go
+(use-package go-mode
+  :straight t)
 ;; M-s s 
 
 ;; LSP
 
-(use-package eglot
+;; (use-package eglot
+;;   :straight t
+;;   :init
+;;   (add-hook 'eglot-managed-mode-hook (lambda ()
+;;                    (remove-hook 'flymake-diagnostic-functions 'eglot-flymake-backend)
+;;                    ))
+;;   )
+
+
+(use-package lsp-haskell
+  :defer t
   :straight t
   :init
-  (add-hook 'eglot-managed-mode-hook (lambda ()
-                   (remove-hook 'flymake-diagnostic-functions 'eglot-flymake-backend)
-                   ))
+  (add-hook 'haskell-literate-mode-hook #'lsp))
 
-  )
+(use-package lsp-mode
+  :hook (prog-mode . lsp-mode)
+  :straight t
+
+  :config
+  ;; This is to make `lsp-mode' work with `direnv' and pick up the correct
+  ;; version of GHC.
+  (setq lsp-modeline-code-actions-enable nil))
+
+(use-package lsp-ui
+  :hook (prog-mode . lsp-ui-mode)
+  :straight t
+  :config
+  (setq lsp-ui-doc-position 'bottom))
 
 ;; dumb-jump
 

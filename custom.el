@@ -49,8 +49,6 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-safe-themes
-   '("c7f364aeea0458b6368815558cbf1f54bbdcc1dde8a14b5260eb82b76c0ffc7b" default))
  '(ignored-local-variable-values '((buffer-file-coding-system . utf-8-unix)))
  '(warning-suppress-types '((org-roam) (org-roam) (org-roam))))
 (custom-set-faces

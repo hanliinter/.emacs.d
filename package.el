@@ -485,3 +485,15 @@ FACE defaults to inheriting from default and highlight."
 
 (use-package company-auctex
   :straight t)
+
+
+(use-package rfc-mode
+  :straight t
+  :config (setq rfc-mode-directory (expand-file-name "~/rfc/"))
+  )
+
+(use-package anki-connect
+  :straight t)
+
+(use-package anki-editor
+  :straight t)
