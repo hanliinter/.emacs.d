@@ -2,24 +2,16 @@
 
 (use-package haskell-mode
   :straight t
-  )
-(add-hook 'haskell-mode-hook 'interactive-haskell-mode)
+  
 
-(use-package dante
-  :ensure t
-  :straight t
-  :after haskell-mode
-  :commands 'dante-mode
-  :init
- ;; (add-hook 'haskell-mode-hook 'flycheck-mode)
-  ;; OR for flymake support:
-;  (add-hook 'haskell-mode-hook 'flymake-mode)
-;  (remove-hook 'flymake-diagnostic-functions 'flymake-proc-legacy-flymake)
+ ;;  (add-hook 'haskell-mode-hook 'flymake-mode)
+ ;;  (remove-hook 'flymake-diagnostic-functions 'flymake-proc-legacy-flymake)
 
-  (add-hook 'haskell-mode-hook 'dante-mode)
+;;  (add-hook 'haskell-mode-hook 'dante-mode)
 
   :config
-  (setq company-backends '((dante-company company-capf company-dabbrev company-yasnippet company-dabbrev-code company-keywords company-files)))
+  (add-hook 'haskell-mode-hook 'interactive-haskell-mode)
+  ;;(setq company-backends '((dante-company company-capf company-dabbrev company-yasnippet company-dabbrev-code company-keywords company-files)))
   )
 
 (use-package attrap
@@ -36,7 +28,7 @@
 (use-package rustic
   :straight t
   :config
-  (setq rustic-lsp-client 'lsp)
+  (setq rustic-lsp-client 'eglot)
   :init
   (require 'flymake-rust)
 (add-hook 'rust-mode-hook 'flymake-rust-load)
@@ -49,35 +41,36 @@
 
 ;; LSP
 
-;; (use-package eglot
-;;   :straight t
-;;   :init
-;;   (add-hook 'eglot-managed-mode-hook (lambda ()
-;;                    (remove-hook 'flymake-diagnostic-functions 'eglot-flymake-backend)
-;;                    ))
-;;   )
-
-
-(use-package lsp-haskell
-  :defer t
+(use-package eglot
   :straight t
   :init
-  (add-hook 'haskell-literate-mode-hook #'lsp))
+  (add-hook 'eglot-managed-mode-hook (lambda ()
+                   (remove-hook 'flymake-diagnostic-functions 'eglot-flymake-backend)
+                   ))
+  )
+(with-eval-after-load "eglot"
+  (add-to-list 'eglot-stay-out-of 'flymake))
 
-(use-package lsp-mode
-  :hook (prog-mode . lsp-mode)
-  :straight t
+;; (use-package lsp-haskell
+;;   :defer t
+;;   :straight t
+;;   :init
+;;   (add-hook 'haskell-literate-mode-hook #'lsp))
 
-  :config
-  ;; This is to make `lsp-mode' work with `direnv' and pick up the correct
-  ;; version of GHC.
-  (setq lsp-modeline-code-actions-enable nil))
+;; (use-package lsp-mode
+;;   :hook (prog-mode . lsp-mode)
+;;   :straight t
 
-(use-package lsp-ui
-  :hook (prog-mode . lsp-ui-mode)
-  :straight t
-  :config
-  (setq lsp-ui-doc-position 'bottom))
+;;   :config
+;;   ;; This is to make `lsp-mode' work with `direnv' and pick up the correct
+;;   ;; version of GHC.
+;;   (setq lsp-modeline-code-actions-enable nil))
+
+;; (use-package lsp-ui
+;;   :hook (prog-mode . lsp-ui-mode)
+;;   :straight t
+;;   :config
+;;   (setq lsp-ui-doc-position 'bottom))
 
 ;; dumb-jump
 
@@ -132,6 +125,50 @@
  (add-to-list 'load-path "/home/hanli/.opam/4.13.1/share/emacs/site-lisp")
      (require 'ocp-indent)
 
+;; OCaml 
+
+;; major mode for editing OCaml code
+;; it also features basic toplevel integration
+(use-package tuareg
+  :ensure t
+  :straight t
+  :mode (("\\.ocamlinit\\'" . tuareg-mode)))
+
+;; major mode for editing Dune files
+(use-package dune
+  :straight t
+  :ensure t)
+
+;; Merlin provides a lot of IDE-like features for OCaml editors
+;; e.g. code completion, go to definition, show type of expression, etc
+(use-package merlin
+  :ensure t
+  :straight t
+  :config
+  (add-hook 'tuareg-mode-hook #'merlin-mode)
+  (add-hook 'merlin-mode-hook #'company-mode)
+  ;; we're using flycheck instead
+  (setq merlin-error-after-save nil))
+
+;; eldoc integration for Merlin
+(use-package merlin-eldoc
+  :straight t
+  :ensure t
+  :hook ((tuareg-mode) . merlin-eldoc-setup))
+
+;; Code Linting
+(use-package flycheck-ocaml
+  :straight t
+  :ensure t
+  :config
+  (flycheck-ocaml-setup))
+
+;; utop integration
+(use-package utop
+  :straight t
+  :ensure t
+  :config
+  (add-hook 'tuareg-mode-hook #'utop-minor-mode))
 
 ;; Elixir
 (use-package elixir-mode
