@@ -22,8 +22,11 @@
 
 (setq theme-file "~/.emacs.d/theme.el")
 (load-file theme-file)
-(straight-use-package 'selectrum)
-(selectrum-mode +1)
+(use-package vertico
+  :straight t
+  :init
+  (vertico-mode)
+  )
 (setq package-file "~/.emacs.d/package.el")
 (load-file package-file)
 

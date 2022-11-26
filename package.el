@@ -367,8 +367,8 @@ FACE defaults to inheriting from default and highlight."
   (marginalia-mode)
 
   ;; When using Selectrum, ensure that Selectrum is refreshed when cycling annotations.
-  (advice-add #'marginalia-cycle :after
-              (lambda () (when (bound-and-true-p selectrum-mode) (selectrum-exhibit))))
+  ;;(advice-add #'marginalia-cycle :after
+  ;;            (lambda () (when (bound-and-true-p selectrum-mode) (selectrum-exhibit))))
 
   ;; Prefer richer, more heavy, annotations over the lighter default variant.
   ;; E.g. M-x will show the documentation string additional to the keybinding.
@@ -403,11 +403,11 @@ FACE defaults to inheriting from default and highlight."
 
 (straight-use-package 'prescient)
 (straight-use-package 'company-prescient)
-(straight-use-package 'selectrum-prescient)
+;(straight-use-package 'selectrum-prescient)
 
 
 (company-prescient-mode)
-(selectrum-prescient-mode)
+;(selectrum-prescient-mode)
 (prescient-persist-mode)
 
 
@@ -415,8 +415,8 @@ FACE defaults to inheriting from default and highlight."
 (use-package git-gutter
   :straight t)
 
- (use-package git-timemachine
-   :straight t)
+;(use-package git-timemachine
+;   :straight t)
 
 (use-package imenu-list
   :straight t)
