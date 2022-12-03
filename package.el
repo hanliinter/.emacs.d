@@ -497,3 +497,6 @@ FACE defaults to inheriting from default and highlight."
 
 (use-package anki-editor
   :straight t)
+
+(use-package vterm
+  :straight t)
