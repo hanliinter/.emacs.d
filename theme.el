@@ -1,3 +1,10 @@
+
+;;recent used:
+;; solo-jazz
+;; minimal
+;; sanityinc-tomorrow-day
+
+
 ;; (use-package doom-themes
 ;;   :straight t
 ;;   :config
@@ -6,7 +13,7 @@
 
 
   
-;;(load-theme 'modus-vivendi t)
+;;
 
   ;;modus-vivendi
   ;;modus-operandi
@@ -14,22 +21,15 @@
 ;  )
 ;;(use-package plan9-theme
 ;;  :straight t)
-(use-package solo-jazz-theme
-  :straight t)
-;;(use-package color-theme-sanityinc-t
- ;; :straight t)
-;;(color-theme-sanityinc-tomorrow-day)
-;;(use-package minimal-theme
-;;  :straight t)
-(load-theme 'solo-jazz t)
+;; (use-package solo-jazz-theme
+;;   :straight t)
+;; (load-theme 'solo-jazz t)
 
-;;  (use-package modus-themes
-;;    :config
-;; ;   (modus-themes-load-vivendi)
-;;    :init
-;;    (modus-themes-load-themes)
-;;    :straight t)
-;; (load-theme 'modus-operandi t)
+ (use-package modus-themes
+   :config
+;   (modus-themes-load-vivendi)
+   :straight t)
+(load-theme 'modus-vivendi-deuteranopia t)
 
 (use-package all-the-icons
   :straight t)
