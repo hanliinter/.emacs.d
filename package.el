@@ -183,6 +183,12 @@ FACE defaults to inheriting from default and highlight."
           (blink-matching-open))))
     (advice-add #'show-paren-function :after #'show-paren-off-screen)))
 
+;; Move Text
+(use-package move-text
+  :straight t
+  :config (move-text-default-bindings)
+  )
+
 ;; Highlight symbols
 (use-package symbol-overlay
   :straight t
@@ -190,10 +196,10 @@ FACE defaults to inheriting from default and highlight."
   :functions (turn-off-symbol-overlay turn-on-symbol-overlay)
   :custom-face (symbol-overlay-default-face ((t (:inherit (region bold)))))
   :bind (("M-i" . symbol-overlay-put)
-         ("M-n" . symbol-overlay-jump-next)
-         ("M-p" . symbol-overlay-jump-prev)
-         ("M-N" . symbol-overlay-switch-forward)
-         ("M-P" . symbol-overlay-switch-backward)
+;         ("M-n" . symbol-overlay-jump-next)
+;         ("M-p" . symbol-overlay-jump-prev)
+;         ("M-N" . symbol-overlay-switch-forward)
+;         ("M-P" . symbol-overlay-switch-backward) ;; do not bind these global key
          ("M-C" . symbol-overlay-remove-all)
          ([M-f3] . symbol-overlay-remove-all))
   :hook ((prog-mode . symbol-overlay-mode)
