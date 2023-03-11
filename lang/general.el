@@ -29,8 +29,14 @@
   :straight t
   :config
   (setq rustic-lsp-client 'eglot)
+  
   :init
   (require 'flymake-rust)
+  (defun rustic-cargo-run-with-args ()
+    "Run 'cargo run' with command line arguments"
+    (interactive)
+    (rustic-cargo-run-with-args t)
+    )
 (add-hook 'rust-mode-hook 'flymake-rust-load)
   )
 
