@@ -57,17 +57,22 @@
         company-global-modes '(not erc-mode message-mode help-mode
                                    gud-mode eshell-mode shell-mode)
         ;;company-backends '((company-files))
-        company-backends '((company-capf company-dabbrev company-yasnippet company-dabbrev-code company-keywords company-files company-clang company-gtags))
+        company-backends '((company-capf company-tabnine company-dabbrev company-yasnippet company-dabbrev-code company-keywords company-files company-clang company-gtags))
 	;;(company-bbdb company-semantic company-cmake company-capf company-clang company-files
 	;;      (company-dabbrev-code company-gtags company-etags company-keywords)
 
 	)
+  :config (setq company-show-numbers t)
   )
-:config (setq company-show-numbers t)
+
+
 
 (use-package company-box
   :straight t
   :hook (company-mode . company-box-mode))
+
+(use-package company-tabnine
+  :straight t)
 
   ;; (defun my-company-yasnippet ()
   ;;   "Hide the current completeions and show snippets."
