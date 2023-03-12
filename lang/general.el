@@ -53,7 +53,11 @@
   (add-hook 'eglot-managed-mode-hook (lambda ()
                    (remove-hook 'flymake-diagnostic-functions 'eglot-flymake-backend)
                    ))
+  :hook (scala-mode . eglot-ensure)
+  :config (setq eglot-stay-out-of '(company))
   )
+
+
 (with-eval-after-load "eglot"
   (add-to-list 'eglot-stay-out-of 'flymake))
 
@@ -217,6 +221,21 @@
   )
     ;(load-file "~/.emacs.d/lisp/ob-scala.el"))
 
+(use-package sbt-mode
+  :commands sbt-start sbt-command
+  :straight t
+  :config
+  ;; WORKAROUND: https://github.com/ensime/emacs-sbt-mode/issues/31
+  ;; allows using SPACE when in the minibuffer
+  (substitute-key-definition
+   'minibuffer-complete-word
+   'self-insert-command
+   minibuffer-local-completion-map)
+   ;; sbt-supershell kills sbt-mode:  https://github.com/hvesalai/emacs-sbt-mode/issues/152
+   (setq sbt:program-options '("-Dsbt.supershell=false")))
 
 (use-package hcl-mode
+  :straight t)
+
+(use-package yaml-mode
   :straight t)
