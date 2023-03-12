@@ -57,7 +57,7 @@
         company-global-modes '(not erc-mode message-mode help-mode
                                    gud-mode eshell-mode shell-mode)
         ;;company-backends '((company-files))
-        company-backends '((company-capf company-tabnine company-dabbrev company-yasnippet company-dabbrev-code company-keywords company-files company-clang company-gtags))
+        company-backends '((company-capf company-tabnine :seperator company-dabbrev company-yasnippet company-dabbrev-code company-keywords company-files company-clang company-gtags))
 	;;(company-bbdb company-semantic company-cmake company-capf company-clang company-files
 	;;      (company-dabbrev-code company-gtags company-etags company-keywords)
 
