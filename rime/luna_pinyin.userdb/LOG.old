@@ -1,7 +1,0 @@
-2021/12/23-22:15:54.702574 7ff9314fa640 Log #34: 66 ops saved to Table #35 OK
-2021/12/23-22:15:54.702632 7ff9314fa640 Archiving /home/hanli/.emacs.d/rime/luna_pinyin.userdb/000034.log: OK
-2021/12/23-22:15:54.702990 7ff9314fa640 Table #33: 312 entries OK
-2021/12/23-22:15:54.703315 7ff9314fa640 Table #31: 441 entries OK
-2021/12/23-22:15:54.703336 7ff9314fa640 Table #35: 66 entries OK
-2021/12/23-22:15:54.703410 7ff9314fa640 Archiving /home/hanli/.emacs.d/rime/luna_pinyin.userdb/MANIFEST-000032: OK
-2021/12/23-22:15:54.704068 7ff9314fa640 **** Repaired leveldb /home/hanli/.emacs.d/rime/luna_pinyin.userdb; recovered 3 files; 17382 bytes. Some data may have been lost. ****
