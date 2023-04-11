@@ -120,20 +120,20 @@
 
 
 ;; Ocaml
-     (let ((opam-share (ignore-errors (car (process-lines "opam" "config" "var" "share")))))
-      (when (and opam-share (file-directory-p opam-share))
-       ;; Register Merlin
-       (add-to-list 'load-path (expand-file-name "emacs/site-lisp" opam-share))
-       (autoload 'merlin-mode "merlin" nil t nil)
-       ;; Automatically start it in OCaml buffers
-       (add-hook 'tuareg-mode-hook 'merlin-mode t)
-       (add-hook 'caml-mode-hook 'merlin-mode t)
-       ;; Use opam switch to lookup ocamlmerlin binary
-       (setq merlin-command 'opam)))
+     ;; (let ((opam-share (ignore-errors (car (process-lines "opam" "config" "var" "share")))))
+     ;;  (when (and opam-share (file-directory-p opam-share))
+     ;;   ;; Register Merlin
+     ;;   (add-to-list 'load-path (expand-file-name "emacs/site-lisp" opam-share))
+     ;;   (autoload 'merlin-mode "merlin" nil t nil)
+     ;;   ;; Automatically start it in OCaml buffers
+     ;;   (add-hook 'tuareg-mode-hook 'merlin-mode t)
+     ;;   (add-hook 'caml-mode-hook 'merlin-mode t)
+     ;;   ;; Use opam switch to lookup ocamlmerlin binary
+     ;;   (setq merlin-command 'opam)))
 
 
- (add-to-list 'load-path "/home/hanli/.opam/4.13.1/share/emacs/site-lisp")
-     (require 'ocp-indent)
+ (add-to-list 'load-path "/home/hanli/.opam/5.0.0/share/emacs/site-lisp") ;; change reduce to cl-reduce
+ (require 'ocp-indent) 
 
 ;; OCaml 
 
@@ -155,7 +155,7 @@
   :ensure t
   :straight t
   :config
-  (let ((opam-share (ignore-errors (car (process-lines "opam" "var" "share")))))
+  (let ((opam-share (ignore-errors (car (process-lines "opam" "config" "var" "share")))))
      (when (and opam-share (file-directory-p opam-share))
        ;; Register Merlin
        (add-to-list 'load-path (expand-file-name "emacs/site-lisp" opam-share))

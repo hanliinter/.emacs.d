@@ -1,7 +1,7 @@
 ;;(setq url-gateway-method 'socks)
 ;;(setq socks-server '("Default server" "127.0.0.1" 1081 5))
 
-
+(defvar native-comp-deferred-compilation-deny-list nil)
 ;; straight
 
 (defvar bootstrap-version)

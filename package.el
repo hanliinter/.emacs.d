@@ -48,7 +48,7 @@
   :init
   (setq company-tooltip-align-annotations t
         company-tooltip-limit 12
-        company-idle-delay 0
+        company-idle-delay 1
         company-echo-delay (if (display-graphic-p) nil 0)
         company-minimum-prefix-length 3
         company-require-match nil
