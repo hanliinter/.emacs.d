@@ -40,7 +40,12 @@
     (set-frame-font "Sarasa Mono SC-14" t t)))
  ((string-equal system-type "darwin") ; macOS
   (when (member "Menlo" (font-family-list))
-    (set-frame-font "Menlo-14" t t)))
+    (set-frame-font "Menlo-14" t t))
+
+  (when (string-equal system-name "Misanthrope.local")
+    (set-frame-font "Monaco-18" t t))
+
+  )
  ((string-equal system-type "gnu/linux") ; linux
   (when (member "Sarasa Mono SC" (font-family-list))
     (set-frame-font "Sarasa Mono SC" t t)
