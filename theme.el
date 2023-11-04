@@ -43,8 +43,8 @@
     (set-frame-font "Menlo-14" t t))
 
   (when (string-equal system-name "Misanthrope.local")
-    (set-frame-font "Monaco-18" t t))
-
+    (set-frame-font "Monaco-17" t t))
+  (setq mac-option-modifier 'meta)
   )
  ((string-equal system-type "gnu/linux") ; linux
   (when (member "Sarasa Mono SC" (font-family-list))
