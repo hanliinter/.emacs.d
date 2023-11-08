@@ -4,8 +4,8 @@
 (use-package projectile
   :straight t)
 
-(add-to-list 'load-path "~/beancount-mode/")
-(require 'beancount)
+;(add-to-list 'load-path "~/beancount-mode/")
+;(require 'beancount)
 (add-to-list 'auto-mode-alist '("\\.beancount\\'" . beancount-mode))
 (use-package exec-path-from-shell
   :straight t
