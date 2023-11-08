@@ -54,12 +54,17 @@
                    (remove-hook 'flymake-diagnostic-functions 'eglot-flymake-backend)
                    ))
   :hook (scala-mode . eglot-ensure)
+  :bind ("s-f" . eglot-format)
   :config (setq eglot-stay-out-of '(company))
   )
 
+;; ;; simply add a new element to the front of the list and it will shadow matches further down the list.
+;; (with-eval-after-load "eglot"
+;;   (add-to-list 'eglot-stay-out-of 'flymake)
+;;   (add-to-list 'eglot-server-programs
+;; 	       `(haskell-mode .  ("haskell-language-server-wrapper" "--lsp" "--debug"))))
 
-(with-eval-after-load "eglot"
-  (add-to-list 'eglot-stay-out-of 'flymake))
+
 
 ;; (use-package lsp-haskell
 ;;   :defer t

@@ -1,15 +1,128 @@
-eix ccls
-emerge dev-util/ccls
-sudo emerge dev-util/ccls
-ccls
-echo $PATH
-echo $PATH
-echo $PATH
-echo $PATH
-echo $PATH
-echo $PATH
-echo $PATH
-echo $PATH
-echo $PATH
-python
+cd ..
+ls
+stack new haxdump
+ls
+cd haxdump/
+ls
+exit
+stack build
+exit
+cd Codes/Projects/
+ls
+mkdir CIS552
+cd CIS552/
+ls
+cd ..
+rm CIS552/
+rm -r CIS552/
+ls
+stack new CIS552
+exit
+cd ..
+stack build
+stack build
+exit
+stack build
+stack build
+exit
+cd Codes/Projects/CIS552/
+ls
+stack buid
+stack build
+exit
+cd Codes/
+ls
+cd Projects/
+ls
+stack new RealWorldHaskell
+stack build
+cd RealWorldHaskell/
+stack build
+exit
+stack build
+stack build
+cd ..
+stack build
+stack build
+ls
+cd Codes/
+ls
+cd Projects/
+ls
+cd K2/
+ls
+cd src/
+ls
+exit
+cd ..
+stack build
+exit
+exit
+stack build
+stack build
+stack build
+stack build
+stack build
+stack build
+stack build
+cd ..
+cd ..
+ls
+stack new ParallelConcurrentProgrammingHaskell
+exit
+stack build
+exit
+cd ~
+cd Codes/Projects/
+ls
+mkdir WYAS_C
+cd WYAS_C/
+cabal update
+cabal init
+ls
+cabal run
+exit
+cabal run
+cd ..
+ls
+cabal run
+cabal run a
+cabal run WYAS_C a
+cabal run WYAS-C a
+cabal run WYAS-C +
+cabal run WYAS-C +
+cabal run WYAS-C "   _"
+cabal run WYAS-C "   _"
+cabal run WYAS-C "+"
+cabal run WYAS-C "+"
+cabal run WYAS-C "+"
+cabal run WYAS-C "   +"
+cabal run WYAS-C "1234"
+cabal run WYAS-C "1234 1234"
+cabal run WYAS-C "1234 0x1234"
+cabal run WYAS-C "$x12341234"
+cabal run WYAS-C "$x12341234"
+cabal run WYAS-C "#x12341234"
+cabal run WYAS-C "#x123 12341234"
+cabal run WYAS-C "#x123 12341234"
+cabal run WYAS-C "ABCD #x123 12341234"
+cabal run WYAS-C "ABCD1 #x123 12341234"
+cabal run WYAS-C "ABCD1#x123 12341234"
+cabal run WYAS-C "ABCD1#x123 12341234"
+cabal run WYAS-C "(ABCD1#x123 12341234)"
+cabal run WYAS-C "(ABCD1#x123 12341234)"
+cabal run WYAS-C "(ABCD1#x123 12341234)"
+cabal run WYAS-C "('ABCD1#x123 12341234)"
+cabal run WYAS-C "ABCD"
+cabal run WYAS-C "\"ABCD\""
+cd ..
+ls
+stack new mt940
+cd mt940/
+ls
+cd test/
+ls
+mkdir data
+cp ~/Downloads/MT940211110142435.STA data/MT940.STA
+ls
 exit

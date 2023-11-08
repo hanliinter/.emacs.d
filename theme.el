@@ -44,9 +44,9 @@
  ((string-equal system-type "gnu/linux") ; linux
   (when (member "Sarasa Mono SC" (font-family-list))
     (set-frame-font "Sarasa Mono SC" t t)
-    (set-face-attribute 'default nil :font "Sarasa Mono SC-24")
-    (set-face-attribute 'fixed-pitch nil :font "Sarasa Mono SC-22")
-    (set-face-attribute 'variable-pitch nil :font "Inconsolata-24")
+    (set-face-attribute 'default nil :font "Sarasa Mono SC-20")
+    (set-face-attribute 'fixed-pitch nil :font "Sarasa Mono SC-20")
+    (set-face-attribute 'variable-pitch nil :font "Inconsolata-22")
     )))
 
 ;; Sarasa Mono SC
