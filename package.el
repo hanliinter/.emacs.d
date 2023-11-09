@@ -270,8 +270,8 @@ FACE defaults to inheriting from default and highlight."
          ("M-g m" . consult-mark)
          ("M-g k" . consult-global-mark)
          ("M-g i" . consult-imenu)
-         ("M-g I" . consult-project-imenu)
-         ("M-g e" . consult-error)
+         ("M-g I" . consult-imenu-multi)
+         ("M-g e" . consult-compile-error)
          ;; -s bindings (search-map)
          ("M-s f" . consult-find)                  ;; alt. consult-locate, find-fd
          ("M-s g" . consult-git-grep)              ;; alt. consult-grep
@@ -281,9 +281,9 @@ FACE defaults to inheriting from default and highlight."
          ("M-s k" . consult-keep-lines)
          ("M-s u" . consult-focus-lines)
          ;; Isearch integration
-         ("M-s e" . consult-isearch)
+         ("M-s e" . consult-isearch-history)
          :map isearch-mode-map
-         ("M-e" . consult-isearch)                 ;; orig. isearch-edit-string
+         ("M-e" . consult-isearch-history)                 ;; orig. isearch-edit-string
          ("M-s e" . consult-isearch)               ;; orig. isearch-edit-string
          ("M-s l" . consult-line))                 ;; required by consult-line to detect isearch
 
