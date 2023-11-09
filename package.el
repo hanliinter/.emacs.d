@@ -9,10 +9,9 @@
 (add-to-list 'auto-mode-alist '("\\.beancount\\'" . beancount-mode))
 (use-package exec-path-from-shell
   :straight t
-  :config
-
-  (exec-path-from-shell-initialize)
   )
+
+(exec-path-from-shell-initialize)
 
 (use-package yasnippet
   :straight t
@@ -448,7 +447,7 @@ FACE defaults to inheriting from default and highlight."
 
 (use-package popper
   :straight t
-  :bind (("C-x C-`" . popper-toggle-latest)
+  :bind (("C-x C-`" . popper-toggle)
          ("M-`" . popper-cycle)
          ("C-M-`" . popper-toggle-type))
   :init
