@@ -457,6 +457,7 @@ FACE defaults to inheriting from default and highlight."
           "\\*Apropos\\*"
 	  "\\*Backtrace\\*"
 	  "\\*haskell\\*"
+	  "\\*undo-tree\\*"
           ("\\*Async Shell Command\\*" . hide)
           help-mode
           compilation-mode
@@ -529,3 +530,19 @@ FACE defaults to inheriting from default and highlight."
   (advice-add 'move-text-up :after 'indent-region-advice)
   (advice-add 'move-text-down :after 'indent-region-advice))
 
+
+(use-package undo-tree
+  :straight t
+  :config (global-undo-tree-mode)
+  )
+
+
+(use-package rainbow-delimiters
+  :straight t
+  :hook
+  ((prog-mode . rainbow-delimiters-mode))
+  )
+
+
+;(use-package dash-at-point
+;  :straight t)
