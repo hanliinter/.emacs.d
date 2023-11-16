@@ -534,6 +534,7 @@ FACE defaults to inheriting from default and highlight."
 (use-package undo-tree
   :straight t
   :config (global-undo-tree-mode)
+  (setq undo-tree-history-directory-alist '(("." . "~/.emacs.d/undo")))
   )
 
 
