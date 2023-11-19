@@ -144,6 +144,9 @@
 (when (string-equal system-name "Misanthrope.local")
   (add-to-list 'load-path "/Users/hanli/.opam/5.1.0/share/emacs/site-lisp")
   )
+(when (string-equal system-name "Mithridatism.local")
+  (add-to-list 'load-path "/Users/Hanli/.opam/4.13.1/share/emacs/site-lisp")
+  )
  (add-to-list 'load-path "/home/hanli/.opam/5.0.0/share/emacs/site-lisp") ;; change reduce to cl-reduce
  (require 'ocp-indent) 
 

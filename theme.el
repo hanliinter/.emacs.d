@@ -29,7 +29,7 @@
    :config
 ;   (modus-themes-load-vivendi)
    :straight t)
-(load-theme 'modus-vivendi-deuteranopia t)
+(load-theme 'modus-vivendi t)
 
 (use-package all-the-icons
   :straight t)
@@ -46,6 +46,11 @@
     (set-frame-font "Monaco-17" t t))
   (setq mac-option-modifier 'meta)
   )
+
+ (when (string-equal system-name "Mithridatism.local")
+  (setq mac-command-modifier 'meta)
+  )
+
  ((string-equal system-type "gnu/linux") ; linux
   (when (member "Sarasa Mono SC" (font-family-list))
     (set-frame-font "Sarasa Mono SC" t t)
