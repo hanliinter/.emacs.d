@@ -94,8 +94,8 @@
 
 (setq org-roam-directory "~/Org/RoamNotes")
 (setq org-roam-v2-ack t)
-(use-package org-journal
-  :straight t)
+;(use-package org-journal
+;  :straight t)
 
 (use-package org-pomodoro
   :straight t)
