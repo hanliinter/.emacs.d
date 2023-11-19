@@ -5,27 +5,31 @@
   )
 (add-hook 'haskell-mode-hook 'interactive-haskell-mode)
 
-(use-package dante
-  :ensure t
-  :straight t
-  :after haskell-mode
-  :commands 'dante-mode
-  :init
- ;; (add-hook 'haskell-mode-hook 'flycheck-mode)
-  ;; OR for flymake support:
-;  (add-hook 'haskell-mode-hook 'flymake-mode)
-;  (remove-hook 'flymake-diagnostic-functions 'flymake-proc-legacy-flymake)
+;; (use-package dante
+;;   :ensure t
+;;   :straight t
+;;   :after haskell-mode
+;;   :commands 'dante-mode
+;;   :init
+;;  ;; (add-hook 'haskell-mode-hook 'flycheck-mode)
+;;   ;; OR for flymake support:
+;; ;  (add-hook 'haskell-mode-hook 'flymake-mode)
+;; ;  (remove-hook 'flymake-diagnostic-functions 'flymake-proc-legacy-flymake)
 
-  (add-hook 'haskell-mode-hook 'dante-mode)
+;;   (add-hook 'haskell-mode-hook 'dante-mode)
 
-  :config
-  (setq company-backends '((dante-company company-capf company-dabbrev company-yasnippet company-dabbrev-code company-keywords company-files)))
-  )
+;;   :config
+;;   (setq company-backends '((dante-company company-capf company-dabbrev company-yasnippet company-dabbrev-code company-keywords company-files)))
+;;   )
 
 (use-package attrap
   :ensure t
   :straight t
   ) ;; use any binding of your choice
+
+(use-package flymake-easy
+  :ensure t
+  :straight t)
 
 ;;Rust
 
@@ -130,8 +134,8 @@
 
 
  (add-to-list 'load-path "/home/hanli/.opam/4.13.1/share/emacs/site-lisp")
-     (require 'ocp-indent)
-
+(use-package ocp-indent
+  :straight t)
 
 ;; Elixir
 (use-package elixir-mode

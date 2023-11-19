@@ -76,3 +76,10 @@
 ;; default 
 (setq rime-translate-keybindings
   '("C-f" "C-b" "C-n" "C-p" "C-g" "<left>" "<right>" "<up>" "<down>" "<prior>" "<next>" "<delete>"))
+
+
+;; MacOS issues : my meta is fn + option now, no reason why
+(when (eq system-type 'darwin)
+  (setq
+   mac-command-modifier 'meta
+   ))

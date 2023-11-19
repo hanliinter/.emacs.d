@@ -1,11 +1,12 @@
-;; (use-package doom-themes
-;;   :straight t
-;;   :config
-;;   (setq doom-themes-enable-bold t
-;; 	doom-themes-enable-italic t)
-
-
-  
+ (use-package doom-themes
+   :straight t
+   :config
+   (setq doom-themes-enable-bold t
+ 	 doom-themes-enable-italic t)
+   (load-theme 'doom-Iosvkem t)
+)
+;;
+;;    (load-theme 'doom-ayu-mirage t)
 ;;(load-theme 'modus-vivendi t)
 
   ;;modus-vivendi
@@ -14,14 +15,14 @@
 ;  )
 ;;(use-package plan9-theme
 ;;  :straight t)
-(use-package solo-jazz-theme
-  :straight t)
+;;(use-package solo-jazz-theme
+;;  :straight t)
 ;;(use-package color-theme-sanityinc-t
  ;; :straight t)
 ;;(color-theme-sanityinc-tomorrow-day)
 ;;(use-package minimal-theme
 ;;  :straight t)
-(load-theme 'solo-jazz t)
+
 
 ;;  (use-package modus-themes
 ;;    :config

@@ -112,8 +112,8 @@
           (lambda () (setq-local global-hl-line-mode nil)))))
 
 
-(use-package magit-todos
-  :straight t)
+;(use-package magit-todos
+;  :straight t)
 
 
 (use-package hl-todo
@@ -412,11 +412,11 @@ FACE defaults to inheriting from default and highlight."
 
 
 
-(use-package git-gutter
-  :straight t)
+;(use-package git-gutter
+;  :straight t)
 
- (use-package git-timemachine
-   :straight t)
+; (use-package git-timemachine
+;   :straight t)
 
 (use-package imenu-list
   :straight t)
