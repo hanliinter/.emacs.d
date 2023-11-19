@@ -8,6 +8,9 @@ straight/
 /server/
 .projectile
 .dir-locals.el
+.mc-lists.el
+.org-id-locations
+eshell/history
 rime/
 elpa/
 var/
@@ -16,3 +19,5 @@ bookmarks
 org-roam.db
 recentf
 .tags/
+undo/
+undo

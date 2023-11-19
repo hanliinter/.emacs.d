@@ -4,15 +4,14 @@
 (use-package projectile
   :straight t)
 
-(add-to-list 'load-path "~/beancount-mode/")
-(require 'beancount)
+;(add-to-list 'load-path "~/beancount-mode/")
+;(require 'beancount)
 (add-to-list 'auto-mode-alist '("\\.beancount\\'" . beancount-mode))
 (use-package exec-path-from-shell
   :straight t
-  :config
-
-  (exec-path-from-shell-initialize)
   )
+
+(exec-path-from-shell-initialize)
 
 (use-package yasnippet
   :straight t
@@ -48,7 +47,7 @@
   :init
   (setq company-tooltip-align-annotations t
         company-tooltip-limit 12
-        company-idle-delay 0
+        company-idle-delay 1
         company-echo-delay (if (display-graphic-p) nil 0)
         company-minimum-prefix-length 3
         company-require-match nil
@@ -57,14 +56,22 @@
         company-global-modes '(not erc-mode message-mode help-mode
                                    gud-mode eshell-mode shell-mode)
         ;;company-backends '((company-files))
-        company-backends '((company-capf company-dabbrev company-yasnippet company-dabbrev-code company-keywords company-files))
+        company-backends '((company-capf company-tabnine :seperator company-dabbrev company-yasnippet company-dabbrev-code company-keywords company-files company-clang company-gtags))
+	;;(company-bbdb company-semantic company-cmake company-capf company-clang company-files
+	;;      (company-dabbrev-code company-gtags company-etags company-keywords)
+
 	)
+  :config (setq company-show-numbers t)
   )
-:config (setq company-show-numbers t)
+
+
 
 (use-package company-box
   :straight t
   :hook (company-mode . company-box-mode))
+
+(use-package company-tabnine
+  :straight t)
 
   ;; (defun my-company-yasnippet ()
   ;;   "Hide the current completeions and show snippets."
@@ -180,6 +187,12 @@ FACE defaults to inheriting from default and highlight."
           (blink-matching-open))))
     (advice-add #'show-paren-function :after #'show-paren-off-screen)))
 
+;; Move Text
+(use-package move-text
+  :straight t
+  :config (move-text-default-bindings)
+  )
+
 ;; Highlight symbols
 (use-package symbol-overlay
   :straight t
@@ -187,10 +200,10 @@ FACE defaults to inheriting from default and highlight."
   :functions (turn-off-symbol-overlay turn-on-symbol-overlay)
   :custom-face (symbol-overlay-default-face ((t (:inherit (region bold)))))
   :bind (("M-i" . symbol-overlay-put)
-         ("M-n" . symbol-overlay-jump-next)
-         ("M-p" . symbol-overlay-jump-prev)
-         ("M-N" . symbol-overlay-switch-forward)
-         ("M-P" . symbol-overlay-switch-backward)
+;         ("M-n" . symbol-overlay-jump-next)
+;         ("M-p" . symbol-overlay-jump-prev)
+;         ("M-N" . symbol-overlay-switch-forward)
+;         ("M-P" . symbol-overlay-switch-backward) ;; do not bind these global key
          ("M-C" . symbol-overlay-remove-all)
          ([M-f3] . symbol-overlay-remove-all))
   :hook ((prog-mode . symbol-overlay-mode)
@@ -256,8 +269,8 @@ FACE defaults to inheriting from default and highlight."
          ("M-g m" . consult-mark)
          ("M-g k" . consult-global-mark)
          ("M-g i" . consult-imenu)
-         ("M-g I" . consult-project-imenu)
-         ("M-g e" . consult-error)
+         ("M-g I" . consult-imenu-multi)
+         ("M-g e" . consult-compile-error)
          ;; -s bindings (search-map)
          ("M-s f" . consult-find)                  ;; alt. consult-locate, find-fd
          ("M-s g" . consult-git-grep)              ;; alt. consult-grep
@@ -267,9 +280,9 @@ FACE defaults to inheriting from default and highlight."
          ("M-s k" . consult-keep-lines)
          ("M-s u" . consult-focus-lines)
          ;; Isearch integration
-         ("M-s e" . consult-isearch)
+         ("M-s e" . consult-isearch-history)
          :map isearch-mode-map
-         ("M-e" . consult-isearch)                 ;; orig. isearch-edit-string
+         ("M-e" . consult-isearch-history)                 ;; orig. isearch-edit-string
          ("M-s e" . consult-isearch)               ;; orig. isearch-edit-string
          ("M-s l" . consult-line))                 ;; required by consult-line to detect isearch
 
@@ -367,8 +380,8 @@ FACE defaults to inheriting from default and highlight."
   (marginalia-mode)
 
   ;; When using Selectrum, ensure that Selectrum is refreshed when cycling annotations.
-  (advice-add #'marginalia-cycle :after
-              (lambda () (when (bound-and-true-p selectrum-mode) (selectrum-exhibit))))
+  ;;(advice-add #'marginalia-cycle :after
+  ;;            (lambda () (when (bound-and-true-p selectrum-mode) (selectrum-exhibit))))
 
   ;; Prefer richer, more heavy, annotations over the lighter default variant.
   ;; E.g. M-x will show the documentation string additional to the keybinding.
@@ -403,11 +416,11 @@ FACE defaults to inheriting from default and highlight."
 
 (straight-use-package 'prescient)
 (straight-use-package 'company-prescient)
-(straight-use-package 'selectrum-prescient)
+;(straight-use-package 'selectrum-prescient)
 
 
 (company-prescient-mode)
-(selectrum-prescient-mode)
+;(selectrum-prescient-mode)
 (prescient-persist-mode)
 
 
@@ -415,7 +428,7 @@ FACE defaults to inheriting from default and highlight."
 ;(use-package git-gutter
 ;  :straight t)
 
-; (use-package git-timemachine
+;(use-package git-timemachine
 ;   :straight t)
 
 (use-package imenu-list
@@ -434,7 +447,7 @@ FACE defaults to inheriting from default and highlight."
 
 (use-package popper
   :straight t
-  :bind (("C-x C-`" . popper-toggle-latest)
+  :bind (("C-x C-`" . popper-toggle)
          ("M-`" . popper-cycle)
          ("C-M-`" . popper-toggle-type))
   :init
@@ -444,6 +457,7 @@ FACE defaults to inheriting from default and highlight."
           "\\*Apropos\\*"
 	  "\\*Backtrace\\*"
 	  "\\*haskell\\*"
+	  "\\*undo-tree\\*"
           ("\\*Async Shell Command\\*" . hide)
           help-mode
           compilation-mode
@@ -497,3 +511,39 @@ FACE defaults to inheriting from default and highlight."
 
 (use-package anki-editor
   :straight t)
+
+(use-package vterm
+  :straight t)
+
+
+(defun indent-region-advice (&rest ignored)
+  (let ((deactivate deactivate-mark))
+    (if (region-active-p)
+        (indent-region (region-beginning) (region-end))
+      (indent-region (line-beginning-position) (line-end-position)))
+    (setq deactivate-mark deactivate)))
+
+
+(use-package move-text
+  :straight t
+  :config
+  (advice-add 'move-text-up :after 'indent-region-advice)
+  (advice-add 'move-text-down :after 'indent-region-advice))
+
+
+(use-package undo-tree
+  :straight t
+  :config (global-undo-tree-mode)
+  (setq undo-tree-history-directory-alist '(("." . "~/.emacs.d/undo")))
+  )
+
+
+(use-package rainbow-delimiters
+  :straight t
+  :hook
+  ((prog-mode . rainbow-delimiters-mode))
+  )
+
+
+;(use-package dash-at-point
+;  :straight t)

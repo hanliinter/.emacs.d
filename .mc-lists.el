@@ -3,13 +3,23 @@
 
 (setq mc/cmds-to-run-for-all
       '(
+	c-electric-delete-forward
+	c-indent-line-or-region
+	indent-for-tab-command
+	org-delete-char
+	yaml-electric-dash-and-dot
 	))
 
 (setq mc/cmds-to-run-once
       '(
+	beginning-of-buffer
 	c-electric-brace
+	easy-kill
 	end-of-buffer
+	haskell-indentation-common-electric-command
+	haskell-process-load-file
 	iedit-switch-to-mc-mode
+	lsp-ui-doc--handle-mouse-movement
 	popper-toggle-latest
 	symbol-overlay-put
 	))

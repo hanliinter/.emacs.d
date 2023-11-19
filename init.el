@@ -1,7 +1,7 @@
 ;;(setq url-gateway-method 'socks)
 ;;(setq socks-server '("Default server" "127.0.0.1" 1081 5))
 
-
+(defvar native-comp-deferred-compilation-deny-list nil)
 ;; straight
 
 (defvar bootstrap-version)
@@ -22,8 +22,11 @@
 
 (setq theme-file "~/.emacs.d/theme.el")
 (load-file theme-file)
-(straight-use-package 'selectrum)
-(selectrum-mode +1)
+(use-package vertico
+  :straight t
+  :init
+  (vertico-mode)
+  )
 (setq package-file "~/.emacs.d/package.el")
 (load-file package-file)
 
@@ -46,10 +49,10 @@
   (load-file terminal-configuration-file)
   )
 
-(setenv "PATH" (concat (getenv "HOME") "/.local/bin:" "/usr/local/bin:" (getenv "PATH")))
-(setq exec-path
-      (reverse
-       (append
-        (reverse exec-path)
-        (list (concat (getenv "HOME") "/.local/bin")  "/usr/local/bin" ))))
-(put 'downcase-region 'disabled nil)
+;; (setenv "PATH" (concat (getenv "HOME") "/.local/bin:" "/usr/local/bin:" (getenv "PATH")))
+;; (setq exec-path
+;;       (reverse
+;;        (append
+;;         (reverse exec-path)
+;;         (list (concat (getenv "HOME") "/.local/bin")  "/usr/local/bin" ))))
+;; (put 'downcase-region 'disabled nil)

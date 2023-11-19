@@ -18,8 +18,11 @@
 (setq frame-title-format '("Hanli - %b")
       icon-title-format frame-title-format)
 
+
+(when (window-system)
 (menu-bar-mode -1)
 (tool-bar-mode -1)
+(tooltip-mode -1)  )
 
 ;; Move buffers between windows
 
@@ -43,7 +46,7 @@
       :straight t
       :ensure t
       :defer t
-      :hook (after-init . doom-modeline-init))
+      :hook (after-init . doom-modeline-mode))
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -77,9 +80,28 @@
 (setq rime-translate-keybindings
   '("C-f" "C-b" "C-n" "C-p" "C-g" "<left>" "<right>" "<up>" "<down>" "<prior>" "<next>" "<delete>"))
 
+;;shamelessly copied from  blog.sumtypeofway.com/posts/emacs-config.html
+(defun pt/eol-then-newline ()
+  "Go to end of line, then newline-and-indent."
+  (interactive)
+  (move-end-of-line nil)
+  (newline-and-indent))
 
-;; MacOS issues : my meta is fn + option now, no reason why
-(when (eq system-type 'darwin)
-  (setq
-   mac-command-modifier 'meta
-   ))
+(bind-key "C-<return>" #'pt/eol-then-newline)
+
+
+(use-package sudo-edit
+  :straight t)
+
+
+(use-package duplicate-thing
+  :straight t
+  :init
+  (defun pt/duplicate-thing ()
+    "Duplicate thing at point without changing the mark."
+    (interactive)
+    (save-mark-and-excursion (duplicate-thing 1))
+    (call-interactively #'next-line))
+  :bind (("C-c u" . pt/duplicate-thing)
+         ("C-c C-d" . pt/duplicate-thing)))
+>>>>>>> origin/master
