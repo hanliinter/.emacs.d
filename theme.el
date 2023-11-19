@@ -47,9 +47,6 @@
   (setq mac-option-modifier 'meta)
   )
 
- (when (string-equal system-name "Mithridatism.local")
-  (setq mac-command-modifier 'meta)
-  )
 
  ((string-equal system-type "gnu/linux") ; linux
   (when (member "Sarasa Mono SC" (font-family-list))

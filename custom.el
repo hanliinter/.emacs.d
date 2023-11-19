@@ -106,3 +106,6 @@
          ("C-c C-d" . pt/duplicate-thing)))
 
 
+ (when (string-equal system-name "Mithridatism.local")
+  (setq mac-command-modifier 'meta)
+  )
