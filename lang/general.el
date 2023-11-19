@@ -254,3 +254,8 @@
 
 (use-package yaml-mode
   :straight t)
+
+
+;; Racket
+(use-package racket-mode
+  :straight t)
