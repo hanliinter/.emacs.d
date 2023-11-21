@@ -12,6 +12,7 @@
   :config
   (add-hook 'haskell-mode-hook 'interactive-haskell-mode)
   ;;(setq haskell-compile-cabal-build-command "stack build --fast")
+  (add-hook 'haskell-mode-hook 'haskell-indentation-mode)
   ;;(setq company-backends '((dante-company company-capf company-dabbrev company-yasnippet company-dabbrev-code company-keywords company-files)))
   )
 
@@ -19,6 +20,10 @@
   :ensure t
   :straight t
   ) ;; use any binding of your choice
+
+(use-package flymake-easy
+  :ensure t
+  :straight t)
 
 ;;Rust
 
@@ -55,12 +60,17 @@
                    (remove-hook 'flymake-diagnostic-functions 'eglot-flymake-backend)
                    ))
   :hook (scala-mode . eglot-ensure)
+  :bind ("s-f" . eglot-format)
   :config (setq eglot-stay-out-of '(company))
   )
 
+;; ;; simply add a new element to the front of the list and it will shadow matches further down the list.
+;; (with-eval-after-load "eglot"
+;;   (add-to-list 'eglot-stay-out-of 'flymake)
+;;   (add-to-list 'eglot-server-programs
+;; 	       `(haskell-mode .  ("haskell-language-server-wrapper" "--lsp" "--debug"))))
 
-(with-eval-after-load "eglot"
-  (add-to-list 'eglot-stay-out-of 'flymake))
+
 
 ;; (use-package lsp-haskell
 ;;   :defer t
@@ -134,6 +144,9 @@
 
 (when (string-equal system-name "Misanthrope.local")
   (add-to-list 'load-path "/Users/hanli/.opam/5.1.0/share/emacs/site-lisp")
+  )
+(when (string-equal system-name "Mithridatism.local")
+  (add-to-list 'load-path "/Users/Hanli/.opam/4.13.1/share/emacs/site-lisp")
   )
  (add-to-list 'load-path "/home/hanli/.opam/5.0.0/share/emacs/site-lisp") ;; change reduce to cl-reduce
  (require 'ocp-indent) 
@@ -241,4 +254,19 @@
   :straight t)
 
 (use-package yaml-mode
+  :straight t)
+
+
+;; Racket
+(use-package racket-mode
+  :straight t)
+
+
+;; Javascript
+(use-package js2-mode
+  :straight t)
+
+
+;; JSX
+(use-package rjsx-mode
   :straight t)

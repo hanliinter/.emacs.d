@@ -79,11 +79,23 @@
 (use-package org-roam
   :straight t)
 
+(use-package org-noter
+  :straight
+             (:repo "org-noter/org-noter"
+                    :host github
+                    :type git
+                    :files ("*.el" "modules/*.el"))
+
+	     :after (:any org pdf-view)
+	     :config
+	     (setq org-noter-notes-window-location 'horizontal-split
+		   org-noter-always-create-frame nil)
+	     )
 
 (setq org-roam-directory "~/Org/RoamNotes")
 (setq org-roam-v2-ack t)
-(use-package org-journal
-  :straight t)
+;(use-package org-journal
+;  :straight t)
 
 (use-package org-pomodoro
   :straight t)

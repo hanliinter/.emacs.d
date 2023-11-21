@@ -29,7 +29,7 @@
    :config
 ;   (modus-themes-load-vivendi)
    :straight t)
-(load-theme 'modus-vivendi-deuteranopia t)
+(load-theme 'modus-vivendi t)
 
 (use-package all-the-icons
   :straight t)
@@ -50,12 +50,14 @@
   (setq mac-option-modifier 'meta)
   (setq mac-command-modifier 'super)
   )
+
+
  ((string-equal system-type "gnu/linux") ; linux
   (when (member "Sarasa Mono SC" (font-family-list))
     (set-frame-font "Sarasa Mono SC" t t)
-    (set-face-attribute 'default nil :font "Sarasa Mono SC-24")
-    (set-face-attribute 'fixed-pitch nil :font "Sarasa Mono SC-22")
-    (set-face-attribute 'variable-pitch nil :font "Inconsolata-24")
+    (set-face-attribute 'default nil :font "Sarasa Mono SC-17")
+    (set-face-attribute 'fixed-pitch nil :font "Sarasa Mono SC-17")
+    (set-face-attribute 'variable-pitch nil :font "Inconsolata-20")
     )))
 
 ;; Sarasa Mono SC
