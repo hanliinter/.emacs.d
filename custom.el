@@ -106,7 +106,7 @@
          ("C-c C-d" . pt/duplicate-thing)))
 
 
- (when (string-equal system-name "Mithridatism.local")
+ (when (or (string-equal system-name "Mithridatism.local") (string-equal system-name "Misanthrope.local"))
   (setq mac-command-modifier 'meta)
   )
 
