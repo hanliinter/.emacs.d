@@ -11,6 +11,7 @@
 
   :config
   (add-hook 'haskell-mode-hook 'interactive-haskell-mode)
+  ;;(setq haskell-compile-cabal-build-command "stack build --fast")
   ;;(setq company-backends '((dante-company company-capf company-dabbrev company-yasnippet company-dabbrev-code company-keywords company-files)))
   )
 
