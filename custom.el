@@ -109,3 +109,9 @@
  (when (string-equal system-name "Mithridatism.local")
   (setq mac-command-modifier 'meta)
   )
+
+(when (string-equal system-name "NirvanaZ")
+  (setq x-meta-keysym 'super
+      x-super-keysym 'meta)
+  )
+
