@@ -259,3 +259,13 @@
 ;; Racket
 (use-package racket-mode
   :straight t)
+
+
+;; Javascript
+(use-package js2-mode
+  :straight t)
+
+
+;; JSX
+(use-package rjsx-mode
+  :straight t)
