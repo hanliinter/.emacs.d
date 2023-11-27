@@ -43,8 +43,12 @@
     (set-frame-font "Menlo-14" t t))
 
   (when (string-equal system-name "Misanthrope.local")
-    (set-frame-font "Monaco-17" t t))
+    ;;(set-frame-font "Monaco-17" t t))
+ (set-frame-font "IBM Plex Mono-19:wight=Bold" t t))
+   ;; (set-frame-font "Iosevka-20" t t))
+    ;;(set-frame-font "FreeMono-20" t t))
   (setq mac-option-modifier 'meta)
+  (setq mac-command-modifier 'super)
   )
 
 
