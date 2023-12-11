@@ -25,11 +25,29 @@
 ;;   :straight t)
 ;; (load-theme 'solo-jazz t)
 
+;;ef-spring
+;;ef-tritanopia-light
+;;ef-bio
+;;ef-dark
+;;ef-deuteranopia-dark
+;;ef-duo-dark
+;;ef-maris-dark
+;;ef-night
+;;ef-tritanopia-dark
+;;ef-winter
+(use-package ef-themes
+  :straight t)
+(load-theme 'ef-winter :no-confirm)
+
+
  (use-package modus-themes
    :config
 ;   (modus-themes-load-vivendi)
    :straight t)
-(load-theme 'modus-vivendi t)
+;(load-theme 'modus-vivendi t)
+
+
+
 
 (use-package all-the-icons
   :straight t)
@@ -44,7 +62,9 @@
 
   (when (string-equal system-name "Misanthrope.local")
     ;;(set-frame-font "Monaco-17" t t))
- (set-frame-font "IBM Plex Mono-19:wight=Bold" t t))
+    ;; (set-frame-font "IBM Plex Mono-19:wight=Bold" t t))
+    (set-frame-font "Source Code Pro-18" t t))
+    
    ;; (set-frame-font "Iosevka-20" t t))
     ;;(set-frame-font "FreeMono-20" t t))
   (setq mac-option-modifier 'meta)
