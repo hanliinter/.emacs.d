@@ -209,7 +209,12 @@
               ("p" "Phone call" entry (file "~/Org/Refile.org")
                "* PHONE %? :PHONE:\n%U" :clock-in t :clock-resume t)
               ("h" "Habit" entry (file "~/Org/Refile.org")
-               "* NEXT %?\n%U\n%a\nSCHEDULED: %(format-time-string \"%<<%Y-%m-%d %a .+1d/3d>>\")\n:PROPERTIES:\n:STYLE: habit\n:REPEAT_TO_STATE: NEXT\n:END:\n"))))
+               "* NEXT %?\n%U\n%a\nSCHEDULED: %(format-time-string \"%<<%Y-%m-%d %a .+1d/3d>>\")\n:PROPERTIES:\n:STYLE: habit\n:REPEAT_TO_STATE: NEXT\n:END:\n")
+	      ("b" "Bookmark" entry (file+headline "~/Org/WebCapture.org" "Bookmarks")
+               "* %?\n:PROPERTIES:\n:CREATED: %U\n:END:\n\n" :empty-lines 1)
+
+	      )
+	     ))
 
 ;; org refile targets should include the current file, agenda file, target archive file and the open buffer
 

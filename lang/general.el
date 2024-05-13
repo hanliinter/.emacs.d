@@ -270,3 +270,20 @@
 ;; JSX
 (use-package rjsx-mode
   :straight t)
+
+;; should use the projectile or project to enhance this one, also need to use hasktags on haskell (and other tags)
+;; (defun compile-tags ()
+;;   "compile etags for the current project"
+;;   (interactive)
+;;   (cd "YOUR_DIRECTORY")
+;;   (compile "find . -name \"*.[chCH]\" -print | etags -"))
+
+
+;; add an execution of ctags to the build script is also a good way 
+
+
+;; Python
+(use-package python
+  :defer t
+  :straight t)
+

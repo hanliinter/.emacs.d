@@ -37,7 +37,7 @@
 ;;ef-winter
 (use-package ef-themes
   :straight t)
-(load-theme 'ef-winter :no-confirm)
+(load-theme 'ef-maris-dark :no-confirm)
 
 
  (use-package modus-themes
@@ -74,7 +74,8 @@
 
  ((string-equal system-type "gnu/linux") ; linux
   (when (member "Sarasa Mono SC" (font-family-list))
-    (set-frame-font "Sarasa Mono SC" t t)
+    ;(set-frame-font "Sarasa Mono SC-18" t t)
+    (set-frame-font "PragmataPro-18" t t)
     (set-face-attribute 'default nil :font "Sarasa Mono SC-17")
     (set-face-attribute 'fixed-pitch nil :font "Sarasa Mono SC-17")
     (set-face-attribute 'variable-pitch nil :font "Inconsolata-20")
