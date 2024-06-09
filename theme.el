@@ -37,17 +37,18 @@
 ;;ef-winter
 (use-package ef-themes
   :straight t)
-(load-theme 'ef-maris-dark :no-confirm)
-
-
+(load-theme 'ef-deuteranopia-dark :no-confirm)2
  (use-package modus-themes
    :config
 ;   (modus-themes-load-vivendi)
    :straight t)
 ;(load-theme 'modus-vivendi t)
 
-
-
+;; (use-package stimmung-themes
+;;   :straight (stimmung-themes :host github :repo "motform/stimmung-themes") ; if you are a straight shooter
+;;   :demand t
+;;   :ensure t
+;;   :config (stimmung-themes-load-light)) ; or (stimmung-themes-load-dark)
 
 (use-package all-the-icons
   :straight t)
