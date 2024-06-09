@@ -37,8 +37,9 @@
 ;;ef-winter
 (use-package ef-themes
   :straight t)
-(load-theme 'ef-maris-dark :no-confirm)
+(load-theme 'ef-deuteranopia-light :no-confirm)
 
+;; use ef-day on macbook during the day
 
  (use-package modus-themes
    :config
