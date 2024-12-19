@@ -35,20 +35,20 @@
 ;;ef-night
 ;;ef-tritanopia-dark
 ;;ef-winter
-(use-package ef-themes
-  :straight t)
-(load-theme 'ef-deuteranopia-dark :no-confirm)2
- (use-package modus-themes
-   :config
-;   (modus-themes-load-vivendi)
-   :straight t)
+;;  (use-package ef-themes
+;;    :straight t)
+;; (load-theme 'ef-night :no-confirm)
+;;  (use-package modus-themes
+;;    :config
+;; ;   (modus-themes-load-vivendi)
+;;    :straight t)
 ;(load-theme 'modus-vivendi t)
 
-;; (use-package stimmung-themes
-;;   :straight (stimmung-themes :host github :repo "motform/stimmung-themes") ; if you are a straight shooter
-;;   :demand t
-;;   :ensure t
-;;   :config (stimmung-themes-load-light)) ; or (stimmung-themes-load-dark)
+(use-package stimmung-themes
+  :straight (stimmung-themes :host github :repo "motform/stimmung-themes") ; if you are a straight shooter
+  :demand t
+  :ensure t
+  :config (stimmung-themes-load-light)) ; or (stimmung-themes-load-dark)
 
 (use-package all-the-icons
   :straight t)
@@ -75,31 +75,11 @@
 
  ((string-equal system-type "gnu/linux") ; linux
   (when (member "Sarasa Mono SC" (font-family-list))
-    ;(set-frame-font "Sarasa Mono SC-18" t t)
-    (set-frame-font "PragmataPro-18" t t)
+    (set-frame-font "Sarasa Mono SC-18" t t)
+    ;(set-frame-font "PragmataPro-18" t t)
     (set-face-attribute 'default nil :font "Sarasa Mono SC-17")
     (set-face-attribute 'fixed-pitch nil :font "Sarasa Mono SC-17")
     (set-face-attribute 'variable-pitch nil :font "Inconsolata-20")
     )))
 
 ;; Sarasa Mono SC
-;;
-(set-fontset-font
- t
- '(#x4e00 . #x9fff)
- (cond
-  ((string-equal system-type "windows-nt")
-   (cond
-    ((member "Sarasa Mono SC" (font-family-list)) "Sarasa Mono SC")
-    ((member "Microsoft YaHei" (font-family-list)) "Microsoft YaHei")
-    ((member "SimHei" (font-family-list)) "SimHei")))
-  ((string-equal system-type "darwin")
-   (cond
-    ((member "Hei" (font-family-list)) "Hei")
-    ((member "Heiti SC" (font-family-list)) "Heiti SC")
-    ((member "Heiti TC" (font-family-list)) "Heiti TC")))
-  ((string-equal system-type "gnu/linux")
-   (cond
-    ((member "WenQuanYi Micro Hei" (font-family-list)) "WenQuanYi Micro Hei")))))
-
-
