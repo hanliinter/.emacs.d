@@ -37,22 +37,21 @@
 ;;ef-winter
 (use-package ef-themes
   :straight t)
-(load-theme 'ef-deuteranopia-light :no-confirm)
+;(load-theme 'ef-deuteranopia-light :no-confirm)
 
 ;; use ef-day on macbook during the day
 
-(load-theme 'ef-deuteranopia-dark :no-confirm)
  (use-package modus-themes
    :config
 ;   (modus-themes-load-vivendi)
    :straight t)
 ;(load-theme 'modus-vivendi t)
 
-;; (use-package stimmung-themes
-;;   :straight (stimmung-themes :host github :repo "motform/stimmung-themes") ; if you are a straight shooter
-;;   :demand t
-;;   :ensure t
-;;   :config (stimmung-themes-load-light)) ; or (stimmung-themes-load-dark)
+(use-package stimmung-themes
+  :straight (stimmung-themes :host github :repo "motform/stimmung-themes") ; if you are a straight shooter
+  :demand t
+  :ensure t
+  :config (stimmung-themes-load-light)) ; or (stimmung-themes-load-dark)
 
 (use-package all-the-icons
   :straight t)
