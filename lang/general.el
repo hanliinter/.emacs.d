@@ -262,6 +262,10 @@
   :straight t)
 
 
+(use-package geiser-racket
+  :straight t)
+
+
 ;; Javascript
 (use-package js2-mode
   :straight t)
@@ -287,3 +291,48 @@
   :defer t
   :straight t)
 
+(use-package pyvenv
+  :ensure t
+  :straight t
+  :config
+  (pyvenv-mode t)
+
+  ;; Set correct Python interpreter
+  (setq pyvenv-post-activate-hooks
+        (list (lambda ()
+                (setq python-shell-interpreter (concat pyvenv-virtual-env "bin/python3")))))
+  (setq pyvenv-post-deactivate-hooks
+        (list (lambda ()
+                (setq python-shell-interpreter "python3")))))
+
+;; https://stackoverflow.com/questions/38535499/how-to-setup-emacs-to-use-a-given-python-virtualenv
+
+
+
+;; sml
+(use-package sml-mode
+  :straight t)
+
+
+;; Treesitter ones
+(setq treesit-language-source-alist
+   '((cmake "https://github.com/uyha/tree-sitter-cmake")
+     (css "https://github.com/tree-sitter/tree-sitter-css")
+     (go "https://github.com/tree-sitter/tree-sitter-go")
+     (html "https://github.com/tree-sitter/tree-sitter-html")
+     (javascript "https://github.com/tree-sitter/tree-sitter-javascript" "master" "src")
+     (json "https://github.com/tree-sitter/tree-sitter-json")
+     (markdown "https://github.com/ikatyang/tree-sitter-markdown")
+     (python "https://github.com/tree-sitter/tree-sitter-python")
+     (toml "https://github.com/tree-sitter/tree-sitter-toml")
+     (tsx "https://github.com/tree-sitter/tree-sitter-typescript" "master" "tsx/src")
+     (typescript "https://github.com/tree-sitter/tree-sitter-typescript" "master" "typescript/src")
+     (yaml "https://github.com/ikatyang/tree-sitter-yaml")))
+
+
+
+
+;; factor
+
+(load-file "/home/hanli/.emacs.d/straight/repos/fuel/fuel-1.0/fu.el")
+(require 'factor-mode)

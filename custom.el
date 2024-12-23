@@ -52,6 +52,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(fuel-listener-factor-binary "/home/hanli/Codes/3PL/factor/factor")
+ '(fuel-listener-factor-image "/home/hanli/Codes/3PL/factor/factor.image")
  '(ignored-local-variable-values '((buffer-file-coding-system . utf-8-unix)))
  '(warning-suppress-types '((org-roam) (org-roam) (org-roam))))
 (custom-set-faces
@@ -138,7 +140,7 @@
          ("C-M-#" . consult-register)
          ;; Other custom bindings
          ("M-y" . consult-yank-pop)                ;; orig. yank-pop
-         ("<help> a" . consult-apropos)            ;; orig. apropos-command
+         ;;("<help> a" . consult-apropos)            ;; orig. apropos-command
          ;; M-g bindings (goto-map)
          ("M-g g" . consult-goto-line)             ;; orig. goto-line
          ("M-g M-g" . consult-goto-line)           ;; orig. goto-line
@@ -311,6 +313,14 @@
   ;; auto-updating embark collect buffer
   :hook
   (embark-collect-mode . consult-preview-at-point-mode))
+
+
+(use-package consult-eglot
+  :straight t
+  :after(embark consult)
+  ;; :config
+  ;; (consult-eglot-embark-mode)
+  )
 
 (use-package orderless
   :straight t

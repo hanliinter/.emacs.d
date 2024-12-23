@@ -399,3 +399,20 @@ FACE defaults to inheriting from default and highlight."
 ;  :straight t)
 
 
+(use-package gptel
+  :straight t)
+
+
+(require 'auth-source)
+(defun get-gemini-password ()
+  (let* ((auth-info (auth-source-search :host "gemini"
+                                        :require '(:user :secret)))
+         (password (funcall (plist-get (car auth-info) :secret))))
+    password))
+
+(setq
+ gptel-model 'gemini-pro
+ gptel-backend (gptel-make-gemini "Gemini"          ;Any name you want
+  :stream t                             ;Streaming responses
+  :key (get-gemini-password)))
+
