@@ -336,3 +336,9 @@
 
 (load-file "/home/hanli/.emacs.d/straight/repos/fuel/fuel-1.0/fu.el")
 (require 'factor-mode)
+
+
+(use-package robe
+  :straight t)
+
+
