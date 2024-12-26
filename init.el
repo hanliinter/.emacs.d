@@ -69,6 +69,18 @@ Cancel the previous one if present."
   :init
   (vertico-mode)
   )
+
+;; Use this only for GUI now, wait Emacs 31 to arrive on my terminal environment
+(if (display-graphic-p)
+  (use-package vertico-posframe
+    :straight t
+    :init
+    (vertico-posframe-mode 1)
+
+    )
+  )
+
+
 (setq package-file "~/.emacs.d/package.el")
 (load-file package-file)
 
