@@ -342,3 +342,10 @@
   :straight t)
 
 
+(use-package copilot
+  :straight (:host github :repo "copilot-emacs/copilot.el" :files ("*.el"))
+  :ensure t
+  :config (add-hook 'prog-mode-hook 'copilot-mode)
+  )
+
+
