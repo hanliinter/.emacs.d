@@ -405,14 +405,38 @@ FACE defaults to inheriting from default and highlight."
 
 (require 'auth-source)
 (defun get-gemini-password ()
-  (let* ((auth-info (auth-source-search :host "gemini"
+  (get-api "gemini")
+)
+
+
+(defun get-api (host)
+  (let* ((auth-info (auth-source-search :host host
                                         :require '(:user :secret)))
          (password (funcall (plist-get (car auth-info) :secret))))
     password))
 
+
+;; (setq
+;;  gptel-model 'gemini-pro
+;;  gptel-backend (gptel-make-gemini "Gemini"          ;Any name you want
+;;   :stream t                             ;Streaming responses
+;;   :key (get-gemini-password)))
+
 (setq
- gptel-model 'gemini-pro
- gptel-backend (gptel-make-gemini "Gemini"          ;Any name you want
-  :stream t                             ;Streaming responses
-  :key (get-gemini-password)))
+ gptel-model 'deepseek-chat
+ gptel-backend
+(gptel-make-openai "DeepSeek"       ;Any name you want
+  :host "api.deepseek.com"
+  :endpoint "/v1/chat/completions"
+  :stream t
+  :key (get-api "deepseek")               ;can be a function that returns the key
+  :models '("deepseek-chat" )))
+
+(get-api "deepseek")
+
+(gptel-make-gemini "Gemini"          ;Any name you want
+   :stream t                             ;Streaming responses
+   :key (get-gemini-password))
+
+
 
