@@ -21,15 +21,7 @@
   :straight t
   ) ;; use any binding of your choice
 
-(use-package flymake-easy
-  :ensure t
-  :straight t)
-
 ;;Rust
-
-(use-package flymake-rust
-  :ensure t
-  :straight t)
 
 (use-package rustic
   :straight t
@@ -37,13 +29,11 @@
   (setq rustic-lsp-client 'eglot)
   
   :init
-  (require 'flymake-rust)
   (defun rustic-cargo-run-with-args ()
     "Run 'cargo run' with command line arguments"
     (interactive)
     (rustic-cargo-run-with-args t)
     )
-(add-hook 'rust-mode-hook 'flymake-rust-load)
   )
 
 ;; Go
@@ -342,10 +332,80 @@
   :straight t)
 
 
-(use-package copilot
-  :straight (:host github :repo "copilot-emacs/copilot.el" :files ("*.el"))
-  :ensure t
-  :config (add-hook 'prog-mode-hook 'copilot-mode)
+;; use a new version, generate by copilot
+
+(defun my/setup-completion-for-copilot()
+  "Setup a combined completion system with Copilot, YASnippet, and Company.
+Only activates when Copilot mode is enabled."
+  (interactive)
+  (defun my/completion-handler()
+    "Handle completion using Copilot, YASnippet, and Company in that order."
+    (interactive)
+    (cond
+     ;; First, check if Copilot has a completion
+     ((and (bound-and-true-p copilot-mode)
+           (copilot--overlay-visible))
+      (copilot-accept-completion))
+     
+     ;; Then, check if there's an expandable snippet
+     ((and (bound-and-true-p yas-minor-mode)
+           (yas-expandable-at-point))
+      (yas-expand))
+     
+     ;; Finally, try company completion
+     ((and (bound-and-true-p company-mode)
+           company-candidates)
+      (company-complete))
+     
+     ;; If nothing above works, try to start company completion
+     (t
+      (company-complete)))
+    )
+   ;; Define key bindings that only work in Copilot mode
+  (defun my/setup-completion-keys ()
+    "Setup keybindings for the combined completion system."
+    (when (bound-and-true-p copilot-mode)
+      ;; Bind TAB to our custom completion handler
+      (local-set-key (kbd "TAB") #'my/completion-handler)
+      
+      ;; Additional Copilot-specific bindings
+      (local-set-key (kbd "C-c C-n") #'copilot-next-completion)
+      (local-set-key (kbd "C-c C-p") #'copilot-previous-completion)
+      
+      ;; Custom binding for forcing copilot completion
+      (local-set-key (kbd "C-c C-j") #'copilot-accept-completion)
+      ;; C-c C-c might be useful for commit in magit, where I might also need copilot
+      ))
+
+(add-hook 'copilot-mode-hook #'my/setup-completion-keys)
+
+  ;; Configure Company settings for better integration
+  (setq company-idle-delay 1
+        company-minimum-prefix-length 2)
+
+  ;; Configure YASnippet to work alongside Copilot
+  (setq yas-triggers-in-field t)
+
+  ;; Advice to prevent Company from showing completions when Copilot is showing suggestions
+  (defun my/company-completion-filtered (orig-fun &rest args)
+    "Don't show Company completions if Copilot overlay is visible."
+    (unless (and (bound-and-true-p copilot-mode)
+                 (copilot--overlay-visible))
+      (apply orig-fun args)))
+  
+  (advice-add 'company-complete :around #'my/company-completion-filtered)
+  
   )
 
 
+(use-package copilot
+  :straight (:host github :repo "copilot-emacs/copilot.el" :files ("*.el"))
+  :ensure t
+   :config
+(add-hook 'prog-mode-hook 'copilot-mode)
+   (my/setup-completion-for-copilot)
+  )
+
+
+;; (use-package company
+;; use 
