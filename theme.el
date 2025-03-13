@@ -44,11 +44,34 @@
 ;;    :straight t)
 ;(load-theme 'modus-vivendi t)
 
-(use-package stimmung-themes
-  :straight (stimmung-themes :host github :repo "motform/stimmung-themes") ; if you are a straight shooter
-  :demand t
-  :ensure t
-  :config (stimmung-themes-load-light)) ; or (stimmung-themes-load-dark)
+;; (use-package stimmung-themes
+;;   :straight (stimmung-themes :host github :repo "motform/stimmung-themes") ; if you are a straight shooter
+;;   :demand t
+;;   :ensure t
+;;   :config (stimmung-themes-load-dark)) ; or (stimmung-themes-load-dark)
+
+;; (use-package minimal-theme
+;;   :straight t)
+;; (load-theme 'minimal)
+
+;; (use-package mindre-theme
+;;     :straight t
+;;     :ensure t
+;;     :custom
+;;     (mindre-use-more-bold nil)
+;;     (mindre-use-faded-lisp-parens t)
+;;     :config
+;;     (load-theme 'mindre t))
+
+
+(use-package almost-mono-themes
+  :straight t
+  :config
+  ;; (load-theme 'almost-mono-black t)
+  ;; (load-theme 'almost-mono-gray t)
+  ;; (load-theme 'almost-mono-cream t)
+  (load-theme 'almost-mono-white t)
+  )
 
 (use-package all-the-icons
   :straight t)
@@ -83,3 +106,7 @@
     )))
 
 ;; Sarasa Mono SC
+
+
+
+(setq display-line-numbers-type 'relative)
