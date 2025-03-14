@@ -410,9 +410,14 @@ FACE defaults to inheriting from default and highlight."
          (password (funcall (plist-get (car auth-info) :secret))))
     password))
 
+
+
+
 (setq
  gptel-model 'gemini-pro
  gptel-backend (gptel-make-gemini "Gemini"          ;Any name you want
   :stream t                             ;Streaming responses
   :key (get-gemini-password)))
+
+;(get-gemini-password)
 
