@@ -13,7 +13,10 @@
   (add-hook 'haskell-mode-hook 'interactive-haskell-mode)
   ;;(setq haskell-compile-cabal-build-command "stack build --fast")
   (add-hook 'haskell-mode-hook 'haskell-indentation-mode)
+  ;(setq haskell-process-log t)
   ;;(setq company-backends '((dante-company company-capf company-dabbrev company-yasnippet company-dabbrev-code company-keywords company-files)))
+  ;; temporarily diable the color output
+  (setq haskell-process-args-stack-ghci '( "--ghci-options=-ferror-spans -fdiagnostics-color=never" "--no-build" "--no-load"))
   )
 
 (use-package attrap
@@ -415,3 +418,11 @@ Only activates when Copilot mode is enabled."
 
 ;; (use-package company
 ;; use 
+
+;; stop the compilation at the first error, which will automatically scroll to the first error, and the rest of the errors will be shown in the compilation buffer in the bottom
+(setq compilation-scroll-output 'first-error)
+
+
+(use-package envrc
+  :straight t
+  :hook (after-init . envrc-global-mode))
