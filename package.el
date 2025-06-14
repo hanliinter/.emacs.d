@@ -440,3 +440,5 @@ FACE defaults to inheriting from default and highlight."
 
 
 
+;(get-gemini-password)
+
