@@ -132,14 +132,20 @@
      ;;   ;; Use opam switch to lookup ocamlmerlin binary
      ;;   (setq merlin-command 'opam)))
 
-(when (string-equal system-name "Misanthrope.local")
-  (add-to-list 'load-path "/Users/hanli/.opam/5.1.0/share/emacs/site-lisp")
-  )
-(when (string-equal system-name "Mithridatism.local")
-  (add-to-list 'load-path "/Users/Hanli/.opam/4.13.1/share/emacs/site-lisp")
-  )
- (add-to-list 'load-path "/home/hanli/.opam/5.0.0/share/emacs/site-lisp") ;; change reduce to cl-reduce
+(defun opam-env ()
+  (interactive nil)
+  (dolist (var (car (read-from-string (shell-command-to-string "opam config env --sexp"))))
+    (setenv (car var) (cadr var))))
+;; Add the opam site-lisp directory to the load path
+;; we should use the opam switch to get the correct version of ocamlmerlin
+;;FIXME: consider combine this with direnv so we can automatically use the opam switch of the current project
+
+(opam-env)
+
+ (add-to-list 'load-path (concat (getenv "OPAM_SWITCH_PREFIX") "/share/emacs/site-lisp"))
  (require 'ocp-indent) 
+
+
 
 ;; OCaml 
 
