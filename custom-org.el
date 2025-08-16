@@ -27,7 +27,6 @@
 
   )
 
-
 ;; (defun try-expand
 
 ;;   ("s" (hot-expand "<s"))
@@ -109,14 +108,7 @@
   :hook
   (org-mode . org-fancy-priorities-mode)
   :config
-  (setq org-fancy-priorities-list '("⚡" "⬆" "⬇" "☕")))
-
-
-
-(with-eval-after-load 'org
-  ;; here goes your Org config :)
-  ;; ....
-
+  (with-eval-after-load 'org
   (setq org-fancy-priorities-list '((?A . "❗")
                                   (?B . "⬆")
                                   (?C . "⬇")
@@ -126,23 +118,35 @@
                                   (?3 . "⮮")
                                   (?4 . "☕")
                                   (?I . "Important")))
+  ))
 
 
+;; customize org to meet my own needs
+;; Inbox.org -- Org-Capture, Org-Agenda, Org-Refiles
+  ;; Planning and Review
+  ;; weekly review
+  ;; weekly planning
+;; Daily log
+  ;; the daily log should be a separated file, it works as journal, not really a todo list, but it might share quite a lot of the agenda items with the todo list, so it should appear in the review section
+;; Sync org
+;; I actually don't need sync that much, so I can just use one particular file for sync, keep this file in Dropbox.  
+  
+  
 ;; refile
-
 (setq org-directory "~/Org/")
+(setq org-agenda-directory "~/Org/agenda/")
 (setq org-default-notes-file "~/Org/Refile.org")
 
 
 
 
 (setq org-agenda-files
-	(append (file-expand-wildcards (concat org-directory "*.org"))
-		(directory-files-recursively (concat org-directory "Daylog") org-agenda-file-regexp)
-    		(directory-files-recursively (concat org-directory "RoamNotes")org-agenda-file-regexp)
+	(append (file-expand-wildcards (concat org-agenda-directory "*.org"))
+	 ;     		(directory-files-recursively (concat org-directory "agenda")org-agenda-file-regexp)
 		)
-		)
+	)
 
+;;(file-expand-wildcards (concat org-agenda-directory "*.org"))
 
 
 ;; (setq org-agenda-files
@@ -156,9 +160,15 @@
 (setq org-use-fast-todo-selection t)
 ;; TODO List
 
+
+;; Inactive and Hold
+;; Maybe "inactive" should be something that not been touchd for (n) days
+;; Hold is a delibrate decision
+;; Someday
 (setq org-todo-keywords
-      (quote ((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d)")
-              (sequence "BACKLOG(b)" "PLAN(p)" "READY(r)" "ACTIVE(a)" "REVIEW(v)" "WAITING(w@/!)" "HOLD(h@/!)" "|" "CANCELLED(c@/!)" "COMPLETED(C)" "PHONE" "MEETING"))))
+      (quote ((sequence "TODO(t)" "NEXT(n)" "PROJ(p)" "HOLD" "|" "DONE(d)")
+              (sequence "BACKLOG(b)" "PLAN(P)" "READY(r)" "ACTIVE(a)" "REVIEW(v)" "WAITING(w@/!)" "HOLD(h@/!)" "|" "CANCELLED(c@/!)" "COMPLETED(C)" "PHONE" "MEETING")
+	      (sequence "SOMEDAY(s)" "INACTIVE(i)" ))))
 
 
 ;; TODO state changes with tags
@@ -168,9 +178,11 @@
               ("WAITING" ("WAITING" . t))
               ("HOLD" ("WAITING") ("HOLD" . t))
               (done ("WAITING") ("HOLD"))
-              ("TODO" ("WAITING") ("CANCELLED") ("HOLD"))
-              ("NEXT" ("WAITING") ("CANCELLED") ("HOLD"))
-              ("DONE" ("WAITING") ("CANCELLED") ("HOLD")))))
+              ("TODO" ("WAITING") ("CANCELLED") ("HOLD") ("INACTIVE")("SOMEDAY"))
+              ("NEXT" ("WAITING") ("CANCELLED") ("HOLD")("INACTIVE")("SOMEDAY"))
+              ("PROJ" ("WAITING") ("CANCELLED") ("HOLD")("INACTIVE")("SOMEDAY"))
+;              ("PROJ" ("WAITING") ("CANCELLED") ("HOLD")("INACTIVE")("SOMEDAY"))
+              ("DONE" ("WAITING") ("CANCELLED") ("HOLD")("INACTIVE")("SOMEDAY")))))
 
 
 ;; Tag list
@@ -183,39 +195,40 @@
        ("@Mac" . ?M)
        ("@Nirvana" . ?Z)
        ("@work" . ?W)
+       ("@phone" . ?e)
        ("agenda" . ?a)
        ("planning" . ?p)
        ("publish" . ?P)
        ("batch" . ?b)
        ("note" . ?n)
        ("concept" . ?c)
+       ("practise" . ?s)
        ("idea" . ?i)))
 
 
-
+;; todo items should go to Inbox.org
 (setq org-capture-templates
-      (quote (("t" "todo" entry (file "~/Org/Refile.org")
+      (quote (("t" "todo" entry (file "~/Org/agenda/Inbox.org")
                "* TODO %?\n%U\n%a\n" :clock-in t :clock-resume t)
-              ("r" "respond" entry (file "~/Org/Refile.org")
+              ("r" "respond" entry (file "~/Org/agenda/Inbox.org")
                "* NEXT Respond to %:from on %:subject\nSCHEDULED: %t\n%U\n%a\n" :clock-in t :clock-resume t :immediate-finish t)
               ("n" "note" entry (file "~/Org/Notes.org")
                "* %? :NOTE:\n%U\n%a\n" :clock-in t :clock-resume t)
               ("j" "Journal" entry (file+datetree "~/Org/Diary.org")
                "* %?\n%U\n" :clock-in t :clock-resume t)
-              ("w" "org-protocol" entry (file "~/Org/Refile.org")
+              ("w" "org-protocol" entry (file "~/Org/agenda/Inbox.org")
                "* TODO Review %c\n%U\n" :immediate-finish t)
-              ("m" "Meeting" entry (file "~/Org/Refile.org")
+              ("m" "Meeting" entry (file "~/Org/agenda/Inbox.org")
                "* MEETING with %? :MEETING:\n%U" :clock-in t :clock-resume t)
-              ("p" "Phone call" entry (file "~/Org/Refile.org")
+              ("p" "Phone call" entry (file "~/Org/agenda/Inbox.org")
                "* PHONE %? :PHONE:\n%U" :clock-in t :clock-resume t)
               ("h" "Habit" entry (file "~/Org/Refile.org")
                "* NEXT %?\n%U\n%a\nSCHEDULED: %(format-time-string \"%<<%Y-%m-%d %a .+1d/3d>>\")\n:PROPERTIES:\n:STYLE: habit\n:REPEAT_TO_STATE: NEXT\n:END:\n")
 	      ("b" "Bookmark" entry (file+headline "~/Org/WebCapture.org" "Bookmarks")
-               "* %?\n:PROPERTIES:\n:CREATED: %U\n:END:\n\n" :empty-lines 1)
+a               "* %?\n:PROPERTIES:\n:CREATED: %U\n:END:\n\n" :empty-lines 1)
 
 	      )
 	     ))
-
 ;; org refile targets should include the current file, agenda file, target archive file and the open buffer
 
 (setq org-refile-targets
@@ -291,21 +304,6 @@
   "A task with a 'PROJ' keyword"
   (member (nth 2 (org-heading-components)) '("PROJ")))
 
-(defun bh/is-project-p ()
-  "Any task with a todo keyword subtask."
-  (save-restriction
-    (widen)
-    (let ((has-subtask)
-          (subtree-end (save-excursion (org-end-of-subtree t)))
-          (is-a-task (member (nth 2 (org-heading-components)) org-todo-keywords-1)))
-      (save-excursion
-        (forward-line 1)
-        (while (and (not has-subtask)
-                    (< (point) subtree-end)
-                    (re-search-forward "^\*+ " subtree-end t))
-          (when (member (org-get-todo-state) org-todo-keywords-1)
-            (setq has-subtask t))))
-      (and is-a-task has-subtask))))
 
 (defun gs/find-project-task ()
   "Any task with a todo keyword that is in a project subtree"
@@ -327,29 +325,6 @@ Callers of this function already widen the buffer view."
       (gs/find-project-task)
       (if (equal (point) task)
           nil t))))
-
-
-(defun bh/find-project-task ()
-  "Move point to the parent (project) task if any."
-  (save-restriction
-    (widen)
-    (let ((parent-task (save-excursion (org-back-to-heading 'invisible-ok) (point))))
-      (while (org-up-heading-safe)
-        (when (member (nth 2 (org-heading-components)) org-todo-keywords-1)
-          (setq parent-task (point))))
-      (goto-char parent-task)
-      parent-task)))
-
-(defun bh/is-project-subtree-p ()
-  "Any task with a todo keyword that is in a project subtree.
-Callers of this function already widen the buffer view."
-  (let ((task (save-excursion (org-back-to-heading 'invisible-ok)
-                              (point))))
-    (save-excursion
-      (bh/find-project-task)
-      (if (equal (point) task)
-          nil
-        t))))
 
 
 
@@ -514,9 +489,9 @@ show this warning instead."
 
 (defvar gs-org-agenda-block--end-of-agenda
   '(tags "ENDOFAGENDA"
-	 ((org-agenda-overriding-header "End of Agenda")
+	 ((org-agenda-overriding-header "QED.")
 	  (org-tags-match-list-sublevels nil)))
-  "End of the agenda.")
+  "QED.")
 
 (defvar gs-org-agenda-display-settings
   '((org-agenda-start-with-log-mode t)
@@ -535,14 +510,51 @@ show this warning instead."
     (org-agenda-entry-text-mode t))
   "Display settings for my agenda views with entry text.")
 
+;; a very nice trick from https://blog.jethro.dev/posts/processing_inbox/
+;; and a very good quote "Make it a habit to bring your inbox count to 0, items are no use left in the inbox"
+(defvar my-org-current-effort "1:00"
+  "Current effort for agenda items.")
 
+(defun my-org-agenda-set-effort (effort)
+  "Set the effort property for the current headline."
+  (interactive
+   (list (read-string (format "Effort [%s]: " my-org-current-effort) nil nil my-org-current-effort)))
+  (setq my-org-current-effort effort)
+  (org-agenda-check-no-diary)
+  (let* ((hdmarker (or (org-get-at-bol 'org-hd-marker)
+                       (org-agenda-error)))
+         (buffer (marker-buffer hdmarker))
+         (pos (marker-position hdmarker))
+         (inhibit-read-only t)
+         newhead)
+    (org-with-remote-undo buffer
+      (with-current-buffer buffer
+        (widen)
+        (goto-char pos)
+        (org-show-context 'agenda)
+        (funcall-interactively 'org-set-effort nil my-org-current-effort)
+        (end-of-line 1)
+        (setq newhead (org-get-heading)))
+      (org-agenda-change-all-lines newhead hdmarker))))
+
+
+(defun my-org-agenda-process-inbox-item ()
+  "Process a single item in the org-agenda."
+  (interactive)
+  (org-with-wide-buffer
+   (org-agenda-set-tags)
+   (org-agenda-priority)
+   (call-interactively 'my-org-agenda-set-effort)
+   (org-agenda-refile nil nil t)))
+
+(define-key org-agenda-mode-map "x" #'my-org-agenda-process-inbox-item)
 
 (setq org-agenda-custom-commands
       `(("h" "Habits" agenda "STYLE=\"habit\""
 	 ((org-agenda-overriding-header "Habits")
 	  (org-agenda-sorting-strategy
 	   '(todo-state-down effort-up category-keep))))
-	(" " "Export Schedule"
+	("v" "Export Schedule"
 	 (,gs-org-agenda-block--today-schedule
 	  ,gs-org-agenda-block--refile
 	  ,gs-org-agenda-block--next-tasks
@@ -556,7 +568,7 @@ show this warning instead."
 	 (,gs-org-agenda-block--next-tasks
 	  ,gs-org-agenda-block--refile
 	  ,gs-org-agenda-block--active-projects
-	  ,gs-org-agenda-block--standalone-tasks
+	  ;,gs-org-agenda-block--standalone-tasks
 	  ,gs-org-agenda-block--waiting-tasks
 	  ,gs-org-agenda-block--remaining-project-tasks
 	  ,gs-org-agenda-block--inactive-tags
