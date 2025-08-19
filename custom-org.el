@@ -130,8 +130,23 @@
   ;; the daily log should be a separated file, it works as journal, not really a todo list, but it might share quite a lot of the agenda items with the todo list, so it should appear in the review section
 ;; Sync org
 ;; I actually don't need sync that much, so I can just use one particular file for sync, keep this file in Dropbox.  
-  
-  
+
+;; https://wohanley.com/posts/org-setup/
+;; provides another nice trick, use rg to temporarily grep the files with TODO's
+;; (defun who-org/agenda-files-update (&rest _)
+;;   (let ((todo-zettels (->> "rg --files-with-matches '(TODO)|(NEXT)|(HOLD)|(WAITING)' ~/org/zettelkasten"
+;;                           (shell-command-to-string)
+;;                           (s-lines)
+;;                           (-filter (lambda (line) (not (s-blank? line)))))))
+;;     (setq org-agenda-files (append (who/find-org-files who/org-agenda-directory)
+;;                                    todo-zettels))))
+
+;; (advice-add 'org-agenda :before #'who-org/agenda-files-update)
+
+
+;; I might not need this, I can just use Org/ and Org/RoamNotes for all my notes, Org/agenda for my local agenda, ~/Dropbox/Org/agenda for all the shared agenda files, and for the projects in my ~/Codes/Projects folder I can create one projectName.org for each project, then use this trick to display the major TODOs in my agenda (in "In Progress")
+
+;;(shell-command-to-string "rg --files-with-matches '(TODO)|(NEXT)|(HOLD)|(WAITING)' ~/Codes/Projects")
 ;; refile
 (setq org-directory "~/Org/")
 (setq org-agenda-directory "~/Org/agenda/")
@@ -142,7 +157,14 @@
 
 (setq org-agenda-files
 	(append (file-expand-wildcards (concat org-agenda-directory "*.org"))
-	 ;     		(directory-files-recursively (concat org-directory "agenda")org-agenda-file-regexp)
+;       		(directory-files-recursively "~/Codes/Projects" org-agenda-file-regexp)
+		)
+	)
+
+
+(setq org-agenda-files-all
+	(append (file-expand-wildcards (concat org-agenda-directory "*.org"))
+       		(directory-files-recursively "~/Codes/Projects" org-agenda-file-regexp)
 		)
 	)
 
@@ -291,7 +313,7 @@ a               "* %?\n:PROPERTIES:\n:CREATED: %U\n:END:\n\n" :empty-lines 1)
         "......" "----------------")))
 
 
-)
+
 
 
 ;; learn a lot from http://cachestocaches.com/2016/9/my-workflow-org-agenda/
@@ -549,18 +571,44 @@ show this warning instead."
 
 (define-key org-agenda-mode-map "x" #'my-org-agenda-process-inbox-item)
 
+(setq my-org-agenda-view-command
+      `( " " "Personal Agenda"
+	((agenda "" ((org-agenda-overriding-header "Personal Today's Schedule:")
+		     (org-agenda-span 'day)
+		     (org-deadline-warning-days 60)
+		      (org-agenda-ndays 1)
+		      (org-agenda-start-on-weekday nil)))
+
+	 (todo "TODO"
+	       ((org-agenda-overriding-header "Personal TODOs:"))
+	       )
+	 (todo "NEXT"
+	       ((org-agenda-overriding-header "In Progress:")
+		(org-agenda-files org-agenda-files-all))
+	       )
+
+ 	 (todo "TODO"
+	       ((org-agenda-overriding-header "Projects:")
+		(org-agenda-files (directory-files-recursively "~/Codes/Projects" org-agenda-file-regexp)))
+	       )
+	 )
+	)
+      )
+
+(directory-files-recursively "~/Codes/Projects" org-agenda-file-regexp)
+
 (setq org-agenda-custom-commands
-      `(("h" "Habits" agenda "STYLE=\"habit\""
+      `(("h" "Habits" agenda ""
 	 ((org-agenda-overriding-header "Habits")
 	  (org-agenda-sorting-strategy
 	   '(todo-state-down effort-up category-keep))))
-	("v" "Export Schedule"
-	 (,gs-org-agenda-block--today-schedule
-	  ,gs-org-agenda-block--refile
-	  ,gs-org-agenda-block--next-tasks
-	  ,gs-org-agenda-block--active-projects
-	  ,gs-org-agenda-block--end-of-agenda)
-	 ,gs-org-agenda-display-settings)
+	;; ("v" "Export Schedule"
+	;;  (,gs-org-agenda-block--today-schedule
+	;;   ,gs-org-agenda-block--refile
+	;;   ,gs-org-agenda-block--next-tasks
+	;;   ,gs-org-agenda-block--active-projects
+	;;   ,gs-org-agenda-block--end-of-agenda)
+	;;  ,gs-org-agenda-display-settings)
 	("L" "Weekly Log"
 	 (,gs-org-agenda-block--weekly-log)
 	 ,gs-org-agenda-display-settings)
@@ -607,6 +655,7 @@ show this warning instead."
 	 ,gs-org-agenda-display-settings)
 	))
 
+(add-to-list 'org-agenda-custom-commands `,my-org-agenda-view-command)
 
 ;;https://doc.norang.ca/org-mode.html
 
