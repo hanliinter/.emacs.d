@@ -1,3 +1,9 @@
+;; Tree-sitter
+
+(use-package treesit-fold
+  :straight (treesit-fold :type git :host github :repo "emacs-tree-sitter/treesit-fold"))
+
+
 ;; Haskell
 
 (use-package haskell-mode
@@ -18,6 +24,29 @@
   ;; temporarily diable the color output
   (setq haskell-process-args-stack-ghci '( "--ghci-options=-ferror-spans -fdiagnostics-color=never" "--no-build" "--no-load"))
   )
+
+
+(use-package haskell-ts-mode
+  :ensure t
+  :straight t
+  :custom
+  (haskell-ts-font-lock-level 4)
+  (haskell-ts-use-indent t)
+  (haskell-ts-ghci "ghci")
+  (haskell-ts-use-indent t)
+  :hook ((haskell-ts-mode . eglot-ensure)
+	 (haskell-ts-mode . haskell-indentation-mode)
+	 (haskell-ts-mode . interactive-haskell-mode))
+  :config
+  (add-to-list 'treesit-language-source-alist
+	       '(haskell . ("https://github.com/tree-sitter/tree-sitter-haskell" "v0.23.1")))
+  (add-hook 'haskell-ts-mode-hook #'my/setup-completion-keys)
+  (add-hook 'haskell-ts-mode 'prettify-symbols-mode)
+
+  )
+
+(use-package consult-hoogle
+  :straight t)
 
 (use-package attrap
   :ensure t
@@ -56,6 +85,10 @@
   :bind ("s-f" . eglot-format)
   :config (setq eglot-stay-out-of '(company))
   )
+
+(with-eval-after-load 'eglot
+  (add-to-list 'eglot-server-programs
+               '(haskell-ts-mode . ("haskell-language-server-wrapper" "--lsp"))))
 
 ;; ;; simply add a new element to the front of the list and it will shadow matches further down the list.
 ;; (with-eval-after-load "eglot"
@@ -135,13 +168,16 @@
      ;;   ;; Use opam switch to lookup ocamlmerlin binary
      ;;   (setq merlin-command 'opam)))
 
+;; https://opam.ocaml.org/doc/Tricks.html
+
 (defun opam-env ()
   (interactive nil)
   (dolist (var (car (read-from-string (shell-command-to-string "opam config env --sexp"))))
     (setenv (car var) (cadr var))))
 ;; Add the opam site-lisp directory to the load path
 ;; we should use the opam switch to get the correct version of ocamlmerlin
-;;FIXME: consider combine this with direnv so we can automatically use the opam switch of the current project
+;;FIXED: now combined with direnv to automatically switch to the correct opam switch
+;; ~/.config/direnv/lib/ocaml.sh
 
 (opam-env)
 
@@ -154,6 +190,11 @@
 
 ;; major mode for editing OCaml code
 ;; it also features basic toplevel integration
+
+;; Tuareg need 'reduce
+(require 'cl-lib)
+(unless (fboundp 'reduce)
+  (defalias 'reduce 'cl-reduce))
 (use-package tuareg
   :ensure t
   :straight t
@@ -290,19 +331,21 @@
   :defer t
   :straight t)
 
-(use-package pyvenv
-  :ensure t
-  :straight t
-  :config
-  (pyvenv-mode t)
 
-  ;; Set correct Python interpreter
-  (setq pyvenv-post-activate-hooks
-        (list (lambda ()
-                (setq python-shell-interpreter (concat pyvenv-virtual-env "bin/python3")))))
-  (setq pyvenv-post-deactivate-hooks
-        (list (lambda ()
-                (setq python-shell-interpreter "python3")))))
+;; FIXME: since I am using direnv now, this part might be redundant and incorre
+;; (use-package pyvenv
+;;   :ensure t
+;;   :straight t
+;;   :config
+;;   (pyvenv-mode t)
+
+;;   ;; Set correct Python interpreter
+;;   (setq pyvenv-post-activate-hooks
+;;         (list (lambda ()
+;;                 (setq python-shell-interpreter (concat pyvenv-virtual-env "bin/python3")))))
+;;   (setq pyvenv-post-deactivate-hooks
+;;         (list (lambda ()
+;;                 (setq python-shell-interpreter "python3")))))
 
 ;; https://stackoverflow.com/questions/38535499/how-to-setup-emacs-to-use-a-given-python-virtualenv
 
@@ -341,80 +384,79 @@
 (use-package robe
   :straight t)
 
+;; quickly disable copilot, sometimes should be very helpful
+;; (defun my/toggle-copilot ()
+;;   "Toggle Copilot mode on and off."
+;;   (interactive)
+;;   (if (bound-and-true-p copilot-mode)
+;;       (progn
+;;         (copilot-mode -1)
+;;         (message "Copilot disabled"))
+;;     (copilot-mode 1)
+;;     (message "Copilot enabled")))
+
+;; (global-set-key (kbd "C-c t c") #'my/toggle-copilot)
+
 
 ;; use a new version, generate by copilot
-
-(defun my/setup-completion-for-copilot()
-  "Setup a combined completion system with Copilot, YASnippet, and Company.
-Only activates when Copilot mode is enabled."
-  (interactive)
-  (defun my/completion-handler()
-    "Handle completion using Copilot, YASnippet, and Company in that order."
-    (interactive)
-    (cond
-     ;; First, check if Copilot has a completion
-     ((and (bound-and-true-p copilot-mode)
-           (copilot--overlay-visible))
-      (copilot-accept-completion))
-     
-     ;; Then, check if there's an expandable snippet
-     ((and (bound-and-true-p yas-minor-mode)
-           (yas-expandable-at-point))
-      (yas-expand))
-     
-     ;; Finally, try company completion
-     ((and (bound-and-true-p company-mode)
-           company-candidates)
-      (company-complete))
-     
-     ;; If nothing above works, try to start company completion
-     (t
-      (company-complete)))
-    )
-   ;; Define key bindings that only work in Copilot mode
-  (defun my/setup-completion-keys ()
-    "Setup keybindings for the combined completion system."
-    (when (bound-and-true-p copilot-mode)
-      ;; Bind TAB to our custom completion handler
-      (local-set-key (kbd "TAB") #'my/completion-handler)
+;; (defun my/setup-completion-for-copilot()
+;;   "Setup a combined completion system with Copilot, YASnippet, and Company.
+;; Only activates when Copilot mode is enabled."
+;;   (interactive)
+;;   (defun my/completion-handler()
+;;     (interactive)
+;;     (or (copilot-accept-completion)
+;; 	(indent-for-tab-command))
+;;     )
+;;    ;; Define key bindings that only work in Copilot mode
+;;   (defun my/setup-completion-keys ()
+;;     "Setup keybindings for the combined completion system."
+;;     (when (bound-and-true-p copilot-mode)
+;;       ;; Bind TAB to our custom completion handler
+;;       (local-set-key (kbd "TAB") #'my/completion-handler)
       
-      ;; Additional Copilot-specific bindings
-      (local-set-key (kbd "C-c C-n") #'copilot-next-completion)
-      (local-set-key (kbd "C-c C-p") #'copilot-previous-completion)
+;;       ;; Additional Copilot-specific bindings
+;;       (local-set-key (kbd "C-c C-n") #'copilot-next-completion)
+;;       (local-set-key (kbd "C-c C-p") #'copilot-previous-completion)
       
-      ;; Custom binding for forcing copilot completion
-      (local-set-key (kbd "C-c C-j") #'copilot-accept-completion)
-      ;; C-c C-c might be useful for commit in magit, where I might also need copilot
-      ))
+;;       ;; Custom binding for forcing copilot completion
+;;       (local-set-key (kbd "C-c C-j") #'copilot-accept-completion)
+;;       ;; C-c C-c might be useful for commit in magit, where I might also need copilot
+;;       ))
 
-(add-hook 'copilot-mode-hook #'my/setup-completion-keys)
+;; (add-hook 'copilot-mode-hook #'my/setup-completion-keys)
 
-  ;; Configure Company settings for better integration
-  (setq company-idle-delay 1
-        company-minimum-prefix-length 2)
+
+;; Configure Company settings for better integration
+  (setq company-idle-delay 0.2
+        company-minimum-prefix-length 2
+					;copilot-idle-delay 1.0
+	)
 
   ;; Configure YASnippet to work alongside Copilot
   (setq yas-triggers-in-field t)
 
   ;; Advice to prevent Company from showing completions when Copilot is showing suggestions
-  (defun my/company-completion-filtered (orig-fun &rest args)
-    "Don't show Company completions if Copilot overlay is visible."
-    (unless (and (bound-and-true-p copilot-mode)
-                 (copilot--overlay-visible))
-      (apply orig-fun args)))
+  ;; (defun my/company-completion-filtered (orig-fun &rest args)
+  ;;   "Don't show Company completions if Copilot overlay is visible."
+  ;;   (unless (and (bound-and-true-p copilot-mode)
+  ;;                (copilot--overlay-visible))
+  ;;     (apply orig-fun args)))
   
-  (advice-add 'company-complete :around #'my/company-completion-filtered)
+  ;; (advice-add 'company-complete :around #'my/company-completion-filtered)
   
-  )
+ ; )
 
 
-(use-package copilot
-  :straight (:host github :repo "copilot-emacs/copilot.el" :files ("*.el"))
-  :ensure t
-   :config
-(add-hook 'prog-mode-hook 'copilot-mode)
-   (my/setup-completion-for-copilot)
-  )
+;; (use-package copilot
+;;   :straight (:host github :repo "copilot-emacs/copilot.el" :files ("*.el"))
+;;   :ensure t
+;;   :init
+;;   (setq copilot-indent-offset-warning-disable t)
+;;    :config
+;; (add-hook 'prog-mode-hook 'copilot-mode)
+;;    (my/setup-completion-for-copilot)
+;;   )
 
 
 ;; (use-package company
@@ -427,3 +469,109 @@ Only activates when Copilot mode is enabled."
 (use-package envrc
   :straight t
   :hook (after-init . envrc-global-mode))
+
+
+;; typescript
+
+(use-package typescript-mode
+  :straight t)
+
+;; Generated by gemini 3
+(defun my/smart-next-error ()
+  "Jump to next error if errors exist, otherwise jump to next warning."
+  (interactive)
+  (let ((comp-buffer (next-error-find-buffer)))
+    (if comp-buffer
+        (with-current-buffer comp-buffer
+          (save-excursion
+            (goto-char (point-min))
+            ;; Look for the word "error" (case-insensitive)
+            (if (re-search-forward "error" nil t)
+                (progn
+                  (message "Errors found: Skipping warnings...")
+                  (setq compilation-skip-threshold 2))
+              (progn
+                (message "No errors: Jumping to warnings...")
+                (setq compilation-skip-threshold 1)))))
+      (message "No compilation buffer found.")))
+  (next-error))
+
+;; Bind it to your preferred key (replacing the default)
+(global-set-key (kbd "M-g n") 'my/smart-next-error)
+
+(use-package focus
+  :straight t
+  :config
+  ;; Set how dim the "background" code should be (0.0 to 1.0)
+  (setq focus-dimness 0.4) 
+  
+  ;; Custom function to "Spotlight" the error
+  (defun my/focus-error ()
+    (interactive)
+    (focus-mode 1)
+    (message "Spotlighting error...")
+    ;; This centers the screen on the error so the spotlight is prominent
+    (recenter-top-bottom))
+
+  ;; Hook it into your "Smart Next Error" function from earlier
+  (advice-add 'my/smart-next-error :after #'my/focus-error))
+
+
+;; remap some program-mode to program-ts-mode
+(setq major-mode-remap-alist
+      '((haskell-mode . haskell-ts-mode)))
+
+(defun my/minuet-force-show-suggestion ()
+    "clear the cache and trigger the sugguestion"
+    (interactive)
+    (minuet-dismiss-suggestion)
+    (sit-for 0.02)
+    (minuet-show-suggestion))
+
+(use-package minuet
+  :straight t
+    :bind
+    (;("M-y" . #'minuet-complete-with-minibuffer) ;; use minibuffer for completion
+     ("M-i" . #'my/minuet-force-show-suggestion) ;; use overlay for completion
+     ("C-c m" . #'minuet-configure-provider)
+     :map minuet-active-mode-map
+     ;; These keymaps activate only when a minuet suggestion is displayed in the current buffer
+     ("M-p" . #'minuet-previous-suggestion) ;; invoke completion or cycle to next completion
+     ("M-n" . #'minuet-next-suggestion) ;; invoke completion or cycle to previous completion
+     ("M-A" . #'minuet-accept-suggestion) ;; accept whole completion
+     ;; Accept the first line of completion, or N lines with a numeric-prefix:
+     ;; e.g. C-u 2 M-a will accepts 2 lines of completion.
+     ("M-a" . #'minuet-accept-suggestion-line)
+     ("C-g" . #'minuet-dismiss-suggestion))
+
+    :init
+    ;; if you want to enable auto suggestion.
+    ;; Note that you can manually invoke completions without enable minuet-auto-suggestion-mode
+    (add-hook 'prog-mode-hook #'minuet-auto-suggestion-mode)
+
+    :config
+    ;; You can use M-x minuet-configure-provider to interactively configure provider and model
+    (setq minuet-provider 'openai-compatible)
+    
+    (setq minuet-request-timeout 2.5)
+    (setq minuet-auto-suggestion-throttle-delay 0.5) ;; Increase to reduce costs and avoid rate limits
+    (setq minuet-auto-suggestion-debounce-delay 15.0) ;; Increase to reduce costs and avoid rate limits
+    (plist-put minuet-openai-compatible-options :end-point "https://opencode.ai/zen/go/v1/chat/completions")
+    (plist-put minuet-openai-compatible-options :api-key (lambda () (get-api "opencode"))
+	       )
+    (plist-put minuet-openai-compatible-options :model "deepseek-v4-flash")
+    (minuet-set-optional-options minuet-openai-compatible-options :thinking '(:type "disabled"))
+    (minuet-set-optional-options minuet-openai-compatible-options :max_tokens 64))
+    ;; For Evil users: When defining `minuet-ative-mode-map` in insert
+    ;; or normal states, the following one-liner is required.
+
+    ;; (add-hook 'minuet-active-mode-hook #'evil-normalize-keymaps)
+
+    ;; This is *not* necessary when defining `minuet-active-mode-map`.
+
+    ;; To minimize frequent overhead, it is recommended to avoid adding
+    ;; `evil-normalize-keymaps` to `minuet-active-mode-hook`. Instead,
+    ;; bind keybindings directly within `minuet-active-mode-map` using
+    ;; standard Emacs key sequences, such as `M-xxx`. This approach should
+    ;; not conflict with Evil's keybindings, as Evil primarily avoids
+;; using `M-xxx` bindings.

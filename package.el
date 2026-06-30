@@ -303,6 +303,7 @@ FACE defaults to inheriting from default and highlight."
   :init
   (setq popper-reference-buffers
         '("\\*Messages\\*"
+	   "\\*Warnings\\*"
           "Output\\*$"
           "\\*Apropos\\*"
 	  "\\*Backtrace\\*"
@@ -400,7 +401,24 @@ FACE defaults to inheriting from default and highlight."
 
 
 (use-package gptel
-  :straight t)
+  :straight t
+  :config
+  (require 'gptel)
+
+  (setq my/opencode-backend
+  (gptel-make-openai "opencode"
+    :host "opencode.ai"
+    :endpoint "/zen/go/v1/chat/completions"
+    :stream t
+    :key (lambda () (get-api "opencode"))
+    :models '("glm-5.2" "deepseek-v4-flash")))
+
+  (gptel-make-gemini "google-ai-studio"
+		   :key (lambda() (get-api "googleai"))
+		   :stream t
+		   :models '("gemini-2.5-flash" "gemini-1.5-pro"))
+      (setq gptel-backend my/opencode-backend)
+      (setq gptel-model "deepseek-v4-flash"))
 
 
 (require 'auth-source)
@@ -416,23 +434,23 @@ FACE defaults to inheriting from default and highlight."
     password))
 
 
-;; (setq
-;;  gptel-model 'gemini-pro
-;;  gptel-backend (gptel-make-gemini "Gemini"          ;Any name you want
-;;   :stream t                             ;Streaming responses
-;;   :key (get-gemini-password)))
-
 (setq
- gptel-model 'deepseek-chat
- gptel-backend
-(gptel-make-openai "DeepSeek"       ;Any name you want
-  :host "api.deepseek.com"
-  :endpoint "/v1/chat/completions"
-  :stream t
-  :key (get-api "deepseek")               ;can be a function that returns the key
-  :models '("deepseek-chat" )))
+ gptel-model 'gemini-3-pro-preview
+ gptel-backend (gptel-make-gemini "Gemini"          ;Any name you want
+  :stream t                             ;Streaming responses
+  :key (get-gemini-password)))
 
-(get-api "deepseek")
+;; (setq
+;;  gptel-model 'deepseek-chat
+;;  gptel-backend
+;; (gptel-make-openai "DeepSeek"       ;Any name you want
+;;   :host "api.deepseek.com"
+;;   :endpoint "/v1/chat/completions"
+;;   :stream t
+;;   :key (get-api "deepseek")               ;can be a function that returns the key
+;;   :models '("deepseek-chat" )))
+
+;; (get-api "deepseek")
 
 (gptel-make-gemini "Gemini"          ;Any name you want
    :stream t                             ;Streaming responses
